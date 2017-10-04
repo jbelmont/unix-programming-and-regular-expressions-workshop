@@ -28,7 +28,21 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 
 ## Unix History
 
-content
+* Shell Scripting was developed in the context of the UNIX Operating System from Bell Labs
+
+* Early UNIX systems packed incredible power into very small machines
+  * 64 Kb "virtual" address space for the code and for data
+  * This was often less than that of physical memory on the early [PDP-11S](https://en.wikipedia.org/wiki/PDP-11)
+* Source Code made it easy to experiment and change the system
+* AT&T Bell Labs heavily influenced Unix by the likes of [Ken Thompson](https://en.wikipedia.org/wiki/Ken_Thompson), [Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie), and others
+
+Quote from Dennis Ritchie for Vision of Unix:
+
+> What we wanted to preserve was not just a good environment in which to do programming, but a system around which a fellowship could form. We knew from experience that the essence of communal computing, as supplied by remote-access, time-shared machines, is not just to type programs into a terminal instead of a keypunch, but to encourage close communication.
+
+* Unix Developers were the users of the system and they developed tools to solve their own problems
+* Unix Developers were given freedom to experiment and rewrite Unix as needed
+* Unix was designed in a quest for elegance
 
 ## Unix Software Philosophy
 

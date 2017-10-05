@@ -1,0 +1,24 @@
+{
+  "name": "unix-programming-and-regular-expressions-workshop",
+  "version": "1.0.0",
+  "description": "A workshop on Unix Programming Principles using tools such as grep, sed, awk, shell programming and regular expressions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop.git"
+  },
+  "keywords": [],
+  "author": "Jean-Marcel Belmont <marcelbelmont@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop/issues"
+  },
+  "homepage": "https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop#readme",
+  "devDependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2"
+  }
+}

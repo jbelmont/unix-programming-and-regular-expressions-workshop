@@ -6,25 +6,26 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 
 * [Unix History](#unix-history)
 * [Unix Software Philosophy](#unix-software-philosophy)
-* [Basics of Shell Programming](#basics-of-shell-programming)
-* [Introduction to Text Processing](#introduction-to-text-processing)
-* [Text Searching](#text-searching)
-* [Text Substitution](#text-substitution)
-* [Filename expansions and globbing](#filename-expansions-and-globbing)
-* [Working with Fields](#working-with-fields)
-* [Text Sorting](#text-sorting)
-* [Pipelines](#pipelines)
-* [Arithmetic Operations and variables](#arithmetic-operations-and-variables)
-* [Decision Making and Exit Status](#decision-making-and-exit-status)
-* [Looping](#looping)
-* [Input and Output](#input-and-output)
-* [Command Process Substitution](#command-process-substitution)
-* [Evaluation Order](#evaluation-order)
-* [Subshells](#subshells)
-* [Shell Functions](#shell-functions)
-* [Signal Handling](#signal-handling)
-* [Working with Files](#working-with-files)
-* [Building Command line applications](#building-command-line-applications)
+* [Self Contained Shell Scripts](#self-contained-shell-scripts)
+* [Basics of Shell Programming](docs/basics-of-shell-programming.md)
+* [Introduction to Text Processing](docs/introduction-to-text-processing.md)
+* [Text Searching](docs/text-searching.md)
+* [Text Substitution](docs/text-substitution.md)
+* [Filename expansions and globbing](docs/filename-expansions-and-globbing.md)
+* [Working with Fields](docs/working-with-fields.md)
+* [Text Sorting](docs/text-sorting.md)
+* [Pipelines](docs/pipelines.md)
+* [Arithmetic Operations and variables](docs/arithmetic-operations-and-variables.md)
+* [Decision Making and Exit Status](docs/decision-making-and-exit-status.md)
+* [Looping](docs/looping.md)
+* [Input and Output](docs/input-and-output.md)
+* [Command Process Substitution](docs/command-process-substitution.md)
+* [Evaluation Order](docs/evaluation-order.md)
+* [Subshells](docs/subshells.md)
+* [Shell Functions](docs/shell-functions.md)
+* [Signal Handling](docs/signal-handling.md)
+* [Working with Files](docs/working-with-files.md)
+* [Building Command line applications](docs/building-command-line-applications.md)
 
 ## Unix History
 
@@ -46,160 +47,119 @@ Quote from Dennis Ritchie for Vision of Unix:
 
 ## Unix Software Philosophy
 
-content
+[Software Tools Book](https://www.amazon.com/Software-Tools-Brian-W-Kernighan/dp/020103669X) and [Software Tools in Pascal](https://www.amazon.com/Software-Tools-Pascal-Brian-Kernighan/dp/0201103427/ref=pd_lpo_sbs_14_img_0?_encoding=UTF8&psc=1&refRID=2HVC5MB1PKHC4YCETHP9&dpID=41eyH0p9aiL&preST=_SY291_BO1,204,203,200_QL40_&dpSrc=detail)
 
-## Basics of Shell Programming
+* Programs should be like specialized tools in a carpenter's toolbox
+  * Avoid `create programs to rule them all`
+  * Don't create programs that are like a Swiss Army Knife
+      * Meaning they do too much
+  * Tools can be combined using pipelines and the shell to get your work done
+  * This philosophy became populare in [Kernighan & Plauger Books](https://www.amazon.com/Software-Tools-Brian-W-Kernighan/dp/020103669X)
 
-content
+  #### Do One thing Well
 
-#### Variables
+  Programs are easier to:
 
-content
+  1. Write and to correct
 
-#### Redirection
+  2. Document
 
-content
+  3. Understand and use
 
-#### Command Types and Searching
+  The `cat` command originally only concatenated files
 
-content
+  The `cp` command copies files
 
-## Introduction to Text Processing
+  The `mv` command moves and renames files
 
-content
+#### Process Lines of Text
 
-## Text Searching
+Using Text as the main data format has advantages:
 
-content
+* Text is easy to process with existing and new tools
 
-#### Regular Expressions
+* Text can be edited with any text editor
 
-content
+* Text is portable across networks and machine architectures
 
-#### Basic Regular Expressions
+For example to list some popular baby names and sort them:
 
-content
+```bash
+cat data/top-10-baby-names-2016.txt | awk '{print $2 }' | sort
+```
 
-#### Extended Regular Expressions
+#### Use Regular Expressions
 
-content
+* Regular Expressions provide powerful text matching and substitution
 
-## Text Substitution
+2 Flavors of regular expressions standardized by [POSIX](https://en.wikipedia.org/wiki/POSIX)
 
-content
+1. Basic Regular Expressions (BREs)
+  1. grep, sed, ...
+2. Extended Regular Expressions (EREs)
+  1. egrep, awk, ...
 
-#### Basic Sed Usage
+#### Default to Standard Input/Output
 
-content
+Use Standard Input/Output (I/O) when there is no files on the command line:
 
-## Filename expansions and globbing
+* Helps simplify writing programs
+* Helps you hook programs together with pipelines
+* Helps encourage programs to do one thing well
 
-content
+#### Don't Be Chatty
 
-#### Tilde Expansion
+* Status messages that are mixed with standard output confuse programs downstream
+* If you ask then you get it. Don't prompt with 'Are you sure'
+* Do know what you are doing:
+  * `rm -rf /` Before running a command like this
+  * This will delete everything starting from the root directory
+* We have version control systems such as `Git` use them
 
-content
+#### Make sure to use the input format for output
 
-#### Extended Pattern Matching
+* If your text is structured then after processing
+  * Write the same format for standard output in the same format of standard input
+  * Doing this affords you to build specialized tools that work together
 
-content
+#### Write specialized tools if they do not exist
 
-## Working with Fields
+* At times a tool does not exist, that is when you need to write the tool
+  * Can the tool be useful to other people?
+  * Can the tool be generalized?
 
-content
+If any of the answers to these questions are yes:
+  * then write a general purpose tool
 
-#### Cut and Join
+* Scripting languages can often be used to write a software tool:
+  * Awk
+  * Perl
+  * Python
+  * Ruby
+  * Shell
 
-content
+* You can also use other languages like for example `Golang` as we will see
 
-#### Basics of Awk Programming
+#### Software Tools Summary
 
-content
+* Using the `software tools` approach helps provide a framework and a mindset for programming and scripting
+* You can combine software tools to solve software programs
+  * This strategy in turn gives you flexibility and helps promote innovation
+* Know your tools and thinking in the `Software Tools` Philosophy will improve your scripting
 
-## Text Sorting
+## Self Contained Shell Scripts
 
-content
+[Executable Definition](https://en.wikipedia.org/wiki/Executable)
 
-## Pipelines
+> In computing, executable code or an executable file or executable program, sometimes simply referred to as an executable or binary, causes a computer "to perform indicated tasks according to encoded instructions,"[1] as opposed to a data file that must be parsed by a program to be meaningful.
 
-content
+Typically a high level language is used that compiles to executable machine code files
 
-## Arithmetic Operations and variables
+* Executable scripts typicall start with a `Shebang` => `#! /bin/bash` or the like
+  * An optional argument can be provided
+  * Some Unix systems have small limits on the path name length
 
-content
+Shell Scripts can be simple executable text files that contain shell commands.
 
-#### Arithmetic expansion
-
-content
-
-#### Variable assignment
-
-content
-
-#### Parameter expansion
-
-content
-
-## Decision Making and Exit Status
-
-content
-
-#### if-elif-else-fi
-
-content
-
-#### Test Command
-
-content
-
-#### Case Statement
-
-content
-
-## Looping
-
-content
-
-#### Loops
-
-content
-
-#### Break, Continue, and Shift
-
-content
-
-#### Select Loops
-
-content
-
-## Input and Output
-
-content
-
-## Command Process Substitution
-
-content
-
-## Evaluation Order
-
-content
-
-## Subshells
-
-content
-
-## Shell Functions
-
-content
-
-## Signal Handling
-
-content
-
-## Working with Files
-
-content
-
-## Building Command line applications
-
-content
+* Keep in mind that this only works if the shell script is in the same language as the interactive shell
+  * For example to expect a zsh shell script to run in a bash environment

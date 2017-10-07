@@ -1,6 +1,8 @@
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
+## npm logs
+npm-debug.log.*
 
 ## Dependency directory
 ## Commenting this out is preferred by some people, see
@@ -14,3 +16,7 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# Make files
+*.err
+*.out

@@ -4,12 +4,20 @@
 
 * [Regular Expressions](#regular-expressions)
 * [History and Types of Regular Expressions](#history-and-types-of-regular-expressions)
+* [Unix Tools that use Regular Expressions](#unix-tools-that-use-regular-expressions)
 * [Basic Regular Expressions](#basic-regular-expressions)
 * [Extended Regular Expressions](#extended-regular-expressions)
 * [Family of Regular Expression Tools](#family-of-regular-expression-tools)
 * [Important Grep Options](#important-grep-options)
 * [Good Practices for Regular Expressions](#good-practices-for-regular-expressions)
 * [Bracket Expressions](#bracket-expressions)
+* [Grep Examples](#grep-examples)
+* [Interval Expressions](#interval-expressions)
+* [Parenthesized Subexpressions](#parenthesized-subexpressions)
+* [Basic Regular Expression Operator Precedence](#basic-regular-expression-operator-precedence)
+* [Regular Expression Matching](#regular-expression-matching)
+* [Intermediate Grep Examples](#intermediate-grep-examples)
+* [Extended Regular Expressions](#extended-regular-expressions)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Regular Expressions
@@ -47,6 +55,20 @@ Here is a chart on metacharacters:
 
 * Different Unix tools have used different Regular Expression types
 * This reflects the influence and interests in AT&T Research Labs (Kernighan, Ritchie, etc)
+
+#### Unix Tools that use Regular Expressions
+
+Unix Tools that use Regexes:
+
+* grep
+
+* sed
+
+* awk
+
+* vim
+
+* emacs
 
 #### Basic Regular Expressions
 
@@ -253,6 +275,384 @@ Character Classes:
 * it does not match `bAd` though it only matches with `c` characters
 * `.*` matches any character though so it is most powerful match
 * `*` matches the null string as well which can affect substitutions
+
+#### Basic Grep Examples
+
+```bash
+$ echo 'Hey Marcel how are you doing?' | grep --color 'Marcel'
+```
+
+Notice when you output this that `Marcel` is in color because it is a match
+
+```bash
+$ echo 'Hey Marcel how are you doing?' | grep --color 'marcel'
+```
+
+This will not match though because case matters
+
+```bash
+$ echo 'You are hungry right?' | grep --color h.ngry
+```
+
+Notice that `hungry` matches because the dot `.` matches any character
+
+```bash
+$ echo this is www.marcelbelmont.com domain | grep --color 'www\.marcelbelmont\.com'
+```
+
+When you want to match a literal character such as a dot it needs to be escaped
+
+```bash
+$ echo abc 555 | grep --color '[aeiouc]'
+```
+
+What do you think will match here?
+
+```bash
+$ echo what will match here 987 | grep --color '[^whe9]'
+```
+
+What matches here?
+
+```bash
+$ echo what is happening 587-987-1000 | grep --color '[[:digit:]]'
+```
+
+This matches numbers 0-9
+
+```bash
+$ echo what should match here? 897-888-3333 | grep --color '[^[:digit:]]'
+```
+
+What matches here?
+
+```bash
+echo do alphas match? 5899 | grep --color '[[:alpha:]]'
+```
+
+The alpha character class matches any characters in alphabet
+
+```bash
+echo do alphas match? 5899 | grep --color '[^[:alpha:]]'
+```
+
+What should match here?
+
+```bash
+$ echo what matches here 888 | grep --color '[[:alpha:]]*'
+```
+
+```bash
+$ echo 0899 matches here 888 | grep --color '[[:alpha:]]*'
+```
+
+```bash
+$ echo 159 out for this 999 | ggrep -E --color '[^[:alpha:]]*'
+```
+
+```bash
+$ echo what the 189 stuff 877 | grep --color -E '[[:digit:]]*'
+```
+
+```bash
+$ echo what the 189 stuff 877 | grep --color -E '[^[:digit:]]*'
+```
+
+When using `bsd` grep there is what seems like subtle bugs
+
+I have gnu grep installed and all occurrences of  characters not in alphabet matched as they should
+
+* Be aware of subtle differences between `BSD` Unix Tools and `GNU` they creep up on you.
+
+* Using `--color` and some sample data helps test your `BREs` as you write them
+
+#### Interval Expressions
+
+* `d\{A\}` - A occurrences of d
+* `d\{A,\}` - At least A occurrences of d
+* `d\{A, B\}` - A to B occurrences of d
+
+* The `d` means a single character
+
+* `[[:digit:]]\{3\}-[[:digit:]]\{4\}` this RegEx matches on a US local phone number
+  * such as 531-2000
+
+* A and B are integers up to RE_DUP_MAX
+
+If you are on a Mac run the following command:
+
+```bash
+$ sysctl user.re_dup_max
+user.re_dup_max: 255
+```
+
+`sysctl` can print kernel state variables
+
+#### Anchor regex matches
+
+* Caret `^` means match must start at beginning of line or string
+
+* Dollar Sign `$` means match must occur at end of line or string
+
+* if you use `^` and `$` in the middle of a basic regular expression than they stand for their literal value
+
+#### Parenthesized Subexpressions
+
+* \(o[pq]\)\(567\)yy\2\1 is the same as `o[pq]567yyY2Y1
+
+  * The Y2 and Yq are the actual text that match expressions in parentheses
+  * The contents of the parenthesis can be any regular expression
+* You can use up to 9 parenthesized subexpressions
+* This is often called "backreferences"
+* This only works for Basic Regular Expressions (BREs)
+
+#### Basic Regular Expression Operator Precedence
+
+I am ordering from Highest to Lowest Precedence:
+
+* Bracket Symbols: [:class:], [=a=], [.ab.]
+* \metacharacter
+* Bracket Expresssions `[ ]`
+* \(.....\) and \digit
+* * and \{......\}
+* concatenation (cde is c followed by d then by e)
+* ^ and $ anchors
+
+#### Regular Expression Matching
+
+* Regular Expression match the longest possible, leftmost occurrence of text that can be matched
+  * It is said that regular expressions are greedy by default in this way
+* The regex match stops at the first character that cannot be matched
+* If a text is matched then it is used even if a longer match exists further down the text
+
+#### Intermediate Grep Examples
+
+```bash
+$ echo 891 you 588 | grep --color '[[:alpha:]]\{2\}'
+```
+
+It matches 2 characters here the `yo`
+
+but
+
+```bash
+$ echo 891 some 5888 | grep --color '[[:alpha:]]\{2\}'
+```
+
+Here it matches the `some` the whole character set
+
+```bash
+$ echo 589 him 999 | grep --color '[^[:alpha:]]\{2\}'
+```
+
+Here it matches on 4 pairs:
+
+The `58`, `9 and space`, `a space and 9`, and `99`
+
+```bash
+$ echo 589 him 999 | grep --color '[^[:alpha:][:space:]]\{2\}'
+```
+
+Here it matched on 2 pairs:
+
+The `58` and the `99`
+
+```bash
+$ echo 589 her 897 | grep --color '^[[:digit:]]*'
+```
+
+Here it matches the digits at the beginning which happens to be `589`
+
+```bash
+$ echo her 888 | grep --color '^[^[:digit:]]*'
+```
+
+This matches anything that is not a digit at the beginning of the set so it matches `her`
+
+```bash
+$ echo 567 vim 321 | grep --color '[^[:alpha:]]*$'
+```
+
+This matches any character that is not in alphabet and in the end of the set so it matches `321`
+
+```bash
+$ echo 567 abcd 789 himhim | grep --color '[aeiouhm]*'
+```
+
+```bash
+$ echo 567 abcd 789 himhim | grep --color '[aeiouhm]*'
+```
+
+Here it didn't match with `BSD` grep but with gnu grep
+
+```bash
+$ echo 567 abcd 789 himhim | ggrep --color '[aeiouhm]*'
+```
+
+it matches with `a`,`him`, `him` like it should to match longest string
+
+This seems to be a bug between `bsd` grep and `gnu` grep
+
+Here is an example using `sed` which will go into soon
+
+```bash
+$ echo 567 aeod 888 houhou  | sed 's/[aeioud]*/D/'
+```
+
+Notice a quirk here it matched on the null string which is at the beginning of the set
+
+```bash
+$ echo 567 aeod 888 houhou  | sed 's/[aeioud][aeioud]*/D/'
+
+567 D 888 houhou
+```
+
+Here it matched on the string `aeod` and replaced with `D` but it didn't match all occurrence because we need the `g` flag which does a global replace
+
+```bash
+echo 567 aeod 888 houhou  | sed 's/[aeioud][aeioud]*/D/g'
+
+567 D 888 hDhD
+```
+
+Notice this time `ou` was replaced with `D` twice 
+
+*Always quote your regular expressions on the command line or you will get unexpected behavior*
+
+Things to be watch out for regular expressions:
+
+* Substitutions can match the null string in unexpected ways as you saw
+
+* Matches will go with *longest leftmost match*
+
+* Regular expressions can become cryptic very quickly so do take your time to read, write and to test them.
+
+#### Extended Regular Expressions
+
+Similiarites to Basic Regular Expressions:
+
+* Matching single characters
+  * Regular characters, `.`, escaped metacharacters
+  * Bracket expressions: ranges and classes
+
+* Conduct repetition with `*` and inverval expressions `({.....})`
+
+* Anchor sets with `^` and `$`
+  * Although in `EREs` the `^` and `$` are still special even in the middle of a Regular Expression
+
+* Matches go with longest, leftmost match
+
+###### Additional Repition Operators for EREs
+
+* `re?` is zero or one of `re`
+  * so for example `mother?` would match one mother or none, meaning optional
+* A note that `re` can be more than one character
+  * This applies to `*` and `{...}` as well
+
+###### Grouping with Parenthesis
+
+* Parenthesis group smaller Regular Expressions into larger regexes
+  * `([[:digit:]]{3}-[[:digit:]]{4})+` this matches one or more US phone numbers
+  * We can even include repetition operators
+* You can't use backreferences with EREs
+
+###### Alternation
+
+* `Alternation` means this or that 
+  * `(mayo|ketchup)` will match either mayo or ketchup but not both
+  * `Alternation` is often used with parenthesis
+* `Alternation` has the lowest precedence of all the operators
+  * ^sorry|world$ will expand like this
+    * (^sorry)|(world$) and not like this ^(sorry|world)$ as you would think due to operator precedence
+
+###### Extended Regular Expressions Operator Precedence
+
+Operator Precedence:
+
+1. Bracket symbols: `[:class:]`, `[=c=]`, `[.bs.]`, and `[012345]`
+  1. Meaning the brackets themselves `[  ]`
+2. `\metacharacter`
+3. Bracket expressions `[:alnum:]`
+4. `(.....)` grouping
+5. `*`, `+`, `?`, and `{.....}`
+6. Concatenation => who means `w` followed by `h` then followed by `o`
+7. Alternation
+
+###### EREs Examples
+
+```bash
+$ echo ac abc abbc abbbc | egrep --color 'ab?c'
+```
+
+This matches `ac` and `abc` since `ac` does not have a `b` and it matched `abc` since it was one `b`
+
+```bash
+$ echo ac abc abbc abbbc | grep -E --color 'ab?c'
+```
+
+this also works because `-E` puts grep in ERE mode
+
+```bash
+echo abc 531-2000 531-7777 cba | egrep --color '([[:digit:]]{3}-[[:digit:]]{4} )+
+```
+
+This uses grouping operator `()` and matches 3 digits, a `-` and 4 digits respectively
+
+```bash
+echo 'yo man
+how are you' | egrep --color 'how|yo'
+```
+
+This matches `yo` twice once in `yo` and second in `yo`u and it matches `how`
+
+```bash
+$ echo word and up | egrep --color '^word|up$'
+```
+
+This matches both `word` and `up` because of operator precedence
+
+```bash
+$ echo word and up | egrep --color '^(word|up)$'
+```
+
+This doesn't match because we have more in the line than just `word` or `up`
+
+```bash
+echo abc 888-7777 999-1111 cba |
+grep --color '\([[:digit:]]\{3\}-[[:digit:]]\{4\} \)\+'
+```
+
+This matches using regular `grep with backslashes and interval expressions and grouping expressions and the plus operator
+
+```bash
+echo 'yo
+man
+hey' | grep --color '^\(yo\|man\)$'
+```
+
+Notice here that we need to escape with `\` but we match with `yo`, `man`
+
+Notice an example with `sed` and `gsed`
+
+```bash
+$ echo yo and hey | sed 's/^yo\|hey$/zzz/g'
+```
+
+this should have worked and replaced both `yo` and `hey` with `zzz`
+
+but this example with `gnu` sed works
+
+```bash
+echo yo and hey | gsed 's/^yo\|hey$/zzz/g'
+zzz and zzz
+```
+
+###### Main programs that use EREs
+
+* egrep
+* grep with `-E`
+* awk
+* GNU grep and sed let you use `\?`, `\+` and `\|` to get the same `ERE` power but is not readable
 
 #### Bread Crumb Navigation
 _________________________

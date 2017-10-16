@@ -12,7 +12,13 @@
 * [Command line arguments](#command-line-arguments)
 * [Simple Parameter Expansion](#simple-parameter-expansion)
 * [Other types of expansions](#other-types-of-expansions)
+* [Parameter expansion examples](#parameter-expansion-examples)
 * [Parameter expansion best practices](#parameter-expansion-best-practices)
+* [Arithmetic Expansion](#arithmetic-expansion)
+* [Arithmetic Operator Table](#arithmetic-operator-table)
+* [Let Command](#let-command)
+* [Arithmetic Expansion Examples](#arithmetic-expansion-examples)
+* [Arithmetic Expansion Best Practices](#arithmetic-expansion-best-practices)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Variable Assignment Syntax
@@ -187,7 +193,7 @@ my home directory is /Users/marcelbelmont
 ```
 
 | `Operator` | `Action` | `Purpose` |
-| ${var:-word} | If the variable exists and is not nul return it else return the word | Its purpose is to return if a variable is not defined |
+| ${var:-word} | If the variable exists and is not null return it else return the word | Its purpose is to return if a variable is not defined |
 | ${var:=word} | If var exists and is not null return it else assign word | Its purpose is to set a variable to a default value if it is not defined already |
 | ${var:?message} | If var exists and is not null return it else print message | Its purpose is to catch errors if a variable is not defined |
 | ${var:+word} | If var exists and is not null return the word else return null | Its purpose is to test if a variable exists and has a value |
@@ -200,6 +206,123 @@ my home directory is /Users/marcelbelmont
 | ${var%pattern} | delete shortest matching text from end of value |
 | ${var%%pattern} | delete longest matching text from end of value |
 
+#### Parameter expansion examples
+
+```bash
+echo $HOME
+```
+
+This expansion prints out `/Users/marcelbelmont`
+
+```bash
+sleep 3 & echo $!
+```
+
+This command sleeps for 3 seconds and prints out job process number. The `echo $!` prints out the last process id of job running in the background.
+
+Notice that when the job finishes we run `echo $!` and the PID (Process Identification Number) is still the same.
+
+```bash
+echo _$USER_
+```
+
+This just prints out `_`
+
+```bash
+echo _${USER}_
+_marcelbelmont_
+```
+
+This works because variable expansion 
+
+```bash
+grep '^four' data/numbers.txt; echo $?
+```
+
+This prints out 1 which means `grep` failed
+
+```bash
+echo My PID is $$
+My PID is 1596
+```
+
+This show PID for the current shell sessiono
+
+We can confirm this with the `ps` command
+
+```bash
+ps
+  PID TTY           TIME CMD
+  406 ttys000    0:00.03 /Applications/iTerm.app/Contents/MacOS
+  410 ttys000    0:00.60 -zsh
+ 1596 ttys001    0:00.82 /usr/local/bin/zsh -l
+```
+
+Notice here that `1596` is the PID for our current shell session as we expect
+
+```bash
+echo ${number:-0}
+0
+```
+
+Since number does not exist, echo returns 0
+
+```bash
+echo ${number:=0}
+```
+
+This returns 0 since number is not set but it sets number to 0.
+
+```bash
+number=10
+```
+
+```bash
+echo ${number:=0}
+```
+
+This time echo prints out 10 since number is set
+
+```bash
+echo ${number:-0}
+```
+
+This also prints out 10 since number has been set
+
+```bash
+mypath=/Users/marcelbelmont/code/very.long.file.name
+```
+
+```bash
+echo ${mypath#/*/}
+marcelbelmont/code/very.long.file.name
+```
+
+This prints out everything minus `/Users/`
+
+```bash
+echo ${mypath##/*/}
+very.long.file.name
+```
+
+Notice here that expansion just prints last part of file
+
+```bash
+echo ${mypath%.*}
+/Users/marcelbelmont/code/very.long.file
+```
+
+Notice that this removes `.name` or the shortest matching part
+
+```bash
+echo ${mypath%%.*}
+/Users/marcelbelmont/code/very
+```
+
+ Notice this removed the longest matching part `long.file.name`
+
+ Using these expansions let you avoid using `basename` and `dirname` which need to be run a separate process so these expansions can make your shell scripts more efficient with resources.
+
 #### Parameter expansion best practices
 
 * Remember that when you use `$@` and `$*` there is quoting quirks
@@ -207,6 +330,143 @@ my home directory is /Users/marcelbelmont
   * `mktemp` is a better command to use for this purpose
 * In general the most useful general expansion is `${value:-someval}` and `${value:=somevalue}`
 * The `${var#pattern}` type parameter expansions can be good for manipulating pathnames and filenames
+
+#### Arithmetic Expansion
+
+This type of expansion because `expr` is harder to use
+
+In order to do arithmetic expansion use `$(( expression ))` to get the result of an arithmetic into a command line expression or for a variable assignment
+
+* You can access variable values by preceding with or without the `$`
+
+* The `$((  expression ))` acts like double quotes
+
+* Result is placed into a command line but side-effects are possible through variable assignment
+
+#### Arithmetic Operator Table
+
+| `Operator` | `Meaning` |
+| `++` `--` | Increment `/` decrement |
+| `+` `-` | Unary plus, minus, logical and bitwise negation |
+| `*` `/` `%` | Multiply, Divide, Remainder |
+| `+` `-` | Binary addition, Binary subtraction |
+| `<<` `>>` | Left Shift, Right Shift |
+| `<` `<=` `>` `>=` | Comparison Operators |
+| `==` `!=` | Equal, Not Equal |
+| `&` | Bitwise AND |
+| `^` | Bitwise Exclusive OR |
+| `|` | Bitwise OR |
+| `&&` | Logical AND (Short Circuit) |
+| `||` | Logical OR (Short Circuit) |
+| `?:` | Conditional Expression |
+| `=` `+=` `-=` `*=` `/=` `%=` etc | Assignment Operators |
+
+#### Let Command
+
+The `let` "expression" is used for arithmetic
+
+* Its purpose is to do arithmetic and to test result in a `if` statement or `loop`
+
+* Exit status is 0 for non-zero result and 1 for zero result so this is inverse of shell success status which returns 0 for success
+
+the `let` expression works same as `$(( expression ))`
+
+* There is an alternate syntax in bash `(( expression ))` with no preceding `$` this is not defined in POSIX so may not work in other shells
+
+* This alternate syntax was designed to make shell scripts look like `regular` programming languages
+
+#### Arithmetic Expansion Examples
+
+```bash
+amount=100
+```
+
+```bash
+percent=15
+```
+
+```bash
+echo Total: $((  amount + ( (amount * percent) / 100) ))
+```
+
+Here we use `$(( ))` notation to save arithmetic value
+
+```bash
+j=50
+```
+
+```bash
+echo my answer is $(( ++j ))
+51
+```
+
+Using prefix operator we increment j and save it to `j` variable
+
+```bash
+echo $j
+51
+```
+
+```bash
+i=30
+```
+
+```bash
+echo my answer is $(( i++ ))
+my answer is 30
+```
+
+The difference in postfix operator is that i returns 30 but when we inspect `i` it was incremented to 31
+
+```bash
+echo $i
+31
+```
+
+```bash
+z=10
+```
+
+```bash
+echo $(( z += 2 ))
+12
+```
+
+Here `+=` assigns 12 to `z`
+
+
+```bash
+mysolution=13
+```
+
+Now let us use if condition to check
+
+```bash
+if (( mysolution == 8 ))
+then
+echo "This is my solution"
+else
+echo "what did my solution end up being?"
+fi
+```
+
+Notice here use `((  ))` to check if mysolution is equal to 8 or not
+
+#### Arithmetic Expansion Best Practices
+
+Arithmetic expansion is used to perform arithmetic instead of using `expr` command
+
+`POSIX` restricts arithmetic to C language long integers
+
+You can use `let` nd `(( expression ))` in bash and zsh but this notation isn't necessarily portable to other shells
+
+Arithmetic expansion helps provide integer arithmetic using a notation familiar to other programming languages
+
+Built-in math is much faster and easier to use than `expr` command
+
+Built-in math is easier to write and read
+
+Bash and zsh also provide commands for arithmetic that can be used in `if`, `while` and `until` loops
 
 #### Bread Crumb Navigation
 _________________________

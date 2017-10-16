@@ -8,7 +8,6 @@
 * [Filename expansions and globbing](docs/filename-expansions-and-globbing.md)
 * [Working with Fields](docs/working-with-fields.md)
 * [Text Sorting](docs/text-sorting.md)
-* [Pipelines](docs/pipelines.md)
 * [Arithmetic Operations and variables](docs/arithmetic-operations-and-variables.md)
 * [Decision Making and Exit Status](docs/decision-making-and-exit-status.md)
 * [Looping](docs/looping.md)

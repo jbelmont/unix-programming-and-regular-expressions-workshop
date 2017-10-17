@@ -172,13 +172,14 @@ Extended Pattern matching is a more powerful filename matching mechanism
 #### Extended Pattern Notations
 
 | `Pattern` | `ERE equivalent` | Explanation |
+| --- | --- | --- |
 | `*(exp)` | exp* | means zero or more of an exp |
 | `+(exp)` | exp+ | means one or more of an exp |
 | `?(exp)` | exp? | means zero or one of exp |
-| `@(exp1|exp2|...|expn)` | exp1|exp2|...|expn | This is alternation |
+| `@(exp1\|exp2\|...\|expn)` | exp1|exp2|...|expn | This is alternation |
 | `!(exp)` | No equivalent notation | means complement of exp |
 
-*This table is for bash*
+*This table is for bash and I had to prefix `|` with `\`*
 
 #### Enable Pattern matching
 

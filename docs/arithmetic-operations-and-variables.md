@@ -193,6 +193,7 @@ my home directory is /Users/marcelbelmont
 ```
 
 | `Operator` | `Action` | `Purpose` |
+| --- | --- | --- |
 | ${var:-word} | If the variable exists and is not null return it else return the word | Its purpose is to return if a variable is not defined |
 | ${var:=word} | If var exists and is not null return it else assign word | Its purpose is to set a variable to a default value if it is not defined already |
 | ${var:?message} | If var exists and is not null return it else print message | Its purpose is to catch errors if a variable is not defined |
@@ -201,6 +202,7 @@ my home directory is /Users/marcelbelmont
 #### Other types of expansions
 
 | `Operator` | `Action` |
+| --- | --- |
 | ${var#pattern} | delete shortest matching text from front of value |
 | ${var##pat} | delete longest text from front of value | 
 | ${var%pattern} | delete shortest matching text from end of value |
@@ -346,6 +348,7 @@ In order to do arithmetic expansion use `$(( expression ))` to get the result of
 #### Arithmetic Operator Table
 
 | `Operator` | `Meaning` |
+| --- | --- |
 | `++` `--` | Increment `/` decrement |
 | `+` `-` | Unary plus, minus, logical and bitwise negation |
 | `*` `/` `%` | Multiply, Divide, Remainder |
@@ -355,9 +358,9 @@ In order to do arithmetic expansion use `$(( expression ))` to get the result of
 | `==` `!=` | Equal, Not Equal |
 | `&` | Bitwise AND |
 | `^` | Bitwise Exclusive OR |
-| `|` | Bitwise OR |
+| `\|` | Bitwise OR |
 | `&&` | Logical AND (Short Circuit) |
-| `||` | Logical OR (Short Circuit) |
+| `\|\|` | Logical OR (Short Circuit) |
 | `?:` | Conditional Expression |
 | `=` `+=` `-=` `*=` `/=` `%=` etc | Assignment Operators |
 

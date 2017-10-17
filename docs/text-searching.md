@@ -111,9 +111,10 @@ Here are some examples from the [Regular Expressions Wikipedia Page](https://en.
 * Additionally, support is removed for \n backreferences and the following metacharacters are added:
 
 | `Metacharacter`	| `Description` |
+| --- | --- |
 | `?` |	Matches the preceding element zero or one time. For example, ab?c matches only "ac" or "abc". |
 | `+`	| Matches the preceding element one or more times. For example, ab+c matches "abc", "abbc", "abbbc", and so on, but not "ac". |
-| `|`	| The choice (also known as alternation or set union) operator matches either the expression before or the expression after the operator. For example, abc|def matches "abc" or "def". |
+| `\|`	| The choice (also known as alternation or set union) operator matches either the expression before or the expression after the operator. For example, `abc\|def` matches "abc" or "def". |
 
 ###### Examples of EREs
 
@@ -659,4 +660,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Basics of Shell Programming](./basics-of-shell-programming.md) | [Text Searching](./text-searching.md) →
+← [Basics of Shell Programming](./basics-of-shell-programming.md) | [Text Substitution](./text-substitution.md) →

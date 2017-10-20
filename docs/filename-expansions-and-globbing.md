@@ -176,10 +176,8 @@ Extended Pattern matching is a more powerful filename matching mechanism
 | `*(exp)` | exp* | means zero or more of an exp |
 | `+(exp)` | exp+ | means one or more of an exp |
 | `?(exp)` | exp? | means zero or one of exp |
-| `@(exp1\|exp2\|...\|expn)` | exp1|exp2|...|expn | This is alternation |
+| <code>@(exp1&#124;exp2&#124;...&#124;expn)</code> | exp1 pipe exp2 | This is alternation |
 | `!(exp)` | No equivalent notation | means complement of exp |
-
-*This table is for bash and I had to prefix `|` with `\`*
 
 #### Enable Pattern matching
 

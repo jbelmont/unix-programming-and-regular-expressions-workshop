@@ -358,9 +358,9 @@ In order to do arithmetic expansion use `$(( expression ))` to get the result of
 | `==` `!=` | Equal, Not Equal |
 | `&` | Bitwise AND |
 | `^` | Bitwise Exclusive OR |
-| `\|` | Bitwise OR |
+| <code>&#124;</code> | Bitwise OR |
 | `&&` | Logical AND (Short Circuit) |
-| `\|\|` | Logical OR (Short Circuit) |
+| <code>&#124;&#124;</code> | Logical OR (Short Circuit) |
 | `?:` | Conditional Expression |
 | `=` `+=` `-=` `*=` `/=` `%=` etc | Assignment Operators |
 

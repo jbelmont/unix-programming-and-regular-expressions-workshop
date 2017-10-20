@@ -660,6 +660,10 @@ case expression in
 esac
 ```
 
+Open up *scripts/decision-making-and-exit-status/case_statements.sh** to look at an example of case statements
+
+We won't go over details of loops and functions yet because we will discuss it later in the workshop.
+
 #### Best Practices
 
 The only universal success status code is zero

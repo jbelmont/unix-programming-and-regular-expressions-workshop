@@ -21,9 +21,9 @@
 
 #### Exit Status
 
-![Exit Status](images/parent-shell.png)
+![Exit Status](../images/shell-decision.png)
 
-[Fork System Call](https://en.wikipedia.org/wiki/Fork_(system_call))
+[Fork System Call](https://en.wikipedia.org/wiki/Fork_\(system_call\))
 
 > In computing, particularly in the context of the Unix operating system and its workalikes, fork is an operation whereby a process creates a copy of itself. It is usually a system call, implemented in the kernel. Fork is the primary (and historically, only) method of process creation on Unix-like operating systems.
 

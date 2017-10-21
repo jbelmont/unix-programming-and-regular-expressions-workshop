@@ -46,8 +46,8 @@
 
 Typical usage for `tr` is to map one set of values into another:
 
-* tr a-z A-z is old style
-* tr [:lower] [:upper] is POSIX style
+* tr a-z A-Z is old style
+* tr [:lower:] [:upper:] is POSIX style
 
 [:class:] Represents all characters belonging to the defined character class.
 

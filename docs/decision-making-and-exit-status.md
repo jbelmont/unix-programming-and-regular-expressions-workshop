@@ -182,7 +182,7 @@ Both `&&` and `||` have same precedence
 
 #### Exit Command 
 
-The [Exit command](https://en.wikipedia.org/wiki/Exit_(command)) will return the status of the script
+The [Exit command](https://en.wikipedia.org/wiki/Exit_\(command\)) will return the status of the script
 
 The script will execute immediately after the exit command is invoked
 
@@ -219,7 +219,7 @@ The `test` command can check for:
   * less than
 * Integer comparisons
 
-Read the [Test Command Wikipedia Doc](https://en.wikipedia.org/wiki/Test_(Unix)) for full options available
+Read the [Test Command Wikipedia Doc](https://en.wikipedia.org/wiki/Test_\(Unix\)) for full options available
 
 #### Test Command Usage
 
@@ -257,7 +257,7 @@ String comparisions use the following operators:
 
 There aren't any operators like `<=` or `>=` for some reason
 
-[String Arguments](https://en.wikipedia.org/wiki/Test_(Unix)#String_arguments)
+[String Arguments](https://en.wikipedia.org/wiki/Test_\(Unix\)#String_arguments)
 
 Non-POSIX options:
 
@@ -492,7 +492,7 @@ Issues with Regular Test Command and `[ ... ]`:
   * `and`, `or`, and grouping
 * the And operator `a` and the Or operator `o` are not portable
 
-The extended test command originated in [KornShell "ksh"](https://en.wikipedia.org/wiki/KornShell) and in [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) and in [Zsh](https://en.wikipedia.org/wiki/Z_shell)
+The extended test command originated in [KornShell "ksh"](https://en.wikipedia.org/wiki/KornShell) and in [Bash](https://en.wikipedia.org/wiki/Bash_\(Unix_shell\)) and in [Zsh](https://en.wikipedia.org/wiki/Z_shell)
 
 Even though the Extended Test Command is not in POSIX it has been available for a long time
 

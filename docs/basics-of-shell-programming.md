@@ -192,7 +192,7 @@ Each line traced each step of the script, notice that the script ran 3 times
 
 #### Redirection
 
-[Redirection](https://en.wikipedia.org/wiki/Redirection_(computing))
+[Redirection](https://en.wikipedia.org/wiki/Redirection_\(computing\))
 
 ```bash
 $ cat
@@ -374,7 +374,7 @@ helloWorld.c:4:26: error: expected ';' after expression
 make: *** [helloWorld] Error 1
 ```
 
-Here we use the [Make](https://en.wikipedia.org/wiki/Make_(software)) utility which is a build automation tool to build executable programs
+Here we use the [Make](https://en.wikipedia.org/wiki/Make_\(software\)) utility which is a build automation tool to build executable programs
 
 When we run `make helloWorld` we get both standard output and standard error all printed in screen
 
@@ -398,7 +398,7 @@ One important point is that you must redirect standard output before redirecting
 $ make helloWorld 2>&1 | tee errors
 ```
 
-Notice here used `2>&1` to redirect stderr to stdout and then used the [TEE command](https://en.wikipedia.org/wiki/Tee_(command))
+Notice here used `2>&1` to redirect stderr to stdout and then used the [TEE command](https://en.wikipedia.org/wiki/Tee_\(command\))
 
 * The tee utility copies standard input to standard output, making a copy in zero or more files.
   * The output is unbuffered.
@@ -418,7 +418,7 @@ ONE TWO THREE
 
 The `|` operator used the standard output of echo to feed the `tr` operator and transform characters to uppercase
 
-[Pipelines in Unix](https://en.wikipedia.org/wiki/Pipeline_(Unix))
+[Pipelines in Unix](https://en.wikipedia.org/wiki/Pipeline_\(Unix\))
 
 > In Unix-like computer operating systems, a pipeline is a sequence of processes chained together by their standard streams, so that the output of each process (stdout) feeds directly as input (stdin) to the next one.
 
@@ -454,7 +454,7 @@ In this run we threw away standard output into `/dev/null` and then checked exit
 
 #### Command Types and Searching
 
-[Type Operator](https://en.wikipedia.org/wiki/Type_(Unix))
+[Type Operator](https://en.wikipedia.org/wiki/Type_\(Unix\))
 
 ###### Shell Builtins
 
@@ -485,7 +485,7 @@ cp is /bin/cp
 
 ###### Shell Aliases
 
-[Shell Aliases](https://en.wikipedia.org/wiki/Alias_(command))
+[Shell Aliases](https://en.wikipedia.org/wiki/Alias_\(command\))
 
 > In computing, alias is a command in various command line interpreters (shells) such as Unix shells, 4DOS/4NT and Windows PowerShell, which enables a replacement of a word by another string. It is mainly used for abbreviating a system command, or for adding default arguments to a regularly used command. Aliasing functionality in the MS-DOS and Microsoft Windows operating systems is provided by the DOSKey command-line utility.
 
@@ -692,7 +692,7 @@ The `PATH` variable is used find location of binary executables
 
 > On POSIX and Unix-like operating systems, the $PATH variable is specified as a list of one or more directory names separated by colon (:) characters.
 
-[Path Variable](https://en.wikipedia.org/wiki/PATH_(variable))
+[Path Variable](https://en.wikipedia.org/wiki/PATH_\(variable\))
 
 ```bash
 echo $PATH

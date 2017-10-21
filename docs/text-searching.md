@@ -114,7 +114,7 @@ Here are some examples from the [Regular Expressions Wikipedia Page](https://en.
 | --- | --- |
 | `?` |	Matches the preceding element zero or one time. For example, ab?c matches only "ac" or "abc". |
 | `+`	| Matches the preceding element one or more times. For example, ab+c matches "abc", "abbc", "abbbc", and so on, but not "ac". |
-| `\|`	| The choice (also known as alternation or set union) operator matches either the expression before or the expression after the operator. For example, `abc\|def` matches "abc" or "def". |
+| `&124;`	| The choice (also known as alternation or set union) operator matches either the expression before or the expression after the operator. For example, `abc\|def` matches "abc" or "def". |
 
 ###### Examples of EREs
 

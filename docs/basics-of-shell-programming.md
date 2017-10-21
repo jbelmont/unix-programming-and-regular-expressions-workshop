@@ -398,7 +398,7 @@ One important point is that you must redirect standard output before redirecting
 $ make helloWorld 2>&1 | tee errors
 ```
 
-Notice here used `2>&1` to redirect stderr to stdout and then used the [TEE command](https://en.wikipedia.org/wiki/Tee_(command))
+Notice here used `2>&1` to redirect stderr to stdout and then used the [TEE command](https://en.wikipedia.org/wiki/Tee_\(command\))
 
 * The tee utility copies standard input to standard output, making a copy in zero or more files.
   * The output is unbuffered.

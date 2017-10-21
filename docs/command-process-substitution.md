@@ -160,4 +160,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Input and Output](./input-and-output.md) | [Evaluation Order](./evaluation-order.md) →
+← [Input and Output](./input-and-output.md) | [History Substitution](./history-substitution.md) →

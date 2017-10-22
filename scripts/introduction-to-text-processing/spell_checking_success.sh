@@ -1,6 +1,6 @@
 #! /bin/bash
 
-tr '[:space:][:punct:]' '\n' < ./data/spelling_success.txt |
+tr '[:space:][:punct:]' '\n' < ./data/spelling_errors.txt |
   tr '[:upper:]' '[:lower:]' |
     sort -u |
-      comm -23 - /usr/share/dict/words
+    comm -23 - <(sort /usr/share/dict/words)

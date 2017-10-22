@@ -51,10 +51,19 @@ Quote from Dennis Ritchie for Vision of Unix:
 
 * Programs should be like specialized tools in a carpenter's toolbox
   * Avoid `create programs to rule them all`
-  * Don't create programs that are like a Swiss Army Knife
-      * Meaning they do too much
+  * Don't create programs that are like a Swiss Army Knife... meaning they do too much
+    * One simple example would be sorting... either you can do one of the two following things:
+      * Write a bunch of programs to do various tasks, each of which has an option to sort its output
+      * Choose a common representation for your system (e.g. streams of ASCII text), create a mechanism for composing pieces of the system (Unix pipes), and only write the sorting functionality once
+    * A less simple example would be the [LLVM compiler](http://www.aosabook.org/en/llvm.html) (and compilers in general), which uses an intermediate representation (IR) that is understood and operated on by all pieces of the system as the compiler does all the passes required to generate its target (e.g. lexing, parsing, optimization, code generation, etc.)
+    * In general, choosing a common representation for a system will turn the problem of interfacing the various pieces from an m*n problem into an m+n problem (where m is the number of different outputs in the first stage, n is number of inputs that are received in the second stage)
   * Tools can be combined using pipelines and the shell to get your work done
-  * This philosophy became populare in [Kernighan & Plauger Books](https://www.amazon.com/Software-Tools-Brian-W-Kernighan/dp/020103669X)
+    * One famous example is Doug McIlroy's word count program, compared to Donald Knuth's, as described [here](http://www.leancrew.com/all-this/2011/12/more-shell-less-egg/) and elsewhere
+  * This philosophy became popular in [Kernighan & Plauger Books](https://www.amazon.com/Software-Tools-Brian-W-Kernighan/dp/020103669X)
+    * Some example presentations that discuss the Unix philosophy include:
+      * [Unix Pipeline (Brian Kernighan) - Computerphile](https://www.youtube.com/watch?v=bKzonnwoR2I), which discusses the concept of the Unix pipe
+      * [Bringing the Unix Philosophy to Big Data by Bryan Cantrill](https://www.youtube.com/watch?v=S0mviKhVmBI), which discusses the Unix philosophy in relation to big data
+      * [Pycon UK 2016: Python and the Glories of the UNIX Tradition by Brandon Rhodes](https://www.youtube.com/watch?v=zFMdhXYlFfY), which discusses the Unix philosophy in relation to Python
 
   #### Do One thing Well
 

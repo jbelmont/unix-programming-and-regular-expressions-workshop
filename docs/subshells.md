@@ -79,4 +79,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [History Substitution](./history-substitution.md) | [Shell Functions](./shell-functions.md) →
+← [Evaluation Order](./evaluation-order.md) | [Shell Functions](./shell-functions.md) →

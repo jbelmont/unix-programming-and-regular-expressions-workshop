@@ -20,6 +20,7 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 * [Input and Output](docs/input-and-output.md)
 * [Command Process Substitution](docs/command-process-substitution.md)
 * [History Substitution](docs/history-substitution.md)
+* [Evaluation Order](docs/evaluation-order.md)
 * [Subshells](docs/subshells.md)
 * [Shell Functions](docs/shell-functions.md)
 * [Signal Handling](docs/signal-handling.md)

@@ -226,3 +226,63 @@ Please try to do your best at filling out the details, but feel free to skip
 parts if you're not sure what to put.
 
 Once opened, Pull Requests are usually reviewed within a few days.
+
+#### Sample Pull Request
+
+Steps I took for the Pull Request
+
+I forked the [Unix and Regular Expressions Workshop](https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop)
+
+![Fork Unix Workshop](images.fork.png)
+
+I then clicked the Clone or Download Button
+
+![Clone Button](images/clone.png)
+
+I ran the following terminal commands:
+
+* `git clone https://github.com/thejohnrambo/unix-programming-and-regular-expressions-workshop.git a-test-fork-repo`
+  * This makes a local cloned copy of the repo
+* `git remote add upstream https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop.git`
+  * This helps add and setup upstream changes for the fork
+* `git fetch upstream`
+  * This command will fetch all the branches for the upstream repository
+  * In my case master and gh-pages branches
+* `git checkout -b file-sharing-edit -t upstream/master`
+  * This creates a new branch called *file-sharing-edit* with a target set to upstream master branch
+* I then made my changes into fork via the *docs/remote-file-sharing-and-file-access.md* file
+* Once done I committed my changes
+* `git add .`
+* `git commit -m 'Added a section to remote file sharing section for using ssh.'`
+  * These commands add changes to be staged and then commit those changes
+* `git push origin file-sharing-edit`
+  * This pushes up the *file-sharing-edit* branch to github to the forked repository
+  * If you have another github username you have to do the following:
+    * `git config credential.helper ""` this will reset credentials stored locally
+* If you go back to the root repository which is sitting at the top of the fork
+
+![Fork Link](images/fork-link.png)
+
+Once you go back to the root you can do the Pull Request via 2 ways in Github UI:
+
+1. Click the new link that shows up in the original repository
+  1. ![Compare & Pull Request](images/compare-and-pr.png)
+  2. Click *Create Pull Request* Button
+2. Click the Pull Request Link
+  1. Click the *New Pull Request* Button
+  2. ![Compare Across Forks](images/compare-forks.png)
+  3. Click compare across forks
+  4. ![Compare Create Click](images/create-compare-across-forks.png)
+    1. Notice here that there is a base fork which is *jbelmont/unix-programming-and-regular-expressions-workshop*
+    2. And there is a head fork which is *thejohnrambo/unix-programming-and-regular-expressions-workshop*
+  5. Click *Create pull request*
+
+Once the changes are reviewed and merged then I will run `npm run docs:publish` so that they get published to gitbook.
+
+When I login I will be able to merge and assign Pull Request to others
+
+![My View](images/admin-pr-view.png)
+
+The second to last step is to merge the changes with *Merge pull request* button
+
+![Last Merge](images/merge-pr.png)

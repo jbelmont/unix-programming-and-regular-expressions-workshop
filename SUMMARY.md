@@ -19,4 +19,5 @@
 * [Shell Functions](docs/shell-functions.md)
 * [Signal Handling](docs/signal-handling.md)
 * [Working with Files](docs/working-with-files.md)
+* [Remote File Sharing and File Access](docs/remote-file-sharing-and-file-access.md)
 * [Building Command line applications](docs/building-command-line-applications.md)

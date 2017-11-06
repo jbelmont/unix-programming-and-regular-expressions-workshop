@@ -27,6 +27,7 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 * [Working with Files](docs/working-with-files.md)
 * [Remote File Sharing and File Access](docs/remote-file-sharing-and-file-access.md)
 * [Building Command line applications](docs/building-command-line-applications.md)
+* [Tasks](#tasks)
 
 ## Unix History
 
@@ -173,3 +174,18 @@ Shell Scripts can be simple executable text files that contain shell commands.
 
 * Keep in mind that this only works if the shell script is in the same language as the interactive shell
   * For example to expect a zsh shell script to run in a bash environment
+
+## Tasks
+
+Sections to Finish:
+
+- [ ] Evaluation Order
+- [ ] Signal Handling
+- [ ] Working with Files
+- [ ] Remote File Sharing and and File Access
+- [ ] Building Command Line Applications
+
+Sections to Add:
+
+- [ ] Using Makefile
+- [ ] Shell Login order

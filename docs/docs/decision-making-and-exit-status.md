@@ -3,7 +3,7 @@
 ## Sections:
 
 * [Exit Status](#exit-status)
-* [Specific Exit Statuses](#specific-exit-statutes)
+* [Specific Exit Statuses](#specific-exit-statuses)
 * [if elif else fi](#if-elif-else-fi)
 * [Shell Test Status and conditionals](#shell-test-status-and-conditionals)
 * [Exit Status Examples](#exit-status-examples)
@@ -64,10 +64,10 @@ fi
 Each command is separated by semicolon `;` or a new line
 
 ```bash
-if test-commands 
+if test-commands
 then
   consequent-commands
-[elif more-test-commands 
+[elif more-test-commands
 then
   more-consequents;]
 [else alternate-consequents;]
@@ -106,7 +106,7 @@ The exit status will the last command that is run
 cd /somepath/not/exist
 ```
 
-This prints error message 
+This prints error message
 
 ```bash
 echo $?
@@ -180,7 +180,7 @@ This command will short circuit if first check passes meaning only *$var* is eva
 
 Both `&&` and `||` have same precedence
 
-#### Exit Command 
+#### Exit Command
 
 The [Exit command](https://en.wikipedia.org/wiki/Exit_\(command\)) will return the status of the script
 
@@ -228,10 +228,10 @@ Unary Operators:
 `-r` tests if file is readable
 
 ```bash
-if [ -r someFile ] 
+if [ -r someFile ]
 ```
 
-There are more unary operators and they all write are written like `-r` 
+There are more unary operators and they all write are written like `-r`
 
 Binary Operators:
 
@@ -261,7 +261,7 @@ There aren't any operators like `<=` or `>=` for some reason
 
 Non-POSIX options:
 
-* `-a` is and 
+* `-a` is and
 * `-o` is or
 
 These operations can be troublesome
@@ -413,7 +413,7 @@ else
 fi
 ```
 
-Here we use `-n` operator which checks if a string has length and we use the test command form of `[  ... ]` 
+Here we use `-n` operator which checks if a string has length and we use the test command form of `[  ... ]`
 
 ```bash
 var=avalue

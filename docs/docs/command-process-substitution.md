@@ -4,7 +4,7 @@
 
 * [Command Substitution the old way](#command-substitution-the-old-way)
 * [Command Substitution the new way](#command-substitution-the-new-way)
-* [Command Substition Examples](#command-substitution-examples)
+* [Command Substitution Examples](#command-substitution-examples)
 * [Expr Command Description](#expr-command-description)
 * [Expr Command Examples](#expr-command-examples)
 * [Process Substitution Description](#process-substitution-description)
@@ -15,7 +15,7 @@
 
 Command substitution will take the text between \`...\` and run it as a command and then place the results back into the surrounding command
 
-You will need to escape double quotes \\" 
+You will need to escape double quotes \\"
 
 Nesting commands is difficult with the old style command substitution
 
@@ -25,7 +25,7 @@ You don't need to quote if you are assigning a variable
 
 You can use `$( ... )` to do command substitution
 
-This has been standardized by POSIX 
+This has been standardized by POSIX
 
 It is available in both bash and zsh
 
@@ -35,7 +35,7 @@ Advantages of Newer Command Substitution:
 * There is no need to escape nested quotes or delimiters
 * It is much easier to read and to maintain then the old styles
 
-#### Command Substition Examples
+#### Command Substitution Examples
 
 ```bash
 bash ; set -x
@@ -105,7 +105,7 @@ Replace `expr` command with the following:
 
 * You should prefer arithmetic substitution with `$(( ...))`
 
-* `test` `[[]]` command 
+* `test` `[[]]` command
 * sed
 * grep
 * shell pattern matching

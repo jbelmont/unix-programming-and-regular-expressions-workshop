@@ -6,7 +6,7 @@
 * [While Loop](#while-loop)
 * [Until Loop](#until-loop)
 * [For Loop](#for-loop)
-* [For Loop Arithmetic Style](#for-loop-arithmetic Style)
+* [For Loop Arithmetic Style](#for-loop-arithmetic-style)
 * [Break Command](#break-command)
 * [Continue Command](#continue-command)
 * [Special Builtins](#special-builtins)
@@ -166,7 +166,7 @@ You can provide a break level for example if you have 2 for loops and the break 
 #### Continue Command
 
 `continue: continue [n]`
-    
+
 Resume for, while, or until loops.
 
 Resumes the next iteration of the enclosing FOR, WHILE or UNTIL loop.
@@ -246,13 +246,13 @@ Some more special builtins:
 * The WORDS are expanded, generating a list of words.  
 * The set of expanded words is printed on the standard error, each preceded by a number.  
 
-* If `in WORDS' is not present, `in "$@"' is assumed. 
+* If `in WORDS' is not present, `in "$@"' is assumed.
 
 * The PS3 prompt is then displayed and a line read
-from the standard input. 
+from the standard input.
 
 * If the line consists of the number corresponding to one of the displayed words, then NAME is set
-to that word. 
+to that word.
 
 * If the line is empty, WORDS and the prompt are
 redisplayed.  
@@ -468,7 +468,7 @@ do
     Nectarine)
       echo Well $fruit is not too bad
       ;;
-    End) 
+    End)
       echo Going to exit here
       break
       ;;

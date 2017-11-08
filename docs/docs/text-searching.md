@@ -11,7 +11,7 @@
 * [Important Grep Options](#important-grep-options)
 * [Good Practices for Regular Expressions](#good-practices-for-regular-expressions)
 * [Bracket Expressions](#bracket-expressions)
-* [Grep Examples](#grep-examples)
+* [Basic Grep Examples](#basic-grep-examples)
 * [Interval Expressions](#interval-expressions)
 * [Parenthesized Subexpressions](#parenthesized-subexpressions)
 * [Basic Regular Expression Operator Precedence](#basic-regular-expression-operator-precedence)
@@ -516,7 +516,7 @@ echo 567 aeod 888 houhou  | sed 's/[aeioud][aeioud]*/D/g'
 567 D 888 hDhD
 ```
 
-Notice this time `ou` was replaced with `D` twice 
+Notice this time `ou` was replaced with `D` twice
 
 *Always quote your regular expressions on the command line or you will get unexpected behavior*
 
@@ -559,7 +559,7 @@ Similiarites to Basic Regular Expressions:
 
 ###### Alternation
 
-* `Alternation` means this or that 
+* `Alternation` means this or that
   * `(mayo|ketchup)` will match either mayo or ketchup but not both
   * `Alternation` is often used with parenthesis
 * `Alternation` has the lowest precedence of all the operators

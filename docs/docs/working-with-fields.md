@@ -12,7 +12,7 @@
 * [Awk Description](#awk-description)
 * [Awk options](#awk-options)
 * [Distributions of awk](#distributions-of-awk)
-* [Patterns and Actions in Awk](#patterns-and-actions)
+* [Patterns and Actions in Awk](#patterns-and-actions-in-awk)
 * [Awk Program Flow](#awk-program-flow)
 * [Awk fields](#awk-fields)
 * [Printing lines in Awk](#printing-lines-in-awk)
@@ -111,7 +111,7 @@ The following options are available for `join`:
 
 * `-o` list
   * The -o option specifies the fields that will be output from each file for each line with matching join fields.  
-  * Each element of list has the either the form `file_number.field`, where file_number is a file number and field is a field number, or the form `0' (zero), representing the join field. 
+  * Each element of list has the either the form `file_number.field`, where file_number is a file number and field is a field number, or the form `0' (zero), representing the join field.
   * The elements of list must be either comma (`,') or whitespace separated.
 
 * `-t` char
@@ -206,7 +206,7 @@ to be the regular expression fs
 #### Awk options
 
 ```bash
-$ awk --help 
+$ awk --help
 ```
 
 *Usage: awk [POSIX or GNU style options] -f progfile [--] file ...*
@@ -219,30 +219,30 @@ POSIX options:
 	* `-F` fs (field separator)
 	* `-v` var=val
 
-Short options:	
+Short options:
 
-  * `-b` 
-  * `-c` 
-  * `-C` 
+  * `-b`
+  * `-c`
+  * `-C`
   * `-d` [file]
   * `-D` [file]
   * `-e`  'program-text'
   * `-E`  file
-  * `-g` 
-  * `-h` 
+  * `-g`
+  * `-h`
   * `-i`  includefile
   * `-l`  library
   * `-L` [fatal|invalid]
-  * `-M` 
-  * `-N` 
-  * `-n` 
+  * `-M`
+  * `-N`
+  * `-n`
   * `-o` [file]
-  * `-O` 
+  * `-O`
   * `-p` [file]
-  * `-P` 
-  * `-r` 
-  * `-S` 
-  * `-t` 
+  * `-P`
+  * `-r`
+  * `-S`
+  * `-t`
   * `-V`
 
 GNU long options: (standard):
@@ -467,7 +467,7 @@ This script counts with `$NF` which is a special variable in `awk` the number of
 
 ```bash
 awk -F : '$5 ~ /PostgreSQL Server/' /etc/passwd
-``` 
+```
 
 This awk program looks in the 5th field for each record for the pattern `/PostgreSQL Server/` using the `~` operator and then prints out the entire record that matched
 

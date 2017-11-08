@@ -2,12 +2,12 @@
 
 ## Sections:
 
-* [Counting lines, words, and characters](#counting-lines-\,-words-\,-and-characters)
+* [Counting lines, words, and characters](#counting-lines\,-words\,-and-characters)
 * [Transforming Text](#transforming-text)
 * [Tabs vs Spaces](#tabs-vs-spaces)
 * [Text extraction](#text-extraction)
 * [Comparing Sorted Files](#comparing-sorted-files)
-* [Script using tr, sort, and comm](#script-using-tr-\,-sort-\,-and-comm)
+* [Script using tr, sort, and comm](#script-using-tr\,-sort\,-and-comm)
 * [Best Practices](#best-practices)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 

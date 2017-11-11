@@ -180,7 +180,7 @@ Shell Scripts can be simple executable text files that contain shell commands.
 Sections to Finish:
 
 - [x] Evaluation Order
-- [ ] Signal Handling
+- [x] Signal Handling
 - [ ] Working with Files
 - [ ] Remote File Sharing and and File Access
 - [ ] Building Command Line Applications

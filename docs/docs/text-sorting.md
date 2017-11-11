@@ -11,7 +11,7 @@
 * [Sort best practices](#sort-best-practices)
 * [Uniq description](#uniq-description)
 * [Uniq options](#uniq-options)
-* [Uniq examples](#uniq-example)
+* [Uniq examples](#uniq-examples)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Sort description

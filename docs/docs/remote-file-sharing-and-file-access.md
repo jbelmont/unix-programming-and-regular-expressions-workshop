@@ -19,4 +19,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← Working with Files](./working-with-files.md) | [Building Command line applications](./building-command-line-applications.md) →
+← [Working with Files](./working-with-files.md) | [Building Command line applications](./building-command-line-applications.md) →

@@ -12,7 +12,7 @@
 * [Extended Pattern Matching](#extended-pattern-matching)
 * [Extended Pattern Notations](#extended-pattern-notations)
 * [Enable Pattern matching](#enable-pattern-matching)
-* [Extended Pattern Matching Example](#extended-pattern-matching-example)
+* [Extended Pattern Matching Examples](#extended-pattern-matching-examples)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Tilde Expansion
@@ -204,7 +204,7 @@ shopt: shopt [-pqsu] [-o] [optname ...]
     given or OPTNAME is disabled.
 ```
 
-To enable extended pattern matching you do `shopt -s extglob` 
+To enable extended pattern matching you do `shopt -s extglob`
 
 You can see what shell options are enabled by simply typing `shopt` into shell or if it is enabled by the command you just entered
 
@@ -212,7 +212,7 @@ Use command `setopt` in zsh to enable shell options
 
 Use command `unsetopt` to disable shell options
 
-So to enable pattern matching in zsh do `setopt extendedglob` 
+So to enable pattern matching in zsh do `setopt extendedglob`
 
 [Zsh options](https://linux.die.net/man/1/zshoptions)
 
@@ -225,7 +225,7 @@ $ cd data
 Go into data directory
 
 ```bash
-$ echo @(vincent|john|jenny) 
+$ echo @(vincent|john|jenny)
 ```
 
 This command prints out `jenny john vincent` in bash but doesn't work as intended in zsh

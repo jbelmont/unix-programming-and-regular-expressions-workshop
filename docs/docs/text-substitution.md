@@ -15,7 +15,7 @@
 
 #### What is Sed
 
-[Sed](https://en.wikipedia.org/wiki/Sed) (stream editor) is a Unix utility that parses and transforms text, using a simple, compact programming language. 
+[Sed](https://en.wikipedia.org/wiki/Sed) (stream editor) is a Unix utility that parses and transforms text, using a simple, compact programming language.
 
 Sed was developed by [Lee McMahon](https://en.wikipedia.org/wiki/Lee_E._McMahon) in 1974.
 
@@ -113,7 +113,7 @@ Replacement text can be:
 
 * `Plain Text` which means matched text is replaced by contents of plain text
 
-* `&` which means the text matching the pattern 
+* `&` which means the text matching the pattern
   * `echo you are the man | sed 's/you are the/& goat/g'`
     * Notice in this example the `&` was used as replacement text for the pattern text used
 
@@ -175,7 +175,7 @@ This example suppresses all output except matched text and prints it to stdout a
 
 There is a many more examples of sed usage this is just a sample.
 
-#### Best practices with Sed:
+#### Best practices for Sed:
 
 * The longest, left-most matching basic regular expressions is critical for proper sed usage
 

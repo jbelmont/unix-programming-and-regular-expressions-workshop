@@ -973,8 +973,9 @@ Notice here that we have a T at the end of the triad which is the sticky bit
 
 A trick to remembering how to add octal values
 
-_  _  _
-4  2  1
+\_  \_  \_
+
+4    2   1
 
 The first `_` has 4 which stands for read permission
 

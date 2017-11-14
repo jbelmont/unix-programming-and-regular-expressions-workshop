@@ -22,9 +22,16 @@
 * [cmp Command Description](#cmp-command-description)
 * [Temporary Files Tips](#temporary-files-tips)
 * [mktemp Command Description](#mktemp-command-description)
+* [File Permissions](#file-permissions)
 * [chmod Command Description](#chmod-command-description)
 * [chmod Command Options](#chmod-command-options)
 * [chmod Command Examples](#chmod-command-examples)
+* [umask Command Options](#umask-command-options)
+* [umask Command Examples](#umask-command-examples)
+* [umask Command Examples](#umask-command-examples)
+* [chown Command Options](#chown-command-options)
+* [chown Command Examples](#chown-command-examples)
+* [chown Command Examples](#chown-command-examples)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### ls Command Description
@@ -886,6 +893,104 @@ Here we try to run `mktemp` on the `/dev` directory but it is not a writable dir
 
 **mktemp: failed to create file via template ‘/dev/anotherprogram.XXXX’: Permission denied**
 
+#### File Permissions
+
+```bash
+ls -l
+total 24
+-rwxrwxrwx 1 marcelbelmont   0 Nov 14 17:15 bad-practice.txt
+-rw-r--r-- 1 marcelbelmont  15 Nov 12 20:08 line1
+-rw-r--r-- 1 marcelbelmont  15 Nov 12 20:08 line2
+-rw-r--r-- 1 marcelbelmont  31 Nov 12 20:11 line3
+-rw-r--r-- 1 marcelbelmont   0 Oct  5 09:17 program.sh
+drwxrwxrwx 3 marcelbelmont 102 Nov 14 17:20 really-bad-directory
+-rw-r-Sr-- 1 marcelbelmont   0 Nov 14 17:07 stick-bit.txt
+-rwSr--r-- 1 marcelbelmont   0 Nov 14 17:09 stick-bit.txt2
+-rwsr-sr-x 1 marcelbelmont   0 Nov 14 17:09 stick-bit.txt3
+-rwxr-xr-x 1 marcelbelmont 178 Nov 12 21:24 temp-files-with-mktemp-version2.sh
+-rwxr-xr-x 1 marcelbelmont 217 Nov 12 21:22 temp-files-with-mktemp.sh
+-rwxr-xr-x 1 marcelbelmont 305 Nov 12 20:53 temp-files.sh
+```
+
+You can see file Permission Bits in the following `ls` command above in the root of the repository
+
+There are 3 specific types of file permissions:
+
+1. **read** 
+  1. The read permission grants the ability to read a file. When set for a directory, this permission grants the ability to read the names of files in the directory, but not to find out any further information about them such as contents, file type, size, ownership, permissions.
+
+2. **write**
+  1. The write permission grants the ability to modify a file. When set for a directory, this permission grants the ability to modify entries in the directory. This includes creating files, deleting files, and renaming files.
+
+3. **execute**
+  1. The execute permission grants the ability to execute a file. This permission must be set for executable programs, including shell scripts, in order to allow the operating system to run them. When set for a directory, the execute permission is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but not list files inside the directory, unless read is set also.
+
+Notice that there are 10 entries
+
+| Directory | User | Group | Other
+| --- | --- | --- | --- |
+| X | XXX | XXX | XXX |
+| This First Character Indicates the File Type (i.e File or Directory) | what the user/owner can do | what the group members can do | what other users can do |
+
+```bash
+cd scripts/working-with-files
+```
+
+```bash
+ls -l bad-practice.txt
+-rwxrwxrwx 1 marcelbelmont 0 Nov 14 17:15 bad-practice.txt
+```
+
+Notice here the order for XXX => r (read) w (write) x (execute)
+
+```bash
+drwxrwxrwx 3 marcelbelmont 102 Nov 14 17:20 really-bad-directory
+```
+
+Here is a directory that has read, write, execute for owner/user, group, and others
+
+| Mode | Name | Octal Value | Description |
+| --- | --- | --- | --- |
+| r | read | 4 | read a file or list a directory's contents |
+| w | write | 2 | write to a file or directory |
+| x | execute | 1 | execute a file or recurse a directory tree |
+| X | special execute | -- | It applies execute permissions to directories regardless of their current permissions and applies execute permissions to a file which already has at least one execute permission bit already set |
+| s | setuid/gid | -- | The symbolic modes use s to represent the setuid and setgid modes |
+| t | sticky | -- | When a directory's sticky bit is set, the filesystem treats the files in such directories in a special way so only the file's owner, the directory's owner, or root user can rename or delete the file |
+
+```bash
+chmod +t stick-bit.txt
+```
+
+Here we set the sticky bit for the user
+
+```bash
+ls -l stick-bit.txt
+-rw-r-Sr-T 1 marcelbelmont 0 Nov 14 17:07 stick-bit.txt
+```
+
+Notice here that we have a T at the end of the triad which is the sticky bit
+
+A trick to remembering how to add octal values
+
+_  _  _
+4  2  1
+
+The first `_` has 4 which stands for read permission
+
+The second `_` has 2 which stands for write permission
+
+The third `_` has 1 which stands for execute permission
+
+If you add up 4 + 2 you get read and write Permission = 6
+
+If you add up 4 + 1 you get read and execute Permission = 5
+
+If you add up 2 + 1 you get write and execute permission = 3
+
+If you add up 4 + 2 + 1 you get read, write, and execute permission = 7
+
+
 #### chmod Command Description
 
 chmod -- change file modes or Access Control Lists
@@ -917,6 +1022,228 @@ chmod [-fhv] [-R [-H | -L | -P]] [-N] file ...
 * `-v` Cause chmod to be verbose, showing filenames as the mode is modified.  If the -v flag is specified more than once, the old and new modes of the file will also be printed, in both octal and symbolic notation.
 
 #### chmod Command Examples
+
+```bash
+chmod a+r permissions.txt
+```
+
+Here we give read permission for users, groups, and others using the `a`
+
+```bash
+ls -l permissions.txt
+-rw-r--r-- 1 marcelbelmont 0 Nov 14 17:37 permissions.txt
+```
+
+We confirm with this with the following `ls -l permissions.txt` command
+
+```bash
+chmod ugo-r permissions.txt
+```
+
+Here we remove read permission for users, groups, and others using `-` instead of `+`
+
+```bash
+chmod 444 permissions.txt
+```
+
+Here we give read permission using octal value 4 to users, groups, and others
+
+```bash
+chmod a-r permissions.txt
+```
+
+Here we remove read permission for users, groups, and others
+
+```bash
+chmod +r permissions.txt
+```
+
+Here we give users read permission but no one else
+
+```bash
+chmod -r permissions.txt
+```
+
+Here we remove read permission for everyone
+
+```bash
+chmod u=rwx,g=rx,o= permissions.txt
+```
+
+Here we give user => read, write, execute, group => read, execute, other: none
+
+```bash
+chmod -R u+w,go-w really-bad-directory
+```
+
+Here we use `-R` flag and recursively go done directory structure and add the following permissions:
+
+User => write
+Group and Other => remove write permission
+
+```bash
+chmod 0722 permissions.txt
+```
+
+Here we explicitly set no special modes denoted by `0` and give user=rwx, go=w
+
+```bash
+chmod 1755 permissions.txt
+```
+
+Here we set the sticky bit denoted by `1` and give user=rwx,go=rx
+
+```bash
+chmod -R u+rwX,g-rwx,o-rx really-bad-directory
+```
+
+Here we Recursively adds read, write, and special execution permissions for owner, remove read, write, and execution permissions for group, and remove read and execution permissions for others
+
+Also notice we used a capital `X` here instead of lowercase `x`
+
+#### umask Command Description
+
+Display or set file mode mask.
+
+Sets the user file-creation mask to MODE.  
+
+If MODE is omitted, prints the current value of the mask.
+
+If MODE begins with a digit, it is interpreted as an octal number, otherwise it is a symbolic mode string like that accepted by chmod
+
+umask entails only new files. 
+
+umask sets the default permissions that a file/directory will have on creation time.
+
+umask has no effect on existing files/directories
+
+#### umask Command Options
+
+`umask` command options:
+
+* `-p`	if MODE is omitted, output in a form that may be reused as input
+* `-S`	makes the output symbolic; otherwise an octal number is output
+
+#### umask Command Examples
+
+```bash
+umask
+022
+```
+
+Here it prints out the default file permissions that will get added in creation time
+
+```bash
+umask -S
+u=rwx,g=rx,o=rx
+```
+
+Notice that in octal values that is 755 meaning users => read (r), write (w), execute (x), groups => read (r), execute (x), others => read (r), execute (x)
+
+
+```bash
+umask 000
+```
+
+Here we allow read, write, and execute permission for all (potential security risk)
+
+```bash
+umask 777
+```
+
+Here we disallow read, write, and execute permission for all
+
+```bash
+umask u=rw,go=
+```
+
+Here we allow read and write permission to be enabled for the user, while prohibiting execute permission from being enabled for the owner; prohibit enabling any permissions for the group and others
+
+#### chown Command Description
+
+chown - change file owner and group
+
+This  manual  page  documents the GNU version of chown.  chown changes the user and/or group ownership of each given file.  
+
+If only an owner (a user name or numeric user ID) is given, that user is made the owner of each given file, and the files' group is not  changed.
+
+If  the  owner  is followed by a colon and a group name (or numeric group ID), with no spaces between them, the group ownership of the files is changed as well.  
+
+If a colon but no group name follows the user name, that user is made the owner of the files and the group of the files is changed to that user's login group.  
+
+If the colon and group are given, but the owner is omitted, only the group of the files is changed; in this case, chown performs the same function as chgrp.  
+
+If only a colon is given, or if the entire operand is empty, neither the owner nor the group is changed.
+
+#### chown Command Options
+
+`chown` command options:
+
+* `-c`, `--changes`
+  * like verbose but report only when a change is made
+
+* `-f`, `--silent`, `--quiet`
+  * suppress most error messages
+
+* `-v`, `--verbose`
+  * output a diagnostic for every file processed
+
+* `--dereference`
+  * affect the referent of each symbolic link (this is the default), rather than the symbolic link itself
+
+* `-h`, `--no-dereference`
+  * affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)
+
+* `--from=CURRENT_OWNER:CURRENT_GROUP`
+  * change the owner and/or group of each file only if its current owner and/or group match those specified here.   
+  * Either may be omitted, in which case a match is not required for the omitted attribute
+
+* `--no-preserve-root`
+  * do not treat '/' specially (the default)
+
+* `--preserve-root`
+  * fail to operate recursively on '/'
+
+* `--reference=RFILE`
+  * use RFILE's owner and group rather than specifying OWNER:GROUP values
+
+* `-R`, `--recursive`
+  * operate on files and directories recursively
+
+The  following  options modify how a hierarchy is traversed when the -R option is also specified.  
+
+If more than one is specified, only  dthe final one takes effect.
+
+* `-H` if a command line argument is a symbolic link to a directory, traverse it
+
+* `-L` traverse every symbolic link to a directory encountered
+
+* `-P` do not traverse any symbolic links (default)
+
+* `--help` display this help and exit
+
+* `--version` output version information and exit
+
+#### chown Command Examples
+
+```bash
+sudo chown root chown-practice.txt
+```
+
+Here we set ownership to *chown-practice.txt* to root using sudo privileges
+
+```bash
+sudo chown marcelbelmont:wheel chown-practice.txt
+```
+
+Here we explicitly set chown-practice.txt to user marcelbelmont and to group wheel
+
+```bash
+ls -l chown-practice.txt
+-rw-r--r-- 1 marcelbelmont wheel 0 Nov 14 18:22 chown-practice.txt
+```
+
+I had to get into bash subshell to see because my oh my zsh shell wasn't showing it
 
 #### Bread Crumb Navigation
 _________________________

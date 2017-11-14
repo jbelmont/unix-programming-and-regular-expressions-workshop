@@ -181,7 +181,7 @@ Sections to Finish:
 
 - [x] Evaluation Order
 - [x] Signal Handling
-- [ ] Working with Files
+- [x] Working with Files
 - [ ] Remote File Sharing and and File Access
 - [ ] Building Command Line Applications
 

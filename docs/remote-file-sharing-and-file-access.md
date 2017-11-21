@@ -104,11 +104,80 @@ If it is invoked with arguments, it performs an open command with those argument
 
 #### telnet Command Examples
 
-content
+```bash
+telnet www.google.com 80
+```
+
+If you enter this command you should see 
+
+```bash
+Trying 173.194.206.99...
+Connected to www.google.com.
+Escape character is '^]'.
+```
+
+If you press **Control ]** then you will get into telnet prompt
+
+You can also get into prompt by simply typing in **telnet**
+
+```bash
+telnet
+```
+
+This will start an interactive telnet session with **telnet** prompt
+
+Type *?* to see the available options
+
+```bash
+telnet towel.blinkenlights.nl
+```
+
+This will start in an interactive telnet session to watch star wars
+
+In order to quit press **Control ]** and then type *quit* command to exit telnet session
+
+```bash
+telnet
+```
+
+this gets you into interactive telnet prompt
+
+```bash
+o telehack.com
+```
+
+This will get telnet session started for telehack.com
+
+type in **eliza** to get session with a computerized Psychotherapist
+
+Press **Control ]** to get back into telnet prompt
+
+Type **quit** command to exit telnet
+
+
+```bash
+telnet freechess.org 5000
+```
+
+This will take you into telnet session with freechess.org
+
+Type **guest** if you aren't a registered user
+
+Type **quit** to get out or type **?** to see all the options
 
 #### ssh Command Description
 
-content
+ssh -- OpenSSH SSH client (remote login program)
+
+ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.  
+
+It is intended to provide secure encrypted communications between two untrusted hosts over an insecure network.  
+
+X11 connections, arbitrary TCP ports and UNIX-domain sockets can also be forwarded over the secure channel.
+
+ssh connects and logs into the specified hostname (with optional user name).  
+
+The user must prove his/her identity to the remote machine using one of several methods.
 
 #### ssh Command Options
 

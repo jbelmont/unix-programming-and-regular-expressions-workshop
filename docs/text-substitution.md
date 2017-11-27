@@ -97,7 +97,7 @@ The primary command is `"s"` (substitute) that does text replacements
 
 The delimiter can be any punctuation character but the `/` is the most common delimiter
 
-* Use `\/` in patter or replacement for real `/` (forward slash) or another delimiter
+* Use `\/` in pattern or replacement for real `/` (forward slash) or another delimiter
 
 * `pattern` is a basic regular expression
 

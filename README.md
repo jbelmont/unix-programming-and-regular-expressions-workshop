@@ -26,6 +26,7 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 * [Signal Handling](docs/signal-handling.md)
 * [Working with Files](docs/working-with-files.md)
 * [Remote File Sharing and File Access](docs/remote-file-sharing-and-file-access.md)
+* [Build Automation](docs/build-automation.md)
 * [Building Command line applications](docs/building-command-line-applications.md)
 * [Tasks](#tasks)
 
@@ -183,9 +184,9 @@ Sections to Finish:
 - [x] Signal Handling
 - [x] Working with Files
 - [x] Remote File Sharing and and File Access
+- [ ] Build Automation
 - [ ] Building Command Line Applications
 
 Sections to Add:
 
-- [ ] Using Makefile
 - [ ] Shell Login order

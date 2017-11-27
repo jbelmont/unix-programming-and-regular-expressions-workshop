@@ -63,7 +63,7 @@ A **makefile** consists of a set of rules
 
 A rule begins with a textual dependency line which defines a target followed by a colon (:) and optionally an enumeration of components (files or other targets) on which the target depends.
 
-```make
+```makefile
 some_binary:
 	echo "nothing"
 ```
@@ -115,7 +115,7 @@ The first command may appear on the same line after the prerequisites, separated
 
 Here we defined a target with prereqs and command all in one line
 
-```make
+```makefile
 some_binary: ; @echo "nothing"
 ```
 
@@ -139,7 +139,7 @@ Make decides where to start through [Topological Sorting](https://en.wikipedia.o
 
 A rule may have no command lines defined. 
 
-```make
+```makefile
 target ... [target] : prerequisites ... [prerequisites]
 ```
 
@@ -169,7 +169,7 @@ A **recipe** may have more than one command, either on the same line or each on 
 This is an obscurity that catches the unwary. 
 If you prefer to prefix your recipes with a character other than tab, you can set the .RECIPEPREFIX variable to an alternate character.
 
-```make
+```makefile
 a_failure:
 echo "Will not work"
 ```
@@ -217,7 +217,7 @@ An equivalent form uses curly braces rather than parenthesis, i.e. `${}`
 
 This is more common in BSD Unix flavors like Mac OS X.
 
-```make
+```makefile
 MY_NAME = "Jean-Marcel"
 
 print_my_name:
@@ -232,7 +232,7 @@ cd scripts/build-automation/example5; make
 
 You can see the output of the above makefile by running the snippet above
 
-```make
+```makefile
 MY_NAME = "Jean-Marcel"
 
 print_my_name:
@@ -246,7 +246,7 @@ Macros can be composed of shell commands by using the command substitution opera
 
 Here is another example of shell commands:
 
-```make
+```makefile
 SOME_DATE = `date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"`
 
 print_date_in_past:
@@ -259,7 +259,7 @@ MACROS can be overriden in the commandline by doing the following:
 
 `make MACRO="value" [MACRO="value" ...] TARGET [TARGET ...]`
 
-```make
+```makefile
 MY_NAME = "Jean-Marcel Belmont"
 
 print my_name:
@@ -289,7 +289,7 @@ You can find a complete list of MACROS [HERE](https://www.gnu.org/software/make/
 
 You can also use environment variables as MACROS
 
-```make
+```makefile
 print_my_environment_variable:
 	@echo $$MY_VAR
 ```

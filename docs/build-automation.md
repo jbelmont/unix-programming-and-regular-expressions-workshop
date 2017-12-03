@@ -9,6 +9,7 @@
 * [Makefile Rules](#makefile-rules)
 * [Makefile Macros](#makefile-macros)
 * [Default command](#default-command)
+* [Makefile Tasks](#makefile-tasks)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Description of Build Automation
@@ -349,6 +350,36 @@ This will `cd` into test directory and print out contents
 | $+ | This is like ‘$^’, but prerequisites listed more than once are duplicated in the order they were listed in the makefile. This is primarily useful for use in linking commands where it is meaningful to repeat library file names in a particular order. |
 | $\| |  The names of all the order-only prerequisites, with spaces between them. |
 | $* | The stem with which an implicit rule matches (see How Patterns Match). If the target is dir/a.foo.b and the target pattern is a.%.b then the stem is dir/foo. The stem is useful for constructing names of related files. In a static pattern rule, the stem is part of the file name that matched the ‘%’ in the target pattern. |
+
+#### Makefile Tasks
+
+```makefile
+# Makefile with specific designed tasks
+
+all: program1 program2 program3
+
+program1: program1.js
+					node program1.js
+
+program2: program2.js
+					node program2.js
+
+program3: program3.js
+					node program3.js
+```
+
+Notice here that we have specified 3 makefile tasks
+
+The `all` task runs program1, program2, and program3 tasks respectively
+
+The `all` task is the default task because it comes first in the **Makefile**
+
+In the program1 task here is the breakdown:
+
+* `program1.js` is given as a dependency
+* The command `node program1.js` is run
+
+For each of the tasks given to the default task of `all` this occurs
 
 #### Bread Crumb Navigation
 _________________________

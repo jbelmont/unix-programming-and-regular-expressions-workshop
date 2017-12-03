@@ -11,6 +11,8 @@
 * [Default command](#default-command)
 * [Makefile Tasks](#makefile-tasks)
 * [Including Other Makefiles](#including-other-makefiles)
+* [Running make with different named file](#running-make-with-different-named-file)
+* [Automatic variables and Wildcards](#automatic-variables-and-wildcards)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Description of Build Automation
@@ -360,21 +362,6 @@ make list
 
 This will `cd` into test directory and print out contents
 
-###### Automatic variables
-
-[Automatic Variables](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
-
-| Automatic Variable | Computed Value |
-| --- | --- |
-| $@ | The file name of the target of the rule. If the target is an archive member, then ‘$@’ is the name of the archive file. In a pattern rule that has multiple targets (see Introduction to Pattern Rules), '$@' is the name of whichever target caused the rule’s recipe to be run. |
-| $% | The target member name, when the target is an archive member. See Archives. For example, if the target is foo.a(bar.o) then '$%' is bar.o and '$@' is foo.a. '$%' is empty when the target is not an archive member. |
-| $< | The name of the first prerequisite. If the target got its recipe from an implicit rule, this will be the first prerequisite added by the implicit rule (see Implicit Rules). |
-| $? | he names of all the prerequisites that are newer than the target, with spaces between them. For prerequisites which are archive members, only the named member is used |
-| $^ | The names of all the prerequisites, with spaces between them. For prerequisites which are archive members, only the named member is used (see Archives). A target has only one prerequisite on each other file it depends on, no matter how many times each file is listed as a prerequisite. So if you list a prerequisite more than once for a target, the value of $^ contains just one copy of the name. This list does not contain any of the order-only prerequisites; for those see the ‘$|’ variable, below. |
-| $+ | This is like ‘$^’, but prerequisites listed more than once are duplicated in the order they were listed in the makefile. This is primarily useful for use in linking commands where it is meaningful to repeat library file names in a particular order. |
-| $\| |  The names of all the order-only prerequisites, with spaces between them. |
-| $* | The stem with which an implicit rule matches (see How Patterns Match). If the target is dir/a.foo.b and the target pattern is a.%.b then the stem is dir/foo. The stem is useful for constructing names of related files. In a static pattern rule, the stem is part of the file name that matched the ‘%’ in the target pattern. |
-
 #### Makefile Tasks
 
 ```makefile
@@ -439,6 +426,105 @@ include someprogram.mk
 Notice the `include` directive in this makefile.
 
 We also added program4 target to tasks in `all` target
+
+#### Running make with different named file
+
+The makefile can be given a different name than the 3 files:
+
+1. GNUmakefile
+2. makefile
+3. Makefile
+
+By using the commandline options: `-f`, `--file=file`, or `--makefile=FILE`
+
+Contents of *Node_Build_Script*
+
+```makefile
+# Another named makefile
+program2: program2.js
+					node program2.js
+```
+
+To run this file you can do the following:
+
+1. `make -f Node_Build_Script`
+2. `make --file=Node_Build_Script`
+3. `make --makefile=Node_Build_Script`
+
+#### Automatic variables and Wildcards
+
+[Automatic Variables](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+
+| Automatic Variable | Computed Value |
+| --- | --- |
+| $@ | The file name of the target of the rule. If the target is an archive member, then ‘$@’ is the name of the archive file. In a pattern rule that has multiple targets (see Introduction to Pattern Rules), '$@' is the name of whichever target caused the rule’s recipe to be run. |
+| $% | The target member name, when the target is an archive member. See Archives. For example, if the target is foo.a(bar.o) then '$%' is bar.o and '$@' is foo.a. '$%' is empty when the target is not an archive member. |
+| $< | The name of the first prerequisite. If the target got its recipe from an implicit rule, this will be the first prerequisite added by the implicit rule (see Implicit Rules). |
+| $? | he names of all the prerequisites that are newer than the target, with spaces between them. For prerequisites which are archive members, only the named member is used |
+| $^ | The names of all the prerequisites, with spaces between them. For prerequisites which are archive members, only the named member is used (see Archives). A target has only one prerequisite on each other file it depends on, no matter how many times each file is listed as a prerequisite. So if you list a prerequisite more than once for a target, the value of $^ contains just one copy of the name. This list does not contain any of the order-only prerequisites; for those see the ‘$|’ variable, below. |
+| $+ | This is like ‘$^’, but prerequisites listed more than once are duplicated in the order they were listed in the makefile. This is primarily useful for use in linking commands where it is meaningful to repeat library file names in a particular order. |
+| $\| |  The names of all the order-only prerequisites, with spaces between them. |
+| $* | The stem with which an implicit rule matches (see How Patterns Match). If the target is dir/a.foo.b and the target pattern is a.%.b then the stem is dir/foo. The stem is useful for constructing names of related files. In a static pattern rule, the stem is part of the file name that matched the ‘%’ in the target pattern. |
+
+Some people refer to these automatic variables as wildcards in makefile
+
+Let us look at a makefile for a golang project
+
+```makefile
+# Variables
+BUILD_DIR := build
+BUILD_MANIFEST := wildcard
+BUILD_OUT := -o ${BUILD_DIR}/wildcard
+
+# Targets
+all: package files homedirectory
+
+package: 	compile
+					tar -czf ${BUILD_DIR}/wildcard.tar.gz -C ${BUILD_DIR} ${BUILD_MANIFEST}
+
+compile: 	wildcard.go
+					mkdir -p ${BUILD_DIR}
+					rm -rf ${BUILD_DIR}/*
+					go build ${BUILD_OUT}/wildcard
+
+files: 	*.go
+				echo $?
+
+homedirectory: ~
+				echo $?
+
+test:	
+					go test ./...
+
+clean:
+					rm -rf ${BUILD_DIR}
+```
+
+Notice here that we have several targets and variables for this makefile.
+
+We also used a couple of targets with wildcard operators `*`, and `~`
+
+Notice that `*.go` printed out all the go source files in current directory
+
+Also notice that the `~` printed out current directory
+
+```bash
+cd ./scripts/build-automation/wildcards; make
+```
+
+This will run the default target of all and its tasks
+
+```bash
+cd ./scripts/build-automation/wildcards; make test
+```
+
+This will run the go tests using the `test` target
+
+```bash
+cd ./scripts/build-automation/wildcards; make clean
+```
+
+The `clean` target will run remove the build directory
 
 #### Bread Crumb Navigation
 _________________________

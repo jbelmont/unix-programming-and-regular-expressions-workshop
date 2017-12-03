@@ -10,6 +10,7 @@
 * [Makefile Macros](#makefile-macros)
 * [Default command](#default-command)
 * [Makefile Tasks](#makefile-tasks)
+* [Including Other Makefiles](#including-other-makefiles)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Description of Build Automation
@@ -52,6 +53,29 @@ The make utility automatically determines which pieces of a large program need t
 Make will not help you build on multiple platforms however and so tools like [Autoconf](https://www.gnu.org/software/autoconf/autoconf.html) and [cmake](https://cmake.org/cmake/help/v3.10/manual/cmake.1.html) can further help you with this problem
 
 This is because compilers can differ on different platforms like for example [gnu gcc](https://gcc.gnu.org/onlinedocs/gcc-7.2.0/gcc/) can have different behavior to [apple clang compiler](https://clang.llvm.org/get_started.html)
+
+Parts of a Makefile:
+
+* Comment which start with `#`
+* A variable assignment
+	* **Lazy Set**
+		* `myvar = 'A Name'`
+		* Normal setting of a variable - values within it are recursively expanded when the variable is used, not when it's declared
+	* **Immediate Set**
+		* `myvar := 'Some Name'`
+		* Setting of a variable with simple expansion of the values inside - values within it are expanded at declaration time.
+	* **Set If Absent**
+		* `MyFoo ?= SomeBar`
+		* Setting of a variable only if it doesn't have a value
+	* **Append**
+		* `anotherVar += 'another one bites the dust'`
+		* Appending the supplied value to the existing value (or setting to that value if the variable didn't exist)
+* A Rule
+	* `target: dependencies\n\tsystem command(s)`
+	* An explicit rule says when and how to remake one or more files, called the rule's targets.
+	* It lists the other files that the targets depend on, called the prerequisites of the target, and may also give a recipe to use to create or update the targets.
+	* An implicit rule says when and how to remake a class of files based on their names. 
+	* It describes how a target may depend on a file with a name similar to the target and gives a recipe to create or update such a target.
 
 #### Makefile Overview
 
@@ -380,6 +404,41 @@ In the program1 task here is the breakdown:
 * The command `node program1.js` is run
 
 For each of the tasks given to the default task of `all` this occurs
+
+```bash
+cd ./scripts/build-automation/makefile-tasks; make
+```
+
+Notice that output of the 3 different program files when you run the command above.
+
+#### Including Other Makefiles
+
+The include directive tells make to suspend reading the current makefile and read one or more other makefiles before continuing. 
+
+The directive is a line in the makefile that looks like this:
+
+`include somefile.mk`
+
+```makefile
+# Makefile with include directive
+
+all: program1 program2 program3 program4
+
+program1: program1.js
+					node program1.js
+
+program2: program2.js
+					node program2.js
+
+program3: program3.js
+					node program3.js
+
+include someprogram.mk
+```
+
+Notice the `include` directive in this makefile.
+
+We also added program4 target to tasks in `all` target
 
 #### Bread Crumb Navigation
 _________________________

@@ -20,3 +20,6 @@ _book
 # Make files
 *.err
 *.out
+
+# Vim swap files
+.*.swp

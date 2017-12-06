@@ -179,4 +179,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Build Automation](./build-automation.md) | [README](../README.md) →
+← [Build Automation](./build-automation.md) | [Shell Login Order](./shell-login-order.md) →

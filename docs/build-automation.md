@@ -759,6 +759,8 @@ print:
 
 If we run make like this `make -n` it will merely print the command but won't execute them
 
+**Read the Fine Manual for more options with the make utility**
+
 #### Bread Crumb Navigation
 _________________________
 

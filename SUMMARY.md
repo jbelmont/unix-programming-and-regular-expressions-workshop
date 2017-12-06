@@ -22,3 +22,5 @@
 * [Remote File Sharing and File Access](docs/remote-file-sharing-and-file-access.md)
 * [Build Automation](docs/build-automation.md)
 * [Building Command line applications](docs/building-command-line-applications.md)
+* [Shell Login Order](docs/shell-login-order.md)
+* [Network Utilities](docs/network-utilities.md)

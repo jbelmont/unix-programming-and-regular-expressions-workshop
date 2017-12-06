@@ -70,10 +70,14 @@ Arguments are passed as $1, $2, ..., $n.  Likewise, $#, $\*, and $@ work similar
 script's command line arguments.
 
 The main script arguments are shadowed by the functions arguments while the function is
-running.  Thi
+running.  In other words, if you need to access the script's arguments (vs the
+function's), you will have to assign them to another variable, or pass them in as
+arguments to the function.
 
-The return statement is used to return a status to the shell script and don't use exit to
-return a status in a shell function because function do not run in a separate process
+The return statement is used to return a status to the shell script.  You shouldn't use
+exit to return a status in a shell function.  Since functions do not run in a separate
+process, this will actually exit the shell script itself (or your login shell, if you're
+executing the function on the command line).
 
 ### Shell Function Examples
 
@@ -84,16 +88,20 @@ printHello() {
 ```
 
 This will create local function called printHello that takes an argument and echoes `Hello
-$arg`
+$arg`.
 
 ```bash
 printHello Marcel
 ```
 
 ```bash
-#! /bin/bash
+#!/bin/bash
 
-ARGS=$@
+# Snag a copy of the script's arguments.
+# Enclosing in parenthesis so that $ARGS is a list, same as $@.
+# Enclosing in quotes so that any multi-word arguments from $@ are
+# preserved in $ARGS.
+ARGS=("$@")
 
 help () {
   printf "Usage:\n\tProvide an argument\n"
@@ -105,7 +113,11 @@ if [[ $# -lt 1 ]] ; then
 fi
 
 printArgs () {
-  for arg in "$ARGS"
+  # Use the copy we squirrelled away.
+  # Note the quotes.  Again, that is to ensure that if a multi-word
+  # argument is passed to the script, they'll stay together as one
+  # argument here.
+  for arg in "${ARGS[@]}"
   do
     echo $arg
   done
@@ -114,10 +126,10 @@ printArgs () {
 printArgs
 ```
 
-This simple script prints a help message if the number of arguments is less than 1
+This simple script prints a help message if the number of arguments is less than 1.
 
-Notice I had to define `ARGS` variable at the top because the command line arguments of
-the script will be shadowed so I captured value at the top of the script
+Notice I had to define the `ARGS` variable at the top because the command line arguments
+of the script will be shadowed inside of printArgs.
 
 ### Bread Crumb Navigation
 _________________________

@@ -74,8 +74,8 @@ function makeHomeDir() {
 }
 ```
 
-In this contrived example, I've overridden the $USER variable (usually the username of the
-user running the script/shell) to be the target user whose home directory is created.
+In this contrived example, I've overridden the `$USER` variable (usually the username of
+the user running the script/shell) to be the target user whose home directory is created.
 Outside of that function, `$USER` retains its special meaning.  Inside the function, it
 gets assigned the first value that is passed in.
 
@@ -83,10 +83,10 @@ gets assigned the first value that is passed in.
 
 You can invoke shell functions just like shell commands.
 
-Arguments are passed as $1, $2, ..., $n.  Likewise, $#, $\*, and $@ work similarly to a
-script's command line arguments.
+Arguments are passed as `$1`, `$2`, ..., `$n`.  Likewise, `$#`, `$*`, and `$@` work
+similarly to a script's command line arguments.
 
-The main script arguments are shadowed by the functions arguments while the function is
+The main script arguments are shadowed by the function's arguments while the function is
 running.  In other words, if you need to access the script's arguments (vs the
 function's), you will have to assign them to another variable, or pass them in as
 arguments to the function.
@@ -149,7 +149,8 @@ This will create local function called printHello that takes an argument and ech
 $arg`.
 
 ```bash
-printHello Marcel
+bash$ printHello Marcel
+Hello Marcel
 ```
 
 ```bash

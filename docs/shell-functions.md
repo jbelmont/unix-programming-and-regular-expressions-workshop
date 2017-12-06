@@ -7,33 +7,75 @@
 * [Shell Function Examples](#shell-function-examples)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
-#### Shell Function Description
+### Shell Function Description
 
-A shell function is like a function in other programming language where you can group related statements together
+A shell function is like a function in other programming languages, where you can group
+related statements together.
 
-You can avoid code duplication by using functions and increase modularity, and improve code clarity and code reuse
+You can avoid code duplication by using functions to increase modularity and improve code
+clarity and code reuse.
 
-You have to define functions before you use them
+### Shell Function Syntax
 
-In a script you have to define them before you use them or they must be sourced outside of the script before you use them
-
-#### Shell Function Syntax
+#### Declaration
 
 ```bash
+# Can be declared using just parenthesis
 nameOfMyFunction () {
   body statements to execute
 }
 ```
 
-You can invoke shell functions just like shell commands
+```bash
+# ...or using the "function" keyword (or both)
+# This is equivalent to the previous declaration.
+function nameOfMyFunction {
+  body statements to execute
+}
+```
 
-Arguments are passed as $1, $2, ..., $n, $#, $*, and $@
+You have to define functions before you can use them.
 
-The main script arguments are shadowed by the functions arguments while the function is running
+In a script you have to define them before you use them or they must be sourced from
+outside of the script before you use them.
 
-The return statement is used to return a status to the shell script and don't use exit to return a status in a shell function because function do not run in a separate process
+```bash
+# Okay
+. file-containing-myPrint.sh
 
-#### Shell Function Examples
+myPrint "blah blah blah"
+```
+
+```bash
+# Okay
+function myPrint() {
+  echo "$@"
+}
+
+myPrint "blah blah blah"
+```
+
+```bash
+# NOT okay
+myPrint "blah blah blah"
+
+function myPrint() {
+  echo "$@"
+}
+```
+
+You can invoke shell functions just like shell commands.
+
+Arguments are passed as $1, $2, ..., $n.  Likewise, $#, $\*, and $@ work similarly to a
+script's command line arguments.
+
+The main script arguments are shadowed by the functions arguments while the function is
+running.  Thi
+
+The return statement is used to return a status to the shell script and don't use exit to
+return a status in a shell function because function do not run in a separate process
+
+### Shell Function Examples
 
 ```bash
 printHello() {
@@ -41,7 +83,8 @@ printHello() {
 }
 ```
 
-This will create local function called printHello that takes an argument and echoes `Hello $arg`
+This will create local function called printHello that takes an argument and echoes `Hello
+$arg`
 
 ```bash
 printHello Marcel
@@ -73,9 +116,10 @@ printArgs
 
 This simple script prints a help message if the number of arguments is less than 1
 
-Notice I had to define `ARGS` variable at the top because the command line arguments of the script will be shadowed so I captured value at the top of the script
+Notice I had to define `ARGS` variable at the top because the command line arguments of
+the script will be shadowed so I captured value at the top of the script
 
-#### Bread Crumb Navigation
+### Bread Crumb Navigation
 _________________________
 
 Previous | Next

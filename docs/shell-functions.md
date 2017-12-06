@@ -64,6 +64,23 @@ function myPrint() {
 }
 ```
 
+You can declare local variables that only exist in your function:
+
+```bash
+function makeHomeDir() {
+  local USER=$1
+  mkdir -p /home/${USER}
+  chown ${USER} /home/${USER}
+}
+```
+
+In this contrived example, I've overridden the $USER variable (usually the username of the
+user running the script/shell) to be the target user whose home directory is created.
+Outside of that function, `$USER` retains its special meaning.  Inside the function, it
+gets assigned the first value that is passed in.
+
+#### Usage
+
 You can invoke shell functions just like shell commands.
 
 Arguments are passed as $1, $2, ..., $n.  Likewise, $#, $\*, and $@ work similarly to a
@@ -78,6 +95,47 @@ The return statement is used to return a status to the shell script.  You should
 exit to return a status in a shell function.  Since functions do not run in a separate
 process, this will actually exit the shell script itself (or your login shell, if you're
 executing the function on the command line).
+
+If you need to return a *value* (instead of, or in addition to a status), you can use
+echo, or printf, or whatever output-producing command you like.  Such as:
+
+```bash
+bash$ type today
+today is a function
+today ()
+{
+    local TODAY=$(date +"%Y%m%d");
+    echo "Today is $TODAY";
+    return 42
+}
+bash$ today
+Today is 20171205
+bash$ echo $?
+42
+bash$ thedate=$(today)
+bash$ echo $?
+42
+bash$ echo "I got $thedate"
+I got Today is 20171205
+```
+
+One thing to note when using functions on the command line.  Shell aliases are evaluated
+before functions (see the doc on [Evaluation Order](evaluation-order.md)).  This can cause
+confusion if you happen to have an alias and a function which are named the same thing:
+
+```bash
+bash$ alias sayhi='echo "Hello, world"'
+bash$ sayhi
+Hello, world
+bash$ function sayhi() { echo "Bonjour le monde"; }
+bash$ sayhi
+Hello, world
+bash$ type sayhi
+sayhi is aliased to `echo 'Hello, world''
+bash$ unalias sayhi
+bash$ sayhi
+Bonjour le monde
+```
 
 ### Shell Function Examples
 

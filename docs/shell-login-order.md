@@ -338,4 +338,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← Building Command line applications](./building-command-line-applications.md) | [Network Utilities](./network-utilities.md) →
+← [Building Command line applications](./building-command-line-applications.md) | [Network Utilities](./network-utilities.md) →

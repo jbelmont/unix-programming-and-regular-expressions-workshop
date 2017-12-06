@@ -13,6 +13,9 @@
 * [Including Other Makefiles](#including-other-makefiles)
 * [Running make with different named file](#running-make-with-different-named-file)
 * [Automatic variables and Wildcards](#automatic-variables-and-wildcards)
+* [Phony Targets](#phony-targets)
+* [Commands](#commands)
+* [Make Options](#make-options)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Description of Build Automation
@@ -525,6 +528,236 @@ cd ./scripts/build-automation/wildcards; make clean
 ```
 
 The `clean` target will run remove the build directory
+
+Here we will look at another makefile that examines some more automatic variables
+
+```makefile
+goFiles := $(wildcard *.go)
+
+showAutomaticVariables: automatic
+
+automatic: 	${goFiles}
+						echo $@
+						echo $<
+						echo $?
+						echo $^
+
+clean:
+	rm ${goFiles}			
+```
+
+Here we have a variable and several targets
+
+To get this started run the following:
+
+```bash
+cd ./scripts/build-automation/makefile-automatic-variables; touch one.go second.go; touch third.go; make
+```
+
+You will see the following output:
+
+```bash
+echo automatic
+automatic
+echo one.go
+one.go
+echo one.go second.go third.go
+one.go second.go third.go
+echo one.go second.go third.go
+one.go second.go third.go
+```
+
+Here is the breakdown:
+
+* `echo $@` => prints out default target of automatic
+* `echo $<` => prints out first filed created of `one.go`
+* `echo $?` => prints outs all the prerequisites newer than the target which in this case is all the files
+* `echo $^` => prints out all the prerequisites
+
+You can read about more [Automatic Variables Here](https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html)
+
+###### Wildcard functions and other make functions
+
+The make utility has a [WildCard Function](https://www.gnu.org/software/make/manual/html_node/Wildcard-Function.html)
+ as well as more [functions](https://www.gnu.org/software/make/manual/html_node/Functions.html)
+
+ ```makefile
+src := $(wildcard *.c)
+
+all: compile
+
+compile: 	${src}
+					gcc ${src} -o printStuff
+					./printStuff
+ ```
+
+ Here I am using the wildcard function and notice that is wrapped in `$()` and we call the wildcard function which finds all the c source files in the current directory.
+
+ Then the default target of all call compile target which compiles source file into a binary executable called printStuff
+
+ Lastly **printStuff** binary is invoked and some statements are printed to stdout
+
+ ```bash
+cd ./scripts/build-automation/makefile-wildcard-function; make
+ ```
+
+You can run the makefile by executing the command above in your terminal
+
+#### Phony Targets
+
+Suppose you have the following makefile:
+
+```makefile
+all: compile
+
+compile: 	one.o two.o three.o
+					gcc one.o two.o three.o
+
+one.o : 	one.c
+					gcc -c one.c
+
+two.o : 	two.c
+					gcc -c two.c
+
+three.o : three.c
+					gcc -c three.c
+
+clean:
+					rm *.o
+```
+
+Here we have a list of targets that have object files as dependencies and then has a clean target that removes all of the object files
+
+```bash
+cd ./scripts/build-automation/phony-target-issue; make; make clean
+```
+
+This works fine but suppose you do the following now:
+
+```bash
+touch clean
+```
+
+Now rerun `make clean` and look at the output:
+
+**make: `clean' is up to date.**
+
+Notice that no matter what it reports clean is up to date 
+
+This is because you created a target file of clean and the make utility believes there is nothing left to do.
+
+This is where the concept of the PHONY target comes into place
+
+Let us look at this makefile now:
+
+```makefile
+all: compile
+
+compile: 	one.o two.o three.o
+					gcc one.o two.o three.o
+
+one.o : 	one.c
+					gcc -c one.c
+
+two.o : 	two.c
+					gcc -c two.c
+
+three.o : three.c
+					gcc -c three.c
+
+.PHONY: clean
+
+clean:
+					rm *.o
+```
+
+Notice now that we can run `make clean` and it works, it is because of the .PHONY target we just created which helps fix the issue of an existing file called the same name as the target
+
+Let us now look at the previous makefile that had several targets specified:
+
+```makefile
+# Variables
+BUILD_DIR := build
+BUILD_MANIFEST := wildcard
+BUILD_OUT := -o ${BUILD_DIR}/wildcard
+
+# Targets
+all: package files homedirectory
+
+package: 	compile
+					tar -czf ${BUILD_DIR}/wildcard.tar.gz -C ${BUILD_DIR} ${BUILD_MANIFEST}
+
+compile: 	wildcard.go
+					mkdir -p ${BUILD_DIR}
+					rm -rf ${BUILD_DIR}/*
+					go build ${BUILD_OUT}/wildcard
+
+files: 	*.go
+				echo $?
+
+homedirectory: ~
+				echo $?
+
+test:	
+					go test ./...
+
+.PHONY: clean
+
+clean:
+					rm -rf ${BUILD_DIR}
+```
+
+Here we created a .PHONY target for the clean task because clean should not be associated with a file
+
+#### Commands
+
+Makefile commands help update targets
+
+Remember that commands begin with a tab and follow the shell syntax
+
+**Target : Prerequisite ; Command**
+
+or in this format
+
+```makefile
+target: Prerequisites
+TAB Command
+TAB Command
+....
+```
+
+The backslash character (`\`) is used to continue a command
+
+```makefile
+all: print
+
+print: 
+				@echo What is this \
+stuff about
+```
+
+This is a trivial example but illustrates what the `\` is used for
+
+```bash
+cd ./scripts/build-automation/makefile-backslash-command; make
+```
+
+Run the command above to see the output
+
+#### Make Options
+
+Let us look at the following makefile:
+
+```makefile
+all: print
+
+print: 
+		echo one
+		echo two
+		echo three
+```
+
+If we run make like this `make -n` it will merely print the command but won't execute them
 
 #### Bread Crumb Navigation
 _________________________

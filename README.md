@@ -184,8 +184,8 @@ Sections to Finish:
 - [x] Signal Handling
 - [x] Working with Files
 - [x] Remote File Sharing and and File Access
-- [ ] Build Automation
-- [ ] Building Command Line Applications
+- [x] Build Automation
+- [x] Building Command Line Applications
 
 Sections to Add:
 

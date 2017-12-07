@@ -98,7 +98,76 @@ List of `ping` options:
 
 ### ping command examples
 
-content
+```bash
+ping 8.8.8.8
+```
+
+Here we use the `ping` command to see if google.com is up
+
+```bash
+ping -i 1 127.0.0.1
+```
+
+Here we see if localhost is up and running and wait 1 second before sending the next packet
+
+```bash
+ping -c 3 www.google.com
+```
+
+Here we send 3 packets to www.google.com and then `ping` quits
+
+```bash
+sudo ping -f localhost
+```
+
+Here using sudo privileges we flood localhost with packets
+
+```bash
+--- localhost ping statistics ---
+1645 packets transmitted, 1000 packets received, 39.2% packet loss
+round-trip min/avg/max/stddev = 0.007/0.019/0.060/0.005 ms
+```
+
+Here is sample output session
+
+The `-f` option provides a rapid display of how many packets are being dropped
+
+```bash
+ping -a 8.8.8.8
+```
+
+The `-a` command option does an audible bell on each successful packet sent
+
+```bash
+ping -c 1 www.google.com
+```
+
+He we send 1 count to www.google.com
+
+Notice that we get the output:
+
+```bash
+PING www.google.com (216.58.218.228): 56 data bytes
+64 bytes from 216.58.218.228: icmp_seq=0 ttl=52 time=38.605 ms
+
+--- www.google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 38.605/38.605/38.605/0.000 ms
+```
+
+Here we can also see the IP_ADDRESS: 216.58.218.228 that maps to www.google.com host name
+
+```bash
+ping -c 3 -q 127.0.0.1
+```
+
+Here we send 3 packets and only show the summary information by using `-q` command option which quiets output
+
+```bash
+ping -s 50 localhost
+```
+
+This specifies a packet size of 50 to localhost
 
 #### ifconfig command description
 
@@ -142,7 +211,121 @@ down	This flag causes the driver for this interface to be shut down.
 
 #### ifconfig command examples
 
-content
+```bash
+ifconfig
+```
+
+Here we get the following output:
+
+```bash
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+	options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+	inet 127.0.0.1 netmask 0xff000000
+	inet6 ::1 prefixlen 128
+	inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1
+	nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether a4:5e:60:f3:b3:37
+	inet6 fe80::8fc:5c30:b69b:16f0%en0 prefixlen 64 secured scopeid 0x4
+	inet 192.168.0.7 netmask 0xffffff00 broadcast 192.168.0.255
+	inet6 2606:a000:50d0:c600:1cb9:f213:74eb:9108 prefixlen 64 autoconf secured
+	inet6 2606:a000:50d0:c600:70a1:966f:7d89:3653 prefixlen 64 autoconf temporary
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+en1: flags=963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX> mtu 1500
+	options=60<TSO4,TSO6>
+	ether 6a:00:00:81:e6:40
+	media: autoselect <full-duplex>
+	status: inactive
+en2: flags=963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX> mtu 1500
+	options=60<TSO4,TSO6>
+	ether 6a:00:00:81:e6:41
+	media: autoselect <full-duplex>
+	status: inactive
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+	ether 6a:00:00:81:e6:40
+	Configuration:
+		id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+		maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+		root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+		ipfilter disabled flags 0x2
+	member: en1 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 5 priority 0 path cost 0
+	member: en2 flags=3<LEARNING,DISCOVER>
+	        ifmaxaddr 0 port 6 priority 0 path cost 0
+	nd6 options=201<PERFORMNUD,DAD>
+	media: <unknown type>
+	status: inactive
+p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
+	ether 06:5e:60:f3:b3:37
+	media: autoselect
+	status: inactive
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1484
+	ether 2e:35:d7:b0:d9:b5
+	inet6 fe80::2c35:d7ff:feb0:d9b5%awdl0 prefixlen 64 scopeid 0x9
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::fe8b:356a:44f2:9f6e%utun0 prefixlen 64 scopeid 0xa
+	nd6 options=201<PERFORMNUD,DAD>
+```
+
+Notice here we get multiple entries for network entries
+
+```bash
+ifconfig -a
+```
+
+Here we list all the network interfaces no matter if they are up or not.
+
+```bash
+ifconfig en0
+```
+
+Here we list the configuration of a specific interface by providing its name
+
+```bash
+sudo ifconfig utun0 down
+```
+
+Here we disable an active network interface using the `down` keyword
+
+```bash
+ifconfig utun0
+```
+
+Here we look at the network interface and notice that it no longer shows the network interface as *UP* 
+
+```bash
+sudo ifconfig utun0 up
+```
+
+Here we enable an active network interface using the `up` keyword
+
+```bash
+ifconfig utun0
+```
+
+Notice we get the following output:
+
+```bash
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+	inet6 fe80::fe8b:356a:44f2:9f6e%utun0 prefixlen 64 scopeid 0xa
+	nd6 options=201<PERFORMNUD,DAD>
+```
+
+Notice that UP is displayed because the network interface is up and running again
+
+```bash
+sudo ifconfig utun0 162.72.169.1
+```
+
+Here we assign the static IP_ADDRESS: *162.72.169.1* to the utun0 network interface
 
 #### netstat command description
 
@@ -182,7 +365,99 @@ Some important `netstat` command options:
 
 #### netstat command examples
 
-content
+```bash
+netstat -sp tcp
+```
+
+Here we get statistics on tcp
+
+Here is some output of the command above:
+
+```bash
+tcp:
+	465304 packets sent
+		88311 data packets (71920719 bytes)
+		2276 data packets (1952856 bytes) retransmitted
+		0 resend initiated by MTU discovery
+		279607 ack-only packets (122 delayed)
+		0 URG only packet
+		0 window probe packet
+		75672 window update packets
+		19500 control packets
+		0 data packet sent after flow control
+		473999 checksummed in software
+			430025 segments (87051438 bytes) over IPv4
+			43974 segments (2741629 bytes) over IPv6
+``` 
+
+Now we will look at stats for udp
+
+```bash
+netstat -sp udp
+```
+
+Here is the output for the command above:
+
+```bash
+udp:
+	16185 datagrams received
+		0 with incomplete header
+		0 with bad data length field
+		0 with bad checksum
+		0 with no checksum
+		5627 checksummed in software
+			5584 datagrams (712357 bytes) over IPv4
+			43 datagrams (4424 bytes) over IPv6
+		162 dropped due to no socket
+		2 broadcast/multicast datagrams undelivered
+		0 time multicast source filter matched
+		0 dropped due to full socket buffers
+		0 not for hashed pcb
+		16021 delivered
+	25081 datagrams output
+		16302 checksummed in software
+			15573 datagrams (2842945 bytes) over IPv4
+			729 datagrams (219939 bytes) over IPv6
+```
+
+Notice that udp stats are printed to stdout
+
+```bash
+netstat -a
+```
+
+This command shows all sockets , both listening and non-listening on all protocols like tcp, udp, etc
+
+This command shows the following output:
+
+```bash
+Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  192.168.0.7.59978      ec2-54-186-179-1.https ESTABLISHED
+tcp4       0      0  192.168.0.7.59963      a184-86-71-214.d.https ESTABLISHED
+tcp4       0      0  192.168.0.7.59961      ec2-34-195-182-8.https ESTABLISHED
+..............................................................................
+```
+
+Here you will get a lot of output because there is usually a lot of open sockets
+
+```bash
+netstat -at
+```
+
+This command shows only tcp connections
+
+```bash
+netstat -ant
+```
+
+This command shows all TCP connections with no dns resolution (show ip numbers instead).
+
+```bash
+netstat -al
+```
+
+This command shows only listening sockets
 
 #### netcat command description
 

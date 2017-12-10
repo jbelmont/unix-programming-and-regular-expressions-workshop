@@ -501,7 +501,58 @@ Unlike telnet, nc scripts nicely, and separates error messages onto standard err
 
 #### netcat command examples
 
-content
+```bash
+nc -h
+```
+
+This command will help you see all the options for netcat utility
+
+Sometimes in Mac and in Linux you might have a precomiled binary for `nc` and you won't have all the features of netcat (`nc`)
+
+In Mac OS X you can use `brew install netcat` to install a more feature rich version of `nc`
+
+```bash
+/usr/bin/nc -l 3000
+```
+
+Here we setup netcat session listening on port 3000
+
+on a separate terminal session do the following
+
+```bash
+/usr/bin/nc localhost 3000
+```
+
+Now we have setup a simple client server session with netcat
+
+If you type a word into the client or server then you will see the following word show up in both terminal sessions
+
+Test this by typing `hello there`
+
+`nc` netcat can be used for file transfer as well, check out the next command examples
+
+In one terminal session do the following:
+
+```bash
+cd ./scripts/network-utilities; nc -l 3000 > serverFile
+```
+
+In another terminal session do this:
+
+```bash
+cat clientFile | nc localhost 3000
+```
+
+Notice Now that serverFile which was empty has content of clientFile
+
+```bash
+cat serverFile
+Hello Client
+```
+
+This confirms file transfer
+
+**Read the Fine Manual** for more netcat usages and options
 
 #### nmap command description
 
@@ -516,6 +567,8 @@ While Nmap is commonly used for security audits, many systems and network admini
 If you are on Mac OS X then you might have to install nmap
 
 If you have homebrew package manager run `brew install nmap`
+
+nmap is often used by both ethical hackers and black hat hackers alike because of its many scripts and powerful features for network discovery
 
 #### nmap command options
 
@@ -537,7 +590,134 @@ Important `nmap` command options:
 
 #### nmap command examples
 
-content
+```bash
+nmap 104.131.117.137
+```
+
+Here we do a simple IP scan of IP_ADDRESS: `104.131.117.137`
+
+```bash
+nmap 104.131.117.137 www.marcelbelmont.com
+```
+
+Here we scan the IP_ADDRESS: `104.131.117.137` and my blog `www.marcelbelmont.com`
+
+```bash
+nmap  192.168.1.1-25
+```
+
+Here we can an IP range of `192.168.1.1` to `192.168.1.25` addresses
+
+Notice that we get the following output:
+
+```xml
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-10 16:11 EST
+Nmap done: 25 IP addresses (0 hosts up) scanned in 12.07 seconds
+```
+
+There are no open ports available for this range of IP addresses
+
+```bash
+nmap 104.131.117.137 -sL
+```
+
+Here we don't do a scan but instead list targets
+
+```bash
+nmap -p 1-65535 -sV -sS -T4 104.131.117.137
+```
+
+This command requires root access to work properly
+
+This command will do a full TCP port scan using with service version detection `-sV`
+This command also uses `-sS` also does default network scan.
+The `-T4` option is a more aggressive scanning option than the default `-T3` option, so use if you have a good network connection
+The `-p 1-65535` will scan ports 1 to 65535
+
+Be mindful that nmap commands can take a while to complete so don't be surprised that some commands can take upwards of a minute to complete
+
+The example output for this `nmap` command execution:
+
+```bash
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-10 21:23 UTC
+Nmap scan report for 104.131.117.137
+Host is up (0.40s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http     nginx 1.4.6 (Ubuntu)
+443/tcp  open  ssl/http nginx 1.4.6 (Ubuntu)
+3000/tcp open  http     Node.js (Express middleware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.55 seconds
+```
+
+Now we will use the `-iL` option to scan a list of IP Addresses using a file
+
+```bash
+nmap -iL ipAddr.txt
+```
+
+This scan will look at my server and facebook.com
+
+It shows the following output:
+
+```bash
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-10 16:34 EST
+Nmap scan report for 104.131.117.137
+Host is up (0.053s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+3000/tcp open  ppp
+
+Nmap scan report for edge-star-mini-shv-01-iad3.facebook.com (31.13.69.228)
+Host is up (0.050s latency).
+Not shown: 996 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+443/tcp  open   https
+843/tcp  open   unknown
+5222/tcp closed xmpp-client
+
+Nmap done: 2 IP addresses (2 hosts up) scanned in 17.99 seconds
+```
+
+Now we will use the `--iflist` nmap command option
+
+```bash
+nmap --iflist
+```
+
+This command option is a more complete command option that lists all open ports similar to `ifconfig` command
+
+Now we will use nmap to do a more aggressive scan which requires root privileges
+
+```bash
+sudo su -
+```
+
+Now we have a root session in the shell
+
+```bash
+nmap -sS -sV -T5 104.131.117.137 --webxml -oX - | xsltproc --output file.html -
+```
+
+this command can fail and if it does try to break it down into 2 commands
+
+```bash
+nmap -sS -sV -T5 104.131.117.137 --webxml -oX - > file.xml
+```
+
+This will redirect stdout into file called `file.xml` and then do this
+
+```bash
+xsltproc file.xml -o file.html
+```
 
 #### traceroute command description
 
@@ -572,7 +752,38 @@ traceroute utilizes the IP protocol time to live field and attempts to elicit an
 
 #### traceroute command examples
 
-content
+```bash
+traceroute www.marcelbelmont.com
+```
+
+Here I am running traceroute in my blog at `www.marcelbelmont.com`
+
+We get the following output:
+
+```bash
+traceroute: Warning: www.marcelbelmont.com has multiple addresses; using 104.28.25.116
+traceroute to www.marcelbelmont.com (104.28.25.116), 64 hops max, 52 byte packets
+ 1  192.168.0.1 (192.168.0.1)  2.652 ms  45.525 ms  4.198 ms
+ 2  * * *
+ 3  cpe-174-111-107-080.triad.res.rr.com (174.111.107.80)  18.323 ms  30.516 ms  23.879 ms
+ 4  cpe-024-025-039-198.ec.res.rr.com (24.25.39.198)  12.890 ms  24.744 ms  33.050 ms
+ 5  be36.drhmncev01r.southeast.rr.com (24.93.64.188)  37.564 ms  19.624 ms  22.649 ms
+ 6  bu-ether15.asbnva1611w-bcr00.tbone.rr.com (66.109.6.80)  37.534 ms  39.571 ms  45.037 ms
+ 7  0.ae1.pr1.dca10.tbone.rr.com (107.14.17.202)  40.294 ms
+    0.ae4.pr1.dca10.tbone.rr.com (66.109.1.113)  31.526 ms
+    0.ae0.pr1.dca10.tbone.rr.com (107.14.17.200)  39.597 ms
+ 8  ix-ae-17-0.tcore2.aeq-ashburn.as6453.net (216.6.87.149)  39.638 ms  39.715 ms  32.743 ms
+ 9  216.6.87.102 (216.6.87.102)  42.390 ms  75.133 ms  45.592 ms
+10  104.28.25.116 (104.28.25.116)  99.297 ms  38.470 ms  49.121 ms
+```
+
+Traceroute operates by sending packets with TTL value starting from 1 and then incrementing by one each time. 
+
+Each time a router receives the packet, it checks the TTL field, if TTL field is 1 then it discards the packet and sends the ICMP error packet containing its IP address and this is what traceroute requires. 
+
+So traceroute incrementally fetches the IP of all the routers  between the source and the destination.
+
+**Read the Fine Manual** for more options
 
 #### dig command description
 
@@ -600,7 +811,76 @@ Some `dig` command options:
 
 #### dig command examples
 
-content
+```bash
+dig www.marcelbelmont.com
+```
+
+Here I run the dig command utility to get DNS entry information and I get the following output:
+
+```bash
+; <<>> DiG 9.8.3-P1 <<>> www.marcelbelmont.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 4459
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.marcelbelmont.com.		IN	A
+
+;; ANSWER SECTION:
+www.marcelbelmont.com.	115	IN	A	104.28.24.116
+www.marcelbelmont.com.	115	IN	A	104.28.25.116
+
+;; Query time: 26 msec
+;; SERVER: 209.18.47.61#53(209.18.47.61)
+;; WHEN: Sun Dec 10 17:17:24 2017
+;; MSG SIZE  rcvd: 71
+```
+
+The dig command output has the following sections:
+
+* Header: This displays the dig command version number, the global options used by the dig command, and few additional header information.
+
+* QUESTION SECTION: This displays the question it asked the DNS. i.e This is your input. 
+	* Since we said ‘dig redhat.com’, and the default type dig command uses is A record, it indicates in this section that we asked for the A record of the redhat.com website
+
+* ANSWER SECTION: This displays the answer it receives from the DNS. i.e This is your output. This displays the A record of redhat.com
+
+* AUTHORITY SECTION: This displays the DNS name server that has the authority to respond to this query. This displays available name servers of marcelbelmont.com
+
+* ADDITIONAL SECTION: This displays the ip address of the name servers listed in the AUTHORITY SECTION.
+
+* Stats section at the bottom displays few dig command statistics including how much time it took to execute this query
+
+You can turn off sections by using the following flags:
+
+* `+nocomments` – Turn off the comment lines
+
+* `+noauthority` – Turn off the authority section
+
+* `+noadditional` – Turn off the additional section
+
+* `+nostats` – Turn off the stats section
+
+* `+noanswer` – Turn off the answer section
+
+```bash
+dig www.marcelbelmont.com +nocomments +noadditional
+```
+
+In this command we turned off comments and additional information:
+
+```bash
+; <<>> DiG 9.8.3-P1 <<>> www.marcelbelmont.com +nocomments +noadditional
+;; global options: +cmd
+;www.marcelbelmont.com.		IN	A
+www.marcelbelmont.com.	300	IN	A	104.28.25.116
+www.marcelbelmont.com.	300	IN	A	104.28.24.116
+;; Query time: 101 msec
+;; SERVER: 209.18.47.61#53(209.18.47.61)
+;; WHEN: Sun Dec 10 17:23:02 2017
+;; MSG SIZE  rcvd: 71
+```
 
 #### Bread Crumb Navigation
 _________________________

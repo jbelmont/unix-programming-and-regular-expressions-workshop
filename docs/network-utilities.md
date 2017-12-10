@@ -25,6 +25,12 @@
 * [dig command description](#dig-command-description)
 * [dig command options](#dig-command-options)
 * [dig command examples](#dig-command-examples)
+* [nslookup command description](#nslookup-command-description)
+* [nslookup command options](#nslookup-command-options)
+* [nslookup command examples](#nslookup-command-examples)
+* [host command description](#host-command-description)
+* [host command options](#host-command-options)
+* [host command examples](#host-command-examples)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### What are networking utilities
@@ -783,6 +789,32 @@ Each time a router receives the packet, it checks the TTL field, if TTL field is
 
 So traceroute incrementally fetches the IP of all the routers  between the source and the destination.
 
+```bash
+traceroute -I www.marcelbelmont.com
+```
+
+Here we use the `-I` option which does  **use ICMP ECHO instead of UDP datagrams.**
+
+and here is the output:
+
+```bash
+traceroute: Warning: www.marcelbelmont.com has multiple addresses; using 104.28.24.116
+traceroute to www.marcelbelmont.com (104.28.24.116), 64 hops max, 72 byte packets
+ 1  192.168.0.1 (192.168.0.1)  5.191 ms  2.932 ms  4.642 ms
+ 2  mta-174-110-32-1.nc.rr.com (174.110.32.1)  22.109 ms  24.571 ms  27.939 ms
+ 3  cpe-174-111-107-082.triad.res.rr.com (174.111.107.82)  17.325 ms  24.331 ms  19.793 ms
+ 4  cpe-024-025-039-200.ec.res.rr.com (24.25.39.200)  36.199 ms  28.242 ms  19.949 ms
+ 5  be36.chrcnctr01r.southeast.rr.com (24.93.64.190)  19.973 ms  40.780 ms  18.819 ms
+ 6  bu-ether14.atlngamq46w-bcr00.tbone.rr.com (66.109.6.82)  29.982 ms  39.296 ms  32.689 ms
+ 7  bu-ether11.atlngamq47w-bcr01.tbone.rr.com (66.109.6.35)  29.357 ms  37.486 ms  33.129 ms
+ 8  0.ae2.pr1.atl20.tbone.rr.com (107.14.17.188)  26.556 ms  32.566 ms  47.194 ms
+ 9  ix-ae-14-0.tcore1.a56-atlanta.as6453.net (64.86.113.37)  31.318 ms  32.737 ms  35.306 ms
+10  64.86.113.90 (64.86.113.90)  29.866 ms  29.115 ms  30.132 ms
+11  104.28.24.116 (104.28.24.116)  34.937 ms  32.531 ms  30.046 ms
+```
+
+Notice here we get 11 hops and we use [ICMP](https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol) and not [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol)
+
 **Read the Fine Manual** for more options
 
 #### dig command description
@@ -881,6 +913,124 @@ www.marcelbelmont.com.	300	IN	A	104.28.24.116
 ;; WHEN: Sun Dec 10 17:23:02 2017
 ;; MSG SIZE  rcvd: 71
 ```
+
+#### nslookup command description
+
+nslookup - query Internet name servers interactively
+
+Nslookup is a program to query Internet domain name servers.  
+
+Nslookup has two modes: 
+
+* interactive and non-interactive
+* Interactive mode  
+	* allows the user to query name servers for information about various hosts and domains or to print a list of hosts in a domain.
+	* Non-interactive mode is used to print just the name and requested information for a host or domain.
+
+nslookup command also use to find out DNS related query. 
+
+#### nslookup command options
+
+INTERACTIVE COMMANDS: 
+
+* host [server]
+	* Look up information for host using the current default server or using server, if specified. If host is an Internet address and the query type is A or PTR, the name of the host is returned. 
+	* If host is a name and does not have a trailing period, the search list is used to qualify the name.
+	* To look up a host not in the current domain, append a period to the name.
+
+* server domain
+
+* lserver domain
+	* Change the default server to domain; lserver uses the initial server to look up information about domain, while server uses the current default server.
+	* If an authoritative answer can't be found, the names of servers that might have the answer are returned.
+
+* root
+	* not implemented
+
+* finger
+	* not implemented
+
+* ls
+	not implemented
+
+* view
+	* not implemented
+
+* help
+	* not implemented
+
+* ?
+	* not implemented
+
+#### nslookup command examples
+
+```bash
+nslookup www.marcelbelmont.com
+```
+
+Here we run nslookup to get name server information for my blog
+
+```bash
+Server:		209.18.47.61
+Address:	209.18.47.61#53
+
+Non-authoritative answer:
+Name:	www.marcelbelmont.com
+Address: 104.28.25.116
+Name:	www.marcelbelmont.com
+Address: 104.28.24.116
+```
+
+Notice here we get some nameserver information on the host: `www.marcelbelmont.com`
+
+```bash
+nslookup
+```
+
+If you run `nslookup` like this you will get an interactive session
+
+
+#### host command description
+
+host - DNS lookup utility
+
+host is a simple utility for performing DNS lookups. 
+
+It is normally used to convert names to IP addresses and vice versa. 
+
+When no arguments or options are given, host prints a short summary of its command line arguments and options.
+
+host command to find name to IP or IP to name in IPv4 or IPv6 and also query DNS records.
+
+#### host command options
+
+`host` command options:
+
+* `-a` (all) option is equivalent to setting the -v option and asking host to make a query of type ANY.
+
+* `-C` option is used, host will attempt to display the SOA records for zone name from all the listed authoritative name servers
+       for that zone.
+
+* `-c` option instructs to make a DNS query of class class. This can be used to lookup Hesiod or Chaosnet class resource records. 
+
+**Read the Fine Manual** for more options
+
+#### host command examples
+
+```bash
+host www.marcelbelmont.com
+```
+
+When we run this command we get the following output:
+
+```bash
+www.marcelbelmont.com has address 104.28.25.116
+www.marcelbelmont.com has address 104.28.24.116
+www.marcelbelmont.com has IPv6 address 2400:cb00:2048:1::681c:1974
+www.marcelbelmont.com has IPv6 address 2400:cb00:2048:1::681c:1874
+```
+
+This show us both the IP 4 and IP 6 
 
 #### Bread Crumb Navigation
 _________________________

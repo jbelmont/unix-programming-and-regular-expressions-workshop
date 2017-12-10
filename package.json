@@ -23,5 +23,8 @@
   "devDependencies": {
     "gitbook": "^3.2.3",
     "gitbook-cli": "^2.3.2"
+  },
+  "dependencies": {
+    "gitbook-plugin-include-codeblock": "^3.2.1"
   }
 }

@@ -29,6 +29,7 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 * [Build Automation](docs/build-automation.md)
 * [Building Command line applications](docs/building-command-line-applications.md)
 * [Shell Login Order](docs/shell-login-order.md)
+* [Network Utilities](docs/network-utilities.md)
 * [Tasks](#tasks)
 
 ## Unix History

@@ -180,4 +180,4 @@ Shell Scripts can be simple executable text files that contain shell commands.
 
 ## Tasks
 
-* [] Complete Shell Security Section
+- [ ] Complete Shell Security Section

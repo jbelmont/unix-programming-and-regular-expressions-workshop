@@ -1030,7 +1030,7 @@ www.marcelbelmont.com has IPv6 address 2400:cb00:2048:1::681c:1974
 www.marcelbelmont.com has IPv6 address 2400:cb00:2048:1::681c:1874
 ```
 
-This show us both the IP 4 and IP 6 
+This command converts name to IP address for the blog marcelbelmont.com
 
 #### Bread Crumb Navigation
 _________________________

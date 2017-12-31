@@ -19,6 +19,7 @@
 * [Awk Startup and Cleanup Actions](#awk-startup-and-cleanup-actions)
 * [Awk examples](#awk-examples)
 * [Tips for awk programs](#tips-for-awk-programs)
+* [Exercises](#exercises)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Cut description
@@ -519,6 +520,49 @@ Since awk automatically reads records and performs field splitting you can focus
 Also awk is a much more powerful unix tool than sed as it is a turing complete programming language and sed is just a streaming editor at heart
 
 Extended regular expressions give awk more power
+
+#### Exercises
+
+For the exercise we will work with the a sample file that is a copy of the */etc/passwd*
+
+Here is a quick rundown of the */etc/passwd* this information was explained in [cyberciti](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) :
+
+1. Username: It is used when user logs in. It should be between 1 and 32 characters in length.
+
+2. Password: An x character indicates that encrypted password is stored in /etc/shadow file.
+  1. Please note that you need to use the passwd command to computes the hash of a password typed at the CLI or to store/update the hash of the password in /etc/shadow file.
+
+3. User ID (UID): Each user must be assigned a user ID (UID). 
+  1. UID 0 (zero) is reserved for root and UIDs 1-99 are reserved for other predefined accounts. 
+  2. Further UID 100-999 are reserved by system for administrative and system accounts/groups.
+
+4. Group ID (GID): The primary group ID (stored in /etc/group file)
+
+5. User ID Info: The comment field. It allow you to add extra information about the users such as user’s full name, phone number etc. This field use by finger command.
+
+6. Home directory: The absolute path to the directory the user will be in when they log in. 
+  1. If this directory does not exists then users directory becomes /
+Command/shell: The absolute path of a command or shell (/bin/bash). 
+  2. Typically, this is a shell. Please note that it does not have to be a shell.
+
+For this exercise you need to get the 5th field and grab the 15th record.
+You can use either cut or awk to solve this and the *scripts/working-with-fields/passwd*.
+
+**Solution with cut**
+
+<details>
+<pre>
+cut -d: -f5 scripts/working-with-fields/passwd | sed -n '15p'
+</pre>
+</details>
+
+**Solution with awk**
+
+<details>
+<pre>
+awk -F ':' '{ print $5 }' scripts/working-with-fields/passwd | sed -n '15p'
+</pre>
+</details>
 
 #### Bread Crumb Navigation
 _________________________

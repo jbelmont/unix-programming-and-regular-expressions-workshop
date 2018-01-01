@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop#readme",
   "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^4.14.0",
     "faker": "^4.1.0",
     "gitbook": "^3.2.3",
-    "gitbook-cli": "^2.3.2"
+    "gitbook-cli": "^2.3.2",
+    "request": "^2.83.0"
   },
   "dependencies": {
     "gitbook-plugin-include-codeblock": "^3.2.1"

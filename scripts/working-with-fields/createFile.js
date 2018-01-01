@@ -3,12 +3,14 @@
 const fs = require('fs');
 const faker = require('faker');
 
+const usernames = require('./usernames');
+const commands = require('./commands');
+
 let writeStream = fs.createWriteStream('logfile');
 
-for (let i = 0; i < 500; i++) {
-    writeStream.write(faker.date.future() + ':' + faker.internet.userName() + ':' + faker.lorem.slug() + '\n');
-}
-
+usernames.forEach((username, index, arr) => {
+    writeStream.write(faker.date.future() + ':' + username + ':' + commands[index] + '\n');
+});
 
 // the finish event is emitted when all data has been flushed from the stream
 writeStream.on('finish', () => {  
@@ -16,4 +18,4 @@ writeStream.on('finish', () => {
 });
 
 // close the stream
-writeStream.end()
+writeStream.end();

@@ -181,7 +181,7 @@ There is a many more examples of sed usage this is just a sample.
 
 * Use basic regular expressions over extended regular expressions and only use simple sed commands for portability and readability
 
-* Make sure to use edit commands on teh sed command line to make sustainable scripts
+* Make sure to use edit commands on the sed command line to make sustainable scripts
 
 * sed is mainly used for text substitutions
 

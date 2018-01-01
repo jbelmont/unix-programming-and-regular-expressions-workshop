@@ -30,7 +30,7 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 * [Building Command line applications](docs/building-command-line-applications.md)
 * [Shell Login Order](docs/shell-login-order.md)
 * [Network Utilities](docs/network-utilities.md)
-* [Tasks](#tasks)
+* [Shell Security](docs/shell-security.md)
 
 ## Unix History
 
@@ -177,7 +177,3 @@ Shell Scripts can be simple executable text files that contain shell commands.
 
 * Keep in mind that this only works if the shell script is in the same language as the interactive shell
   * For example to expect a zsh shell script to run in a bash environment
-
-## Tasks
-
-- [ ] Complete Shell Security Section

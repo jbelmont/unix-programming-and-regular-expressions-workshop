@@ -24,3 +24,4 @@
 * [Building Command line applications](docs/building-command-line-applications.md)
 * [Shell Login Order](docs/shell-login-order.md)
 * [Network Utilities](docs/network-utilities.md)
+* [Shell Security](docs/shell-security.md)

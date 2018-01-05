@@ -32,7 +32,7 @@ Here are the following redirection operators:
 * `>` redirect output
 * `>>` append instead of truncate
 * `|` will pipe stdout of an action as stdin for the corresponding pipeline
-* `<<`, ``<<-` corresponds to Here Documents
+* `<<`, `<<-` corresponds to Here Documents
 * `>&2` will redirect output to standard error (stderr)
 * `do an action 2>&1 | tee myoutput`
 
@@ -52,13 +52,13 @@ You can use *exec* with shell redirections and no arguments to manage your shell
 Any open files are inherited by child programs
 
 ```bash
-exec myaction>&anotherAction
+exec myaction >& anotherAction
 ```
 
 This copies output of myAction into anotherAction
 
 ```bash
-exec someAction>&-
+exec someAction >& -
 ```
 
 This closes the file descriptor
@@ -101,7 +101,7 @@ The shell will now throw error and not perform truncation
 echo another thing >| text
 ```
 
-Now this command will work because of `>|` operator which will forcible truncate
+Now this command will work because of `>|` operator which will forcibly truncate
 
 #### Read Command Description
 
@@ -225,6 +225,7 @@ echo $sentence
 ```
 
 ```bash
+FOODS="pizz cookies bread shrimp"
 echo $FOODS | sed 's;pizz;pizza;' | while read foods
 do
 echo $foods

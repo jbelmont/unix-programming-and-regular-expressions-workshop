@@ -13,10 +13,9 @@
 #### Shell Evaluation Order
 
 1. Token Recognition 
-  * Words in the command line are split into **tokens** separated by metacharacters
-
-  1. White Space ` `, `;` (Semicolon), `|`, `<`, `>`, `\`, 
-  2. Substitution can occur here like `$HOME/myfile`
+    1. Words in the command line are split into **tokens** separated by metacharacters
+    2. White Space ` `, `;` (Semicolon), `|`, `<`, `>`, `\`, 
+    3. Substitution can occur here like `$HOME/myfile`
 
 2. Shell then looks if there is an opening *keyword*
   if **keyword**
@@ -35,38 +34,41 @@
       continue on to step 4
 
 4. Tilde Substitution occurs in following situations:
-  * On the start of a word
-  * After `:`, `:-` in variable assignment as we mentioned previously
-  * In expressions like `${somevar operation aword}`
+    1. On the start of a word
+    2. After `:`, `:-` in variable assignment as we mentioned previously
+    3. In expressions like `${somevar operation aword}`
 
 5. Parameter or aka variable expansion
-  * `NAME=james ; echo $NAME`
-  * Here the `NAME` variable is expanded to james
+    1. `NAME=james ; echo $NAME`
+    2. Here the `NAME` variable is expanded to james
 
 6. Command substitution
-  * Old style with backticks \`\`
-  * New style with `$()`
+    1. Old style with backticks \`\`
+    2. New style with `$()`
 
 7. Arithmetic expansion
-  * `$(())`
+    1. `$(())`
 
 8. Split results of Step 5, 6, 7 onto characters in the [Internal Field Separator aka $IFS variable](https://en.wikipedia.org/wiki/Internal_field_separator)
 
-  * For many command line interpreters ("shell") of Unix operating systems, the internal field separator (abbreviated IFS) refers to a variable which defines the character or characters used to separate a pattern into tokens for some operations.
-  * IFS typically includes the space, tab, and the newline.
-
-  * This step is distinguished by steps you can control as shell programmer
+    1. For many command line interpreters ("shell") of Unix operating systems, the internal field separator (abbreviated IFS) refers to a variable which defines the character or characters used to separate a pattern into tokens for some operations.
   
-  * if there is whitespace then each *run* of whitespace will separate fields
-  * else each non whitespace will delimit a field
+    2. IFS typically includes the space, tab, and the newline.
+
+    3. This step is distinguished by steps you can control as shell programmer
+  
+    4. if there is whitespace then each *run* of whitespace will separate fields
+  
+    5. else each non whitespace will delimit a field
 
 9. Filename generation / Wilcard Expansion
 
 10. In a series of tokens then look at first word
-  * Keywords will be found but really any keywords have already been found
-  * Look at special builtins: `break, continue`
-  * Functions
-  * Regular builtins `cd, echo`
+  
+  1. Keywords will be found but really any keywords have already been found
+  2. Look at special builtins: `break, continue`
+  3. Functions
+  4. Regular builtins `cd, echo`
 
 11. Setup Input and Output I/0 redirections that were saved from step 1 and finally to run the shell program
 

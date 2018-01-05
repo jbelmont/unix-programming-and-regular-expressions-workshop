@@ -196,7 +196,7 @@ You can pass an integer with the `continue` command like this *continue 2* and i
 
 Shift positional parameters.
 
-Rename the positional parameters $N+1,$N+2 ... to $1,$2 ...  If N is
+Rename the positional parameters $N+1, $N+2 ... to $1, $2 ...  If N is
 not given, it is assumed to be 1.
 
 Exit Status:
@@ -246,7 +246,7 @@ Some more special builtins:
 * The WORDS are expanded, generating a list of words.  
 * The set of expanded words is printed on the standard error, each preceded by a number.  
 
-* If `in WORDS' is not present, `in "$@"' is assumed.
+* If `in WORDS` is not present then "$@"' is assumed.
 
 * The PS3 prompt is then displayed and a line read
 from the standard input.
@@ -312,7 +312,7 @@ Even though `$PS3` has a default prompt, it is a good idea to set a more descrip
 
 #### Loop Examples
 
-All The scripts can be found in *scripts/looping* directory
+All The scripts can be found in **scripts/looping** directory
 
 *Example While Loop*
 

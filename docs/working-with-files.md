@@ -463,7 +463,7 @@ Here we create 2 directories *dir1* *dir2*
 
 ```bash
 for i in dir1/file1 dir1/file2 dir2/file1 dir2/file2
-do echo this is $i > $i
+  do echo this is $i > $i
 done
 ```
 
@@ -704,7 +704,7 @@ mktemp -- make temporary file name (unique)
 The mktemp utility takes each of the given file name templates and overwrites a portion of it to create a file name.  This file name is unique and suitable for use by the application.  
 
 The template may be any file name with some number of `Xs` appended to it, for example /tmp/temp.XXXX.  
-The trailing `Xs' are replaced with the current process number and/or a unique letter combination.  
+The trailing `Xs` are replaced with the current process number and/or a unique letter combination.  
 
 The number of unique file names mktemp can return depends on the number of `Xs` provided; six `Xs` will result in mktemp selecting 1 of 56800235584 (62 ** 6) possible file names.  
 
@@ -917,13 +917,13 @@ You can see file Permission Bits in the following `ls` command above in the root
 There are 3 specific types of file permissions:
 
 1. **read** 
-  1. The read permission grants the ability to read a file. When set for a directory, this permission grants the ability to read the names of files in the directory, but not to find out any further information about them such as contents, file type, size, ownership, permissions.
+    1. The read permission grants the ability to read a file. When set for a directory, this permission grants the ability to read the names of files in the directory, but not to find out any further information about them such as contents, file type, size, ownership, permissions.
 
 2. **write**
-  1. The write permission grants the ability to modify a file. When set for a directory, this permission grants the ability to modify entries in the directory. This includes creating files, deleting files, and renaming files.
+    1. The write permission grants the ability to modify a file. When set for a directory, this permission grants the ability to modify entries in the directory. This includes creating files, deleting files, and renaming files.
 
 3. **execute**
-  1. The execute permission grants the ability to execute a file. This permission must be set for executable programs, including shell scripts, in order to allow the operating system to run them. When set for a directory, the execute permission is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but not list files inside the directory, unless read is set also.
+    1. The execute permission grants the ability to execute a file. This permission must be set for executable programs, including shell scripts, in order to allow the operating system to run them. When set for a directory, the execute permission is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but not list files inside the directory, unless read is set also.
 
 Notice that there are 10 entries
 

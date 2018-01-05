@@ -68,7 +68,7 @@ Notice with this command the subshell does indeed go to *~/tmp/copy* but the par
 ```bash
 for i in this is a code block here
 {
-echo $i
+    echo $i
 }
 ```
 

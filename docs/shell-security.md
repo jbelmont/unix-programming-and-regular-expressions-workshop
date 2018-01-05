@@ -235,6 +235,5 @@ Please read the [Shellshock Wikipedia Page](https://en.wikipedia.org/wiki/Shells
 _________________________
 
 Previous | Next
-
 :------- | ---:
 ← [Network Utilities](./network-utilities.md) | [README](../README.md) →

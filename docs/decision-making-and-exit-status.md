@@ -31,7 +31,7 @@
 
 [Exit Status](https://en.wikipedia.org/wiki/Exit_status)
 
-Once a comand finishes whether the command is external or built-in it will return an integer value between 0 to 255 to the shell
+Once a command finishes whether the command is external or built-in it will return an integer value between 0 to 255 to the shell
 
 ```bash
 echo $?
@@ -76,7 +76,7 @@ fi
 
 Notice here I put `then` in a new line
 
-Both `elif` and `else` are optional and notice that do close the `if` command we used `fi`.
+Both `elif` and `else` are optional and notice that to close the `if` command we used `fi`.
 
 [fi syntax used in Algol 68](https://en.wikipedia.org/wiki/ALGOL_68)
 
@@ -176,7 +176,7 @@ commands;
 fi
 ```
 
-This command will short circuit if first check passes meaning only *$var* is evaluated
+This command will short circuit if first check passes meaning that *$NUM1 and $NUM2* are evaluated
 
 Both `&&` and `||` have same precedence
 
@@ -186,7 +186,7 @@ The [Exit command](https://en.wikipedia.org/wiki/Exit_\(command\)) will return t
 
 The script will execute immediately after the exit command is invoked
 
-If there is no value then the status returns will be of the last command run
+If there is no value then the status returned will be of the last command run
 
 Zero `0` signifies success and nonzero signifies failure
 
@@ -194,11 +194,11 @@ Don't use negative numbers or numbers greater than 255 for your own status codes
 
 Small values work best for exit status codes
 
-An exit statuses is defined by each command
+An exit status is defined for each command
 
 #### Test Command Description
 
-The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; otherwise it returns 1 (false).  
+The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; otherwise it returns 1 (false).
 
 If there is no expression, test also returns 1 (false).
 
@@ -207,6 +207,7 @@ The `test` command is a multipurpose command that can check for many things
 The `test` command has 2 forms:
 
 1. `test` something to test
+
 2. `[ something  to test ... ]` The brackets need to have a space in between them to work correctly
   1. So `[something to test]` won't work
 
@@ -231,7 +232,7 @@ Unary Operators:
 if [ -r someFile ]
 ```
 
-There are more unary operators and they all write are written like `-r`
+There are more unary operators and they are all written like `-r`
 
 Binary Operators:
 
@@ -378,7 +379,8 @@ We can confirm this with the `$?` command
 Remember we can create a shell program interactively using `>` as stdin
 
 ```bash
-cat > check_arguments.sh#! /bin/sh
+cat > check_arguments.sh
+#! /bin/sh
 if [ $# != 2 ]
 then
         echo Usage: my program -f /a/file >&2
@@ -544,7 +546,7 @@ set -x
 Set execution tracing
 
 ```bash
-twoWords="Hista Mikist"
+twoWords="Hista Mikista"
 if [ -z $twoWords ] ; then echo twoWords is a empty ; fi
 ```
 
@@ -601,7 +603,7 @@ The `case` statement is similar to the switch statement in C, Java, C#, JavaScri
 
 The case statement tests a single value against multiple patterns one after another pattern
 
-The case statement is easier to read and to write than a series of chained `if...elif...elif...else` statements
+The case statement is easier to read and to write than a series of chained `if ... elif ... elif ... else` statements
 
 **case: case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... esac**
 
@@ -609,7 +611,7 @@ Execute commands based on pattern matching.
 
 Selectively execute COMMANDS based upon WORD matching PATTERN.  
 
-The `|' is used to separate multiple patterns.
+The `|` is used to separate multiple patterns.
 
 Exit Status:
 Returns the status of the last command executed.
@@ -660,7 +662,7 @@ case expression in
 esac
 ```
 
-Open up *scripts/decision-making-and-exit-status/case_statements.sh** to look at an example of case statements
+Open up **scripts/decision-making-and-exit-status/case_statements.sh** to look at an example of case statements
 
 We won't go over details of loops and functions yet because we will discuss it later in the workshop.
 

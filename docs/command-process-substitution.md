@@ -15,7 +15,7 @@
 
 Command substitution will take the text between \`...\` and run it as a command and then place the results back into the surrounding command
 
-You will need to escape double quotes \\"
+You will need to escape double quotes \"
 
 Nesting commands is difficult with the old style command substitution
 
@@ -122,7 +122,7 @@ do
 done
 ```
 
-Here we assign 2 variables and use while loop and increment i anotherSum
+Here we assign 2 variables and use a while loop and increment i and anotherSum
 
 #### Process Substitution Description
 
@@ -138,7 +138,7 @@ By using **process substitution** you can create *nonlinear* pipelines:
 
 #### Process Substitution Syntax
 
-* A `command <(a | b | ...) to be read from a pipeline
+* A *command <(a | b | ...)* to be read from a pipeline
   * `diff <(sort file1) <(sort file2)`
 
 * A `command >(d | e | ...)` to write to a pipeline

@@ -174,6 +174,12 @@ sed '/^Russia/d' data/cities.sorted.txt | join - data/population.sorted.txt
 
 This command will pass because both files have been sorted and when join encounters key `Russia` that is not found it simply omits Russia from Output because population and cities didn't have the shared key anymore
 
+Another way to do the same thing is to use Process Substitution:
+
+```bash
+join <(sed '/^Russia/d' data/cities.sorted.txt) <(sort data/population.txt)
+```
+
 #### Usages for Cut and Join
 
 * Cut is a focused tool for a special task
@@ -432,6 +438,22 @@ If we wanted to delete the the First Row we can pipe the output to sed like this
 awk -F , '{ print $2 }' data/information.txt | sed '/Rank/d'
 ```
 
+Another way to do this using awk is to do:
+
+```bash
+awk -F , '$2 != "Rank" { print $2 }' data/information.txt
+```
+
+Notice here we put double quotes (") around Rank
+
+Or another way to do this is:
+
+```bash
+awk -F , 'FNR != 1 { print $2 }' data/information.txt
+```
+
+// TODO: Add xargs example with awk
+
 Now we get the following output:
 
 SSG
@@ -477,7 +499,7 @@ sed '/^#/d' /etc/passwd | awk -F : '{ print $6 }'
 What do you think gets printed in this awk program?
 
 ```bash
-awk -F : '$NR ~ /\/bin\/sh/ { print }' /etc/passwd
+awk -F : '$NF ~ /\/bin\/sh/ { print }' /etc/passwd
 ```
 
 This script counts with `$NF` which is a special variable in `awk` the number of records that have users that use `/bin/sh`. Notice here that I had to escape the `/` with a `\` to get the literal `/`. Since we don't specify any field it will print all the fields that matched

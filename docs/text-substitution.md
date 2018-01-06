@@ -11,6 +11,7 @@
 * [Substitute Flags](#substitute-flags)
 * [Sed Examples](#sed-examples)
 * [Best Practices for Sed](#best-practices-for-sed)
+* [Exercises](#exercises)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### What is Sed
@@ -188,6 +189,28 @@ There is a many more examples of sed usage this is just a sample.
 * sed is used a lot in scripts with pattern matching and text replacement or deletion of text via substitution
 
 * sed is often used in the middle of shell pipelines to transform data
+
+#### Exercises
+
+Using sed find all the occurrences of *fries* in the 'data/orders.txt' file and replace with French Fries
+
+One Possible Solution:
+
+<details>
+  <pre>
+    sed 's/Fries/French Fries/g' data/orders.txt
+  </pre>
+</details>
+
+Using sed delete the first row in the file `data/orders.txt`
+
+One Possible Solution:
+
+<details>
+  <pre>
+    sed '/^ID/d' data/orders.txt
+  </pre>
+</details>
 
 #### Bread Crumb Navigation
 _________________________

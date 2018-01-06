@@ -327,10 +327,10 @@ Either the pattern or the action may be omitted in `awk`
 1. `awk` processes command line options and parses program text
 2. `awk` will execute any startup actions
 3. `awk` will loop until it is done
-  1. awk will read a record
-  2. awk will split a record into fields
-  3. awk will test each pattern (your program code) against a record.
-  4. awk will run corresponding action if the action matches
+    1. `awk` will read a record
+    2. `awk` will split a record into fields
+    3. `awk` will test each pattern (your program code) against a record.
+    4. `awk` will run corresponding action if the action matches
 4. `awk` will execute any cleanup actions
 
 #### Awk fields
@@ -339,7 +339,7 @@ An input line in `awk` is known as a `record`
 
 Records in awk consist of fields that are separated by whitespace
 
-You can set field separators on the command line  or use `FS` variable
+You can set field separators on the command line or use the `FS` variable
 
 In awk you use the variables `$1`, `$2`, ... , `$n` and so on for each field
 
@@ -354,14 +354,14 @@ You use `$0` for the whole record in awk
 You can set field separator in 2 places:
 
 1. command line wth `-F` option
-  1. `awk -F: 'some program text' /etc/passwd | some pipe operation`
+    1. `awk -F: 'some program text' /etc/passwd | some pipe operation`
 
 2. In an awk program.
-  1. You assign a string to `FS`
-  2. 3 different "modes" in awk:
-    1. `FS = " "` number of whitespace separated fields
-    2. `FS = "character"` Number of instances of `character` separated fields
-    3. `FS = "re"` Each field separated by text that matches "re"
+    1. You assign a string to `FS`
+    2. 3 different "modes" in awk:
+        1. `FS = " "` number of whitespace separated fields
+        2. `FS = "character"` Number of instances of `character` separated fields
+        3. `FS = "re"` Each field separated by text that matches "re"
 
 #### Printing lines in Awk
 
@@ -389,7 +389,7 @@ Many languages have a `printf` function
 
 You provide code that runs before reading any records like so:
 
-```sh
+```bash
 BEGIN {
   code here ...
 }
@@ -397,7 +397,7 @@ BEGIN {
 
 You then can provide code to run after all the records have been processed
 
-```sh
+```bash
 END {
   code here ...
 }
@@ -426,6 +426,20 @@ Here is a breakdown of each field:
 
 It prints out the Rank field here
 
+If we wanted to delete the the First Row we can pipe the output to sed like this:
+
+```bash
+awk -F , '{ print $2 }' data/information.txt | sed '/Rank/d'
+```
+
+Now we get the following output:
+
+SSG
+SSG
+PVT
+SGT
+CPT
+
 ```bash
 awk -F : '{ print $1 }' /etc/passwd
 ```
@@ -441,6 +455,8 @@ Notice with sed we print the 25th line of `/etc/passwd`
 which has the following content:
 
 **_serialnumberd:*:58:58:Serial Number Daemon:/var/empty:/usr/bin/false**
+
+This can vary with different `/etc/passwd` files
 
 Here is a breakdown of each field:
 
@@ -461,10 +477,11 @@ sed '/^#/d' /etc/passwd | awk -F : '{ print $6 }'
 What do you think gets printed in this awk program?
 
 ```bash
-awk -F : '$NF ~ /\/bin\/sh/ { print $1 }' /etc/passwd
+awk -F : '$NR ~ /\/bin\/sh/ { print }' /etc/passwd
 ```
 
-This script counts with `$NF` which is a special variable in `awk` the number of records that have users that use `/bin/sh`. Notice here that I had to escape the `/` with a `\` to get the literal `/`. Also remember `$1` is the first field of the record
+This script counts with `$NF` which is a special variable in `awk` the number of records that have users that use `/bin/sh`. Notice here that I had to escape the `/` with a `\` to get the literal `/`. Since we don't specify any field it will print all the fields that matched
+Also remember `$1` is the first field of the record
 
 ```bash
 awk -F : '$5 ~ /PostgreSQL Server/' /etc/passwd
@@ -495,7 +512,7 @@ This simple file has a list of orders
 awk -F ',' '$2 ~ /Hamburger/ { total += $3 } END { print "total: ", total }' data/orders.txt
 ```
 
-This awk program sets `,` as field delimiter and then searches in the second field for the pattern `Hamburger` and then it creates variable `total` that sums up 3rd field which is the price and then prints the total in the end.
+This awk program sets `,` as field delimiter and then searches in the second field for the pattern `Hamburger` and then it creates variable `total` that sums up 3rd field which is the price and then prints the total in the end for any Mat.
 
 ```bash
 ./scripts/working-with-fields/bank_statement.sh data/bank_statement.csv

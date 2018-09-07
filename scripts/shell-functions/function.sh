@@ -1,6 +1,6 @@
 #! /bin/bash
 
-ARGS=$@
+ARGS="$@"
 
 help () {
   printf "Usage:\n\tProvide an argument\n"

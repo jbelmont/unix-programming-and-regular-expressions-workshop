@@ -454,7 +454,7 @@ In this run we threw away standard output into `/dev/null` and then checked exit
 
 #### Command Types and Searching
 
-[Type Operator](https://en.wikipedia.org/wiki/Type_%28Unix%28)
+[Type Operator](https://en.wikipedia.org/wiki/Type_%28Unix%29)
 
 ###### Shell Builtins
 

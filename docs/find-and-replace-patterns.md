@@ -3,6 +3,10 @@
 ## Sections:
 
 * [Defining Regexes with online tool](#defining-regexes-with-online-tool)
+* [Capture Groups](#capture-groups)
+* [Backreferences for a regular expression](#backreferences-for-a-regular-expression)
+* [Editor Example for Find and Replace](#editor-example-for-find-and-replace)
+* [Using Find and Replace with the Shell](#using-find-and-replace-with-the-shell)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Defining Regexes with online tool

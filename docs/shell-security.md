@@ -236,4 +236,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Network Utilities](./network-utilities.md) | [README](../README.md) →
+← [Network Utilities](./network-utilities.md) | [Find and Replace Patterns](docs/find-and-replace-patterns) →

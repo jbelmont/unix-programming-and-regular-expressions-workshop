@@ -31,6 +31,7 @@ A workshop on Unix Programming Principles using tools such as grep, sed, awk, sh
 * [Shell Login Order](docs/shell-login-order.md)
 * [Network Utilities](docs/network-utilities.md)
 * [Shell Security](docs/shell-security.md)
+* [Find and Replace Patterns](docs/find-and-replace-patterns)
 
 ## Unix History
 

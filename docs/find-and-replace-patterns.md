@@ -7,6 +7,7 @@
 * [Backreferences for a regular expression](#backreferences-for-a-regular-expression)
 * [Editor Example for Find and Replace](#editor-example-for-find-and-replace)
 * [Using Find and Replace with the Shell](#using-find-and-replace-with-the-shell)
+* [Advanced Find and Replace Patterns](#advanced-find-and-replace-patterns)
 * [Bread Crumb Navigation](#bread-crumb-navigation)
 
 #### Defining Regexes with online tool
@@ -170,6 +171,53 @@ We also removed the `-n` option as it has an unintended consequence of removing 
 We used it in the command line to see only what we captured but in the context of this command we want it to run for each command.
 
 **It is important to note that we created a back up file with the `-i.bak` option just in case an issue occurred and to save us with a backup for problems with our command.**
+
+#### Advanced Find and Replace Patterns
+
+Typically with find and replace patterns you will want to do to check that *sed* is finding the pattern that you want to replace.
+
+A trick with sed is to always write out all the delimiters before you start the find:
+
+`sed 's///g'` and then go back and enter the text replacement
+
+Let us say that we want to globally replace the following text *here is*
+
+Now with *sed*: 
+
+`sed 's/here is/there we go/g'`
+
+We can place multiple commands by placing a `;` in between like this:
+
+`sed 's/here is/there we go/g;s/to much/too little/g'`
+
+You can virtually do as many commands in one sed expression as you want by doing this pattern.
+
+*One thing to note is that you should experiment with sed on one file and then do this next step for global search and replace*
+
+Now using find we can look for all the dat files and do a global find and replace like this:
+
+
+`find . -name "*.dat" -exec sed -i .bak 's/here is/there we go/g;s/to much/too little/g' {} \;`
+
+This command will look at current directory and every subdirectory and then execute the *sed* command(s) and do an edit and create a bak file that has the original text
+we can look at the text that is changed with the *grep* command: 
+
+```sh
+> grep -nr "there we go" .
+./data/otherText.dat:1:there we go the man
+```
+
+By doing this we can make sure that we get the text change like we expect and once we are confident we can delete the bak files like this
+
+`find . -name "*.bak" -exec rm {} +`
+
+Notice that with find and the `-exec` option we did this pattern `{} \;` and this pattern `{} +` this works as a placeholder for each file/folder
+
+If you are doubly sure that your global find and replace works you can do this change to do an in place file edit with sed:
+
+`find . -name "*.dat" -exec sed -i '' 's/here is/there we go/g;s/to much/too little/g' {} \;`
+
+Notice here that we didn’t specify a file to backup with so sed just edits the file and doesn’t create any backup, the `''` is necessary on mac os x, in linux you can probably get away without doing it.
 
 #### Bread Crumb Navigation
 _________________________

@@ -42,7 +42,7 @@ Historically build automation occurred with makefiles and we will use makefiles 
 * [Apache Ant for Java](https://ant.apache.org/manual/)
 * [Cabal for haskell](https://www.haskell.org/cabal/users-guide/)
 * [npm scripts for Node based Projects](https://docs.npmjs.com/misc/scripts)
-* [Rake for Ruby](https://en.wikipedia.org/wiki/Rake_(software))
+* [Rake for Ruby](https://en.wikipedia.org/wiki/Rake_%28software%29)
 * [MSBuild for Windows Development](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild)
 
 There is many more build automation tooling this is just a short list I compiled

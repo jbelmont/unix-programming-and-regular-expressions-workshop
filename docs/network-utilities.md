@@ -45,7 +45,7 @@ The majority of them originated on Unix systems, but several later ports to othe
 
 Common Networking Tools:
 
-* [ping](https://en.wikipedia.org/wiki/Ping_(networking_utility)), ping a host to check connectivity (reports packet loss and latency, uses ICMP).
+* [ping](https://en.wikipedia.org/wiki/Ping_%28networking_utility%29), ping a host to check connectivity (reports packet loss and latency, uses ICMP).
 
 * [ifconfig](https://en.wikipedia.org/wiki/Network_utility) ifconfig is a system administration utility in Unix-like operating systems for network interface configuration.
 
@@ -61,7 +61,7 @@ Common Networking Tools:
 * [traceroute](https://en.wikipedia.org/wiki/Traceroute) shows the series of successive systems a packet goes through en route to its destination on a network. 
   * It works by sending packets with sequential TTLs which generate ICMP TTL-exceeded messages from the hosts the packet passes through.
 
-* [dig](https://en.wikipedia.org/wiki/Dig_(command)) dig (domain information groper) is a network administration command-line tool for querying Domain Name System (DNS) servers.
+* [dig](https://en.wikipedia.org/wiki/Dig_%28command%29) dig (domain information groper) is a network administration command-line tool for querying Domain Name System (DNS) servers.
 
 #### ping command description
 

@@ -227,7 +227,7 @@ Read the [iptables Wikipedia Page](https://en.wikipedia.org/wiki/Iptables) for m
 
 #### Shellshock Bash Bug
 
-Please read the [Shellshock Wikipedia Page](https://en.wikipedia.org/wiki/Shellshock_(software_bug))
+Please read the [Shellshock Wikipedia Page](https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29)
 
 > Shellshock, also known as Bashdoor, is a family of security bugs in the widely used Unix Bash shell, the first of which was disclosed on 24 September 2014. Many Internet-facing services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized access to a computer system
 

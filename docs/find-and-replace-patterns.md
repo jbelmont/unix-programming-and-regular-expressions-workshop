@@ -55,6 +55,16 @@ Here we have 6 Capture Groups:
     2. + Quantifier — Matches between one and unlimited times, as many times as possible, giving back as needed (greedy)
     3. ^ matches the character ^ literally (case sensitive)
 
+##### Defining Regexes with extendsclass online tool
+
+There is another tool that you can use to test and debug regexes.
+
+[Extends Class Regex Tester](https://extendsclass.com/regex-tester.html)
+
+Here is a screenshot of this tool in action:
+
+![images/extends-class-regex-tester](../images/extends-class-regex-tester.png)
+
 ###### Capture Groups
 
 * Parentheses group the regex between them. 

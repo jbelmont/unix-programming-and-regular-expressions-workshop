@@ -234,4 +234,4 @@ _________________________
 
 Previous | Next
 :------- | ---:
-← [Shell Security](./shell-security.md) | [README](../README.md) →
+← [Shell Security](./shell-security.md) | [System Administration Commands](./system-administration-commands.md) →

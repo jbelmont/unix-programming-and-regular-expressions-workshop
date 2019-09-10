@@ -1,0 +1,783 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Find and Replace Patterns · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="system-administration-commands.html" />
+    
+    
+    <link rel="prev" href="shell-security.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Find and Replace Patterns</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---find-and-replace-patterns">Unix Programming and Regular Expressions Workshop - Find and Replace Patterns</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#defining-regexes-with-online-tool">Defining Regexes with online tool</a></li>
+<li><a href="#capture-groups">Capture Groups</a></li>
+<li><a href="#backreferences-for-a-regular-expression">Backreferences for a regular expression</a></li>
+<li><a href="#editor-example-for-find-and-replace">Editor Example for Find and Replace</a></li>
+<li><a href="#using-find-and-replace-with-the-shell">Using Find and Replace with the Shell</a></li>
+<li><a href="#advanced-find-and-replace-patterns">Advanced Find and Replace Patterns</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="defining-regexes-with-online-tool">Defining Regexes with online tool</h4>
+<p>There are a handful of ways to define a regex but we will cover some online tools that help write them.</p>
+<p>You can try <a href="https://regexr.com/" target="_blank">Regexr</a> or <a href="https://regex101.com/" target="_blank">Regex101</a> to help write regexes and get helpful information about what is happening in the regular expression.</p>
+<p><img src="../images/regex-input-test-string.png" alt="Test String and RegEx Input"></p>
+<p>The first screenshot is the regex we are entering and the test string we are testing against.</p>
+<p><strong>Regular Expression:</strong></p>
+<pre><code class="lang-regex">(##)(\s+)(\[)(\])(\(.*?\))([^^]+)
+</code></pre>
+<p><strong>Test String:</strong></p>
+<pre><code>## [](https://google.com)google
+</code></pre><p>The <a href="https://regex101.com/" target="_blank">Regex101</a> online tool has a great feature of color coding each capture group for us and we can see each capture group in this example in the right side of the screen.</p>
+<p><img src="../images/capture-groups.png" alt="Capture Groups"></p>
+<p>Here we have 6 Capture Groups:</p>
+<ol>
+<li>1st Capturing Group (##)</li>
+<li>2nd Capturing Group (\s+)<ol>
+<li>\s+ matches any whitespace character (equal to [\r\n\t\f\v ])</li>
+</ol>
+</li>
+<li>3rd Capturing Group ([)<ol>
+<li>[ matches the character [ literally (case sensitive)</li>
+</ol>
+</li>
+<li>4th Capturing Group (])<ol>
+<li>] matches the character ] literally (case sensitive)</li>
+</ol>
+</li>
+<li>5th Capturing Group ((.*?))<ol>
+<li>( matches the character ( literally (case sensitive)</li>
+<li>.*? matches any character (except for line terminators)</li>
+<li>*? Quantifier &#x2014; Matches between zero and unlimited times, as few times as possible, expanding as needed (lazy)</li>
+<li>) matches the character ) literally (case sensitive)</li>
+</ol>
+</li>
+<li>6th Capturing Group (<sup><a href="#fn_%5E" id="reffn_^">^</a></sup>+)<ol>
+<li>Match a single character not present in the list below <sup><a href="#fn_%5E" id="reffn_^">^</a></sup>+</li>
+<li><ul>
+<li>Quantifier &#x2014; Matches between one and unlimited times, as many times as possible, giving back as needed (greedy)</li>
+</ul>
+</li>
+<li>^ matches the character ^ literally (case sensitive)</li>
+</ol>
+</li>
+</ol>
+<h5 id="defining-regexes-with-extendsclass-online-tool">Defining Regexes with extendsclass online tool</h5>
+<p>There is another tool that you can use to test and debug regexes.</p>
+<p><a href="https://extendsclass.com/regex-tester.html" target="_blank">Extends Class Regex Tester</a></p>
+<p>Here is a screenshot of this tool in action:</p>
+<p><img src="../images/extends-class-regex-tester.png" alt="images/extends-class-regex-tester"></p>
+<h6 id="capture-groups">Capture Groups</h6>
+<ul>
+<li><p>Parentheses group the regex between them. </p>
+</li>
+<li><p>They capture the text matched by the regex inside them into a numbered group that can be reused with a numbered backreference. </p>
+</li>
+<li><p>They allow you to apply regex operators to the entire grouped regex. </p>
+</li>
+<li>This is what is meant by a capture group</li>
+</ul>
+<h6 id="using-match-information-for-our-test-string-example">Using Match Information for our Test String Example</h6>
+<p>Now that we know what a capture group is we can use this knowledge to break apart the different matching groups to use in a find and replace scenario</p>
+<ol>
+<li>Group 1<ol>
+<li><code>##</code></li>
+</ol>
+</li>
+<li>Group 2<ol>
+<li><code> </code> empty space here</li>
+</ol>
+</li>
+<li>Group 3<ol>
+<li><code>[</code></li>
+</ol>
+</li>
+<li>Group 4<ol>
+<li><code>]</code></li>
+</ol>
+</li>
+<li>Group 5<ol>
+<li><code>(https://google.com)</code></li>
+</ol>
+</li>
+<li>Group 6<ol>
+<li><code>google</code></li>
+</ol>
+</li>
+</ol>
+<h4 id="backreferences-for-a-regular-expression">Backreferences for a regular expression</h4>
+<p>back-references are regular expression commands which refer to a previous part of the matched regular expression. </p>
+<p>Back-references are specified with backslash and a single digit (e.g. <code>\1</code>). </p>
+<p>The part of the regular expression they refer to is called a subexpression, and is designated with parentheses.</p>
+<p>Now that we have defined a backreference we can use them like this:</p>
+<ol>
+<li>Backreference 1<ol>
+<li><code>\1</code></li>
+<li>this matches <code>##</code></li>
+</ol>
+</li>
+<li>Backreference 2<ol>
+<li><code>\2</code></li>
+<li>this matches <code> </code> empty space</li>
+</ol>
+</li>
+<li>Backreference 3<ol>
+<li><code>\3</code></li>
+<li>this matches <code>[</code></li>
+</ol>
+</li>
+<li>Backreference 4<ol>
+<li><code>\4</code></li>
+<li>this matches <code>]</code> </li>
+</ol>
+</li>
+<li>Backreference 5<ol>
+<li><code>\5</code></li>
+<li>this matches <code>(https://google.com)</code></li>
+</ol>
+</li>
+<li>Backreference 6<ol>
+<li><code>\6</code></li>
+<li>this matches <code>google</code></li>
+</ol>
+</li>
+</ol>
+<h4 id="editor-example-for-find-and-replace">Editor Example for Find and Replace</h4>
+<p>Now we can use this in order to do find and replace using the VSCode Editor like this:</p>
+<p><img src="../images/find-replace-vscode.png" alt="Find and Replace VSCode Editor"></p>
+<p>In order to get the find menu open on a Mac just press <code>Command f</code> in your keyboard and then click the right arrow to expand to replace input box.</p>
+<p>In visual studio code we use the <code>$</code> for backreferences like this <code>$1</code> instead of <code>\1</code>.</p>
+<p>Notice that we did the following in this replace <code>$1$2$3$6$4$5</code> we swapped the contents of the match so that data in inserted into <code>[ ]</code> which is what we want for this.</p>
+<h4 id="using-find-and-replace-with-the-shell">Using Find and Replace with the Shell</h4>
+<p>By using the Unix Command Line we can take advantage of many more shell utilities to automate this task to many files.</p>
+<p>Say that we wanted to apply this regex pattern with sed and with the find utility to find each Markdown file and create a backup we can do the following.</p>
+<p>We have already introduced <code>find</code> in this workshop but we will introduce the <code>-exec</code> option with find here.</p>
+<p><img src="../images/find-in-unix.png" alt="Find markdown files"></p>
+<p>Notice that only markdown files were returned which is what we want.</p>
+<p>Now we can use this in combination with the <code>-exec</code> option to apply an action to all of these files which will be a sed command to make a backup and write the change to the file like we want in place.</p>
+<p><img src="../images/sed-action.png" alt="Sed Action"></p>
+<p>Notice this is the <strong>sed</strong> command:</p>
+<pre><code class="lang-sed">gsed -nE &apos;s;(##)(\s+)(\[)(\])(\(.*?\))([^^]+);\1\2\3\6\4\5;gp&apos; find-and-replace.txt
+</code></pre>
+<p>Here I am using gnu sed instead of mac os x as gnu sed is more POSIX compliant and more useful and up to date version.</p>
+<p>The option <code>-n</code> means only print captured lines and <code>-E</code> is for extended regular expressions.</p>
+<p>Here we use <code>;</code> for delimiters instead of <code>/</code> which is the default to make it easier for the capture groups.</p>
+<p>The final options of <code>gp</code> will globally apply to all occurrences and then print the captured group since we suppressed the default action of sed which is to print everything to standard output.</p>
+<h6 id="bring-power-of-find-and-replace-in-command-line">Bring Power of Find and Replace in Command Line</h6>
+<p>Now that we have verified what we want out of each command we can assemble the following command:</p>
+<pre><code class="lang-bash">find . -name <span class="hljs-string">&apos;*.txt&apos;</span> -exec gsed -Ei.bak <span class="hljs-string">&apos;s;(##)(\s+)(\[)(\])(\(.*?\))([^^]+);\1\2\3\6\4\5;gp&apos;</span> <span class="hljs-string">&apos;{}&apos;</span> \;
+</code></pre>
+<p>Note that we added <code>-exec</code> for the find action to take and then added <code>&apos;{}&apos;</code> and <code>\;</code></p>
+<p>Notice that the braces are enclosed in single quote marks to protect them from interpretation as shell script punctuation. </p>
+<p>The semicolon is similarly protected by the use of a backslash, though single quotes could have been used in that case also.</p>
+<p>We also removed the <code>-n</code> option as it has an unintended consequence of removing the contents of the rest of the file.</p>
+<p>We used it in the command line to see only what we captured but in the context of this command we want it to run for each command.</p>
+<p><strong>It is important to note that we created a back up file with the <code>-i.bak</code> option just in case an issue occurred and to save us with a backup for problems with our command.</strong></p>
+<h4 id="advanced-find-and-replace-patterns">Advanced Find and Replace Patterns</h4>
+<p>Typically with find and replace patterns you will want to do to check that <em>sed</em> is finding the pattern that you want to replace.</p>
+<p>A trick with sed is to always write out all the delimiters before you start the find:</p>
+<p><code>sed &apos;s///g&apos;</code> and then go back and enter the text replacement</p>
+<p>Let us say that we want to globally replace the following text <em>here is</em></p>
+<p>Now with <em>sed</em>: </p>
+<p><code>sed &apos;s/here is/there we go/g&apos;</code></p>
+<p>We can place multiple commands by placing a <code>;</code> in between like this:</p>
+<p><code>sed &apos;s/here is/there we go/g;s/to much/too little/g&apos;</code></p>
+<p>You can virtually do as many commands in one sed expression as you want by doing this pattern.</p>
+<p><em>One thing to note is that you should experiment with sed on one file and then do this next step for global search and replace</em></p>
+<p>Now using find we can look for all the dat files and do a global find and replace like this:</p>
+<p><code>find . -name &quot;*.dat&quot; -exec sed -i .bak &apos;s/here is/there we go/g;s/to much/too little/g&apos; {} \;</code></p>
+<p>This command will look at current directory and every subdirectory and then execute the <em>sed</em> command(s) and do an edit and create a bak file that has the original text
+we can look at the text that is changed with the <em>grep</em> command: </p>
+<pre><code class="lang-sh">&gt; grep -nr <span class="hljs-string">&quot;there we go&quot;</span> .
+./data/otherText.dat:1:there we go the man
+</code></pre>
+<p>By doing this we can make sure that we get the text change like we expect and once we are confident we can delete the bak files like this</p>
+<p><code>find . -name &quot;*.bak&quot; -exec rm {} +</code></p>
+<p>Notice that with find and the <code>-exec</code> option we did this pattern <code>{} \;</code> and this pattern <code>{} +</code> this works as a placeholder for each file/folder</p>
+<p>If you are doubly sure that your global find and replace works you can do this change to do an in place file edit with sed:</p>
+<p><code>find . -name &quot;*.dat&quot; -exec sed -i &apos;&apos; &apos;s/here is/there we go/g;s/to much/too little/g&apos; {} \;</code></p>
+<p>Notice here that we didn&#x2019;t specify a file to backup with so sed just edits the file and doesn&#x2019;t create any backup, the <code>&apos;&apos;</code> is necessary on mac os x, in linux you can probably get away without doing it.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="shell-security.html">Shell Security</a></td>
+<td style="text-align:right"><a href="system-administration-commands.html">System Administration Commands</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shell-security.html" class="navigation navigation-prev " aria-label="Previous page: Shell Security">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="system-administration-commands.html" class="navigation navigation-next " aria-label="Next page: System Administration Commands">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Find and Replace Patterns","level":"1.26","depth":1,"next":{"title":"System Administration Commands","level":"1.27","depth":1,"path":"docs/system-administration-commands.md","ref":"docs/system-administration-commands.md","articles":[]},"previous":{"title":"Shell Security","level":"1.25","depth":1,"path":"docs/shell-security.md","ref":"docs/shell-security.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/find-and-replace-patterns.md","mtime":"2019-08-24T22:22:31.765Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

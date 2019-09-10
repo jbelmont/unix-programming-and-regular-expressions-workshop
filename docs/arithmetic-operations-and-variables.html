@@ -1,0 +1,1024 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Arithmetic Operations and variables · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="decision-making-and-exit-status.html" />
+    
+    
+    <link rel="prev" href="text-sorting.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Arithmetic Operations and variables</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---arithmetic-operations-and-variables">Unix Programming and Regular Expressions Workshop - Arithmetic Operations and variables</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#variable-assignment-syntax">Variable Assignment Syntax</a></li>
+<li><a href="#create-global-variables">Create Global variables</a></li>
+<li><a href="#read-only-variables">Read only variables</a></li>
+<li><a href="#environment-control-with-env">Environment control with env</a></li>
+<li><a href="#unset-command">Unset command</a></li>
+<li><a href="#variable-best-practices">Variable Best Practices</a></li>
+<li><a href="#parameter-expansions">Parameter expansions</a></li>
+<li><a href="#command-line-arguments">Command line arguments</a></li>
+<li><a href="#simple-parameter-expansion">Simple Parameter Expansion</a></li>
+<li><a href="#other-types-of-expansions">Other types of expansions</a></li>
+<li><a href="#parameter-expansion-examples">Parameter expansion examples</a></li>
+<li><a href="#parameter-expansion-best-practices">Parameter expansion best practices</a></li>
+<li><a href="#arithmetic-expansion">Arithmetic Expansion</a></li>
+<li><a href="#arithmetic-operator-table">Arithmetic Operator Table</a></li>
+<li><a href="#let-command">Let Command</a></li>
+<li><a href="#arithmetic-expansion-examples">Arithmetic Expansion Examples</a></li>
+<li><a href="#arithmetic-expansion-best-practices">Arithmetic Expansion Best Practices</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="variable-assignment-syntax">Variable Assignment Syntax</h4>
+<p>To assign variables you do <code>somevar=somevalue</code> </p>
+<ul>
+<li>Don&apos;t use spaces around the <code>=</code> sign</li>
+<li>You need to quote values if the value contains some whitespace</li>
+<li>You don&apos;t need to quote if you assigning a value<ul>
+<li>FOO=foo; bar=$FOO</li>
+<li><code>FOO</code> variable is assigned so we just assign bar to it with quotes</li>
+</ul>
+</li>
+<li>You can do multiple assignments in one line</li>
+</ul>
+<pre><code class="lang-bash">bar=<span class="hljs-string">&apos;BAR&apos;</span> foo=FOO baz=BAZ
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$bar</span> <span class="hljs-variable">$foo</span> <span class="hljs-variable">$baz</span>
+BAR FOO BAZ
+</code></pre>
+<p>Notice here we created three variables in one line with no issues because the assignments worked from left to right</p>
+<p>Some shells give you concatenation capability like so:</p>
+<p><code>somevar+=somevalue</code> which will concatenate a value to the end of <code>$somevar</code> but this is not defined in <code>POSIX</code> so be wary for portability&apos;s sake</p>
+<h4 id="create-global-variables">Create Global variables</h4>
+<p>A shell environment has a list of name/value pairs (aka associative array, or dictionary) that are accesible to all programs in the shell</p>
+<p>Child programs in the shell will inherit the shell environment from the Parent program</p>
+<p>To make globally accessible variables use the <code>export</code> command </p>
+<p><code>export BAZ=baz</code></p>
+<p>This will do 2 things:</p>
+<ol>
+<li>It will give the value &apos;baz&apos; to <code>BAZ</code></li>
+<li>It will create a name/value pair that is available to child programs.</li>
+</ol>
+<p>The <code>export -p</code> command will print all global shell variables</p>
+<h4 id="read-only-variables">Read only variables</h4>
+<p>The command <code>readonly somevar=value</code> will 3 things:</p>
+<ol>
+<li>Assign value to <em>somevar</em></li>
+<li>It will disallow changing <em>somevar</em></li>
+<li>It will not put <em>somevar</em> into shell environment like <code>export</code> command</li>
+</ol>
+<pre><code class="lang-bash"><span class="hljs-built_in">readonly</span> immutable=<span class="hljs-string">&apos;Will not change me&apos;</span>
+</code></pre>
+<p>Here we create a readonly variable</p>
+<pre><code class="lang-bash">immutable=<span class="hljs-string">&apos;this will not work&apos;</span>
+</code></pre>
+<p>Zsh prints this output: <code>zsh: read-only variable: immutable</code></p>
+<p>Bash prints this output: <code>bash: immutable: readonly variable</code></p>
+<p>If you use <code>readonly -p</code> it will print the read-only variables</p>
+<p>In zsh here is the output: <code>typeset -r immutable=&apos;Will not change me&apos;</code></p>
+<p>In bash here is the output:</p>
+<pre><code class="lang-bash">bash-4.4$ <span class="hljs-built_in">readonly</span> immutable=<span class="hljs-string">&apos;Will not change me&apos;</span>
+bash-4.4$ immutable=<span class="hljs-string">&apos;this will not work&apos;</span>
+bash: immutable: <span class="hljs-built_in">readonly</span> variable
+bash-4.4$ <span class="hljs-built_in">readonly</span> -p
+<span class="hljs-built_in">declare</span> -r BASHOPTS=<span class="hljs-string">&quot;cmdhist:complete_fullquote:expand_aliases:extquote:force_fignore:hostcomplete:interactive_comments:progcomp:promptvars:sourcepath&quot;</span>
+<span class="hljs-built_in">declare</span> -ir BASHPID
+<span class="hljs-built_in">declare</span> -ar BASH_VERSINFO=([0]=<span class="hljs-string">&quot;4&quot;</span> [1]=<span class="hljs-string">&quot;4&quot;</span> [2]=<span class="hljs-string">&quot;12&quot;</span> [3]=<span class="hljs-string">&quot;1&quot;</span> [4]=<span class="hljs-string">&quot;release&quot;</span> [5]=<span class="hljs-string">&quot;x86_64-apple-darwin16.3.0&quot;</span>)
+<span class="hljs-built_in">declare</span> -ir EUID=<span class="hljs-string">&quot;501&quot;</span>
+<span class="hljs-built_in">declare</span> -ir PPID=<span class="hljs-string">&quot;25996&quot;</span>
+<span class="hljs-built_in">declare</span> -r SHELLOPTS=<span class="hljs-string">&quot;braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor&quot;</span>
+<span class="hljs-built_in">declare</span> -ir UID=<span class="hljs-string">&quot;501&quot;</span>
+<span class="hljs-built_in">declare</span> -r immutable=<span class="hljs-string">&quot;Will not change me&quot;</span>
+</code></pre>
+<h4 id="environment-control-with-env">Environment control with env</h4>
+<p>The <code>env</code> command provides a way to control the shell environment</p>
+<pre><code class="lang-bash">env
+TERM_SESSION_ID=w1t0p0:011B05E8-0A67-486A-A821-E15BCBA8AF92
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.1s3qZ3IXF0/Listeners
+Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.7gtsRkK4VJ/Render
+COLORFGBG=12;8
+ITERM_PROFILE=Default
+XPC_FLAGS=0x0
+LANG=en_US.UTF-8
+PWD=/Users/marcelbelmont/code-craftsmanship-organization/unix-programming-and-regular-expressions-workshop
+SHELL=/usr/<span class="hljs-built_in">local</span>/bin/zsh
+SECURITYSESSIONID=186a8
+TERM_PROGRAM_VERSION=3.1.3
+TERM_PROGRAM=iTerm.app
+...
+</code></pre>
+<p>Here it prints all the shell variables</p>
+<p>If you want to start a shell environment with clean slate use <code>env -i</code> and set variables you want, in this way the shell will not inherit anything</p>
+<h4 id="unset-command">Unset command</h4>
+<p><code>unset</code> will remove shell variables and functions</p>
+<p>unset options:</p>
+<ul>
+<li><code>unset</code> with no options or with <code>-v</code> will just remove variables</li>
+<li><p><code>unset -f</code> will remove shell functions</p>
+</li>
+<li><p>When you use <code>unset</code> it will also remove variables from the shell environment</p>
+</li>
+</ul>
+<h4 id="variable-best-practices">Variable Best Practices</h4>
+<ul>
+<li>Don&apos;t put spaces around the <code>=</code> when doing variable assignments</li>
+<li>Make sure to quote values that have whitespace</li>
+<li>exported variables will share the same namespace as regular variables</li>
+<li>I haven&apos;t seen much use of read-only variables even though I introduced them</li>
+</ul>
+<h4 id="parameter-expansions">Parameter expansions</h4>
+<p>Parameters consist of regular shell variables(baz=BAZ)</p>
+<p>Command line argument like this:</p>
+<ul>
+<li><code>$1</code>, ... <code>$n</code></li>
+<li><code>$#</code></li>
+<li><code>$#</code>,</li>
+<li><code>$@</code>,</li>
+<li><p><code>$*</code>
+<strong>We have discusses these already earlier</strong></p>
+</li>
+<li><p><code>$?</code> ==&gt; this gives you exit status code</p>
+</li>
+</ul>
+<p>Parameter expansion is the way you get values from different parameters</p>
+<h4 id="command-line-arguments">Command line arguments</h4>
+<ul>
+<li><code>$1</code>, ..., <code>${8}</code> is individual positional parameters</li>
+<li><code>$@</code> and <code>$*</code> will get all arguments but their expansion will behave differently in quotes as was discussed earlier in the workshop</li>
+<li><code>$#</code> is the count of command line arguments</li>
+<li><code>shift</code> command will drop an argument from left side and decrement <code>$#</code> and is used in shell scripts</li>
+<li><code>$0</code> is the name of the shell program or could a function</li>
+<li><code>$-</code> will give options given to shell at invocation <code>awk -f</code></li>
+<li><code>$$</code> will show process ID of current shell process</li>
+<li><code>$?</code> will show exit status of last background command</li>
+<li><code>$!</code> will show process ID of last background command</li>
+<li><code>$HOME</code> is the current users home directory for example my home is <code>/Users/marcelbelmont</code></li>
+<li><code>$IFS</code> is the set input field separator characters</li>
+<li><code>$ENV</code> is the startup file for interactive shells</li>
+</ul>
+<h4 id="simple-parameter-expansion">Simple Parameter Expansion</h4>
+<p>As you have seen already to get variable value you need to precede <code>$</code> to variable name like <code>$HOME</code></p>
+<p>If you want to use a variable but it is enclosed in a variable</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;my home directory is <span class="hljs-variable">${HOME}</span>&quot;</span>
+my home directory is /Users/marcelbelmont
+</code></pre>
+<table>
+<thead>
+<tr>
+<th><code>Operator</code></th>
+<th><code>Action</code></th>
+<th><code>Purpose</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${var:-word}</td>
+<td>If the variable exists and is not null return it else return the word</td>
+<td>Its purpose is to return if a variable is not defined</td>
+</tr>
+<tr>
+<td>${var:=word}</td>
+<td>If var exists and is not null return it else assign word</td>
+<td>Its purpose is to set a variable to a default value if it is not defined already</td>
+</tr>
+<tr>
+<td>${var:?message}</td>
+<td>If var exists and is not null return it else print message</td>
+<td>Its purpose is to catch errors if a variable is not defined</td>
+</tr>
+<tr>
+<td>${var:+word}</td>
+<td>If var exists and is not null return the word else return null</td>
+<td>Its purpose is to test if a variable exists and has a value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="other-types-of-expansions">Other types of expansions</h4>
+<table>
+<thead>
+<tr>
+<th><code>Operator</code></th>
+<th><code>Action</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${var#pattern}</td>
+<td>delete shortest matching text from front of value</td>
+</tr>
+<tr>
+<td>${var##pat}</td>
+<td>delete longest text from front of value</td>
+</tr>
+<tr>
+<td>${var%pattern}</td>
+<td>delete shortest matching text from end of value</td>
+</tr>
+<tr>
+<td>${var%%pattern}</td>
+<td>delete longest matching text from end of value</td>
+</tr>
+</tbody>
+</table>
+<h4 id="parameter-expansion-examples">Parameter expansion examples</h4>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$HOME</span>
+</code></pre>
+<p>This expansion prints out <code>/Users/marcelbelmont</code></p>
+<pre><code class="lang-bash">sleep 3 &amp; <span class="hljs-built_in">echo</span> $!
+</code></pre>
+<p>This command sleeps for 3 seconds and prints out job process number. The <code>echo $!</code> prints out the last process id of job running in the background.</p>
+<p>Notice that when the job finishes we run <code>echo $!</code> and the PID (Process Identification Number) is still the same.</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> _<span class="hljs-variable">$USER_</span>
+</code></pre>
+<p>This just prints out <code>_</code></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> _<span class="hljs-variable">${USER}</span>_
+_marcelbelmont_
+</code></pre>
+<p>This works because variable expansion </p>
+<pre><code class="lang-bash">grep <span class="hljs-string">&apos;^four&apos;</span> data/numbers.txt; <span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>This prints out 1 which means <code>grep</code> failed</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> My PID is $$
+My PID is 1596
+</code></pre>
+<p>This show PID for the current shell sessiono</p>
+<p>We can confirm this with the <code>ps</code> command</p>
+<pre><code class="lang-bash">ps
+  PID TTY           TIME CMD
+  406 ttys000    0:00.03 /Applications/iTerm.app/Contents/MacOS
+  410 ttys000    0:00.60 -zsh
+ 1596 ttys001    0:00.82 /usr/<span class="hljs-built_in">local</span>/bin/zsh <span class="hljs-_">-l</span>
+</code></pre>
+<p>Notice here that <code>1596</code> is the PID for our current shell session as we expect</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${number:-0}</span>
+0
+</code></pre>
+<p>Since number does not exist, echo returns 0</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${number:=0}</span>
+</code></pre>
+<p>This returns 0 since number is not set but it sets number to 0.</p>
+<pre><code class="lang-bash">number=10
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${number:=0}</span>
+</code></pre>
+<p>This time echo prints out 10 since number is set</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${number:-0}</span>
+</code></pre>
+<p>This also prints out 10 since number has been set</p>
+<pre><code class="lang-bash">mypath=/Users/marcelbelmont/code/very.long.file.name
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${mypath#/*/}</span>
+marcelbelmont/code/very.long.file.name
+</code></pre>
+<p>This prints out everything minus <code>/Users/</code></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${mypath##/*/}</span>
+very.long.file.name
+</code></pre>
+<p>Notice here that expansion just prints last part of file</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${mypath%.*}</span>
+/Users/marcelbelmont/code/very.long.file
+</code></pre>
+<p>Notice that this removes <code>.name</code> or the shortest matching part</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">${mypath%%.*}</span>
+/Users/marcelbelmont/code/very
+</code></pre>
+<p> Notice this removed the longest matching part <code>long.file.name</code></p>
+<p> Using these expansions let you avoid using <code>basename</code> and <code>dirname</code> which need to be run a separate process so these expansions can make your shell scripts more efficient with resources.</p>
+<h4 id="parameter-expansion-best-practices">Parameter expansion best practices</h4>
+<ul>
+<li>Remember that when you use <code>$@</code> and <code>$*</code> there is quoting quirks</li>
+<li><code>$$</code> will often be used when creating temporary filenames<ul>
+<li><code>mktemp</code> is a better command to use for this purpose</li>
+</ul>
+</li>
+<li>In general the most useful general expansion is <code>${value:-someval}</code> and <code>${value:=somevalue}</code></li>
+<li>The <code>${var#pattern}</code> type parameter expansions can be good for manipulating pathnames and filenames</li>
+</ul>
+<h4 id="arithmetic-expansion">Arithmetic Expansion</h4>
+<p>This type of expansion because <code>expr</code> is harder to use</p>
+<p>In order to do arithmetic expansion use <code>$(( expression ))</code> to get the result of an arithmetic into a command line expression or for a variable assignment</p>
+<ul>
+<li><p>You can access variable values by preceding with or without the <code>$</code></p>
+</li>
+<li><p>The <code>$((  expression ))</code> acts like double quotes</p>
+</li>
+<li><p>Result is placed into a command line but side-effects are possible through variable assignment</p>
+</li>
+</ul>
+<h4 id="arithmetic-operator-table">Arithmetic Operator Table</h4>
+<table>
+<thead>
+<tr>
+<th><code>Operator</code></th>
+<th><code>Meaning</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>++</code> <code>--</code></td>
+<td>Increment <code>/</code> decrement</td>
+</tr>
+<tr>
+<td><code>+</code> <code>-</code></td>
+<td>Unary plus, minus, logical and bitwise negation</td>
+</tr>
+<tr>
+<td><code>*</code> <code>/</code> <code>%</code></td>
+<td>Multiply, Divide, Remainder</td>
+</tr>
+<tr>
+<td><code>+</code> <code>-</code></td>
+<td>Binary addition, Binary subtraction</td>
+</tr>
+<tr>
+<td><code>&lt;&lt;</code> <code>&gt;&gt;</code></td>
+<td>Left Shift, Right Shift</td>
+</tr>
+<tr>
+<td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td>
+<td>Comparison Operators</td>
+</tr>
+<tr>
+<td><code>==</code> <code>!=</code></td>
+<td>Equal, Not Equal</td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td>Bitwise AND</td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>Bitwise Exclusive OR</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>Bitwise OR</td>
+</tr>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>Logical AND (Short Circuit)</td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>Logical OR (Short Circuit)</td>
+</tr>
+<tr>
+<td><code>?:</code></td>
+<td>Conditional Expression</td>
+</tr>
+<tr>
+<td><code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code> etc</td>
+<td>Assignment Operators</td>
+</tr>
+</tbody>
+</table>
+<h4 id="let-command">Let Command</h4>
+<p>The <code>let</code> &quot;expression&quot; is used for arithmetic</p>
+<ul>
+<li><p>Its purpose is to do arithmetic and to test result in a <code>if</code> statement or <code>loop</code></p>
+</li>
+<li><p>Exit status is 0 for non-zero result and 1 for zero result so this is inverse of shell success status which returns 0 for success</p>
+</li>
+</ul>
+<p>the <code>let</code> expression works same as <code>$(( expression ))</code></p>
+<ul>
+<li><p>There is an alternate syntax in bash <code>(( expression ))</code> with no preceding <code>$</code> this is not defined in POSIX so may not work in other shells</p>
+</li>
+<li><p>This alternate syntax was designed to make shell scripts look like <code>regular</code> programming languages</p>
+</li>
+</ul>
+<h4 id="arithmetic-expansion-examples">Arithmetic Expansion Examples</h4>
+<pre><code class="lang-bash">amount=100
+</code></pre>
+<pre><code class="lang-bash">percent=15
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> Total: $((  amount + ( (amount * percent) / 100) ))
+</code></pre>
+<p>Here we use <code>$(( ))</code> notation to save arithmetic value</p>
+<pre><code class="lang-bash">j=50
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> my answer is $(( ++j ))
+51
+</code></pre>
+<p>Using prefix operator we increment j and save it to <code>j</code> variable</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$j</span>
+51
+</code></pre>
+<pre><code class="lang-bash">i=30
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> my answer is $(( i++ ))
+my answer is 30
+</code></pre>
+<p>The difference in postfix operator is that i returns 30 but when we inspect <code>i</code> it was incremented to 31</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$i</span>
+31
+</code></pre>
+<pre><code class="lang-bash">z=10
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $(( z += 2 ))
+12
+</code></pre>
+<p>Here <code>+=</code> assigns 12 to <code>z</code></p>
+<pre><code class="lang-bash">mysolution=13
+</code></pre>
+<p>Now let us use if condition to check</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> (( mysolution == 8 ))
+<span class="hljs-keyword">then</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;This is my solution&quot;</span>
+<span class="hljs-keyword">else</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;what did my solution end up being?&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Notice here use <code>((  ))</code> to check if mysolution is equal to 8 or not</p>
+<h4 id="arithmetic-expansion-best-practices">Arithmetic Expansion Best Practices</h4>
+<p>Arithmetic expansion is used to perform arithmetic instead of using <code>expr</code> command</p>
+<p><code>POSIX</code> restricts arithmetic to C language long integers</p>
+<p>You can use <code>let</code> nd <code>(( expression ))</code> in bash and zsh but this notation isn&apos;t necessarily portable to other shells</p>
+<p>Arithmetic expansion helps provide integer arithmetic using a notation familiar to other programming languages</p>
+<p>Built-in math is much faster and easier to use than <code>expr</code> command</p>
+<p>Built-in math is easier to write and read</p>
+<p>Bash and zsh also provide commands for arithmetic that can be used in <code>if</code>, <code>while</code> and <code>until</code> loops</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="text-sorting.html">Text Sorting</a></td>
+<td style="text-align:right"><a href="decision-making-and-exit-status.html">Decision Making and Exit Status</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="text-sorting.html" class="navigation navigation-prev " aria-label="Previous page: Text Sorting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="decision-making-and-exit-status.html" class="navigation navigation-next " aria-label="Next page: Decision Making and Exit Status">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Arithmetic Operations and variables","level":"1.9","depth":1,"next":{"title":"Decision Making and Exit Status","level":"1.10","depth":1,"path":"docs/decision-making-and-exit-status.md","ref":"docs/decision-making-and-exit-status.md","articles":[]},"previous":{"title":"Text Sorting","level":"1.8","depth":1,"path":"docs/text-sorting.md","ref":"docs/text-sorting.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/arithmetic-operations-and-variables.md","mtime":"2018-11-22T17:17:35.921Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,832 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Filename expansions and globbing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="working-with-fields.html" />
+    
+    
+    <link rel="prev" href="text-substitution.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Filename expansions and globbing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---filename-expansions-and-globbing">Unix Programming and Regular Expressions Workshop - Filename expansions and globbing</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#tilde-expansion">Tilde Expansion</a></li>
+<li><a href="#wildcards">Wildcards</a></li>
+<li><a href="#hidden-files">Hidden Files</a></li>
+<li><a href="#tilde-examples">Tilde Examples</a></li>
+<li><a href="#wildcard-examples">Wildcard Examples</a></li>
+<li><a href="#hidden-file-examples">Hidden File Examples</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#extended-pattern-matching">Extended Pattern Matching</a></li>
+<li><a href="#extended-pattern-notations">Extended Pattern Notations</a></li>
+<li><a href="#enable-pattern-matching">Enable Pattern matching</a></li>
+<li><a href="#extended-pattern-matching-examples">Extended Pattern Matching Examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="tilde-expansion">Tilde Expansion</h4>
+<p>The <code>~</code> is shorthand for a users home directory</p>
+<ul>
+<li><code>~/somefile</code> is shorthand for a file in current users home directory<ul>
+<li>In my mac book ~ is short for <code>/Users/marcelbelmont</code> so <code>~/somefile</code> would expand to <code>/Users/marcelbelmont/somefile</code></li>
+<li>In linux machines usually <code>~</code> would be <code>/home/someuser</code></li>
+</ul>
+</li>
+<li>~someuser/somefile would be for a file in a specific users home directory<ul>
+<li><code>cd ~marcelbelmont/code-craftsmanship-organization/</code><ul>
+<li>this command would expand to <code>cd /Users/marcelbelmont/code-craftsmanship-organization</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Common extensions:<ul>
+<li><code>~+</code> will use the current directory</li>
+<li><code>~-</code> will use the previous directory</li>
+</ul>
+</li>
+<li>The tilde <code>~</code> will expand after variable expansion so you could do <code>cd ~$USER</code> which would work</li>
+</ul>
+<h4 id="wildcards">Wildcards</h4>
+<p>Wildcards are like regular expressions but are simpler</p>
+<p>Wildcards are used for file names while regular expressions are typically used for file contents</p>
+<ul>
+<li><p><code>*</code> asterisk matches any sequence of characters much like use in regular expressions</p>
+<ul>
+<li><code>ls .*</code> will print out all hidden files in current directory</li>
+</ul>
+</li>
+<li><p><code>?</code> will match any single character like the <code>.</code> dot in regular expressions</p>
+</li>
+<li><p>Bracket expressions are like the regular expressions bracket expressions</p>
+<ul>
+<li>Ranges and <code>[[:class:]]</code></li>
+<li>Big difference is the complement though<ul>
+<li>Use <code>[!...]</code> instead of <code>[^...]</code> to complement</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Anchoring is done implicitly</p>
+<ul>
+<li><code>*.c</code> =&gt; <code>^.*\.c$</code><ul>
+<li>remember the <code>^ and $</code> will anchor the name to this</li>
+<li>like <code>word.c</code> or something</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="hidden-files">Hidden Files</h4>
+<p>By convention files and directories whose names start with a dot are not shown by either <code>ls</code> and are not matched by <code>wildcards</code></p>
+<p>If you want to see hidden files pass <code>-a</code> flag which means &quot;all&quot;</p>
+<ul>
+<li><code>ls -a</code> will print out all the files</li>
+</ul>
+<pre><code class="lang-bash">$ ls <span class="hljs-_">-a</span>
+.  ..  .git  .gitignore  LICENSE  README.md  SUMMARY.md  _book    book.json  data  docs  node_modules  package.json  scripts
+</code></pre>
+<p>Notice that this printed out all the files/directories in the repo</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> ~/.profile
+-rw-r--r-- 1 marcelbelmont 186 Jan 23  2017 /Users/marcelbelmont/.profile
+</code></pre>
+<p>Notice here I am printing out <code>.profile</code> in my home directory with <code>-l</code> flag option which gives full description</p>
+<h4 id="tilde-examples">Tilde Examples</h4>
+<p>Example using extensions:</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">pwd</span>
+/Users/marcelbelmont/code-craftsmanship-organization/data-visualization-workshop
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> ~/code-craftsmanship-organization/unix-programming-and-regular-expressions-workshop
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> We were just <span class="hljs-keyword">in</span> ~-
+We were just <span class="hljs-keyword">in</span> /Users/marcelbelmont/code-craftsmanship-organization/data-visualization-workshop
+$ <span class="hljs-built_in">echo</span> Now we are <span class="hljs-keyword">in</span> ~+
+Now we are <span class="hljs-keyword">in</span> /Users/marcelbelmont/code-craftsmanship-organization/unix-programming-and-regular-expressions-workshop
+</code></pre>
+<p>Notice here that <code>~-</code> prints out the previous path we were in while <code>~+</code> prints out the current path</p>
+<h4 id="wildcard-examples">Wildcard Examples</h4>
+<p>Let use go to object file directory</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> ~/code-craftsmanship-organization/unix-programming-and-regular-expressions-workshop/object-files
+</code></pre>
+<p>Run the gcc utility to generate object files</p>
+<pre><code class="lang-bash">$ gcc -c helloWorld.c
+</code></pre>
+<p>This will generate an object file</p>
+<pre><code class="lang-bash">$ gcc helloWorld.o -o hello
+</code></pre>
+<p>This will generate an executable file called <code>hello</code></p>
+<pre><code class="lang-bash">$ ls *.[!c]
+</code></pre>
+<p>This command works in bash but not the zsh</p>
+<h4 id="hidden-file-examples">Hidden File Examples</h4>
+<pre><code class="lang-bash">ls ~/.bash*
+/Users/marcelbelmont/.bash_history
+/Users/marcelbelmont/.bash_profile
+/Users/marcelbelmont/.bashrc
+
+/Users/marcelbelmont/.bash_sessions:
+029688FD-3537-49D5-B14B-572B91E5DC3F.history
+029688FD-3537-49D5-B14B-572B91E5DC3F.historynew
+029688FD-3537-49D5-B14B-572B91E5DC3F.session
+80529834-95E5-41D0-81D4-D94A60984AE1.history
+80529834-95E5-41D0-81D4-D94A60984AE1.historynew
+80529834-95E5-41D0-81D4-D94A60984AE1.session
+8C1748D6-939A-4FBD-925F-0FBDBCFE729B.history
+8C1748D6-939A-4FBD-925F-0FBDBCFE729B.historynew
+8C1748D6-939A-4FBD-925F-0FBDBCFE729B.session
+</code></pre>
+<p>Notice this command prints out all the hidden files/directories that start with <code>.bash</code></p>
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+<li><p>You need to be very carefule with spaces and <code>*</code></p>
+<ul>
+<li>`rm *  .o</li>
+<li>this will remove all files and then try to delete <code>.o</code> but that is already deleted</li>
+</ul>
+</li>
+<li><p>Make sure to quote wildcard characters if you want to use them literally</p>
+</li>
+<li><p>Older shells don&apos;t support tilde expansion even though tilde expansion is part of the POSIX standard.</p>
+</li>
+<li><p>If you run scripts in a older shell then they may fail</p>
+</li>
+</ul>
+<h4 id="extended-pattern-matching">Extended Pattern Matching</h4>
+<p>Extended Pattern Matching is availabe in Bash, ksh, zsh and probably other shells</p>
+<p>Extended Pattern is not part of the POSIX standard</p>
+<p>Don&apos;t rely on extended pattern matching though for portability though as some shells may not have it</p>
+<p>Extended patterns provide similar power that extended regular expressions provide</p>
+<p>Extended Pattern matching is a more powerful filename matching mechanism</p>
+<h4 id="extended-pattern-notations">Extended Pattern Notations</h4>
+<table>
+<thead>
+<tr>
+<th><code>Pattern</code></th>
+<th><code>ERE equivalent</code></th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*(exp)</code></td>
+<td>exp*</td>
+<td>means zero or more of an exp</td>
+</tr>
+<tr>
+<td><code>+(exp)</code></td>
+<td>exp+</td>
+<td>means one or more of an exp</td>
+</tr>
+<tr>
+<td><code>?(exp)</code></td>
+<td>exp?</td>
+<td>means zero or one of exp</td>
+</tr>
+<tr>
+<td>&lt;code&gt;@(exp1|exp2|...|expn)&lt;/code&gt;</td>
+<td>exp1 pipe exp2</td>
+<td>This is alternation</td>
+</tr>
+<tr>
+<td><code>!(exp)</code></td>
+<td>No equivalent notation</td>
+<td>means complement of exp</td>
+</tr>
+</tbody>
+</table>
+<h4 id="enable-pattern-matching">Enable Pattern matching</h4>
+<p>Use command <code>shopt</code> in bash</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">shopt</span> --help
+<span class="hljs-built_in">shopt</span>: <span class="hljs-built_in">shopt</span> [-pqsu] [-o] [optname ...]
+    Set and <span class="hljs-built_in">unset</span> shell options.
+
+    Change the setting of each shell option OPTNAME.  Without any option
+    arguments, list all shell options with an indication of whether or not each
+    is set.
+
+    Options:
+      -o    restrict OPTNAMEs to those defined <span class="hljs-keyword">for</span> use with `<span class="hljs-built_in">set</span> -o<span class="hljs-string">&apos;
+      -p    print each shell option with an indication of its status
+      -q    suppress output
+      -s    enable (set) each OPTNAME
+      -u    disable (unset) each OPTNAME
+
+    Exit Status:
+    Returns success if OPTNAME is enabled; fails if an invalid option is
+    given or OPTNAME is disabled.
+</span></code></pre>
+<p>To enable extended pattern matching you do <code>shopt -s extglob</code></p>
+<p>You can see what shell options are enabled by simply typing <code>shopt</code> into shell or if it is enabled by the command you just entered</p>
+<p>Use command <code>setopt</code> in zsh to enable shell options</p>
+<p>Use command <code>unsetopt</code> to disable shell options</p>
+<p>So to enable pattern matching in zsh do <code>setopt extendedglob</code></p>
+<p><a href="https://linux.die.net/man/1/zshoptions" target="_blank">Zsh options</a></p>
+<h4 id="extended-pattern-matching-examples">Extended Pattern Matching Examples</h4>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">cd</span> data
+</code></pre>
+<p>Go into data directory</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> @(vincent|john|jenny)
+</code></pre>
+<p>This command prints out <code>jenny john vincent</code> in bash but doesn&apos;t work as intended in zsh</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> *@(vincent|john|jingle)*
+jingleheimer john vincent
+</code></pre>
+<p>In order to get <code>jingleheimer</code> we need to put <code>*</code> in front and after</p>
+<p>If you see this message in bash <code>extglob</code> is not enabled <code>bash: !: event not found</code></p>
+<pre><code class="lang-bash">$ ls !(*.o)
+hello  helloWorld.c
+</code></pre>
+<ul>
+<li>This prints out anything not an object file so in this case the executable and c file get printed to stdout</li>
+</ul>
+<p>The equivalent zsh command is <code>ls ^*.o</code></p>
+<ul>
+<li>Use the extended patterns if they are available</li>
+<li><code>!(...)</code> in bash for complement and <code>^..</code> in zsh</li>
+<li><code>@(...)</code> in bash for alternation is useful</li>
+<li>You can use wildcards in the pattern like `!(*.o) in bash</li>
+<li>Use extended patterns where it makes sense</li>
+<li>Sometimes using something like <code>egrep</code> will be faster than a shell function that is read line-by-line</li>
+</ul>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="text-substitution.html">Text Substitution</a></td>
+<td style="text-align:right"><a href="working-with-fields.html">Working with Fields</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="text-substitution.html" class="navigation navigation-prev " aria-label="Previous page: Text Substitution">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="working-with-fields.html" class="navigation navigation-next " aria-label="Next page: Working with Fields">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Filename expansions and globbing","level":"1.6","depth":1,"next":{"title":"Working with Fields","level":"1.7","depth":1,"path":"docs/working-with-fields.md","ref":"docs/working-with-fields.md","articles":[]},"previous":{"title":"Text Substitution","level":"1.5","depth":1,"path":"docs/text-substitution.md","ref":"docs/text-substitution.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/filename-expansions-and-globbing.md","mtime":"2018-11-22T17:17:35.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

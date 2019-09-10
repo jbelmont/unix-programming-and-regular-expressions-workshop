@@ -1,0 +1,5 @@
+Canada	Toronto
+Ireland	Dublin
+Russia Moscow
+UK	London
+USA	Washington, D.C

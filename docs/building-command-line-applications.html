@@ -1,0 +1,748 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Building Command line applications · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell-login-order.html" />
+    
+    
+    <link rel="prev" href="build-automation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Building Command line applications</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---building-command-line-applications">Unix Programming and Regular Expressions Workshop - Building Command line applications</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#command-line-applications">Command Line Applications</a></li>
+<li><a href="#node-commandline-application">Node CommandLine Application</a></li>
+<li><a href="#golang-commandline-application">Golang CommandLine Application</a></li>
+<li><a href="#quick-summary">Quick summary</a></li>
+<li><a href="#link-to-golang-workshop">Link to Golang Workshop</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h2 id="command-line-applications">Command Line Applications</h2>
+<p>Building command line applications can be done using any turing complete programming language of your choice.</p>
+<p>The 2 Programming Languages we will look at here:</p>
+<ul>
+<li>Node.js</li>
+<li>Golang</li>
+</ul>
+<h2 id="node-commandline-application">Node CommandLine Application</h2>
+<p>First off we will not use <code>commander.js</code> or any third party libraries to make a generic cli application. </p>
+<p>We will use plain node.js</p>
+<pre><code class="lang-javascript"><span class="hljs-meta">&apos;use strict&apos;</span>;
+
+<span class="hljs-keyword">const</span> process = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;process&apos;</span>);
+<span class="hljs-keyword">const</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+
+<span class="hljs-keyword">const</span> lib = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../lib&apos;</span>);
+<span class="hljs-keyword">const</span> utf8 = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;../constants&apos;</span>).utf8;
+
+<span class="hljs-keyword">const</span> args = process.argv.slice(<span class="hljs-number">2</span>);
+
+<span class="hljs-keyword">const</span> tsvOrCsv = args.some(<span class="hljs-function"><span class="hljs-params">arg</span> =&gt;</span> {
+  <span class="hljs-keyword">return</span> arg === <span class="hljs-string">&apos;--tsv-file&apos;</span> || arg === <span class="hljs-string">&apos;--csv-file&apos;</span>;
+});
+
+<span class="hljs-keyword">if</span> (!tsvOrCsv) {
+  lib.UsageMessage();
+  process.exit(<span class="hljs-number">1</span>);
+}
+
+<span class="hljs-keyword">const</span> csvIndex = args.findIndex(<span class="hljs-function"><span class="hljs-params">arg</span> =&gt;</span> arg === <span class="hljs-string">&apos;--csv-file&apos;</span>);
+<span class="hljs-keyword">let</span> csv, tsv;
+<span class="hljs-keyword">if</span> (csvIndex &gt; <span class="hljs-number">-1</span>) {
+  csv  = args.slice(csvIndex);
+}
+
+<span class="hljs-keyword">const</span> tsvIndex = args.findIndex(<span class="hljs-function"><span class="hljs-params">arg</span> =&gt;</span> arg === <span class="hljs-string">&apos;--tsv-file&apos;</span>);
+<span class="hljs-keyword">if</span> (tsvIndex &gt; <span class="hljs-number">-1</span>) {
+  tsv = args.slice(tsvIndex);
+}
+<span class="hljs-keyword">if</span> (csv) {
+  <span class="hljs-keyword">const</span> csvPath = csv[<span class="hljs-number">1</span>];
+  <span class="hljs-keyword">const</span> fileContents = [];
+  fileReader(csvPath, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, data</span>) </span>{
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">throw</span> err;
+    <span class="hljs-keyword">const</span> [
+      language,
+      frequency
+    ] = data.split(<span class="hljs-string">&apos;,&apos;</span>);
+    <span class="hljs-built_in">console</span>.log(language);
+    <span class="hljs-built_in">console</span>.log(frequency);
+  });
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (tsv) {
+  <span class="hljs-keyword">const</span> tsvPath = tsv[<span class="hljs-number">1</span>];
+  <span class="hljs-built_in">console</span>.log(tsvPath);
+} <span class="hljs-keyword">else</span> {
+  lib.UsageMessage();
+  process.exit(<span class="hljs-number">1</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fileReader</span>(<span class="hljs-params">filePath, cb</span>) </span>{
+  fs.readFile(<span class="hljs-string">`<span class="hljs-subst">${__dirname}</span>/../<span class="hljs-subst">${filePath}</span>`</span>, utf8, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err, data</span>) </span>{
+    <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">return</span> cb(err);
+    cb(<span class="hljs-literal">null</span>, data);
+  });
+}
+</code></pre>
+<p>Here is a snippet of code I used for node.js on one hand you can parse commandline flags relatively easy.</p>
+<p>In node.js you can just use <code>process.argv</code> and parse out the flags that were passed in via the commmandline</p>
+<h2 id="golang-commandline-application">Golang CommandLine Application</h2>
+<p>Golang already has features built into the standard library that make building command line applications simple.</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;bufio&quot;</span>
+    <span class="hljs-string">&quot;encoding/csv&quot;</span>
+    <span class="hljs-string">&quot;encoding/json&quot;</span>
+    <span class="hljs-string">&quot;flag&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;io&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">convertToJSON</span><span class="hljs-params">(f *os.File, isTSVFile <span class="hljs-keyword">bool</span>)</span></span> {
+    rows := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>, <span class="hljs-number">0</span>)
+    <span class="hljs-keyword">var</span> columns = []<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;language&quot;</span>, <span class="hljs-string">&quot;frequency&quot;</span>}
+    <span class="hljs-comment">// Create a new reader.</span>
+    csvReader := csv.NewReader(bufio.NewReader(f))
+    csvReader.TrimLeadingSpace = <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">if</span> isTSVFile {
+        csvReader.Comma = <span class="hljs-string">&apos;\t&apos;</span> <span class="hljs-comment">// Use tab-delimited instead of comma</span>
+    }
+    <span class="hljs-keyword">for</span> {
+        record, err := csvReader.Read()
+        <span class="hljs-keyword">if</span> err == io.EOF {
+            <span class="hljs-keyword">break</span>
+        }
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            fmt.Println(err)
+        }
+        row := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>)
+        <span class="hljs-keyword">for</span> i, n := <span class="hljs-keyword">range</span> columns {
+            row[n] = record[i]
+        }
+        rows = <span class="hljs-built_in">append</span>(rows, row)
+    }
+    data, err := json.MarshalIndent(&amp;rows, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;  &quot;</span>)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Println(err)
+    }
+    <span class="hljs-comment">// print the reformatted struct as JSON</span>
+    fmt.Printf(<span class="hljs-string">&quot;%s\n&quot;</span>, data)
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    csvPtr := flag.String(<span class="hljs-string">&quot;csv-file&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;CSV File to parse. (Required)&quot;</span>)
+    tsvPtr := flag.String(<span class="hljs-string">&quot;tsv-file&quot;</span>, <span class="hljs-string">&quot;&quot;</span>, <span class="hljs-string">&quot;TSV File to parse. (Required)&quot;</span>)
+    flag.Parse()
+
+    <span class="hljs-keyword">if</span> *csvPtr == <span class="hljs-string">&quot;&quot;</span> &amp;&amp; *tsvPtr == <span class="hljs-string">&quot;&quot;</span> {
+        flag.PrintDefaults()
+        os.Exit(<span class="hljs-number">1</span>)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> *csvPtr != <span class="hljs-string">&quot;&quot;</span> {
+        f, err := os.Open(*csvPtr)
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            fmt.Println(err)
+        }
+        <span class="hljs-keyword">defer</span> f.Close()
+        convertToJSON(f, <span class="hljs-literal">false</span>)
+    } <span class="hljs-keyword">else</span> {
+        f, err := os.Open(*tsvPtr)
+        <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+            fmt.Println(err)
+        }
+        <span class="hljs-keyword">defer</span> f.Close()
+        convertToJSON(f, <span class="hljs-literal">true</span>)
+    }
+}
+</code></pre>
+<p>Notice here that I just used the <code>flag</code> builtin library and it does the job of parsing command line flags.</p>
+<p>Also dealing with asychronous code in <code>Golang</code> is much easier than using <code>Node.js</code>. </p>
+<p>There are many design patterns built into Golang that make writing commandline applications a joy to work with.</p>
+<h2 id="quick-summary">Quick summary</h2>
+<p>You can write cli apps use either <code>Node.js</code> or <code>Golang</code> but consider writing a command line application in Golang. </p>
+<h2 id="link-to-golang-workshop">Link to Golang Workshop</h2>
+<p>I wrote a <a href="https://github.com/jbelmont/golang-workshop" target="_blank">Golang workshop</a> which you can check out if you aren&apos;t familiar with Go.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="build-automation.html">Build Automation</a></td>
+<td style="text-align:right"><a href="shell-login-order.html">Shell Login Order</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="build-automation.html" class="navigation navigation-prev " aria-label="Previous page: Build Automation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell-login-order.html" class="navigation navigation-next " aria-label="Next page: Shell Login Order">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Building Command line applications","level":"1.22","depth":1,"next":{"title":"Shell Login Order","level":"1.23","depth":1,"path":"docs/shell-login-order.md","ref":"docs/shell-login-order.md","articles":[]},"previous":{"title":"Build Automation","level":"1.21","depth":1,"path":"docs/build-automation.md","ref":"docs/build-automation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/building-command-line-applications.md","mtime":"2018-11-22T17:17:35.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

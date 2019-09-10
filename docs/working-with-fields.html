@@ -1,0 +1,1101 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Working with Fields · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="text-sorting.html" />
+    
+    
+    <link rel="prev" href="filename-expansions-and-globbing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Working with Fields</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---working-with-fields">Unix Programming and Regular Expressions Workshop - Working with Fields</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#cut-description">Cut description</a></li>
+<li><a href="#cut-options">Cut options</a></li>
+<li><a href="#cut-examples">Cut examples</a></li>
+<li><a href="#join-description">Join description</a></li>
+<li><a href="#join-options">Join options</a></li>
+<li><a href="#join-examples">Join examples</a></li>
+<li><a href="#usages-for-cut-and-join">Usages for Cut and Join</a></li>
+<li><a href="#awk-description">Awk Description</a></li>
+<li><a href="#awk-options">Awk options</a></li>
+<li><a href="#distributions-of-awk">Distributions of awk</a></li>
+<li><a href="#patterns-and-actions-in-awk">Patterns and Actions in Awk</a></li>
+<li><a href="#awk-program-flow">Awk Program Flow</a></li>
+<li><a href="#awk-fields">Awk fields</a></li>
+<li><a href="#printing-lines-in-awk">Printing lines in Awk</a></li>
+<li><a href="#awk-startup-and-cleanup-actions">Awk Startup and Cleanup Actions</a></li>
+<li><a href="#awk-examples">Awk examples</a></li>
+<li><a href="#tips-for-awk-programs">Tips for awk programs</a></li>
+<li><a href="#exercises">Exercises</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="cut-description">Cut description</h4>
+<p>Cut is used to &quot;cut out&quot; fields from data files</p>
+<p>The cut utility cuts out selected portions of each line (as specified by list) from each file and writes them to the standard output.  </p>
+<ul>
+<li><p>If no file arguments are specified, or a file argument is a single dash (`-&apos;), cut reads from the standard input.  </p>
+</li>
+<li><p>The items specified by list can be in terms of column position or in terms of fields delimited by a special character.  </p>
+</li>
+<li><p>Column numbering starts from 1.</p>
+</li>
+</ul>
+<p>The default for <code>cut</code> is field based with <code>TAB</code> as a field separator using the <code>-f</code> option.</p>
+<h4 id="cut-options">Cut options</h4>
+<p><code>cut</code> takes the following options:</p>
+<ul>
+<li><p><code>-b</code> list</p>
+<ul>
+<li>The list specifies byte positions.</li>
+</ul>
+</li>
+<li><p><code>-c</code> list</p>
+<ul>
+<li>The list specifies character positions.</li>
+</ul>
+</li>
+<li><p><code>-d</code> delim</p>
+<ul>
+<li>Use delim as the field delimiter character instead of the tab character.</li>
+</ul>
+</li>
+<li><p><code>-f</code> list</p>
+<ul>
+<li>The list specifies fields, separated in the input by the field delimiter character (see the -d option.)  </li>
+<li>Output fields are separated by a single occurrence of the field delimiter character.</li>
+</ul>
+</li>
+<li><p><code>-n</code> Do not split multi-byte characters.          </p>
+<ul>
+<li>Characters will only be output if at least one byte is selected, and, after a prefix of zero or more unselected bytes, the rest of the bytes that form the character are selected.</li>
+</ul>
+</li>
+<li><p><code>-s</code> Suppress lines with no field delimiter characters.  </p>
+<ul>
+<li>Unless specified, lines with no delimiters are passed through unmodified.</li>
+</ul>
+</li>
+</ul>
+<h4 id="cut-examples">Cut examples</h4>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;one,two,three,four,five&apos;</span> | cut <span class="hljs-_">-d</span> <span class="hljs-string">&apos;,&apos;</span> <span class="hljs-_">-f</span> 1,5
+</code></pre>
+<p>This cut example cuts field <code>1</code> and field <code>5</code> so it prints out <code>one,five</code></p>
+<pre><code class="lang-bash">$ cut <span class="hljs-_">-d</span> : <span class="hljs-_">-f</span> 1,7 /etc/passwd | sed <span class="hljs-string">&apos;/\#.*/d&apos;</span> | sort -u
+</code></pre>
+<p>This cut example first cuts field <code>1</code> and field <code>7</code> then this is piped into sed to delete the initial comment lines and then sort the values and only print unique values</p>
+<h4 id="join-description">Join description</h4>
+<blockquote>
+<p>join -- relational database operator</p>
+</blockquote>
+<ul>
+<li><p>The join utility performs an <code>equality join</code> on the specified files and writes the result to the standard output.  </p>
+</li>
+<li><p>The <code>join field</code> is the field in each file by which the files are compared.  </p>
+</li>
+<li><p>The first field in each line is used by default.  </p>
+</li>
+<li><p>There is one line in the output for each pair of lines in file1 and file2 which have identical join fields.  </p>
+</li>
+<li><p>Each output line consists of the join field, the remaining fields from file1 and then the remaining fields from file2</p>
+</li>
+</ul>
+<p><code>join</code> is used for these reasons:</p>
+<ul>
+<li><p>You have 2 files that associate data with corresponding keys.</p>
+</li>
+<li><p>You have 2 files that have different data in each file.</p>
+</li>
+<li><p>You have 2 files that need to combine the related data in an output record.</p>
+<ul>
+<li>Both of these files need to be sorted on the key <code>(field)</code> of interest</li>
+</ul>
+</li>
+</ul>
+<p>Remember that <code>joins</code> occur on a line-by-line basis</p>
+<p>A missing key in one file will skip the corresponding line in the other file.</p>
+<h4 id="join-options">Join options</h4>
+<p>The following options are available for <code>join</code>:</p>
+<ul>
+<li><p><code>-a</code> file_number</p>
+<ul>
+<li>In addition to the default output, produce a line for each unpairable line in file file_number.</li>
+</ul>
+</li>
+<li><p><code>-e</code> string</p>
+<ul>
+<li>Replace empty output fields with string.</li>
+</ul>
+</li>
+<li><p><code>-o</code> list</p>
+<ul>
+<li>The -o option specifies the fields that will be output from each file for each line with matching join fields.  </li>
+<li>Each element of list has the either the form <code>file_number.field</code>, where file_number is a file number and field is a field number, or the form `0&apos; (zero), representing the join field.</li>
+<li>The elements of list must be either comma (`,&apos;) or whitespace separated.</li>
+</ul>
+</li>
+<li><p><code>-t</code> char</p>
+<ul>
+<li>Use character char as a field delimiter for both input and output.  </li>
+<li>Every occurrence of char in a line is significant.</li>
+</ul>
+</li>
+<li><p><code>-v</code> file_number</p>
+<ul>
+<li>Do not display the default output, but display a line for each unpairable line in file file_number.  </li>
+<li>The options -v 1 and -v 2 may be specified at the same time.</li>
+</ul>
+</li>
+<li><p><code>-1</code> field</p>
+<ul>
+<li>Join on the field&apos;th field of file 1.</li>
+</ul>
+</li>
+<li><p><code>-2</code> field</p>
+<ul>
+<li>Join on the field&apos;th field of file 2.</li>
+</ul>
+</li>
+</ul>
+<h4 id="join-examples">Join examples</h4>
+<pre><code class="lang-bash">$ join data/population.txt data/cities.txt
+Ireland 4,773,000 Dublin
+USA 318,900,000 Washington, D.C
+Russia 144,300,000 Moscow
+UK 64,100,000 London
+Canada 35,160,000 Toronto
+</code></pre>
+<p>Remember that the first field is used by default which happens to be the key in <code>population.txt</code> and <code>cities.txt</code></p>
+<p>Notice here that the key <code>Ireland</code> joins both text files with population and capital fields consequently</p>
+<pre><code class="lang-bash">join -o 1.1,2.2,1.2,1.3 data/cities.txt data/population.txt
+</code></pre>
+<p>This example prints out first field of <code>cities.txt</code> =&gt; 1.1, then prints out second field of <code>population.txt</code> =&gt; 2.2, then prints out second field of <code>cities.txt</code> =&gt; 1.2, then lastly prints out third field of <code>cities.txt</code> =&gt; 1.3 (mainly to get <code>D.C</code>) since it get cut off from.</p>
+<pre><code class="lang-bash">sed <span class="hljs-string">&apos;/^Russia/d&apos;</span> data/cities.txt| join - data/population.txt
+</code></pre>
+<p>In this example we first delete Russia from cities.txt and then pipe this as stdin for <code>join</code> but it fails with join because we didn&apos;t sort the contents of the file <code>cities.txt</code> and when it encountered the file population.txt which wasn&apos;t sorted either it looked for a key <code>Russia</code> but didn&apos;t find it.</p>
+<pre><code class="lang-bash">sort data/cities.txt &gt; data/cities.sorted.txt
+</code></pre>
+<p>Here we sort <code>cities.txt</code></p>
+<pre><code class="lang-bash">sort data/population.txt &gt; data/population.sorted.txt
+</code></pre>
+<p>and here we sort <code>population.txt</code></p>
+<pre><code class="lang-bash">sed <span class="hljs-string">&apos;/^Russia/d&apos;</span> data/cities.sorted.txt | join - data/population.sorted.txt
+</code></pre>
+<p>This command will pass because both files have been sorted and when join encounters key <code>Russia</code> that is not found it simply omits Russia from Output because population and cities didn&apos;t have the shared key anymore</p>
+<p>Another way to do the same thing is to use Process Substitution:</p>
+<pre><code class="lang-bash">join &lt;(sed <span class="hljs-string">&apos;/^Russia/d&apos;</span> data/cities.sorted.txt) &lt;(sort data/population.txt)
+</code></pre>
+<h4 id="usages-for-cut-and-join">Usages for Cut and Join</h4>
+<ul>
+<li>Cut is a focused tool for a special task<ul>
+<li>Cut is a special command that cuts out either delimiter-separated fields or a range of characters</li>
+<li>Cut is much simpler than sed and is used to extract individual fields from a file</li>
+<li>Also there is some locale issues when cutting by a charactere so be cognizant of that</li>
+</ul>
+</li>
+<li>Join is also a focused tool for a special task<ul>
+<li>Join is a special command that selectively merges related data based on corresponding keys</li>
+<li>Join must be sorted on the key field</li>
+<li>Remember from the example above we had to sort it, if you don&apos;t sort it may or may not work as was evidenced on the first <code>sort</code> example so always sort to avoid unexpected behavior</li>
+</ul>
+</li>
+</ul>
+<h4 id="awk-description">Awk Description</h4>
+<p>awk - pattern-directed scanning and processing language</p>
+<p>Awk scans each input file for lines that match any of a set of patterns specified literally in prog or in one or more files specified as -f progfile.  </p>
+<p>With each pattern there can be an associated action that will be performed when a line of a file matches the pattern.</p>
+<p>Each  line  is  matched  against  the  pattern  portion of every pattern-action statement; the associated action is performed for each
+matched pattern.  </p>
+<p>The file name - means the standard input.  Any file of the form var=value is treated as an assignment, not  a  filename, and is executed at the time it would have been opened if it were a filename.  </p>
+<p>The option -v followed by var=value is an assign-
+ment to be done before prog is executed; any number of -v options may be present.  </p>
+<p>The -F fs option defines the input field  separator
+to be the regular expression fs</p>
+<h4 id="awk-options">Awk options</h4>
+<pre><code class="lang-bash">$ awk --help
+</code></pre>
+<p><em>Usage: awk [POSIX or GNU style options] -f progfile [--] file ...</em></p>
+<p><em>Usage: awk [POSIX or GNU style options] [--] &apos;program&apos; file ...</em></p>
+<p>POSIX options:</p>
+<ul>
+<li><code>-f</code> progfile<ul>
+<li><code>-F</code> fs (field separator)</li>
+<li><code>-v</code> var=val</li>
+</ul>
+</li>
+</ul>
+<p>Short options:</p>
+<ul>
+<li><code>-b</code></li>
+<li><code>-c</code></li>
+<li><code>-C</code></li>
+<li><code>-d</code> [file]</li>
+<li><code>-D</code> [file]</li>
+<li><code>-e</code>  &apos;program-text&apos;</li>
+<li><code>-E</code>  file</li>
+<li><code>-g</code></li>
+<li><code>-h</code></li>
+<li><code>-i</code>  includefile</li>
+<li><code>-l</code>  library</li>
+<li><code>-L</code> [fatal|invalid]</li>
+<li><code>-M</code></li>
+<li><code>-N</code></li>
+<li><code>-n</code></li>
+<li><code>-o</code> [file]</li>
+<li><code>-O</code></li>
+<li><code>-p</code> [file]</li>
+<li><code>-P</code></li>
+<li><code>-r</code></li>
+<li><code>-S</code></li>
+<li><code>-t</code></li>
+<li><code>-V</code></li>
+</ul>
+<p>GNU long options: (standard):</p>
+<ul>
+<li><code>--file=progfile</code></li>
+<li><code>--field-separator=fs</code></li>
+<li><code>--assign=var=val</code></li>
+</ul>
+<p>GNU long options: (extensions)</p>
+<ul>
+<li><code>--characters-as-bytes</code></li>
+<li><code>--traditional</code></li>
+<li><code>--copyright</code></li>
+<li><code>--dump-variables[=file]</code></li>
+<li><code>--debug[=file]</code></li>
+<li><code>--source=&apos;program-text&apos;</code></li>
+<li><code>--exec=file</code></li>
+<li><code>--gen-pot</code></li>
+<li><code>--help</code></li>
+<li><code>--include=includefile</code></li>
+<li><code>--load=library</code></li>
+<li><code>--lint[=fatal|invalid]</code></li>
+<li><code>--bignum</code></li>
+<li><code>--use-lc-numeric</code></li>
+<li><code>--non-decimal-data</code></li>
+<li><code>--pretty-print[=file]</code></li>
+<li><code>--optimize</code></li>
+<li><code>--profile[=file]</code></li>
+<li><code>--posix</code></li>
+<li><code>--re-interval</code></li>
+<li><code>--sandbox</code></li>
+<li><code>--lint-old</code></li>
+<li><code>--version</code></li>
+</ul>
+<h4 id="distributions-of-awk">Distributions of awk</h4>
+<p><code>awk</code> has several distributions:</p>
+<ul>
+<li><code>awk</code> bsd style</li>
+<li><code>nawk</code> is a version written by one of the original authors <a href="https://en.wikipedia.org/wiki/Brian_Kernighan" target="_blank">Brian Kernighan</a></li>
+<li><code>gawk</code> is gnu awk and here is the <a href="https://www.gnu.org/software/gawk/manual/gawk.html" target="_blank">Gawk Docs</a></li>
+<li><code>mawk</code> is fast awk implementation</li>
+<li><code>libmawk</code> is a fork of mawk</li>
+<li><code>awka</code></li>
+<li><code>tawk</code></li>
+<li><code>jawk</code></li>
+<li><code>xgawk</code></li>
+<li><code>qseawk</code></li>
+<li>Implementation of <code>awk</code> written by <a href="https://en.wikipedia.org/wiki/BusyBox" target="_blank">BusyBox</a></li>
+</ul>
+<p>We will mainly look at bsd version of awk and gawk</p>
+<h4 id="patterns-and-actions-in-awk">Patterns and Actions in Awk</h4>
+<p>Awk programs operate on a series of patterns and actions</p>
+<p><code>$1 === &quot;marcel&quot; { increment_user++ }</code></p>
+<p>Here is an example</p>
+<ul>
+<li><p>Patterns in awk are done:</p>
+</li>
+<li><p>Regular expression matching</p>
+</li>
+<li>String Comparision</li>
+<li>Number Comparison</li>
+<li>General Test</li>
+<li>Extended Regular expressions</li>
+</ul>
+<p><code>awk</code> actions are enclosed in braces and can do any computation</p>
+<p>Variables in awk are automatically initialized to <code>0</code> or <code>&quot;&quot;</code></p>
+<p>Either the pattern or the action may be omitted in <code>awk</code></p>
+<p><a href="https://www.gnu.org/software/gawk/manual/gawk.html#Pattern-Overview" target="_blank">Patterns in Awk Docs</a></p>
+<p><a href="https://www.gnu.org/software/gawk/manual/gawk.html#Action-Overview" target="_blank">Actions in Awk Docs</a></p>
+<h4 id="awk-program-flow">Awk Program Flow</h4>
+<ol>
+<li><code>awk</code> processes command line options and parses program text</li>
+<li><code>awk</code> will execute any startup actions</li>
+<li><code>awk</code> will loop until it is done<ol>
+<li><code>awk</code> will read a record</li>
+<li><code>awk</code> will split a record into fields</li>
+<li><code>awk</code> will test each pattern (your program code) against a record.</li>
+<li><code>awk</code> will run corresponding action if the action matches</li>
+</ol>
+</li>
+<li><code>awk</code> will execute any cleanup actions</li>
+</ol>
+<h4 id="awk-fields">Awk fields</h4>
+<p>An input line in <code>awk</code> is known as a <code>record</code></p>
+<p>Records in awk consist of fields that are separated by whitespace</p>
+<p>You can set field separators on the command line or use the <code>FS</code> variable</p>
+<p>In awk you use the variables <code>$1</code>, <code>$2</code>, ... , <code>$n</code> and so on for each field</p>
+<p><code>NF</code> is the number of fields in a current record</p>
+<p>You can use <code>NF</code> for the last field in a record</p>
+<p>You use <code>$0</code> for the whole record in awk</p>
+<h6 id="set-field-separator-in-awk">Set Field Separator in awk</h6>
+<p>You can set field separator in 2 places:</p>
+<ol>
+<li><p>command line wth <code>-F</code> option</p>
+<ol>
+<li><code>awk -F: &apos;some program text&apos; /etc/passwd | some pipe operation</code></li>
+</ol>
+</li>
+<li><p>In an awk program.</p>
+<ol>
+<li>You assign a string to <code>FS</code></li>
+<li>3 different &quot;modes&quot; in awk:<ol>
+<li><code>FS = &quot; &quot;</code> number of whitespace separated fields</li>
+<li><code>FS = &quot;character&quot;</code> Number of instances of <code>character</code> separated fields</li>
+<li><code>FS = &quot;re&quot;</code> Each field separated by text that matches &quot;re&quot;</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="printing-lines-in-awk">Printing lines in Awk</h4>
+<p><strong>print</strong> statements only appear in the actions parts in awk</p>
+<p>The <code>print</code> statement is mainly used for simple formatting</p>
+<p><code>print &quot;Order&quot;, $2, &quot;Amount:&quot;, $1</code></p>
+<p>The <code>printf</code> statement is used for formatted text</p>
+<p><code>printf(&quot;Order: %s\tAmount: %g\n&quot;, $2, $1)</code></p>
+<p><a href="https://en.wikipedia.org/wiki/Printf_format_string" target="_blank">printf docs</a></p>
+<p>Many languages have a <code>printf</code> function</p>
+<p><strong>As you saw earlier in the workshop you need to put <code>\n</code> in printf to print a final newline</strong></p>
+<h4 id="awk-startup-and-cleanup-actions">Awk Startup and Cleanup Actions</h4>
+<p><a href="https://www.gnu.org/software/gawk/manual/gawk.html#Using-BEGIN_002fEND" target="_blank">Startup and Cleanup</a></p>
+<h6 id="begin-and-end-rules">Begin and End Rules</h6>
+<p>You provide code that runs before reading any records like so:</p>
+<pre><code class="lang-bash">BEGIN {
+  code here ...
+}
+</code></pre>
+<p>You then can provide code to run after all the records have been processed</p>
+<pre><code class="lang-bash">END {
+  code here ...
+}
+</code></pre>
+<p>The keywords <code>BEGIN</code> and <code>END</code> can begin anywhere in your awk program.</p>
+<p><code>BEGIN</code> and <code>END</code> can be used multiple times in an awk program.</p>
+<p>Furthermore <code>BEGIN</code> and <code>END</code> are run in the order that they appear in your awk program</p>
+<h4 id="awk-examples">Awk examples</h4>
+<pre><code class="lang-bash">awk -F , <span class="hljs-string">&apos;{ print $2 }&apos;</span> data/information.txt
+</code></pre>
+<p>The field separator is <code>,</code> is in this awk program</p>
+<p>Here is a breakdown of each field:</p>
+<ol>
+<li>Name</li>
+<li>Rank</li>
+<li>Height</li>
+<li>Years of Service</li>
+</ol>
+<p>It prints out the Rank field here</p>
+<p>If we wanted to delete the the First Row we can pipe the output to sed like this:</p>
+<pre><code class="lang-bash">awk -F , <span class="hljs-string">&apos;{ print $2 }&apos;</span> data/information.txt | sed <span class="hljs-string">&apos;/Rank/d&apos;</span>
+</code></pre>
+<p>Another way to do this using awk is to do:</p>
+<pre><code class="lang-bash">awk -F , <span class="hljs-string">&apos;$2 != &quot;Rank&quot; { print $2 }&apos;</span> data/information.txt
+</code></pre>
+<p>Notice here we put double quotes (&quot;) around Rank</p>
+<p>Or another way to do this is:</p>
+<pre><code class="lang-bash">awk -F , <span class="hljs-string">&apos;FNR != 1 { print $2 }&apos;</span> data/information.txt
+</code></pre>
+<p>// TODO: Add xargs example with awk</p>
+<p>Now we get the following output:</p>
+<p>SSG
+SSG
+PVT
+SGT
+CPT</p>
+<pre><code class="lang-bash">awk -F : <span class="hljs-string">&apos;{ print $1 }&apos;</span> /etc/passwd
+</code></pre>
+<p>This awk command line program sets field separator to <code>:</code>, then it prints out the first field for each record of <code>/etc/passwd</code></p>
+<pre><code class="lang-bash">sed -n <span class="hljs-string">&apos;25p&apos;</span> /etc/passwd
+</code></pre>
+<p>Notice with sed we print the 25th line of <code>/etc/passwd</code></p>
+<p>which has the following content:</p>
+<p><strong>_serialnumberd:*:58:58:Serial Number Daemon:/var/empty:/usr/bin/false</strong></p>
+<p>This can vary with different <code>/etc/passwd</code> files</p>
+<p>Here is a breakdown of each field:</p>
+<ol>
+<li>_serialnumberd</li>
+<li>*</li>
+<li>58</li>
+<li>58</li>
+<li>Serial Number Daemon</li>
+<li>/var/empty</li>
+<li>/usr/bin/false</li>
+</ol>
+<p>So in total there is 7 fields in each record that is field separated with <code>:</code> character</p>
+<pre><code class="lang-bash">sed <span class="hljs-string">&apos;/^#/d&apos;</span> /etc/passwd | awk -F : <span class="hljs-string">&apos;{ print $6 }&apos;</span>
+</code></pre>
+<p>What do you think gets printed in this awk program?</p>
+<pre><code class="lang-bash">awk -F : <span class="hljs-string">&apos;$NF ~ /\/bin\/sh/ { print }&apos;</span> /etc/passwd
+</code></pre>
+<p>This script counts with <code>$NF</code> which is a special variable in <code>awk</code> the number of records that have users that use <code>/bin/sh</code>. Notice here that I had to escape the <code>/</code> with a <code>\</code> to get the literal <code>/</code>. Since we don&apos;t specify any field it will print all the fields that matched
+Also remember <code>$1</code> is the first field of the record</p>
+<pre><code class="lang-bash">awk -F : <span class="hljs-string">&apos;$5 ~ /PostgreSQL Server/&apos;</span> /etc/passwd
+</code></pre>
+<p>This awk program looks in the 5th field for each record for the pattern <code>/PostgreSQL Server/</code> using the <code>~</code> operator and then prints out the entire record that matched</p>
+<pre><code class="lang-bash">awk -F : <span class="hljs-string">&apos;$5 ~ /PostgreSQL Server/ { print $1 }&apos;</span> /etc/passwd
+</code></pre>
+<p>This example explicitly prints out first field <code>_postgres</code> because we used the curly braces and the print command</p>
+<pre><code class="lang-bash">cat data/orders.txt
+ID,ORDER DESCRIPTION,PRICE
+1,Hamburger,2.50
+2,Fries,1.00
+3,Hamburger,2.50
+4,Shake,2.75
+5,Fries,1.00
+6,Hamburger,2.75
+</code></pre>
+<p>This simple file has a list of orders</p>
+<pre><code class="lang-bash">awk -F <span class="hljs-string">&apos;,&apos;</span> <span class="hljs-string">&apos;$2 ~ /Hamburger/ { total += $3 } END { print &quot;total: &quot;, total }&apos;</span> data/orders.txt
+</code></pre>
+<p>This awk program sets <code>,</code> as field delimiter and then searches in the second field for the pattern <code>Hamburger</code> and then it creates variable <code>total</code> that sums up 3rd field which is the price and then prints the total in the end for any Mat.</p>
+<pre><code class="lang-bash">./scripts/working-with-fields/bank_statement.sh data/bank_statement.csv
+</code></pre>
+<p>We will look at this script and explain contents line by line but one thing we will discuss is that the first line has a shebang and takes the <code>-f</code> option because we will provide a data file to it.</p>
+<h4 id="tips-for-awk-programs">Tips for awk programs</h4>
+<p>Remember when using regular expression matching and string comparison in awk programs that locales come into effect.</p>
+<p>When using multiple source files with awk you need to order them correctly in the command line</p>
+<p>Remember for portability that certain flavors of <code>awk</code> have different features so try not to use to many special functions if your script is to be used across many environments</p>
+<p>If portability is not a real issue then try to use <code>gnu</code> awk as it is the most feature rich version of awk</p>
+<p>The concept of patterns and actions in awk brings a powerful abilithy to describe data that needs to be processed.</p>
+<p>Since awk automatically reads records and performs field splitting you can focus on your data and what to do with your data</p>
+<p>Also awk is a much more powerful unix tool than sed as it is a turing complete programming language and sed is just a streaming editor at heart</p>
+<p>Extended regular expressions give awk more power</p>
+<h4 id="exercises">Exercises</h4>
+<p>For the exercise we will work with the a sample file that is a copy of the <em>/etc/passwd</em></p>
+<p>Here is a quick rundown of the <em>/etc/passwd</em> this information was explained in <a href="https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/" target="_blank">cyberciti</a> :</p>
+<ol>
+<li><p>Username: It is used when user logs in. It should be between 1 and 32 characters in length.</p>
+</li>
+<li><p>Password: An x character indicates that encrypted password is stored in /etc/shadow file.</p>
+<ol>
+<li>Please note that you need to use the passwd command to computes the hash of a password typed at the CLI or to store/update the hash of the password in /etc/shadow file.</li>
+</ol>
+</li>
+<li><p>User ID (UID): Each user must be assigned a user ID (UID). </p>
+<ol>
+<li>UID 0 (zero) is reserved for root and UIDs 1-99 are reserved for other predefined accounts. </li>
+<li>Further UID 100-999 are reserved by system for administrative and system accounts/groups.</li>
+</ol>
+</li>
+<li><p>Group ID (GID): The primary group ID (stored in /etc/group file)</p>
+</li>
+<li><p>User ID Info: The comment field. It allow you to add extra information about the users such as user&#x2019;s full name, phone number etc. This field use by finger command.</p>
+</li>
+<li><p>Home directory: The absolute path to the directory the user will be in when they log in. </p>
+<ol>
+<li>If this directory does not exists then users directory becomes /
+Command/shell: The absolute path of a command or shell (/bin/bash). </li>
+<li>Typically, this is a shell. Please note that it does not have to be a shell.</li>
+</ol>
+</li>
+</ol>
+<p>For this exercise you need to get the 5th field and grab the 15th record.
+You can use either cut or awk to solve this and the <em>scripts/working-with-fields/passwd</em>.</p>
+<p><strong>Solution with cut</strong></p>
+<details>
+<pre>
+cut -d: -f5 scripts/working-with-fields/passwd | sed -n &apos;15p&apos;
+</pre>
+</details>
+
+<p><strong>Solution with awk</strong></p>
+<details>
+<pre>
+awk -F &apos;:&apos; &apos;{ print $5 }&apos; scripts/working-with-fields/passwd | sed -n &apos;15p&apos;
+</pre>
+</details>
+
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="filename-expansions-and-globbing.html">Filename expansions and globbing</a></td>
+<td style="text-align:right"><a href="text-sorting.html">Text Sorting</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="filename-expansions-and-globbing.html" class="navigation navigation-prev " aria-label="Previous page: Filename expansions and globbing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="text-sorting.html" class="navigation navigation-next " aria-label="Next page: Text Sorting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Working with Fields","level":"1.7","depth":1,"next":{"title":"Text Sorting","level":"1.8","depth":1,"path":"docs/text-sorting.md","ref":"docs/text-sorting.md","articles":[]},"previous":{"title":"Filename expansions and globbing","level":"1.6","depth":1,"path":"docs/filename-expansions-and-globbing.md","ref":"docs/filename-expansions-and-globbing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/working-with-fields.md","mtime":"2018-11-22T17:17:35.879Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

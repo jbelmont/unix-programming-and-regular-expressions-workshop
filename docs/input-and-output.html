@@ -1,0 +1,805 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Input and Output · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="command-process-substitution.html" />
+    
+    
+    <link rel="prev" href="looping.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Input and Output</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---input-and-output">Unix Programming and Regular Expressions Workshop - Input and Output</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#redirections">Redirections</a></li>
+<li><a href="#read-command-description">Read Command Description</a></li>
+<li><a href="#moving-descriptors">Moving Descriptors</a></li>
+<li><a href="#read-command-options">Read Command Options</a></li>
+<li><a href="#read-command-usage">Read Command Usage</a></li>
+<li><a href="#read-command-examples">Read Command Examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="redirections">Redirections</h4>
+<p><strong>Quick Review of Redirection Operators we have seen so far in the workshop.</strong></p>
+<p>Opening files in Unix is manipulated using integer file descriptors:</p>
+<ul>
+<li>0 corresponds to standard input (stdin)</li>
+<li>1 corresponds to standard output (stdout)</li>
+<li>2 corresponds to standard error (stderr)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>File Handle</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>stdin</td>
+<td>Standard Input</td>
+</tr>
+<tr>
+<td>1</td>
+<td>stdout</td>
+<td>Standard Output</td>
+</tr>
+<tr>
+<td>2</td>
+<td>stderr</td>
+<td>Standard Error</td>
+</tr>
+</tbody>
+</table>
+<p>Here are the following redirection operators:</p>
+<ul>
+<li><code>&lt;</code> redirect input</li>
+<li><code>&gt;</code> redirect output</li>
+<li><code>&gt;&gt;</code> append instead of truncate</li>
+<li><code>|</code> will pipe stdout of an action as stdin for the corresponding pipeline</li>
+<li><code>&lt;&lt;</code>, <code>&lt;&lt;-</code> corresponds to Here Documents</li>
+<li><code>&gt;&amp;2</code> will redirect output to standard error (stderr)</li>
+<li><code>do an action 2&gt;&amp;1 | tee myoutput</code></li>
+</ul>
+<p>New Redirection Operators:</p>
+<ul>
+<li><code>set -o | grep noclobber</code></li>
+<li><code>set -o noclobber</code> this works in bash and zsh<ul>
+<li><code>&gt;</code> will not truncate a file instead will throw an error</li>
+</ul>
+</li>
+<li><code>&gt;|</code> this redirection will override noclobber option</li>
+<li><code>&lt;&gt;</code> will open a file for reading and writing<ul>
+<li><code>somecommand &lt;&gt; somefile</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="moving-descriptors">Moving Descriptors</h3>
+<p>You can use <em>exec</em> with shell redirections and no arguments to manage your shell&apos;s file descriptors</p>
+<p>Any open files are inherited by child programs</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">exec</span> myaction &gt;&amp; anotherAction
+</code></pre>
+<p>This copies output of myAction into anotherAction</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">exec</span> someAction &gt;&amp; -
+</code></pre>
+<p>This closes the file descriptor</p>
+<p>You need to move file descriptors by copying them and then closing them</p>
+<p>Using <em>exec</em> with arguments has different behavior:</p>
+<ul>
+<li>Exec will retain the same process ID number</li>
+<li>The arguments will be passed into a new program</li>
+<li>Any open file descriptors will remain open</li>
+</ul>
+<p>Run the script <em>capture.sh</em></p>
+<pre><code class="lang-bash">./scripts/input-and-output/capture.sh &gt; something
+</code></pre>
+<p>This will redirect stdout to a file and the <code>exec</code> command will redirect error to myerr files</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> some file &gt; text
+</code></pre>
+<p>Create a file called text</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">set</span> -C
+</code></pre>
+<p>enable noclobber option</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> another thing &gt; text
+</code></pre>
+<p>The shell will now throw error and not perform truncation</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> another thing &gt;| text
+</code></pre>
+<p>Now this command will work because of <code>&gt;|</code> operator which will forcibly truncate</p>
+<h4 id="read-command-description">Read Command Description</h4>
+<p><code>read: read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchars] [-p prompt] [-t timeout] [-u fd] [name ...]</code></p>
+<ul>
+<li><p>Read a line from the standard input and split it into fields.</p>
+</li>
+<li><p>Reads a single line from the standard input, or from file descriptor FD if the -u option is supplied.</p>
+</li>
+<li><p>The line is split into fields as with word splitting, and the first word is assigned to the first NAME, the second word to the second NAME, and so on, with any leftover words assigned to the last NAME.</p>
+</li>
+<li><p>Only the characters found in $IFS are recognized as word delimiters.</p>
+</li>
+</ul>
+<p>The Read Command does the following:</p>
+<ul>
+<li>Changes the field separator</li>
+<li>Reads a loop</li>
+<li>Reads exactly one line</li>
+<li>The <em>read</em> command has bash extensions</li>
+</ul>
+<p>The <em>read</em> command can read one line of text and split into words, assign to variables</p>
+<ul>
+<li><em>IFS</em> can control word splitting</li>
+<li>Exit status of 1 upon end of file</li>
+</ul>
+<p>If there are any remaining words they are assigned to the last variable and you can use one variable to get a whole line</p>
+<p>The <strong>Read</strong> command is often run in a subshell if you use a pipeline or a loop</p>
+<p>Also the variables defined in a loop won&apos;t be available outside the loop body</p>
+<h4 id="read-command-options">Read Command Options</h4>
+<p><em>Read</em> Command Options (Bash):</p>
+<ul>
+<li><p><code>-a</code> array    assign the words read to sequential indices of the array variable ARRAY, starting at zero</p>
+</li>
+<li><p><code>-d</code> delim    continue until the first character of DELIM is read, rather than newline</p>
+</li>
+<li><p><code>-e</code>use Readline to obtain the line in an interactive shell</p>
+</li>
+<li><p><code>-i</code> text    use TEXT as the initial text for Readline</p>
+</li>
+<li><p><code>-n</code> nchars    return after reading NCHARS characters rather than waiting for a newline, but honor a delimiter if fewer than NCHARS characters are read before the delimiter</p>
+</li>
+<li><p><code>-N</code> nchars    return only after reading exactly NCHARS characters, unless EOF is encountered or read times out, ignoring any delimiter</p>
+</li>
+<li><p><code>-p</code> prompt    output the string PROMPT without a trailing newline before attempting to read</p>
+</li>
+<li><p><code>-r</code>    do not allow backslashes to escape any characters</p>
+</li>
+<li><p><code>-s</code>    do not echo input coming from a terminal
+-t timeout    time out and return failure if a complete line of input is not read within TIMEOUT seconds.  </p>
+<ul>
+<li>The value of the TMOUT variable is the default timeout.  </li>
+<li>TIMEOUT may be avfractional number. </li>
+<li>If TIMEOUT is 0, read returns immediately, without trying to read any data, returning
+success only if input is available on the specified file descriptor.  </li>
+<li>The exit status is greater than 128 if the timeout is exceeded</li>
+</ul>
+</li>
+<li><p><code>-u</code> fd    read from file descriptor FD instead of the standard input</p>
+</li>
+</ul>
+<h4 id="read-command-usage">Read Command Usage</h4>
+<p><a href="https://en.wikipedia.org/wiki/Internal_field_separator" target="_blank">IFS Docs</a></p>
+<p>You can set <code>IFS=&apos; ... &apos;</code> to read var1, var2, ... to change field separators while the read command is executing</p>
+<p>The <strong>read</strong> command can be piped into a loop</p>
+<pre><code class="lang-bash">some_processing |
+  <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> somevar1 somevar2 
+  <span class="hljs-keyword">do</span>
+    some loop body
+  <span class="hljs-keyword">done</span>
+</code></pre>
+<p>The <strong>read</strong> command can also be used with input redirection </p>
+<pre><code class="lang-bash"><span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> somevar1 somevar2
+<span class="hljs-keyword">do</span>
+  some loop body
+<span class="hljs-keyword">done</span> &lt; someFile
+</code></pre>
+<p>It is necessary to put the redirection after done</p>
+<p>The <strong>read</strong> command will continue reading input if you use the <code>\</code> </p>
+<p>If you use the <code>-r</code> option though the <strong>read</strong> command will only read one line</p>
+<h4 id="read-command-examples">Read Command Examples</h4>
+<pre><code class="lang-bash"><span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Enter your name: &quot;</span> ; <span class="hljs-built_in">read</span> name
+</code></pre>
+<p>Here the <code>;</code> is necessary to get read input</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your name is <span class="hljs-variable">$name</span>&quot;</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Enter your first_name and last_name: &quot;</span> ; <span class="hljs-built_in">read</span> firstName lastName
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$firstName</span> <span class="hljs-variable">$lastName</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">read</span> sentence
+</code></pre>
+<p>Use the <code>\</code> to make multiple lines else when you hit enter after your first line the input is complete</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$sentence</span>
+</code></pre>
+<pre><code class="lang-bash">FOODS=<span class="hljs-string">&quot;pizz cookies bread shrimp&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-variable">$FOODS</span> | sed <span class="hljs-string">&apos;s;pizz;pizza;&apos;</span> | <span class="hljs-keyword">while</span> <span class="hljs-built_in">read</span> foods
+<span class="hljs-keyword">do</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-variable">$foods</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>This is a contrived example showing how you can use pipe with while loop and use that to pipe into read</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>The exit status of 0 means success</p>
+<pre><code class="lang-bash">bash
+</code></pre>
+<p>Enter a bash subshell if in zsh</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">read</span> -p <span class="hljs-string">&quot;Enter your name: &quot;</span> -t 4 name
+</code></pre>
+<p>This will prompt for you to enter your name and timeout after 4 seconds if you haven&apos;t entered anything</p>
+<p>If you check the exit status it is greater than <em>128</em> upon a timeout</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="looping.html">Looping</a></td>
+<td style="text-align:right"><a href="command-process-substitution.html">Command Process Substitution</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="looping.html" class="navigation navigation-prev " aria-label="Previous page: Looping">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="command-process-substitution.html" class="navigation navigation-next " aria-label="Next page: Command Process Substitution">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Input and Output","level":"1.12","depth":1,"next":{"title":"Command Process Substitution","level":"1.13","depth":1,"path":"docs/command-process-substitution.md","ref":"docs/command-process-substitution.md","articles":[]},"previous":{"title":"Looping","level":"1.11","depth":1,"path":"docs/looping.md","ref":"docs/looping.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/input-and-output.md","mtime":"2018-11-22T17:17:35.903Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

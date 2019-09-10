@@ -1,0 +1,7 @@
+ID,ORDER DESCRIPTION,PRICE
+1,Hamburger,2.50
+2,Fries,1.00
+3,Hamburger,2.50
+4,Shake,2.75
+5,Fries,1.00
+6,Hamburger,2.75

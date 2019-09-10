@@ -1,0 +1,1408 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Network Utilities · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell-security.html" />
+    
+    
+    <link rel="prev" href="shell-login-order.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Network Utilities</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---network-utilities">Unix Programming and Regular Expressions Workshop - Network Utilities</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#what-are-networking-utilities">What are networking utilities</a></li>
+<li><a href="#list-of-networing-utilities">List of Networking Utilities</a></li>
+<li><a href="#ping-command-description">ping command description</a></li>
+<li><a href="#ping-command-options">ping command options</a></li>
+<li><a href="#ping-command-examples">ping command examples</a></li>
+<li><a href="#ifconfig-command-description">ifconfig command description</a></li>
+<li><a href="#ifconfig-command-options">ifconfig command options</a></li>
+<li><a href="#ifconfig-command-examples">ifconfig command examples</a></li>
+<li><a href="#netstat-command-description">netstat command description</a></li>
+<li><a href="#netstat-command-options">netstat command options</a></li>
+<li><a href="#netstat-command-examples">netstat command examples</a></li>
+<li><a href="#netcat-command-description">netcat command description</a></li>
+<li><a href="#netcat-command-options">netcat command options</a></li>
+<li><a href="#netcat-command-examples">netcat command examples</a></li>
+<li><a href="#nmap-command-description">nmap command description</a></li>
+<li><a href="#nmap-command-options">nmap command options</a></li>
+<li><a href="#nmap-command-examples">nmap command examples</a></li>
+<li><a href="#traceroute-command-description">traceroute command description</a></li>
+<li><a href="#traceroute-command-options">traceroute command options</a></li>
+<li><a href="#traceroute-command-examples">traceroute command examples</a></li>
+<li><a href="#dig-command-description">dig command description</a></li>
+<li><a href="#dig-command-options">dig command options</a></li>
+<li><a href="#dig-command-examples">dig command examples</a></li>
+<li><a href="#nslookup-command-description">nslookup command description</a></li>
+<li><a href="#nslookup-command-options">nslookup command options</a></li>
+<li><a href="#nslookup-command-examples">nslookup command examples</a></li>
+<li><a href="#host-command-description">host command description</a></li>
+<li><a href="#host-command-options">host command options</a></li>
+<li><a href="#host-command-examples">host command examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="what-are-networking-utilities">What are networking utilities</h4>
+<p><a href="https://en.wikipedia.org/wiki/Network_utility" target="_blank">Network Utility</a></p>
+<p>Network utilities are software utilities designed to analyze and configure various aspects of computer networks. </p>
+<p>The majority of them originated on Unix systems, but several later ports to other operating systems exist.</p>
+<h4 id="list-of-networking-utilities">List of Networking Utilities</h4>
+<p>Common Networking Tools:</p>
+<ul>
+<li><p><a href="https://en.wikipedia.org/wiki/Ping_%28networking_utility%29" target="_blank">ping</a>, ping a host to check connectivity (reports packet loss and latency, uses ICMP).</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Network_utility" target="_blank">ifconfig</a> ifconfig is a system administration utility in Unix-like operating systems for network interface configuration.</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Ipconfig" target="_blank">ipconfig</a> ipconfig (internet protocol configuration) in Microsoft Windows is a console application that displays all current TCP/IP network configuration values and can modify Dynamic Host Configuration Protocol (DHCP) and Domain Name System (DNS) settings.</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Netcat" target="_blank">netcat</a> Netcat (often abbreviated to nc) is a computer networking utility for reading from and writing to network connections using TCP or UDP.</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Netstat" target="_blank">netstat</a>, displays network connections (both incoming and outgoing), routing tables, and a number of network interface and network protocol statistics. </p>
+<ul>
+<li>It is used for finding problems in the network and to determine the amount of traffic on the network as a performance measurement</li>
+</ul>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Nmap" target="_blank">nmap</a> Nmap (Network Mapper) is a security scanner, originally written by Gordon Lyon (also known by his pseudonym Fyodor Vaskovich), used to discover hosts and services on a computer network, thus building a &quot;map&quot; of the network.</p>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Traceroute" target="_blank">traceroute</a> shows the series of successive systems a packet goes through en route to its destination on a network. </p>
+<ul>
+<li>It works by sending packets with sequential TTLs which generate ICMP TTL-exceeded messages from the hosts the packet passes through.</li>
+</ul>
+</li>
+<li><p><a href="https://en.wikipedia.org/wiki/Dig_%28command%29" target="_blank">dig</a> dig (domain information groper) is a network administration command-line tool for querying Domain Name System (DNS) servers.</p>
+</li>
+</ul>
+<h4 id="ping-command-description">ping command description</h4>
+<p>ping -- send ICMP ECHO_REQUEST packets to network hosts</p>
+<p>The ping utility uses the ICMP protocol&apos;s mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway. </p>
+<p>ECHO_REQUEST datagrams (pings) have an IP and ICMP header, followed by a struct timeval and then an arbitrary number of pad bytes used to fill out the packet.</p>
+<h4 id="ping-command-options">ping command options</h4>
+<p>List of <code>ping</code> options:</p>
+<ul>
+<li><p>-i wait Wait wait seconds between sending each packet.  </p>
+<ul>
+<li>The default is to wait for one second between each packet.  </li>
+<li>The wait time may be fractional, but only the super-user may specify values less than 0.1 second.</li>
+<li>This option is incompatible with the -f option.</li>
+</ul>
+</li>
+<li><p>-c count Stop after sending (and receiving) count ECHO_RESPONSE packets.</p>
+<ul>
+<li>If this option is not specified, ping will operate until interrupted.  </li>
+<li>If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.</li>
+</ul>
+</li>
+<li><p>-f Flood ping. Outputs packets as fast as they come back or one hundred times per second, whichever is more.  </p>
+<ul>
+<li>For every ECHO_REQUEST sent a period &apos;.&apos; is printed, while for every ECHO_REPLY received a backspace is printed.  </li>
+<li>This provides a rapid display of how many packets are being dropped. </li>
+<li>Only the super-user may use this option.  </li>
+<li>This can be very hard on a network and should be used with caution.</li>
+</ul>
+</li>
+<li><p>-a Audible. Include a bell (ASCII 0x07) character in the output when any packet is received.  </p>
+<ul>
+<li>This option is ignored if other format options are present.</li>
+</ul>
+</li>
+<li><p>-s packetsize Specify the number of data bytes to be sent. </p>
+<ul>
+<li>The default is 56, which translates into 64 ICMP data bytes when combined with the 8 bytes of ICMP header data.  </li>
+<li>This option cannot be used with ping sweeps.</li>
+</ul>
+</li>
+<li><p>-W waittime Time in milliseconds to wait for a reply for each packet sent.  </p>
+<ul>
+<li>If a reply arrives later, the packet is not printed as replied, but considered as replied when calculating statistics.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options</p>
+<h3 id="ping-command-examples">ping command examples</h3>
+<pre><code class="lang-bash">ping 8.8.8.8
+</code></pre>
+<p>Here we use the <code>ping</code> command to see if google.com is up</p>
+<pre><code class="lang-bash">ping -i 1 127.0.0.1
+</code></pre>
+<p>Here we see if localhost is up and running and wait 1 second before sending the next packet</p>
+<pre><code class="lang-bash">ping -c 3 www.google.com
+</code></pre>
+<p>Here we send 3 packets to www.google.com and then <code>ping</code> quits</p>
+<pre><code class="lang-bash">sudo ping <span class="hljs-_">-f</span> localhost
+</code></pre>
+<p>Here using sudo privileges we flood localhost with packets</p>
+<pre><code class="lang-bash">--- localhost ping statistics ---
+1645 packets transmitted, 1000 packets received, 39.2% packet loss
+round-trip min/avg/max/stddev = 0.007/0.019/0.060/0.005 ms
+</code></pre>
+<p>Here is sample output session</p>
+<p>The <code>-f</code> option provides a rapid display of how many packets are being dropped</p>
+<pre><code class="lang-bash">ping <span class="hljs-_">-a</span> 8.8.8.8
+</code></pre>
+<p>The <code>-a</code> command option does an audible bell on each successful packet sent</p>
+<pre><code class="lang-bash">ping -c 1 www.google.com
+</code></pre>
+<p>He we send 1 count to www.google.com</p>
+<p>Notice that we get the output:</p>
+<pre><code class="lang-bash">PING www.google.com (216.58.218.228): 56 data bytes
+64 bytes from 216.58.218.228: icmp_seq=0 ttl=52 time=38.605 ms
+
+--- www.google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 38.605/38.605/38.605/0.000 ms
+</code></pre>
+<p>Here we can also see the IP_ADDRESS: 216.58.218.228 that maps to www.google.com host name</p>
+<pre><code class="lang-bash">ping -c 3 -q 127.0.0.1
+</code></pre>
+<p>Here we send 3 packets and only show the summary information by using <code>-q</code> command option which quiets output</p>
+<pre><code class="lang-bash">ping <span class="hljs-_">-s</span> 50 localhost
+</code></pre>
+<p>This specifies a packet size of 50 to localhost</p>
+<h4 id="ifconfig-command-description">ifconfig command description</h4>
+<p>ifconfig -- configure network interface parameters</p>
+<p>The ifconfig utility is used to assign an address to a network interface and/or configure network interface parameters.</p>
+<h4 id="ifconfig-command-options">ifconfig command options</h4>
+<ul>
+<li><p><code>-a</code> Display information for all network interfaces, even if they are down.</p>
+</li>
+<li><p><code>-s</code> Display a short list in a format identical to the command &quot;netstat -i&quot;.</p>
+</li>
+<li><p><code>-v</code> Verbose mode; display additional information for certain error conditions.</p>
+</li>
+<li><p><code>interface</code> The name of the interface. This is usually a driver name followed by a unit number, for example &quot;eth0&quot; for the first Ethernet interface. </p>
+</li>
+<li><p><code>up</code> This flag causes the interface to be activated. </p>
+<ul>
+<li>It is implicitly specified if an address is assigned to the interface.
+down    This flag causes the driver for this interface to be shut down.</li>
+</ul>
+</li>
+<li><p><code>[-]arp</code>    Enable (or disable, if the &quot;-&quot; prefix is specified) the use of the ARP protocol on this interface.</p>
+</li>
+<li><p><code>[-]promisc</code>    Enable (or disable, if the &quot;-&quot; prefix is specified) the promiscuous mode of the interface. </p>
+<ul>
+<li>If promiscuous mode is enabled, all packets on the network will be received by the interface.</li>
+</ul>
+</li>
+<li><p><code>[-]allmulti</code>    Enable or disable all-multicast mode. If multicast mode is enabled, all multicast packets on the network will be received by the interface.</p>
+</li>
+<li><p><code>metric N</code> This parameter sets the interface metric, which is used by the interface to make routing decisions. N must be an integer between 0 and 4294967295. If you&apos;re not sure what a network metric is, or whether you should change it, you can safely leave this setting alone.</p>
+</li>
+<li><p><code>netmask address</code>    Set the IP network mask for this interface. </p>
+<ul>
+<li>This value defaults to the usual class A, B or C network mask (as derived from the interface IP address), but it can be set to any value.</li>
+</ul>
+</li>
+<li><p><code>add address/prefixlen</code>    Add an IPv6 address to an interface.</p>
+</li>
+<li><p><code>del address/prefixlen</code>    Remove an IPv6 address from an interface.</p>
+</li>
+<li><p><code>tunnel aa.bb.cc.dd</code> Create a new SIT (IPv6-in-IPv4) device, tunnelling to the given destination.</p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual for more options</strong></p>
+<h4 id="ifconfig-command-examples">ifconfig command examples</h4>
+<pre><code class="lang-bash">ifconfig
+</code></pre>
+<p>Here we get the following output:</p>
+<pre><code class="lang-bash">lo0: flags=8049&lt;UP,LOOPBACK,RUNNING,MULTICAST&gt; mtu 16384
+    options=1203&lt;RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP&gt;
+    inet 127.0.0.1 netmask 0xff000000
+    inet6 ::1 prefixlen 128
+    inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1
+    nd6 options=201&lt;PERFORMNUD,DAD&gt;
+gif0: flags=8010&lt;POINTOPOINT,MULTICAST&gt; mtu 1280
+stf0: flags=0&lt;&gt; mtu 1280
+en0: flags=8863&lt;UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500
+    ether a4:5e:60:f3:b3:37
+    inet6 fe80::8<span class="hljs-built_in">fc</span>:5c30:b69b:16f0%en0 prefixlen 64 secured scopeid 0x4
+    inet 192.168.0.7 netmask 0xffffff00 broadcast 192.168.0.255
+    inet6 2606:a000:50d0:c600:1cb9:f213:74eb:9108 prefixlen 64 autoconf secured
+    inet6 2606:a000:50d0:c600:70a1:966f:7d89:3653 prefixlen 64 autoconf temporary
+    nd6 options=201&lt;PERFORMNUD,DAD&gt;
+    media: autoselect
+    status: active
+en1: flags=963&lt;UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX&gt; mtu 1500
+    options=60&lt;TSO4,TSO6&gt;
+    ether 6a:00:00:81:e6:40
+    media: autoselect &lt;full-duplex&gt;
+    status: inactive
+en2: flags=963&lt;UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX&gt; mtu 1500
+    options=60&lt;TSO4,TSO6&gt;
+    ether 6a:00:00:81:e6:41
+    media: autoselect &lt;full-duplex&gt;
+    status: inactive
+bridge0: flags=8863&lt;UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST&gt; mtu 1500
+    options=63&lt;RXCSUM,TXCSUM,TSO4,TSO6&gt;
+    ether 6a:00:00:81:e6:40
+    Configuration:
+        id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+        maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+        root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+        ipfilter disabled flags 0x2
+    member: en1 flags=3&lt;LEARNING,DISCOVER&gt;
+            ifmaxaddr 0 port 5 priority 0 path cost 0
+    member: en2 flags=3&lt;LEARNING,DISCOVER&gt;
+            ifmaxaddr 0 port 6 priority 0 path cost 0
+    nd6 options=201&lt;PERFORMNUD,DAD&gt;
+    media: &lt;unknown <span class="hljs-built_in">type</span>&gt;
+    status: inactive
+p2p0: flags=8843&lt;UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST&gt; mtu 2304
+    ether 06:5e:60:f3:b3:37
+    media: autoselect
+    status: inactive
+awdl0: flags=8943&lt;UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST&gt; mtu 1484
+    ether 2e:35:d7:b0:d9:b5
+    inet6 fe80::2c35:d7ff:feb0:d9b5%awdl0 prefixlen 64 scopeid 0x9
+    nd6 options=201&lt;PERFORMNUD,DAD&gt;
+    media: autoselect
+    status: active
+utun0: flags=8051&lt;UP,POINTOPOINT,RUNNING,MULTICAST&gt; mtu 2000
+    inet6 fe80::fe8b:356a:44f2:9f6e%utun0 prefixlen 64 scopeid 0xa
+    nd6 options=201&lt;PERFORMNUD,DAD&gt;
+</code></pre>
+<p>Notice here we get multiple entries for network entries</p>
+<pre><code class="lang-bash">ifconfig <span class="hljs-_">-a</span>
+</code></pre>
+<p>Here we list all the network interfaces no matter if they are up or not.</p>
+<pre><code class="lang-bash">ifconfig en0
+</code></pre>
+<p>Here we list the configuration of a specific interface by providing its name</p>
+<pre><code class="lang-bash">sudo ifconfig utun0 down
+</code></pre>
+<p>Here we disable an active network interface using the <code>down</code> keyword</p>
+<pre><code class="lang-bash">ifconfig utun0
+</code></pre>
+<p>Here we look at the network interface and notice that it no longer shows the network interface as <em>UP</em> </p>
+<pre><code class="lang-bash">sudo ifconfig utun0 up
+</code></pre>
+<p>Here we enable an active network interface using the <code>up</code> keyword</p>
+<pre><code class="lang-bash">ifconfig utun0
+</code></pre>
+<p>Notice we get the following output:</p>
+<pre><code class="lang-bash">utun0: flags=8051&lt;UP,POINTOPOINT,RUNNING,MULTICAST&gt; mtu 2000
+    inet6 fe80::fe8b:356a:44f2:9f6e%utun0 prefixlen 64 scopeid 0xa
+    nd6 options=201&lt;PERFORMNUD,DAD&gt;
+</code></pre>
+<p>Notice that UP is displayed because the network interface is up and running again</p>
+<pre><code class="lang-bash">sudo ifconfig utun0 162.72.169.1
+</code></pre>
+<p>Here we assign the static IP_ADDRESS: <em>162.72.169.1</em> to the utun0 network interface</p>
+<h4 id="netstat-command-description">netstat command description</h4>
+<p>netstat -- show network status</p>
+<p>The netstat command symbolically displays the contents of various network-related data structures.  </p>
+<p>There are a number of output formats, depending on the options for the information presented.  </p>
+<p>The 7 netstat command forms:</p>
+<ul>
+<li><p>The first form of the command displays a list of active sockets for each protocol.  </p>
+</li>
+<li><p>The second form presents the contents of one of the other network data structures according to the option selected. </p>
+</li>
+<li><p>Using the third form, with a wait interval specified, netstat will continuously display the information regarding packet traffic on the configured network interfaces. </p>
+</li>
+<li><p>The fourth form displays statistics for the specified protocol or address family. </p>
+</li>
+<li><p>If a wait interval is specified, the protocol information over the last interval seconds will be displayed.  </p>
+</li>
+<li><p>The fifth form displays per-interface statistics for the specified protocol or address family.  </p>
+</li>
+<li><p>The sixth form displays mbuf statistics. </p>
+</li>
+<li><p>The seventh form displays routing table for the specified address family.  The eighth form displays routing statistics.</p>
+</li>
+</ul>
+<h4 id="netstat-command-options">netstat command options</h4>
+<p>Some important <code>netstat</code> command options:</p>
+<ul>
+<li><p><code>-l</code> Print full IPv6 address.</p>
+</li>
+<li><p><code>-v</code> Increase verbosity level.</p>
+</li>
+</ul>
+<p><strong>Read the fine manual for more options</strong></p>
+<h4 id="netstat-command-examples">netstat command examples</h4>
+<pre><code class="lang-bash">netstat -sp tcp
+</code></pre>
+<p>Here we get statistics on tcp</p>
+<p>Here is some output of the command above:</p>
+<pre><code class="lang-bash">tcp:
+    465304 packets sent
+        88311 data packets (71920719 bytes)
+        2276 data packets (1952856 bytes) retransmitted
+        0 resend initiated by MTU discovery
+        279607 ack-only packets (122 delayed)
+        0 URG only packet
+        0 window probe packet
+        75672 window update packets
+        19500 control packets
+        0 data packet sent after flow control
+        473999 checksummed <span class="hljs-keyword">in</span> software
+            430025 segments (87051438 bytes) over IPv4
+            43974 segments (2741629 bytes) over IPv6
+</code></pre>
+<p>Now we will look at stats for udp</p>
+<pre><code class="lang-bash">netstat -sp udp
+</code></pre>
+<p>Here is the output for the command above:</p>
+<pre><code class="lang-bash">udp:
+    16185 datagrams received
+        0 with incomplete header
+        0 with bad data length field
+        0 with bad checksum
+        0 with no checksum
+        5627 checksummed <span class="hljs-keyword">in</span> software
+            5584 datagrams (712357 bytes) over IPv4
+            43 datagrams (4424 bytes) over IPv6
+        162 dropped due to no socket
+        2 broadcast/multicast datagrams undelivered
+        0 time multicast <span class="hljs-built_in">source</span> filter matched
+        0 dropped due to full socket buffers
+        0 not <span class="hljs-keyword">for</span> hashed pcb
+        16021 delivered
+    25081 datagrams output
+        16302 checksummed <span class="hljs-keyword">in</span> software
+            15573 datagrams (2842945 bytes) over IPv4
+            729 datagrams (219939 bytes) over IPv6
+</code></pre>
+<p>Notice that udp stats are printed to stdout</p>
+<pre><code class="lang-bash">netstat <span class="hljs-_">-a</span>
+</code></pre>
+<p>This command shows all sockets , both listening and non-listening on all protocols like tcp, udp, etc</p>
+<p>This command shows the following output:</p>
+<pre><code class="lang-bash">Active Internet connections (including servers)
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  192.168.0.7.59978      ec2-54-186-179-1.https ESTABLISHED
+tcp4       0      0  192.168.0.7.59963      a184-86-71-214.d.https ESTABLISHED
+tcp4       0      0  192.168.0.7.59961      ec2-34-195-182-8.https ESTABLISHED
+..............................................................................
+</code></pre>
+<p>Here you will get a lot of output because there is usually a lot of open sockets</p>
+<pre><code class="lang-bash">netstat -at
+</code></pre>
+<p>This command shows only tcp connections</p>
+<pre><code class="lang-bash">netstat -ant
+</code></pre>
+<p>This command shows all TCP connections with no dns resolution (show ip numbers instead).</p>
+<pre><code class="lang-bash">netstat -al
+</code></pre>
+<p>This command shows only listening sockets</p>
+<h4 id="netcat-command-description">netcat command description</h4>
+<p>netcat (nc) -- arbitrary TCP and UDP connections and listens</p>
+<p>The nc (or netcat) utility is used for just about anything under the sun involving TCP or UDP.  </p>
+<p>It can open TCP connections, send UDP packets, listen on arbitrary TCP and UDP ports, do port scanning, and deal with both IPv4 and IPv6.</p>
+<p>Unlike telnet, nc scripts nicely, and separates error messages onto standard error instead of sending them to standard output, as telnet does with some.</p>
+<h4 id="netcat-command-options">netcat command options</h4>
+<p><code>nc</code> command options:</p>
+<ul>
+<li><p><code>-4</code> Forces nc to use IPv4 addresses only.</p>
+</li>
+<li><p><code>-6</code> Forces nc to use IPv6 addresses only.</p>
+</li>
+<li><p><code>-b</code> Allow broadcast.</p>
+</li>
+<li><p><code>-C</code> Send CRLF as line-ending.</p>
+</li>
+<li><p><code>-D</code> Enable debugging on the socket.</p>
+</li>
+<li><p><code>-d</code> Do not attempt to read from stdin.</p>
+</li>
+<li><p><code>-h</code> Prints out nc help.</p>
+</li>
+<li><p><code>-I</code> length    Specifies the size of the TCP receive buffer.</p>
+</li>
+<li><p><code>-i</code> interval    Specifies a delay time interval between lines of text sent and received. </p>
+<ul>
+<li>Also, causes a delay time between connections to multiple ports.</li>
+</ul>
+</li>
+<li><p><code>-k</code>    Forces nc to stay listening for another connection after its current connection is completed. </p>
+<ul>
+<li>It is an error to use this option without the -l option.</li>
+</ul>
+</li>
+<li><p><code>-l</code> Used to specify that nc should listen for an incoming connection rather than initiate a connection to a remote host. It is an error to use this option in conjunction with the -p, </p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual for more options</strong></p>
+<h4 id="netcat-command-examples">netcat command examples</h4>
+<pre><code class="lang-bash">nc -h
+</code></pre>
+<p>This command will help you see all the options for netcat utility</p>
+<p>Sometimes in Mac and in Linux you might have a precomiled binary for <code>nc</code> and you won&apos;t have all the features of netcat (<code>nc</code>)</p>
+<p>In Mac OS X you can use <code>brew install netcat</code> to install a more feature rich version of <code>nc</code></p>
+<pre><code class="lang-bash">/usr/bin/nc <span class="hljs-_">-l</span> 3000
+</code></pre>
+<p>Here we setup netcat session listening on port 3000</p>
+<p>on a separate terminal session do the following</p>
+<pre><code class="lang-bash">/usr/bin/nc localhost 3000
+</code></pre>
+<p>Now we have setup a simple client server session with netcat</p>
+<p>If you type a word into the client or server then you will see the following word show up in both terminal sessions</p>
+<p>Test this by typing <code>hello there</code></p>
+<p><code>nc</code> netcat can be used for file transfer as well, check out the next command examples</p>
+<p>In one terminal session do the following:</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> ./scripts/network-utilities; nc <span class="hljs-_">-l</span> 3000 &gt; serverFile
+</code></pre>
+<p>In another terminal session do this:</p>
+<pre><code class="lang-bash">cat clientFile | nc localhost 3000
+</code></pre>
+<p>Notice Now that serverFile which was empty has content of clientFile</p>
+<pre><code class="lang-bash">cat serverFile
+Hello Client
+</code></pre>
+<p>This confirms file transfer</p>
+<p><strong>Read the Fine Manual</strong> for more netcat usages and options</p>
+<h4 id="nmap-command-description">nmap command description</h4>
+<p>nmap - Network exploration tool and security / port scanner</p>
+<p>Nmap (&quot;Network Mapper&quot;) is an open source tool for network exploration and security auditing. </p>
+<p>It was designed to rapidly scan large networks, although it works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. </p>
+<p>While Nmap is commonly used for security audits, many systems and network administrators find it useful for routine tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime</p>
+<p>If you are on Mac OS X then you might have to install nmap</p>
+<p>If you have homebrew package manager run <code>brew install nmap</code></p>
+<p>nmap is often used by both ethical hackers and black hat hackers alike because of its many scripts and powerful features for network discovery</p>
+<h4 id="nmap-command-options">nmap command options</h4>
+<p>Important <code>nmap</code> command options:</p>
+<ul>
+<li><p><code>-sP</code>  Ping scans the network, listing machines that respond to ping.</p>
+</li>
+<li><p><code>-p</code> <code>-sV</code> <code>-sS</code> <code>-T4</code> target Full TCP port scan using with service version detection</p>
+</li>
+<li><p><code>-v</code> <code>-sS</code> <code>-A</code> <code>-T4</code> target Prints verbose output, runs stealth syn scan, T4 timing, OS and version detection + traceroute and scripts against target services.</p>
+</li>
+<li><p><code>-v</code> <code>-sS</code> <code>-A</code> <code>-T5</code> target  Prints verbose output, runs stealth syn scan, T5 timing, OS and version detection + traceroute and scripts against target services.</p>
+</li>
+<li><p><code>-v</code> <code>-sV</code> <code>-O</code> <code>-sS</code> <code>-T5</code> target Prints verbose output, runs stealth syn scan, T5 timing, OS and version detection.</p>
+</li>
+<li><p><code>-v</code> <code>-p</code> <code>-sV</code> <code>-O</code> <code>-sS</code> <code>-T4</code> target Prints verbose output, runs stealth syn scan, T4 timing, OS and version detection + full port range scan.</p>
+</li>
+<li><p><code>-v</code> <code>-p</code> <code>1-65535</code> <code>-sV</code> <code>-O</code> <code>-sS</code> <code>-T5</code> target Prints verbose output, runs stealth syn scan, T5 timing, OS and version detection + full port range scan.</p>
+</li>
+</ul>
+<h4 id="nmap-command-examples">nmap command examples</h4>
+<pre><code class="lang-bash">nmap 104.131.117.137
+</code></pre>
+<p>Here we do a simple IP scan of IP_ADDRESS: <code>104.131.117.137</code></p>
+<pre><code class="lang-bash">nmap 104.131.117.137 www.marcelbelmont.com
+</code></pre>
+<p>Here we scan the IP_ADDRESS: <code>104.131.117.137</code> and my blog <code>www.marcelbelmont.com</code></p>
+<pre><code class="lang-bash">nmap  192.168.1.1-25
+</code></pre>
+<p>Here we can an IP range of <code>192.168.1.1</code> to <code>192.168.1.25</code> addresses</p>
+<p>Notice that we get the following output:</p>
+<pre><code class="lang-xml">Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-10 16:11 EST
+Nmap done: 25 IP addresses (0 hosts up) scanned in 12.07 seconds
+</code></pre>
+<p>There are no open ports available for this range of IP addresses</p>
+<pre><code class="lang-bash">nmap 104.131.117.137 <span class="hljs-_">-s</span>L
+</code></pre>
+<p>Here we don&apos;t do a scan but instead list targets</p>
+<pre><code class="lang-bash">nmap -p 1-65535 <span class="hljs-_">-s</span>V <span class="hljs-_">-s</span>S -T4 104.131.117.137
+</code></pre>
+<p>This command requires root access to work properly</p>
+<p>This command will do a full TCP port scan using with service version detection <code>-sV</code>
+This command also uses <code>-sS</code> also does default network scan.
+The <code>-T4</code> option is a more aggressive scanning option than the default <code>-T3</code> option, so use if you have a good network connection
+The <code>-p 1-65535</code> will scan ports 1 to 65535</p>
+<p>Be mindful that nmap commands can take a while to complete so don&apos;t be surprised that some commands can take upwards of a minute to complete</p>
+<p>The example output for this <code>nmap</code> command execution:</p>
+<pre><code class="lang-bash">Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-10 21:23 UTC
+Nmap scan report <span class="hljs-keyword">for</span> 104.131.117.137
+Host is up (0.40s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.6 (Ubuntu Linux; protocol 2.0)
+80/tcp   open  http     nginx 1.4.6 (Ubuntu)
+443/tcp  open  ssl/http nginx 1.4.6 (Ubuntu)
+3000/tcp open  http     Node.js (Express middleware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap <span class="hljs-keyword">done</span>: 1 IP address (1 host up) scanned <span class="hljs-keyword">in</span> 17.55 seconds
+</code></pre>
+<p>Now we will use the <code>-iL</code> option to scan a list of IP Addresses using a file</p>
+<pre><code class="lang-bash">nmap -iL ipAddr.txt
+</code></pre>
+<p>This scan will look at my server and facebook.com</p>
+<p>It shows the following output:</p>
+<pre><code class="lang-bash">Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-10 16:34 EST
+Nmap scan report <span class="hljs-keyword">for</span> 104.131.117.137
+Host is up (0.053s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+80/tcp   open  http
+443/tcp  open  https
+3000/tcp open  ppp
+
+Nmap scan report <span class="hljs-keyword">for</span> edge-star-mini-shv-01-iad3.facebook.com (31.13.69.228)
+Host is up (0.050s latency).
+Not shown: 996 filtered ports
+PORT     STATE  SERVICE
+80/tcp   open   http
+443/tcp  open   https
+843/tcp  open   unknown
+5222/tcp closed xmpp-client
+
+Nmap <span class="hljs-keyword">done</span>: 2 IP addresses (2 hosts up) scanned <span class="hljs-keyword">in</span> 17.99 seconds
+</code></pre>
+<p>Now we will use the <code>--iflist</code> nmap command option</p>
+<pre><code class="lang-bash">nmap --iflist
+</code></pre>
+<p>This command option is a more complete command option that lists all open ports similar to <code>ifconfig</code> command</p>
+<p>Now we will use nmap to do a more aggressive scan which requires root privileges</p>
+<pre><code class="lang-bash">sudo su -
+</code></pre>
+<p>Now we have a root session in the shell</p>
+<pre><code class="lang-bash">nmap <span class="hljs-_">-s</span>S <span class="hljs-_">-s</span>V -T5 104.131.117.137 --webxml -oX - | xsltproc --output file.html -
+</code></pre>
+<p>this command can fail and if it does try to break it down into 2 commands</p>
+<pre><code class="lang-bash">nmap <span class="hljs-_">-s</span>S <span class="hljs-_">-s</span>V -T5 104.131.117.137 --webxml -oX - &gt; file.xml
+</code></pre>
+<p>This will redirect stdout into file called <code>file.xml</code> and then do this</p>
+<pre><code class="lang-bash">xsltproc file.xml -o file.html
+</code></pre>
+<h4 id="traceroute-command-description">traceroute command description</h4>
+<p>traceroute -- print the route packets take to network host</p>
+<p>The Internet is a large and complex aggregation of network hardware, connected together by gateways. </p>
+<p>Tracking the route one&apos;s packets follow (or finding the miscreant gateway that&apos;s discarding your packets) can be difficult.  </p>
+<p>traceroute utilizes the IP protocol time to live field and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to some host.</p>
+<h4 id="traceroute-command-options">traceroute command options</h4>
+<p><code>traceroute</code> command options:</p>
+<ul>
+<li><p><code>-a</code> Turn on AS# lookups for each hop encountered.</p>
+</li>
+<li><p><code>-A</code> as_server Turn  on  AS#  lookups  and  use the given server instead of the default.</p>
+</li>
+<li><p><code>-d</code> Enable socket level debugging.</p>
+</li>
+<li><p><code>-D</code> When an ICMP response to our probe datagram is received, print the differences between the transmitted packet and the packet quoted by the ICMP response.</p>
+</li>
+<li><p><code>-e</code> Firewall evasion mode.  </p>
+<ul>
+<li>Use fixed destination ports for UDP and TCP probes.  </li>
+<li>The destination port does NOT increment with each packet sent.</li>
+</ul>
+</li>
+<li><p><code>-f</code> first_ttl</p>
+<ul>
+<li>Set the initial time-to-live used in the first outgoing probe packet.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine manual for more options</strong></p>
+<h4 id="traceroute-command-examples">traceroute command examples</h4>
+<pre><code class="lang-bash">traceroute www.marcelbelmont.com
+</code></pre>
+<p>Here I am running traceroute in my blog at <code>www.marcelbelmont.com</code></p>
+<p>We get the following output:</p>
+<pre><code class="lang-bash">traceroute: Warning: www.marcelbelmont.com has multiple addresses; using 104.28.25.116
+traceroute to www.marcelbelmont.com (104.28.25.116), 64 hops max, 52 byte packets
+ 1  192.168.0.1 (192.168.0.1)  2.652 ms  45.525 ms  4.198 ms
+ 2  * * *
+ 3  cpe-174-111-107-080.triad.res.rr.com (174.111.107.80)  18.323 ms  30.516 ms  23.879 ms
+ 4  cpe-024-025-039-198.ec.res.rr.com (24.25.39.198)  12.890 ms  24.744 ms  33.050 ms
+ 5  be36.drhmncev01r.southeast.rr.com (24.93.64.188)  37.564 ms  19.624 ms  22.649 ms
+ 6  bu-ether15.asbnva1611w-bcr00.tbone.rr.com (66.109.6.80)  37.534 ms  39.571 ms  45.037 ms
+ 7  0.ae1.pr1.dca10.tbone.rr.com (107.14.17.202)  40.294 ms
+    0.ae4.pr1.dca10.tbone.rr.com (66.109.1.113)  31.526 ms
+    0.ae0.pr1.dca10.tbone.rr.com (107.14.17.200)  39.597 ms
+ 8  ix-ae-17-0.tcore2.aeq-ashburn.as6453.net (216.6.87.149)  39.638 ms  39.715 ms  32.743 ms
+ 9  216.6.87.102 (216.6.87.102)  42.390 ms  75.133 ms  45.592 ms
+10  104.28.25.116 (104.28.25.116)  99.297 ms  38.470 ms  49.121 ms
+</code></pre>
+<p>Traceroute operates by sending packets with TTL value starting from 1 and then incrementing by one each time. </p>
+<p>Each time a router receives the packet, it checks the TTL field, if TTL field is 1 then it discards the packet and sends the ICMP error packet containing its IP address and this is what traceroute requires. </p>
+<p>So traceroute incrementally fetches the IP of all the routers  between the source and the destination.</p>
+<pre><code class="lang-bash">traceroute -I www.marcelbelmont.com
+</code></pre>
+<p>Here we use the <code>-I</code> option which does  <strong>use ICMP ECHO instead of UDP datagrams.</strong></p>
+<p>and here is the output:</p>
+<pre><code class="lang-bash">traceroute: Warning: www.marcelbelmont.com has multiple addresses; using 104.28.24.116
+traceroute to www.marcelbelmont.com (104.28.24.116), 64 hops max, 72 byte packets
+ 1  192.168.0.1 (192.168.0.1)  5.191 ms  2.932 ms  4.642 ms
+ 2  mta-174-110-32-1.nc.rr.com (174.110.32.1)  22.109 ms  24.571 ms  27.939 ms
+ 3  cpe-174-111-107-082.triad.res.rr.com (174.111.107.82)  17.325 ms  24.331 ms  19.793 ms
+ 4  cpe-024-025-039-200.ec.res.rr.com (24.25.39.200)  36.199 ms  28.242 ms  19.949 ms
+ 5  be36.chrcnctr01r.southeast.rr.com (24.93.64.190)  19.973 ms  40.780 ms  18.819 ms
+ 6  bu-ether14.atlngamq46w-bcr00.tbone.rr.com (66.109.6.82)  29.982 ms  39.296 ms  32.689 ms
+ 7  bu-ether11.atlngamq47w-bcr01.tbone.rr.com (66.109.6.35)  29.357 ms  37.486 ms  33.129 ms
+ 8  0.ae2.pr1.atl20.tbone.rr.com (107.14.17.188)  26.556 ms  32.566 ms  47.194 ms
+ 9  ix-ae-14-0.tcore1.a56-atlanta.as6453.net (64.86.113.37)  31.318 ms  32.737 ms  35.306 ms
+10  64.86.113.90 (64.86.113.90)  29.866 ms  29.115 ms  30.132 ms
+11  104.28.24.116 (104.28.24.116)  34.937 ms  32.531 ms  30.046 ms
+</code></pre>
+<p>Notice here we get 11 hops and we use <a href="https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol" target="_blank">ICMP</a> and not <a href="https://en.wikipedia.org/wiki/User_Datagram_Protocol" target="_blank">UDP</a></p>
+<p><strong>Read the Fine Manual</strong> for more options</p>
+<h4 id="dig-command-description">dig command description</h4>
+<p>dig - DNS lookup utility</p>
+<p>dig (domain information groper) is a flexible tool for interrogating DNS name servers. </p>
+<p>It performs DNS lookups and displays the answers that are returned from the name server(s) that were queried. </p>
+<p>Most DNS administrators use dig to troubleshoot DNS problems because of its flexibility, ease of use and clarity of output. Other lookup tools tend to have less functionality than dig.</p>
+<h4 id="dig-command-options">dig command options</h4>
+<p>Some <code>dig</code> command options:</p>
+<ul>
+<li><p><code>+nocomments</code> &#x2013; Turn off the comment lines</p>
+</li>
+<li><p><code>+noauthority</code> &#x2013; Turn off the authority section</p>
+</li>
+<li><p><code>+noadditional</code> &#x2013; Turn off the additional section</p>
+</li>
+<li><p><code>+nostats</code> &#x2013; Turn off the stats section</p>
+</li>
+<li><p><code>+noanswer</code> &#x2013; Turn off the answer section (Of course, you wouldn&#x2019;t want to turn off the answer section)</p>
+</li>
+</ul>
+<h4 id="dig-command-examples">dig command examples</h4>
+<pre><code class="lang-bash">dig www.marcelbelmont.com
+</code></pre>
+<p>Here I run the dig command utility to get DNS entry information and I get the following output:</p>
+<pre><code class="lang-bash">; &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; www.marcelbelmont.com
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 4459
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.marcelbelmont.com.        IN    A
+
+;; ANSWER SECTION:
+www.marcelbelmont.com.    115    IN    A    104.28.24.116
+www.marcelbelmont.com.    115    IN    A    104.28.25.116
+
+;; Query time: 26 msec
+;; SERVER: 209.18.47.61<span class="hljs-comment">#53(209.18.47.61)</span>
+;; WHEN: Sun Dec 10 17:17:24 2017
+;; MSG SIZE  rcvd: 71
+</code></pre>
+<p>The dig command output has the following sections:</p>
+<ul>
+<li><p>Header: This displays the dig command version number, the global options used by the dig command, and few additional header information.</p>
+</li>
+<li><p>QUESTION SECTION: This displays the question it asked the DNS. i.e This is your input. </p>
+<ul>
+<li>Since we said &#x2018;dig redhat.com&#x2019;, and the default type dig command uses is A record, it indicates in this section that we asked for the A record of the redhat.com website</li>
+</ul>
+</li>
+<li><p>ANSWER SECTION: This displays the answer it receives from the DNS. i.e This is your output. This displays the A record of redhat.com</p>
+</li>
+<li><p>AUTHORITY SECTION: This displays the DNS name server that has the authority to respond to this query. This displays available name servers of marcelbelmont.com</p>
+</li>
+<li><p>ADDITIONAL SECTION: This displays the ip address of the name servers listed in the AUTHORITY SECTION.</p>
+</li>
+<li><p>Stats section at the bottom displays few dig command statistics including how much time it took to execute this query</p>
+</li>
+</ul>
+<p>You can turn off sections by using the following flags:</p>
+<ul>
+<li><p><code>+nocomments</code> &#x2013; Turn off the comment lines</p>
+</li>
+<li><p><code>+noauthority</code> &#x2013; Turn off the authority section</p>
+</li>
+<li><p><code>+noadditional</code> &#x2013; Turn off the additional section</p>
+</li>
+<li><p><code>+nostats</code> &#x2013; Turn off the stats section</p>
+</li>
+<li><p><code>+noanswer</code> &#x2013; Turn off the answer section</p>
+</li>
+</ul>
+<pre><code class="lang-bash">dig www.marcelbelmont.com +nocomments +noadditional
+</code></pre>
+<p>In this command we turned off comments and additional information:</p>
+<pre><code class="lang-bash">; &lt;&lt;&gt;&gt; DiG 9.8.3-P1 &lt;&lt;&gt;&gt; www.marcelbelmont.com +nocomments +noadditional
+;; global options: +cmd
+;www.marcelbelmont.com.        IN    A
+www.marcelbelmont.com.    300    IN    A    104.28.25.116
+www.marcelbelmont.com.    300    IN    A    104.28.24.116
+;; Query time: 101 msec
+;; SERVER: 209.18.47.61<span class="hljs-comment">#53(209.18.47.61)</span>
+;; WHEN: Sun Dec 10 17:23:02 2017
+;; MSG SIZE  rcvd: 71
+</code></pre>
+<h4 id="nslookup-command-description">nslookup command description</h4>
+<p>nslookup - query Internet name servers interactively</p>
+<p>Nslookup is a program to query Internet domain name servers.  </p>
+<p>Nslookup has two modes: </p>
+<ul>
+<li>interactive and non-interactive</li>
+<li>Interactive mode  <ul>
+<li>allows the user to query name servers for information about various hosts and domains or to print a list of hosts in a domain.</li>
+<li>Non-interactive mode is used to print just the name and requested information for a host or domain.</li>
+</ul>
+</li>
+</ul>
+<p>nslookup command also use to find out DNS related query. </p>
+<h4 id="nslookup-command-options">nslookup command options</h4>
+<p>INTERACTIVE COMMANDS: </p>
+<ul>
+<li><p>host [server]</p>
+<ul>
+<li>Look up information for host using the current default server or using server, if specified. If host is an Internet address and the query type is A or PTR, the name of the host is returned. </li>
+<li>If host is a name and does not have a trailing period, the search list is used to qualify the name.</li>
+<li>To look up a host not in the current domain, append a period to the name.</li>
+</ul>
+</li>
+<li><p>server domain</p>
+</li>
+<li><p>lserver domain</p>
+<ul>
+<li>Change the default server to domain; lserver uses the initial server to look up information about domain, while server uses the current default server.</li>
+<li>If an authoritative answer can&apos;t be found, the names of servers that might have the answer are returned.</li>
+</ul>
+</li>
+<li><p>root</p>
+<ul>
+<li>not implemented</li>
+</ul>
+</li>
+<li><p>finger</p>
+<ul>
+<li>not implemented</li>
+</ul>
+</li>
+<li><p>ls
+  not implemented</p>
+</li>
+<li><p>view</p>
+<ul>
+<li>not implemented</li>
+</ul>
+</li>
+<li><p>help</p>
+<ul>
+<li>not implemented</li>
+</ul>
+</li>
+<li><p>?</p>
+<ul>
+<li>not implemented</li>
+</ul>
+</li>
+</ul>
+<h4 id="nslookup-command-examples">nslookup command examples</h4>
+<pre><code class="lang-bash">nslookup www.marcelbelmont.com
+</code></pre>
+<p>Here we run nslookup to get name server information for my blog</p>
+<pre><code class="lang-bash">Server:        209.18.47.61
+Address:    209.18.47.61<span class="hljs-comment">#53</span>
+
+Non-authoritative answer:
+Name:    www.marcelbelmont.com
+Address: 104.28.25.116
+Name:    www.marcelbelmont.com
+Address: 104.28.24.116
+</code></pre>
+<p>Notice here we get some nameserver information on the host: <code>www.marcelbelmont.com</code></p>
+<pre><code class="lang-bash">nslookup
+</code></pre>
+<p>If you run <code>nslookup</code> like this you will get an interactive session</p>
+<h4 id="host-command-description">host command description</h4>
+<p>host - DNS lookup utility</p>
+<p>host is a simple utility for performing DNS lookups. </p>
+<p>It is normally used to convert names to IP addresses and vice versa. </p>
+<p>When no arguments or options are given, host prints a short summary of its command line arguments and options.</p>
+<p>host command to find name to IP or IP to name in IPv4 or IPv6 and also query DNS records.</p>
+<h4 id="host-command-options">host command options</h4>
+<p><code>host</code> command options:</p>
+<ul>
+<li><p><code>-a</code> (all) option is equivalent to setting the -v option and asking host to make a query of type ANY.</p>
+</li>
+<li><p><code>-C</code> option is used, host will attempt to display the SOA records for zone name from all the listed authoritative name servers</p>
+<pre><code> for that zone.
+</code></pre></li>
+<li><p><code>-c</code> option instructs to make a DNS query of class class. This can be used to lookup Hesiod or Chaosnet class resource records. </p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options</p>
+<h4 id="host-command-examples">host command examples</h4>
+<pre><code class="lang-bash">host www.marcelbelmont.com
+</code></pre>
+<p>When we run this command we get the following output:</p>
+<pre><code class="lang-bash">www.marcelbelmont.com has address 104.28.25.116
+www.marcelbelmont.com has address 104.28.24.116
+www.marcelbelmont.com has IPv6 address 2400:cb00:2048:1::681c:1974
+www.marcelbelmont.com has IPv6 address 2400:cb00:2048:1::681c:1874
+</code></pre>
+<p>This command converts name to IP address for the blog marcelbelmont.com</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="shell-login-order.html">Shell Login Order</a></td>
+<td style="text-align:right"><a href="shell-security.html">Shell Security</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shell-login-order.html" class="navigation navigation-prev " aria-label="Previous page: Shell Login Order">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell-security.html" class="navigation navigation-next " aria-label="Next page: Shell Security">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Network Utilities","level":"1.24","depth":1,"next":{"title":"Shell Security","level":"1.25","depth":1,"path":"docs/shell-security.md","ref":"docs/shell-security.md","articles":[]},"previous":{"title":"Shell Login Order","level":"1.23","depth":1,"path":"docs/shell-login-order.md","ref":"docs/shell-login-order.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/network-utilities.md","mtime":"2018-11-22T17:17:35.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

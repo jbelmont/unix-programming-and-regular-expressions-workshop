@@ -1,0 +1,3 @@
+# Another named makefile
+program2: program2.js
+					node program2.js

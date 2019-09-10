@@ -1,0 +1,779 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shell Security · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="find-and-replace-patterns.html" />
+    
+    
+    <link rel="prev" href="network-utilities.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Shell Security</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---shell-security">Unix Programming and Regular Expressions Workshop - Shell Security</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#shell-permissions">Shell Permissions</a></li>
+<li><a href="#root-permissions">Root Permissions</a></li>
+<li><a href="#system-administrator-techniques">System Administrator Techniques</a></li>
+<li><a href="#keep-software-up-to-date">Keep Software Up to Date</a></li>
+<li><a href="#understand-the-services-running-in-the-unix-environment">Understand the Services Running in the Unix Environment</a></li>
+<li><a href="#file-system-security">File System Security</a></li>
+<li><a href="#selinux">SELinux</a></li>
+<li><a href="#viruses-in-unix-systems">Viruses in Unix Systems</a></li>
+<li><a href="#network-firewalls">Network Firewalls</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="shell-permissions">Shell Permissions</h4>
+<p>In the <a href="working-with-files.html">Working with Files Section</a> we discussed the different types of permissions and the level of access they give.</p>
+<p>Users under Unix style operating systems often belong to managed groups with specific access permissions. </p>
+<p>This enables users to be grouped by the level of access they have to this system. </p>
+<p>Many Unix implementations add an additional layer of security by requiring that a user be a member of the wheel user privileges group in order to access the su command.</p>
+<p>Mac OS X uses the wheel user group as well.</p>
+<h4 id="root-permissions">Root Permissions</h4>
+<p>A lot of the following content was extracted from <a href="https://en.wikipedia.org/wiki/Unix_security" target="_blank">Unix Security Wikipedia Page</a></p>
+<p>A lot of Unix systems have either an account or group that permits complete control of the system, this is usually called having root access.</p>
+<p>If access is granted to an unwanted user then they can have complete access to the system which is a complete breach of security.</p>
+<blockquote>
+<p>A root account however is necessary for administrative purposes, and for the above security reasons the root account is seldom used for day to day purposes (the sudo program is more commonly used), so usage of the root account can be more closely monitored.</p>
+</blockquote>
+<h4 id="system-administrator-techniques">System Administrator Techniques</h4>
+<blockquote>
+<p>Selecting a strong password and guarding it properly are probably the most important things a user can do to improve Unix security. </p>
+<p>In Unix systems, the essential information about users is stored under the file /etc/passwd. </p>
+<p>This file keeps track of the users registered in the system and their main definitions. Passwords, or more correctly, the hash of the password, can also be stored in the same place. </p>
+<p>The entries in /etc/passwd occupy exactly one line each</p>
+<p>The entries in /etc/passwd occupy exactly one line each, and have the following form:</p>
+</blockquote>
+<p><code>nickname:password_hash:UserID:GroupID:Complete_Name:home_dir:shell_bin</code></p>
+<blockquote>
+<p>Since all users must have read access to the /etc/passwd file to do many common tasks (ls -l /home will use /etc/passwd to map UIDs to login names for example), anyone could also read the password hashes of other users. </p>
+<p>To solve this problem, the file /etc/shadow was created to store the password hashes, with only root having read access. </p>
+<p>Under password shadowing, the 2nd field (password hash) is replaced by an &apos;x&apos; which tells the system to retrieve the corresponding user&apos;s password via the /etc/shadow file.</p>
+<p>The /etc/shadow file often only contains values for the first two fields:</p>
+</blockquote>
+<p><code>xfze:$$1zuW2nX3sslp3qJm9MYDdglEApAc36r/:::::</code></p>
+<p>The remaining fields in the /etc/shadow file include:</p>
+<ol>
+<li><p>The minimum number of days between password changes</p>
+</li>
+<li><p>The maximum number of days until the password must be changed</p>
+</li>
+<li><p>The number of days of warning given before the password must be changed</p>
+</li>
+<li><p>The number of days after the password must be changed when the account becomes unusable</p>
+</li>
+<li><p>The date (expressed as the number of days since January 1st, 1970) when the account is expired</p>
+</li>
+</ol>
+<p>A system administrator can use these fields in the <code>/etc/shadow</code> to enforce a password security policy.</p>
+<p>Any old users or groups should be promptly removed from the Unix System.</p>
+<p><strong>su, sudo, ssh only, no remote root logins</strong></p>
+<h4 id="keep-software-up-to-date">Keep Software Up to Date</h4>
+<p><a href="https://en.wikipedia.org/wiki/Unix_security#Patching" target="_blank">Software Patching Wikipedia Section</a></p>
+<h6 id="patching">Patching</h6>
+<blockquote>
+<p>Operating systems, like all software, may contain bugs in need of fixing or may be enhanced with the addition of new features. Patching the operating system in a secure manner requires that the software come from a trustworthy source and not have been altered since it was packaged. Common methods for verifying that operating system patches have not been altered include the use of cryptographic hash, such as an MD5 based checksum, or the use of read-only media.</p>
+</blockquote>
+<h6 id="source-distributions">Source distributions</h6>
+<blockquote>
+<p>Source distributions include the ability to examine the code for suspicious content. The drawback, absent an accompanying cryptographic hash value, is that the user must be able to perform a security analysis of the code themselves.</p>
+<p>Regardless of the vendor or distribution, all software distributions should provide a mechanism for verifying that the software is legitimate and has not been modified since it was originally packaged.</p>
+</blockquote>
+<p>Often an md5 checksum of the downloaded content is used to verify that you downloaded an untampered resource.</p>
+<h4 id="understand-the-services-running-in-the-unix-environment">Understand the Services Running in the Unix Environment</h4>
+<p>Do not install unnecessary services in the system.</p>
+<p>Any software that is no longer needed should be removed from the system.</p>
+<p><strong>Identify what services are running</strong> :</p>
+<ol>
+<li><p>netstat -na</p>
+</li>
+<li><p>lsof</p>
+</li>
+<li><p>nmap</p>
+</li>
+<li><p>sockstat -4</p>
+</li>
+</ol>
+<p><strong>The commands inetd and xinetd act as super-servers for a variety of network protocols such as rlogin, telnet and ftp.</strong></p>
+<p>Here is a sample run of netstat in a ubuntu system:</p>
+<pre><code class="lang-bash">$ netstat -na
+
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 127.0.0.1:9333          0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.1.1:53            0.0.0.0:*               LISTEN     
+tcp        0      0 127.0.0.1:631           0.0.0.0:*               LISTEN     
+tcp        0      0 192.168.0.14:35384      64.233.177.188:443      ESTABLISHED
+tcp        0      0 192.168.0.14:56538      192.241.178.140:443     ESTABLISHED
+tcp6       0      0 ::1:631                 :::*                    LISTEN     
+tcp6       0      0 2606:a000:50d0:c6:54216 2607:f8b0:4002:810::443 ESTABLISHED
+tcp6       0      0 2606:a000:50d0:c6:48316 2607:f8b0:4002:804::443 ESTABLISHED
+tcp6       0      0 2606:a000:50d0:c6:48314 2607:f8b0:4002:804::443 ESTABLISHED
+tcp6       0      0 2606:a000:50d0:c6:53842 2607:f8b0:4002:808::443 ESTABLISHED
+udp        0      0 0.0.0.0:43326           0.0.0.0:*                          
+udp        0      0 127.0.1.1:53            0.0.0.0:*                          
+udp        0      0 0.0.0.0:68              0.0.0.0:*                          
+udp        0      0 0.0.0.0:631             0.0.0.0:*                          
+udp        0      0 0.0.0.0:51891           0.0.0.0:*                          
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+udp        0      0 0.0.0.0:5353            0.0.0.0:*                          
+udp6       0      0 :::57792                :::*                               
+udp6       0      0 :::5353                 :::*                               
+udp6       0      0 :::5353                 :::*                               
+raw6       0      0 :::58                   :::*                    7          
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     28568    /tmp/.org.chromium.Chromium.1VIs5h/SingletonSocket
+unix  2      [ ]         DGRAM                    24170    /run/user/1000/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     netstat -na | less24171    /run/user/1000/systemd/private
+unix  2      [ ACC ]     SEQPACKET  LISTENING     10230    /run/udev/control
+unix  3      [ ]         DGRAM                    9874     /run/systemd/notify
+unix  2      [ ACC ]     STREAM     LISTENING     27702    @christine-com.canonical.Unity.Scope.scopes.T1268472427719
+unix  2      [ ACC ]     STREAM     LISTENING     24202    /run/user/1000/keyring/control
+unix  2      [ ACC ]     STREAM     LISTENING     24508    /run/user/1000/keyring/pkcs11
+unix  2      [ ACC ]     STREAM     LISTENING     24512    /run/user/1000/keyring/ssh
+unix  2      [ ACC ]     STREAM     LISTENING     27704    @christine-com.canonical.Unity.Scope.applications.T1268524384910
+unix  2      [ ACC ]     STREAM     LISTENING     16458    /sys/fs/cgroup/cgmanager/sock
+unix  2      [ ACC ]     STREAM     LISTENING     25260    /run/user/1000/pulse/native
+unix  2      [ ACC ]     STREAM     LISTENING     531649   /run/user/1000/vscode-git-askpass-ace0622bfd4151186f67e7466a8ebc0a7aaf5aaf.sock
+unix  2      [ ACC ]     STREAM     LISTENING     25334    @/tmp/.ICE-unix/1660
+unix  2      [ ACC ]     STREAM     LISTENING     55198    /run/user/1000/Code-1.19.1-main.sock
+unix  2      [ ACC ]     STREAM     LISTENING     55613    /run/user/1000/Code-1.19.1-shared.sock
+......................................................................
+</code></pre>
+<h4 id="file-system-security">File System Security</h4>
+<p>This information was extracted from <a href="https://en.wikipedia.org/wiki/Unix_security#file-systems" target="_blank">File System Security Wikipedia Section</a></p>
+<blockquote>
+<p>File system security within UNIX and Unix-like systems is based on 9 permission bits, set user and group ID bits, and the sticky bit, for a total of 12 bits. </p>
+<p>These permissions apply almost equally to all filesystem objects such as files, directories and devices.</p>
+<p>The 9 permission bits are divided into three groups of three bits each. The first group describes the permissions of the file owner, the second group describes the permissions of a group associated with the file owner or the directory containing the file, and the third group describes the permissions associated with any process which does not have the same user ID as the file. Each group of three bits contains a bit indicating the read, write or execute access is granted. In the case of directories, execute access is interpreted as the permission to perform a filename lookup within the directory.</p>
+<p>The set user ID and set group ID bits, commonly abbreviated set-UID and set-GID respectively, are used to change the identity of the process which executes a file having either or both of those bits set. A file having the set-UID permission bit set will cause a process which executes that file to temporarily switch the effective user ID to that of the file owner. A file having the set-GID permission bit set will cause a process which executes that file to temporarily switch the effective group ID to that of the file group. A process may then alternate between the effective user or group ID which it inherited from the file and the real user or group ID which it inherited when the user logged on to the system. This provides a mechanism by which a process may limit the access rights it possesses to those code regions which require those access rights. This is a form of a security technique known as privilege separation and improves program security by limiting the unintended or undesirable actions of a processes.</p>
+<p>A directory having the set-GID permission bit set will cause a newly created file to have an initial file group value equal to the file group of the directory. This provides a mechanism whereby a subsystem, such as the system&apos;s mail subsystem, can create files which have a common file group value so that set-GID processes within that subsystem are then able to read or write the file.</p>
+<p>The sticky bit, formally known as the save text on swap bit, derives its name from its original purpose. Originally the sticky bit caused a process&apos;s initial memory image to be stored as a contiguous image on the disk drive which was used to store real memory pages when they were not in use. This improved the performance of commonly executed commands by making the initial memory image readily available. Modern UNIX systems no longer perform that function when the bit is set, but the name has been preserved nonetheless. In the case of files, the sticky-bit may be used by the system to indicate the style of file locking to be performed. In the case of directories, the sticky bit prevents any process, other than one which has super-user privileges or one having an effective user ID of the file owner, from deleting a file within that directory. The sticky bit is most commonly used on publicly writable directories, such as the various temporary working space directories on the system.</p>
+</blockquote>
+<p>We discussed in great detail the permission bits on the <a href="working-with-files.html">Working with Files Section</a></p>
+<h4 id="selinux">SELinux</h4>
+<p><a href="https://en.wikipedia.org/wiki/Security-Enhanced_Linux" target="_blank">SELinux Wikipedia</a></p>
+<blockquote>
+<p>Security-Enhanced Linux (SELinux) is a Linux kernel security module that provides a mechanism for supporting access control security policies, including United States Department of Defense&#x2013;style mandatory access controls (MAC).</p>
+</blockquote>
+<p>SELinux features include:</p>
+<ul>
+<li>clean separation of policy from enforcement</li>
+<li>well-defined policy interfaces
+support for applications querying the policy and enforcing access control (for example, crond running jobs in the correct context)</li>
+<li>independence of specific policies and policy languages</li>
+<li>independence of specific security-label formats and contents</li>
+<li>individual labels and controls for kernel objects and services
+support for policy changes</li>
+<li>separate measures for protecting system integrity (domain-type) and data confidentiality (multilevel security)</li>
+<li>flexible policy</li>
+<li>controls over process initialization and inheritance and program execution</li>
+<li>controls over file systems, directories, files, and open file descriptors</li>
+<li>controls over sockets, messages, and network interfaces</li>
+<li>controls over the use of &quot;capabilities&quot;</li>
+<li>cached information on access-decisions via the Access Vector Cache (AVC)</li>
+</ul>
+<h4 id="viruses-in-unix-systems">Viruses in Unix Systems</h4>
+<p>Unix-like operating systems are immune to most Microsoft Windows viruses because binaries created to run on Windows generally won&apos;t run on other platforms. </p>
+<p>However, many Unix like installations provide file storage services to Microsoft Windows clients, such as through the use of Samba software, and may unintentionally become a repository for viruses stored by users. </p>
+<p>It is common for Unix servers to act as mail transfer agents; consequently; email virus scanning is often installed. The ClamAV virus scanner is available in source code form and may be used to scan Unix file systems for viruses which infect other operating systems.</p>
+<p>There are viruses and worms that target Unix-like operating systems. In fact, the first computer worm&#x2014;the Morris worm&#x2014;targeted Unix systems.</p>
+<h4 id="network-firewalls">Network Firewalls</h4>
+<blockquote>
+<p>In computing, a firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules. A firewall typically establishes a barrier between a trusted internal network and untrusted outside network, such as the Internet.</p>
+</blockquote>
+<h6 id="iptables">iptables</h6>
+<p>iptables is the current user interface for interacting with Linux kernel netfilter functionality. </p>
+<p>It replaced ipchains. Other Unix like operating systems may provide their own native functionality and other open source firewall products exist.</p>
+<blockquote>
+<p>iptables requires elevated privileges to operate and must be executed by user root, otherwise it fails to function. On most Linux systems, iptables is installed as /usr/sbin/iptables and documented in its man pages, which can be opened using man iptables when installed. It may also be found in /sbin/iptables, but since iptables is more like a service rather than an &quot;essential binary&quot;, the preferred location remains /usr/sbin.</p>
+</blockquote>
+<p>Read the <a href="https://en.wikipedia.org/wiki/Iptables" target="_blank">iptables Wikipedia Page</a> for more details on iptables</p>
+<h4 id="shellshock-bash-bug">Shellshock Bash Bug</h4>
+<p>Please read the <a href="https://en.wikipedia.org/wiki/Shellshock_%28software_bug%29" target="_blank">Shellshock Wikipedia Page</a></p>
+<blockquote>
+<p>Shellshock, also known as Bashdoor, is a family of security bugs in the widely used Unix Bash shell, the first of which was disclosed on 24 September 2014. Many Internet-facing services, such as some web server deployments, use Bash to process certain requests, allowing an attacker to cause vulnerable versions of Bash to execute arbitrary commands. This can allow an attacker to gain unauthorized access to a computer system</p>
+</blockquote>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="network-utilities.html">Network Utilities</a></td>
+<td style="text-align:right"><a href="find-and-replace-patterns">Find and Replace Patterns</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="network-utilities.html" class="navigation navigation-prev " aria-label="Previous page: Network Utilities">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="find-and-replace-patterns.html" class="navigation navigation-next " aria-label="Next page: Find and Replace Patterns">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Shell Security","level":"1.25","depth":1,"next":{"title":"Find and Replace Patterns","level":"1.26","depth":1,"path":"docs/find-and-replace-patterns.md","ref":"docs/find-and-replace-patterns.md","articles":[]},"previous":{"title":"Network Utilities","level":"1.24","depth":1,"path":"docs/network-utilities.md","ref":"docs/network-utilities.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/shell-security.md","mtime":"2019-08-24T22:21:44.653Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

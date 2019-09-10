@@ -1,0 +1,1144 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Decision Making and Exit Status · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="looping.html" />
+    
+    
+    <link rel="prev" href="arithmetic-operations-and-variables.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Decision Making and Exit Status</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---decision-making-and-exit-status">Unix Programming and Regular Expressions Workshop - Decision Making and Exit Status</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#exit-status">Exit Status</a></li>
+<li><a href="#specific-exit-statuses">Specific Exit Statuses</a></li>
+<li><a href="#if-elif-else-fi">if elif else fi</a></li>
+<li><a href="#shell-test-status-and-conditionals">Shell Test Status and conditionals</a></li>
+<li><a href="#exit-status-examples">Exit Status Examples</a></li>
+<li><a href="#reverse-conditional">Reverse Conditional</a></li>
+<li><a href="#logical-operators">Logical Operators</a></li>
+<li><a href="#exit-command">Exit Command</a></li>
+<li><a href="#test-command-description">Test Command Description</a></li>
+<li><a href="#test-command-usage">Test Command Usage</a></li>
+<li><a href="#test-string-comparison">Test String Comparison</a></li>
+<li><a href="#test-if-and-conditional-examples">Test if and conditional examples</a></li>
+<li><a href="#case-statement-description">Case Statement Description</a></li>
+<li><a href="#case-statement-syntax">Case Statement Syntax</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="exit-status">Exit Status</h4>
+<p><img src="../images/shell-decision.png" alt="Exit Status"></p>
+<p><a href="https://en.wikipedia.org/wiki/Fork_\(system_call\" target="_blank">Fork System Call</a>)</p>
+<blockquote>
+<p>In computing, particularly in the context of the Unix operating system and its workalikes, fork is an operation whereby a process creates a copy of itself. It is usually a system call, implemented in the kernel. Fork is the primary (and historically, only) method of process creation on Unix-like operating systems.</p>
+</blockquote>
+<h4 id="specific-exit-statuses">Specific Exit Statuses</h4>
+<p><a href="https://en.wikipedia.org/wiki/Exit_status" target="_blank">Exit Status</a></p>
+<p>Once a command finishes whether the command is external or built-in it will return an integer value between 0 to 255 to the shell</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>Remember that <code>$?</code> while show the exit status of the last command</p>
+<table>
+<thead>
+<tr>
+<th>Exit Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>Success</td>
+</tr>
+<tr>
+<td>Non zero</td>
+<td>Failure</td>
+</tr>
+<tr>
+<td><code>126</code></td>
+<td>Command was found but the command could not be run</td>
+</tr>
+<tr>
+<td><code>127</code></td>
+<td>Command could not be found</td>
+</tr>
+<tr>
+<td><code>129 to 255</code></td>
+<td>A death by signal ==&gt; (250 - 128) need to subtract 128 for the actual signal</td>
+</tr>
+<tr>
+<td>Other values</td>
+<td>Different values are given by the actual command to indicate failure</td>
+</tr>
+</tbody>
+</table>
+<h4 id="if-elif-else-fi">if elif else fi</h4>
+<p><strong>The Syntax of the <code>if</code>, <code>elif</code>, <code>else</code>, and <code>fi</code></strong></p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> <span class="hljs-built_in">test</span>-commands; <span class="hljs-keyword">then</span>
+  consequent-commands;
+[<span class="hljs-keyword">elif</span> more-test-commands; <span class="hljs-keyword">then</span>
+  more-consequents;]
+[<span class="hljs-keyword">else</span> alternate-consequents;]
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Each command is separated by semicolon <code>;</code> or a new line</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> <span class="hljs-built_in">test</span>-commands
+<span class="hljs-keyword">then</span>
+  consequent-commands
+[<span class="hljs-keyword">elif</span> more-test-commands
+<span class="hljs-keyword">then</span>
+  more-consequents;]
+[<span class="hljs-keyword">else</span> alternate-consequents;]
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Notice here I put <code>then</code> in a new line</p>
+<p>Both <code>elif</code> and <code>else</code> are optional and notice that to close the <code>if</code> command we used <code>fi</code>.</p>
+<p><a href="https://en.wikipedia.org/wiki/ALGOL_68" target="_blank">fi syntax used in Algol 68</a></p>
+<p>The <code>fi</code> syntax is based on <a href="https://en.wikipedia.org/wiki/ALGOL_68" target="_blank">Algol 68</a> syntax that <a href="https://en.wikipedia.org/wiki/Bourne_shell" target="_blank">Steven Bourne incorporated into Bourne Shell</a></p>
+<h4 id="shell-test-status-and-conditionals">Shell Test Status and conditionals</h4>
+<p>The shell will check the exit status of the last command between <code>if</code> and <code>then</code></p>
+<p>If zero <code>0</code> is returned this means success so run commands after the <code>then</code> block</p>
+<p>Otherwise move onto the next set of commands if there are any</p>
+<p><code>elif</code> is really short for &quot;else if&quot; and the same type of action is applied as the <code>if</code></p>
+<ul>
+<li>The <code>elif</code> is optional and you can use as many as you need</li>
+</ul>
+<p>The <code>else</code> is only if the <code>if</code> statement or <code>elif</code> statement do not run</p>
+<ul>
+<li>The <code>else</code> statement is also optional</li>
+</ul>
+<p>The exit status will the last command that is run</p>
+<h4 id="exit-status-examples">Exit Status Examples</h4>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> /somepath/not/exist
+</code></pre>
+<p>This prints error message</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>This should return 1 signifying failure</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> <span class="hljs-built_in">cd</span> /dont/exist
+<span class="hljs-keyword">then</span>
+  <span class="hljs-string">&apos;\000&apos;</span>
+<span class="hljs-keyword">else</span>
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;could not change directory&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Notice here we put null character <code>&apos;\000&apos;</code> and then echoed message</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>Notice that this prints 0 for success even though this isn&apos;t very clear usage</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> ! <span class="hljs-built_in">cd</span> /some/file/dont/exist
+<span class="hljs-keyword">then</span>
+<span class="hljs-built_in">echo</span> could not find the file
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Here we use the <code>!</code> operator which has more clear intent in the script</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>Notice that this prints 0 for success but it is more clear because of <code>!</code> operator usage</p>
+<h4 id="reverse-conditional">Reverse Conditional</h4>
+<p>The <code>!</code> command is used with <code>if</code> to test reverse condition</p>
+<p>This syntax was added by <a href="https://en.wikipedia.org/wiki/POSIX" target="_blank">POSIX</a></p>
+<h4 id="logical-operators">Logical Operators</h4>
+<table>
+<thead>
+<tr>
+<th><code>Operator</code></th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>This is a logical <code>AND</code> operator which means <strong>if this and that condition</strong></td>
+</tr>
+<tr>
+<td>`\</td>
+<td>\</td>
+<td>`</td>
+<td>This is the logical <code>OR</code> operator which means <strong>if this or that condition</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Both of these operators are <em>short circuit</em> operators</p>
+<ul>
+<li>The processing will stop as soon as the shell knows the result of the expression</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> ([<span class="hljs-variable">$var</span> == 1 &amp;&amp; <span class="hljs-variable">$var2</span> == <span class="hljs-string">&quot;blah&quot;</span>]); <span class="hljs-keyword">then</span>
+commands;
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This command will short circuit if first check fails meaning only <em>$var</em> is evaluated</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> ([ <span class="hljs-variable">$NUM1</span> == 1 ] || [ <span class="hljs-variable">$NUM2</span> == 1 ]) &amp;&amp; [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$STR</span>&quot;</span> ]); <span class="hljs-keyword">then</span>
+commands;
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This command will short circuit if first check passes meaning that <em>$NUM1 and $NUM2</em> are evaluated</p>
+<p>Both <code>&amp;&amp;</code> and <code>||</code> have same precedence</p>
+<h4 id="exit-command">Exit Command</h4>
+<p>The <a href="https://en.wikipedia.org/wiki/Exit_\(command\" target="_blank">Exit command</a>) will return the status of the script</p>
+<p>The script will execute immediately after the exit command is invoked</p>
+<p>If there is no value then the status returned will be of the last command run</p>
+<p>Zero <code>0</code> signifies success and nonzero signifies failure</p>
+<p>Don&apos;t use negative numbers or numbers greater than 255 for your own status codes</p>
+<p>Small values work best for exit status codes</p>
+<p>An exit status is defined for each command</p>
+<h4 id="test-command-description">Test Command Description</h4>
+<p>The test utility evaluates the expression and, if it evaluates to true, returns a zero (true) exit status; otherwise it returns 1 (false).</p>
+<p>If there is no expression, test also returns 1 (false).</p>
+<p>The <code>test</code> command is a multipurpose command that can check for many things</p>
+<p>The <code>test</code> command has 2 forms:</p>
+<ol>
+<li><p><code>test</code> something to test</p>
+</li>
+<li><p><code>[ something  to test ... ]</code> The brackets need to have a space in between them to work correctly</p>
+<ol>
+<li>So <code>[something to test]</code> won&apos;t work</li>
+</ol>
+</li>
+</ol>
+<p>The <code>test</code> command can check for:</p>
+<ul>
+<li>file attributes (is it readable, writable, is it a directory)</li>
+<li>String comparisons:<ul>
+<li>equal,</li>
+<li>not equal</li>
+<li>less than</li>
+</ul>
+</li>
+<li>Integer comparisons</li>
+</ul>
+<p>Read the <a href="https://en.wikipedia.org/wiki/Test_\(Unix\" target="_blank">Test Command Wikipedia Doc</a>) for full options available</p>
+<h4 id="test-command-usage">Test Command Usage</h4>
+<p>Unary Operators:</p>
+<p><code>-r</code> tests if file is readable</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ -r someFile ]
+</code></pre>
+<p>There are more unary operators and they are all written like <code>-r</code></p>
+<p>Binary Operators:</p>
+<p><code>-eq</code> is a binary operator</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$#</span> <span class="hljs-_">-lt</span> 2 -o ! <span class="hljs-_">-e</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> ]
+ <span class="hljs-keyword">then</span>
+   <span class="hljs-built_in">exit</span>
+ <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Remember that <code>$#</code> tells how many arguments were given to shell <code>-lt</code> stands for less than and <code>-o</code> stands for binary or operator and remember that <code>!</code> is logical negation.</p>
+<p>This is checking whether arguments is less than 2 or if the file doesn&apos;t exist if any of these are true then exit the script.</p>
+<p>String comparisions use the following operators:</p>
+<ul>
+<li><code>=</code></li>
+<li><code>!=</code></li>
+<li><code>&lt;</code></li>
+<li><code>&gt;</code></li>
+</ul>
+<p>There aren&apos;t any operators like <code>&lt;=</code> or <code>&gt;=</code> for some reason</p>
+<p><a href="https://en.wikipedia.org/wiki/Test_\(Unix\" target="_blank">String Arguments</a>#String_arguments)</p>
+<p>Non-POSIX options:</p>
+<ul>
+<li><code>-a</code> is and</li>
+<li><code>-o</code> is or</li>
+</ul>
+<p>These operations can be troublesome</p>
+<p>The man pages have bugs section detailing possible issues:</p>
+<blockquote>
+<p>Both sides are always evaluated in -a and -o.  For instance, the writable status of file will be tested by the following command even though the former expression indicated false, which results in a gratuitous access to the file system:
+    [ -z abc -a -w file ]
+To avoid this, write
+    [ -z abc ] &amp;&amp; [ -w file ]</p>
+</blockquote>
+<p>It is preferable to use <code>&amp;&amp;</code> and <code>||</code> over these operators for this reason</p>
+<h4 id="test-command-options">Test Command Options</h4>
+<p>File Level Tests:</p>
+<ul>
+<li><code>-e</code> True if file exists (regardless of type).</li>
+<li><code>-r</code> True if file exists and is readable.</li>
+<li><code>-w</code> True if file exists and is writable.  True indicates only that the write flag is on.  The file is not writable on a read-only file system even if this test indicates true.</li>
+<li><code>-L</code> True if file exists and is a symbolic link.</li>
+</ul>
+<p>String Tests:</p>
+<ul>
+<li><code>=</code> True if the strings s1 and s2 are identical.<ul>
+<li>str1 = str2</li>
+</ul>
+</li>
+<li><code>!=</code> True if the strings s1 and s2 are not identical.<ul>
+<li>str1 != str2</li>
+</ul>
+</li>
+<li><code>-n</code> True if the length of string is nonzero<ul>
+<li>-n str</li>
+</ul>
+</li>
+<li><code>-z</code> True if the length of string is zero.<ul>
+<li>-z string</li>
+</ul>
+</li>
+</ul>
+<p>Numeric Tests:</p>
+<ul>
+<li><code>-eq</code> True if the integers n1 and n2 are algebraically equal.<ul>
+<li>n1 -eq n2</li>
+</ul>
+</li>
+<li><code>-ne</code> True if the integers n1 and n2 are not algebraically equal.<ul>
+<li>n1 -ne n2</li>
+</ul>
+</li>
+<li><code>-lt</code> True if the integer n1 is algebraically less than the integer n2.<ul>
+<li>n1 -lt n2</li>
+</ul>
+</li>
+<li><code>-gt</code> True if the integer n1 is algebraically greater than the integer n2.<ul>
+<li>n1 -gt n2</li>
+</ul>
+</li>
+<li><code>-le</code> True if the integer n1 is algebraically less than or equal to the integer n2.<ul>
+<li>n1 -le n2</li>
+</ul>
+</li>
+<li><code>-ge</code> True if the integer n1 is algebraically greater than or equal to the integer n2.<ul>
+<li>n1 -ge n2</li>
+</ul>
+</li>
+</ul>
+<p>Read the Man pages for Test for more options</p>
+<p>Also to see built-in test command help in bash run <code>help test</code> in zsh run <code>run-help test</code></p>
+<p>There is also another none builtin in <code>/bin</code> or <code>/usr/bin</code> which runs in C programs that is similar</p>
+<h4 id="test-string-comparison">Test String Comparison</h4>
+<p>Always use quotes when doing string comparison</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$somevar</span>&quot;</span> = off ]; <span class="hljs-keyword">then</span>
+<span class="hljs-keyword">do</span> something
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<h4 id="test-if-and-conditional-examples">Test if and conditional examples</h4>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> <span class="hljs-built_in">test</span> <span class="hljs-_">-f</span> /etc/passwd &amp;&amp; grep root /etc/passwd &gt; /dev/null
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> the password file exists and so does the root user
+<span class="hljs-keyword">elif</span> <span class="hljs-built_in">test</span> <span class="hljs-_">-f</span> /etc/group &amp;&amp; grep root /etc/group &gt; /dev/null
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> group file exists and so does the group root
+<span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">echo</span> there is no password or group file or there is notuser root or group root
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Remember that <code>/dev/null</code> will redirect output of grep else we will get more output put into stdout. This script checks whether there is a file that exists called <code>/etc/passwd</code> and if there is a user named root and if so print message else if there is a file called <code>/etc/group</code> and if a group named root exists and if so prints message else it prints message</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> grep marcel /etc/passwd &gt; /dev/null || grep root /etc/passwd &gt; /dev/null
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> marcel or root exists as a user
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This example uses or <code>||</code> operator this time</p>
+<pre><code class="lang-bash">bash
+</code></pre>
+<p>type in bash to get into a subshell</p>
+<pre><code class="lang-bash">ps
+</code></pre>
+<p>This should print out multiple versions of bash since we are in a subshell</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">exit</span> 18
+</code></pre>
+<p>This will exit out of subshell and send value 18 to parent shell</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>We can confirm this with the <code>$?</code> command</p>
+<p>Remember we can create a shell program interactively using <code>&gt;</code> as stdin</p>
+<pre><code class="lang-bash">cat &gt; check_arguments.sh
+<span class="hljs-meta">#! /bin/sh</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-variable">$#</span> != 2 ]
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> Usage: my program <span class="hljs-_">-f</span> /a/file &gt;&amp;2
+        <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-comment"># some more program related lines</span>
+</code></pre>
+<p>Paste the program above into your shell then hit enter and lastly press <code>Control d</code> in your keyboard to signify end of line.</p>
+<pre><code class="lang-bash">./scripts/decision-making-and-exit-status/check_arguments.sh
+</code></pre>
+<p>If you run this command with no args you will see the output <strong>Usage: my program -f /a/file</strong></p>
+<p>and the exit status of <code>1</code> with <code>echo $?</code></p>
+<pre><code class="lang-bash">z=
+</code></pre>
+<p>Here we set a variable z to an empty value</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$z</span>&quot;</span> ]
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> z is <span class="hljs-variable">$z</span>
+<span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">echo</span> z is empty
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Here we use <code>-n</code> operator which checks if a string has length and we use the test command form of <code>[  ... ]</code></p>
+<pre><code class="lang-bash">var=avalue
+</code></pre>
+<p>Here we create a variable with a value</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$var</span>&quot;</span> ]
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> var is empty
+<span class="hljs-keyword">else</span>
+        <span class="hljs-built_in">echo</span> var is <span class="hljs-variable">$var</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This uses <code>-z</code> operator checks if a string length is zero and the test command form <code>[ ... ]</code></p>
+<pre><code class="lang-bash">bash
+</code></pre>
+<p>Enter a subshell</p>
+<pre><code class="lang-bash">c=
+</code></pre>
+<p>Set a value of c</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">set</span> -x
+</code></pre>
+<p>Set a value of c variable and set command line execution tracing</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ <span class="hljs-variable">$c</span> != foo ]; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> worked ; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Notice it didn&apos;t work because there is an empty space before <code>!=</code> comparison</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ S<span class="hljs-variable">$c</span> != Sfoo ]; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> worked ; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This worked because we preceded <code>$c</code> with a character the <code>!=</code> operator is binary and an empty space isn&apos;t considered a proper argument</p>
+<pre><code class="lang-bash">c=<span class="hljs-string">&apos;some spaces here&apos;</span>
+</code></pre>
+<p>Now rerun the previous command</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ S<span class="hljs-variable">$c</span> != Sfoo ]; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> worked ; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>It fails with too many arguments</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$c</span>&quot;</span> != foo ]; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> worked ; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Notice it works because we quoted <code>$c</code> this time</p>
+<h4 id="extended-test-command">Extended Test Command</h4>
+<p>Issues with Regular Test Command and <code>[ ... ]</code>:</p>
+<ul>
+<li>The extended test command is syntactically the same as any other command</li>
+<li>Spaces are required between everything</li>
+<li>Quoting is required for parentheses, <code>&lt;</code>, and <code>&gt;</code></li>
+<li>Quoting is required for variable values</li>
+<li>Complicated expressions can be hard to write<ul>
+<li><code>and</code>, <code>or</code>, and grouping</li>
+</ul>
+</li>
+<li>the And operator <code>a</code> and the Or operator <code>o</code> are not portable</li>
+</ul>
+<p>The extended test command originated in <a href="https://en.wikipedia.org/wiki/KornShell" target="_blank">KornShell &quot;ksh&quot;</a> and in <a href="https://en.wikipedia.org/wiki/Bash_\(Unix_shell\" target="_blank">Bash</a>) and in <a href="https://en.wikipedia.org/wiki/Z_shell" target="_blank">Zsh</a></p>
+<p>Even though the Extended Test Command is not in POSIX it has been available for a long time</p>
+<p>The syntax for extened test command is <code>[[ ... ]]</code></p>
+<p>It is almost like a separate language inside the brackets</p>
+<p>Features of Extended Test Command:</p>
+<ul>
+<li>Word Splitting <em>disabled</em></li>
+<li>Filename Expansion <em>disabled</em></li>
+<li><code>&lt;</code>, and <code>&gt;</code> are recognized as operators and not redirections</li>
+<li>You can directly use <code>$var</code> to get a variable value<ul>
+<li>You don&apos;t have to use double quotes like <code>&quot;$var&quot;</code></li>
+</ul>
+</li>
+<li>You can use <code>&amp;&amp;</code> and <code>||</code> in the extended test command to chain your conditions</li>
+<li>You don&apos;t need to quote <code>&lt;</code>, <code>&gt;</code> for string comparisions</li>
+<li>You don&apos;t need to quote parentheses for grouping</li>
+<li>File names can be used <code>/dev/fd/N</code> for test file descriptors</li>
+<li>The same features in the regular test command are available</li>
+</ul>
+<p>Pattern Matching Abilities:</p>
+<ul>
+<li>You can use <code>=</code>, <code>==</code>, and <code>!=</code> for pattern matching</li>
+<li>Extended patterns using <code>extglob</code> for Bash and <code>extendedglob</code> for zsh</li>
+<li>You can quote the right hand arguments in order to do string comparisons<ul>
+<li><code>if [[ $FILE != !(*.c) ]]</code></li>
+</ul>
+</li>
+<li>The <code>==</code> operator is preferred over <code>=</code> for comparisions</li>
+<li>You can use <em>str =~ pattern</em> for ERE type matching</li>
+</ul>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [[ <span class="hljs-_">-f</span> <span class="hljs-variable">$SOMEFILE</span> &amp;&amp; -r <span class="hljs-variable">$SOMEFILE</span> ]]
+<span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-variable">$SOMEFILE</span> is both a regular and readable file
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Here notice we didn&apos;t double quote variables and everything should work fine</p>
+<pre><code class="lang-bash">bash
+</code></pre>
+<p>Go into bash subshell if you are in a shell zsh</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">set</span> -x
+</code></pre>
+<p>Set execution tracing</p>
+<pre><code class="lang-bash">twoWords=<span class="hljs-string">&quot;Hista Mikista&quot;</span>
+<span class="hljs-keyword">if</span> [ -z <span class="hljs-variable">$twoWords</span> ] ; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> twoWords is a empty ; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This prints error because expansion uses word splitting provides more arguments</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [[ -z <span class="hljs-variable">$twoWords</span> ]] ; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> twoWords is a empty; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>This time it works because expansion is not split into separate words instead <em>$twoWords</em> is given as one word</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">shopt</span> <span class="hljs-_">-s</span> extglob
+</code></pre>
+<p>This enables extended glob options in bash</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">set</span> +x
+</code></pre>
+<p>Turn off tracing</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$CFILE</span> == !(*.o) ]]; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> <span class="hljs-variable">$CFILE</span> is not an object file; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Here with extended glob features in bash and extended test command we check whether a file is not an object file</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [[ Marcel =~ [A-Z][a-z]+ ]]; <span class="hljs-keyword">then</span> <span class="hljs-built_in">echo</span> Marcel; <span class="hljs-keyword">else</span> <span class="hljs-built_in">echo</span> Not Marcel; <span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Here we use a feature in bash and zsh to do pattern check with <code>=~</code></p>
+<pre><code class="lang-bash">regex=<span class="hljs-string">&apos;[A-Z][a-z]+&apos;</span>
+<span class="hljs-keyword">if</span> [[ Marcel =~ <span class="hljs-variable">$regex</span> ]]
+<span class="hljs-keyword">then</span>
+<span class="hljs-built_in">echo</span> Marcel
+<span class="hljs-keyword">else</span>
+<span class="hljs-built_in">echo</span> Not marcel
+<span class="hljs-keyword">fi</span>
+Marcel
+</code></pre>
+<p>Here we use variable and it still works</p>
+<p>The extended test command <code>[[ ... ]]</code> has features over the regular test command <code>[ ... ]</code></p>
+<h4 id="case-statement-description">Case Statement Description</h4>
+<p>The <code>case</code> statement is similar to the switch statement in C, Java, C#, JavaScript, etc</p>
+<p>The case statement tests a single value against multiple patterns one after another pattern</p>
+<p>The case statement is easier to read and to write than a series of chained <code>if ... elif ... elif ... else</code> statements</p>
+<p><strong>case: case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... esac</strong></p>
+<p>Execute commands based on pattern matching.</p>
+<p>Selectively execute COMMANDS based upon WORD matching PATTERN.  </p>
+<p>The <code>|</code> is used to separate multiple patterns.</p>
+<p>Exit Status:
+Returns the status of the last command executed.</p>
+<h4 id="case-statement-syntax">Case Statement Syntax</h4>
+<pre><code class="lang-bash"><span class="hljs-keyword">case</span> expression <span class="hljs-keyword">in</span>
+    pattern1 )
+        statements ;;
+    pattern2 )
+        statements ;;
+    ...
+    * )
+        statements ;;
+<span class="hljs-keyword">esac</span>
+</code></pre>
+<p>Case Statement Execution:</p>
+<ul>
+<li><p>Case statement first expands the expression and tries to match it against each pattern.</p>
+</li>
+<li><p>When a match is found all of the associated statements until the double semicolon (;;) are executed.</p>
+</li>
+<li><p>After the first match, case terminates with the exit status of the last command that was executed.</p>
+</li>
+<li><p>If there is no match, exit status of case is zero.</p>
+</li>
+</ul>
+<p>No quotes are required on the value between <code>case</code> and <code>in</code></p>
+<p>Make sure that each case group ends with <code>;;</code></p>
+<p>The <code>;;</code> can be on a line by itself which is often more readable</p>
+<p>The <code>;;</code> is optional before <code>esac</code> but it is good convention to do so.</p>
+<p>You can optionally use a leading left parenthesis before each pattern set</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">case</span> expression <span class="hljs-keyword">in</span>
+    (pattern1 )
+        statements ;;
+    (pattern2 )
+        statements ;;
+    ...
+    * * )
+        statements ;;
+<span class="hljs-keyword">esac</span>
+</code></pre>
+<p>Open up <strong>scripts/decision-making-and-exit-status/case_statements.sh</strong> to look at an example of case statements</p>
+<p>We won&apos;t go over details of loops and functions yet because we will discuss it later in the workshop.</p>
+<h4 id="best-practices">Best Practices</h4>
+<p>The only universal success status code is zero</p>
+<p>The Syntax in conditionals is very important</p>
+<p>Make sure to use a newline or semicolon to make the next keyword work properly</p>
+<p>Be sure to use <code>!</code>, <code>&amp;&amp;</code> and <code>||</code> in your scripts</p>
+<p>If you need to return an exit status make sure it is small and use them sparingly</p>
+<p>If you try to use <code>&lt;</code> and <code>&gt;</code> then you must quote them</p>
+<p>Double quotes should be used in variable values</p>
+<p>Group conditions with <code>( )</code></p>
+<p>Try not to confuse string comparisons with numeric comparisons</p>
+<p>Use shell operators <code>&amp;&amp;</code> and <code>||</code> to chain tests instead of <code>-a</code> and <code>-o</code></p>
+<p>Of the 2 test forms that you can use prefer <code>[ ... ]</code> form over the <code>test</code> version</p>
+<p>Make sure to save exit status of <code>$?</code> and do it immediately</p>
+<p>Use ! to invert cases</p>
+<p>Quote Variable expansion arguments in the test command</p>
+<p>There are possible spacing issues with test command</p>
+<p>Use the extended test command <code>[[ ... ]]</code> because it makes your scripts more readable and easier to write</p>
+<p><code>case ... esac</code> is a more clean pattern to use than a bunch of <code>if ... elif ... else</code> in your script</p>
+<p>use <code>pattern1 | pattern2</code> where appropriate</p>
+<p>Use a final <code>* )</code> for the default case</p>
+<p>Always Supply the final <code>;;</code> before esac</p>
+<p>Bash <code>extglob</code> and Zsh <code>extendedglob</code> can be used for extended case patterns</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="arithmetic-operations-and-variables.html">Arithmetic Operations and variables</a></td>
+<td style="text-align:right"><a href="looping.html">Looping</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="arithmetic-operations-and-variables.html" class="navigation navigation-prev " aria-label="Previous page: Arithmetic Operations and variables">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="looping.html" class="navigation navigation-next " aria-label="Next page: Looping">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Decision Making and Exit Status","level":"1.10","depth":1,"next":{"title":"Looping","level":"1.11","depth":1,"path":"docs/looping.md","ref":"docs/looping.md","articles":[]},"previous":{"title":"Arithmetic Operations and variables","level":"1.9","depth":1,"path":"docs/arithmetic-operations-and-variables.md","ref":"docs/arithmetic-operations-and-variables.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/decision-making-and-exit-status.md","mtime":"2018-11-22T17:17:35.954Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,742 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shell Functions · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="signal-handling.html" />
+    
+    
+    <link rel="prev" href="subshells.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Shell Functions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---shell-functions">Unix Programming and Regular Expressions Workshop - Shell Functions</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#shell-function-description">Shell Function Description</a></li>
+<li><a href="#shell-function-syntax">Shell Function Syntax</a></li>
+<li><a href="#shell-function-examples">Shell Function Examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h3 id="shell-function-description">Shell Function Description</h3>
+<p>A shell function is like a function in other programming languages, where you can group
+related statements together.</p>
+<p>You can avoid code duplication by using functions to increase modularity and improve code
+clarity and code reuse.</p>
+<h3 id="shell-function-syntax">Shell Function Syntax</h3>
+<h4 id="declaration">Declaration</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># Can be declared using just parenthesis</span>
+<span class="hljs-function"><span class="hljs-title">nameOfMyFunction</span></span> () {
+  body statements to execute
+}
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># ...or using the &quot;function&quot; keyword (or both)</span>
+<span class="hljs-comment"># This is equivalent to the previous declaration.</span>
+<span class="hljs-keyword">function</span> nameOfMyFunction {
+  body statements to execute
+}
+</code></pre>
+<p>You have to define functions before you can use them.</p>
+<p>In a script you have to define them before you use them or they must be sourced from
+outside of the script before you use them.</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Okay</span>
+. file-containing-myPrint.sh
+
+myPrint <span class="hljs-string">&quot;blah blah blah&quot;</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># Okay</span>
+<span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">myPrint</span></span>() {
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span>
+}
+
+myPrint <span class="hljs-string">&quot;blah blah blah&quot;</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-comment"># NOT okay</span>
+myPrint <span class="hljs-string">&quot;blah blah blah&quot;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">myPrint</span></span>() {
+  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span>
+}
+</code></pre>
+<p>You can declare local variables that only exist in your function:</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">makeHomeDir</span></span>() {
+  <span class="hljs-built_in">local</span> USER=<span class="hljs-variable">$1</span>
+  mkdir -p /home/<span class="hljs-variable">${USER}</span>
+  chown <span class="hljs-variable">${USER}</span> /home/<span class="hljs-variable">${USER}</span>
+}
+</code></pre>
+<p>In this contrived example, I&apos;ve overridden the <code>$USER</code> variable (usually the username of
+the user running the script/shell) to be the target user whose home directory is created.
+Outside of that function, <code>$USER</code> retains its special meaning.  Inside the function, it
+gets assigned the first value that is passed in.</p>
+<h4 id="usage">Usage</h4>
+<p>You can invoke shell functions just like shell commands.</p>
+<p>Arguments are passed as <code>$1</code>, <code>$2</code>, ..., <code>$n</code>.  Likewise, <code>$#</code>, <code>$*</code>, and <code>$@</code> work
+similarly to a script&apos;s command line arguments.</p>
+<p>The main script arguments are shadowed by the function&apos;s arguments while the function is
+running.  In other words, if you need to access the script&apos;s arguments (vs the
+function&apos;s), you will have to assign them to another variable, or pass them in as
+arguments to the function.</p>
+<p>The return statement is used to return a status to the shell script.  You shouldn&apos;t use
+exit to return a status in a shell function.  Since functions do not run in a separate
+process, this will actually exit the shell script itself (or your login shell, if you&apos;re
+executing the function on the command line).</p>
+<p>If you need to return a <em>value</em> (instead of, or in addition to a status), you can use
+echo, or printf, or whatever output-producing command you like.  Such as:</p>
+<pre><code class="lang-bash">bash$ <span class="hljs-built_in">type</span> today
+today is a <span class="hljs-keyword">function</span>
+<span class="hljs-function"><span class="hljs-title">today</span></span> ()
+{
+    <span class="hljs-built_in">local</span> TODAY=$(date +<span class="hljs-string">&quot;%Y%m%d&quot;</span>);
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Today is <span class="hljs-variable">$TODAY</span>&quot;</span>;
+    <span class="hljs-built_in">return</span> 42
+}
+bash$ today
+Today is 20171205
+bash$ <span class="hljs-built_in">echo</span> $?
+42
+bash$ thedate=$(today)
+bash$ <span class="hljs-built_in">echo</span> $?
+42
+bash$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;I got <span class="hljs-variable">$thedate</span>&quot;</span>
+I got Today is 20171205
+</code></pre>
+<p>One thing to note when using functions on the command line.  Shell aliases are evaluated
+before functions (see the doc on <a href="evaluation-order.html">Evaluation Order</a>).  This can cause
+confusion if you happen to have an alias and a function which are named the same thing:</p>
+<pre><code class="lang-bash">bash$ <span class="hljs-built_in">alias</span> sayhi=<span class="hljs-string">&apos;echo &quot;Hello, world&quot;&apos;</span>
+bash$ sayhi
+Hello, world
+bash$ <span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">sayhi</span></span>() { <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Bonjour le monde&quot;</span>; }
+bash$ sayhi
+Hello, world
+bash$ <span class="hljs-built_in">type</span> sayhi
+sayhi is aliased to `<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;Hello, world&apos;</span><span class="hljs-string">&apos;
+bash$ unalias sayhi
+bash$ sayhi
+Bonjour le monde
+</span></code></pre>
+<h3 id="shell-function-examples">Shell Function Examples</h3>
+<pre><code class="lang-bash"><span class="hljs-function"><span class="hljs-title">printHello</span></span>() {
+  <span class="hljs-built_in">echo</span> Hello <span class="hljs-variable">$1</span>
+}
+</code></pre>
+<p>This will create local function called printHello that takes an argument and echoes <code>Hello
+$arg</code>.</p>
+<pre><code class="lang-bash">bash$ <span class="hljs-built_in">print</span>Hello Marcel
+Hello Marcel
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># Snag a copy of the script&apos;s arguments.</span>
+<span class="hljs-comment"># Enclosing in parenthesis so that $ARGS is a list, same as $@.</span>
+<span class="hljs-comment"># Enclosing in quotes so that any multi-word arguments from $@ are</span>
+<span class="hljs-comment"># preserved in $ARGS.</span>
+ARGS=(<span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span>)
+
+<span class="hljs-function"><span class="hljs-title">help</span></span> () {
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Usage:\n\tProvide an argument\n&quot;</span>
+}
+
+<span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$#</span> <span class="hljs-_">-lt</span> 1 ]] ; <span class="hljs-keyword">then</span>
+  <span class="hljs-built_in">help</span>
+  <span class="hljs-built_in">exit</span> 1
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-function"><span class="hljs-title">printArgs</span></span> () {
+  <span class="hljs-comment"># Use the copy we squirrelled away.</span>
+  <span class="hljs-comment"># Note the quotes.  Again, that is to ensure that if a multi-word</span>
+  <span class="hljs-comment"># argument is passed to the script, they&apos;ll stay together as one</span>
+  <span class="hljs-comment"># argument here.</span>
+  <span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${ARGS[@]}</span>&quot;</span>
+  <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-variable">$arg</span>
+  <span class="hljs-keyword">done</span>
+}
+
+<span class="hljs-built_in">print</span>Args
+</code></pre>
+<p>This simple script prints a help message if the number of arguments is less than 1.</p>
+<p>Notice I had to define the <code>ARGS</code> variable at the top because the command line arguments
+of the script will be shadowed inside of printArgs.</p>
+<h3 id="bread-crumb-navigation">Bread Crumb Navigation</h3>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="subshells.html">Subshells</a></td>
+<td style="text-align:right"><a href="signal-handling.html">Signal Handling</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="subshells.html" class="navigation navigation-prev " aria-label="Previous page: Subshells">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="signal-handling.html" class="navigation navigation-next " aria-label="Next page: Signal Handling">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Shell Functions","level":"1.17","depth":1,"next":{"title":"Signal Handling","level":"1.18","depth":1,"path":"docs/signal-handling.md","ref":"docs/signal-handling.md","articles":[]},"previous":{"title":"Subshells","level":"1.16","depth":1,"path":"docs/subshells.md","ref":"docs/subshells.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/shell-functions.md","mtime":"2018-11-22T17:17:35.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

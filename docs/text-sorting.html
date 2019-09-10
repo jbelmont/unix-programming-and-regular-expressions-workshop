@@ -1,0 +1,791 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Text Sorting · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="arithmetic-operations-and-variables.html" />
+    
+    
+    <link rel="prev" href="working-with-fields.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Text Sorting</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---text-sorting">Unix Programming and Regular Expressions Workshop - Text Sorting</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#sort-description">Sort description</a></li>
+<li><a href="#sort-by-line">Sort by line</a></li>
+<li><a href="#sort-by-field">Sort by field</a></li>
+<li><a href="#sort-field-specifications">Sort Field Specifications</a></li>
+<li><a href="#sort-options">Sort options</a></li>
+<li><a href="#sort-examples">Sort examples</a></li>
+<li><a href="#sort-best-practices">Sort best practices</a></li>
+<li><a href="#uniq-description">Uniq description</a></li>
+<li><a href="#uniq-options">Uniq options</a></li>
+<li><a href="#uniq-examples">Uniq examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="sort-description">Sort description</h4>
+<p>sort - sort lines of text files</p>
+<p><code>sort</code> writes sorted concatenation of all FILE(s) to standard output.</p>
+<p>The process of sorting will gather related data for further processing in a pipeline</p>
+<p>Some uses for sorting:</p>
+<ul>
+<li>To count the number of occurrences of some data</li>
+<li>To remove duplicates of data</li>
+<li>To process related items together</li>
+</ul>
+<p><strong>Sorting can be thought of as a key operation for any complicated pipeline</strong></p>
+<h4 id="sort-by-line">Sort by line</h4>
+<p>The default behavior for <code>sort</code> is to sort by comparing full lines</p>
+<p><strong>Important note: sort order is defined by the current locale</strong></p>
+<p>If you <code>export LC_ALL=C</code> then it will compare by byte values</p>
+<p>The default behavior is to keep duplicate line in stdout</p>
+<p>2 ways to get unique ways with text in sorted values:</p>
+<ol>
+<li><p>If you pass <code>-u</code> then it will only print unique values</p>
+</li>
+<li><p>If you pipe sorted text to <code>uniq</code> unix command</p>
+</li>
+</ol>
+<h4 id="sort-by-field">Sort by field</h4>
+<p><code>Fields</code> are separated by whitespace characters but leading and trailing whitespace are ignored.</p>
+<p>The <code>-t</code> flag is used to specify a field separator</p>
+<p>The <code>-k</code> is used to define sorting criteria for each field</p>
+<p><code>sort</code> will sort by the first field, then by the second, ..., until it is done</p>
+<h4 id="sort-field-specifications">Sort Field Specifications</h4>
+<ul>
+<li>Field numbers start at one</li>
+<li>You specify character position within a field using <code>.N</code> and <code>N</code> start at field one</li>
+</ul>
+<p><code>-k</code> has a start and end in order to start and end positions for each sort criteria</p>
+<p>Each field specification can be specified with an optional letter:</p>
+<ul>
+<li><code>n</code> for numeric</li>
+<li><code>r</code> to reverse</li>
+<li><code>f</code> to fold case</li>
+</ul>
+<h4 id="sort-options">Sort options</h4>
+<p>Ordering options:</p>
+<ul>
+<li><code>-b</code>, --ignore-leading-blanks<ul>
+<li>ignore leading blanks</li>
+</ul>
+</li>
+<li><code>-d</code>, --dictionary-order<ul>
+<li>consider only blanks and alphanumeric characters</li>
+</ul>
+</li>
+<li><code>-f</code>, --ignore-case<ul>
+<li>fold lower case to upper case characters</li>
+</ul>
+</li>
+<li><code>-g</code>, --general-numeric-sort<ul>
+<li>compare according to general numerical value</li>
+</ul>
+</li>
+<li><code>-i</code>, --ignore-nonprinting<ul>
+<li>consider only printable characters</li>
+</ul>
+</li>
+<li><code>-M</code>, --month-sort<ul>
+<li>compare (unknown) &lt; &apos;JAN&apos; &lt; ... &lt; &apos;DEC&apos;</li>
+</ul>
+</li>
+<li><code>-n</code>, --numeric-sort<ul>
+<li>compare according to string numerical value</li>
+</ul>
+</li>
+<li><code>-r</code>, --reverse<ul>
+<li>reverse the result of comparisons</li>
+</ul>
+</li>
+<li><code>-c</code>, --check<ul>
+<li>check whether input is sorted; do not sort</li>
+</ul>
+</li>
+<li><code>-k</code>, --key=POS1[,POS2]<ul>
+<li>start a key at POS1, end it at POS2 (origin 1)</li>
+</ul>
+</li>
+<li><code>-m</code>, --merge<ul>
+<li>merge already sorted files; do not sort</li>
+</ul>
+</li>
+<li><code>-o</code>, --output=FILE<ul>
+<li>write result to FILE instead of standard output</li>
+</ul>
+</li>
+<li><code>-s</code>, --stable<ul>
+<li>stabilize sort by disabling last-resort comparison</li>
+</ul>
+</li>
+<li><code>-S</code>, --buffer-size=SIZE<ul>
+<li>use SIZE for main memory buffer</li>
+</ul>
+</li>
+<li><code>-t</code>, --field-separator=SEP<ul>
+<li>use SEP instead of non-blank to blank * transition</li>
+</ul>
+</li>
+<li><code>-T</code>, --temporary-directory=DIR<ul>
+<li>use DIR for temporaries, not $TMPDIR or /tmp; multiple options specify multiple directories</li>
+</ul>
+</li>
+<li><code>-u</code>, --unique<ul>
+<li>with  <code>-c</code>, check for strict ordering; without <code>-c</code>, output only the first of an equal run</li>
+</ul>
+</li>
+<li><code>-z</code>, --zero-terminated<ul>
+<li>end lines with 0 byte, not newline</li>
+</ul>
+</li>
+<li><code>--</code>help display this help and exit</li>
+<li><code>--</code>version<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="sort-examples">Sort examples</h4>
+<pre><code class="lang-bash">sed <span class="hljs-string">&apos;/^ID/d&apos;</span> data/students.csv | sort -t <span class="hljs-string">&apos;,&apos;</span> -k2
+</code></pre>
+<p>Here we first delete description column then we sort by student name</p>
+<pre><code class="lang-bash">sed <span class="hljs-string">&apos;/^ID/d&apos;</span> data/students.csv | sort -n
+</code></pre>
+<p>Here we again delete the description record/line and then use <code>-n</code> to sort numerically</p>
+<pre><code class="lang-bash">du <span class="hljs-_">-s</span> * | sort -nr
+</code></pre>
+<p>In this command I use the disk usage command to print disk usage in current location per file/directory and then sort them numerically and in reverse order.</p>
+<p>As no surprise node_modules is the biggest folder followed by <code>_book</code> which is a gitbook folder</p>
+<pre><code class="lang-bash">grep -v <span class="hljs-string">&apos;^ID&apos;</span> data/students.csv | sort -t, -k2,2r -k4gr | sed <span class="hljs-string">&apos;s/^[0-9],//&apos;</span> | sed <span class="hljs-string">&apos;s/^10,//&apos;</span>
+</code></pre>
+<p>Here we use grep and the invert match flag <code>-v</code> to which will print everthing that isn&apos;t <code>ID</code> and then pipe this into sort and sort by second field and then sort by fourth field then I pipe this into sed to delete the number column</p>
+<h4 id="sort-best-practices">Sort best practices</h4>
+<p>Sorting is at times the critical operation in a long and complex pipeline</p>
+<p>The <code>sort</code> command is both flexible and powerful</p>
+<p>If you can think of collecting your data in terms of sorting it will open more possibilities</p>
+<p>Make sure to pay attention to locale</p>
+<p>End your field specifications in the correct way</p>
+<p>The <code>-n</code> option will sort integers</p>
+<p><code>gnu</code> sort can sort floating point numbers with <code>-g</code></p>
+<p><code>gnu</code> sort has a <code>--debug</code> option that helps print what sort is doing</p>
+<pre><code class="lang-bash">grep -v <span class="hljs-string">&apos;^ID&apos;</span> data/students.csv | sort --debug -t, -k2,2r -k4gr | sed <span class="hljs-string">&apos;s/^[0-9],//&apos;</span> | sed <span class="hljs-string">&apos;s/^10,//&apos;</span>
+</code></pre>
+<p>You will get more output with sort using --debug</p>
+<h4 id="uniq-description">Uniq description</h4>
+<p>uniq -- report or filter out repeated lines in a file</p>
+<p>The uniq utility reads the specified input_file comparing adjacent lines, and writes a copy of each unique input line to the output_file.  </p>
+<p>If input_file is a single dash (<code>-</code>) or absent, the standard input is read.  If output_file is absent, standard output is used for output.</p>
+<p>The second and succeeding copies of identical adjacent input lines are not written.</p>
+<p>Repeated lines in the input will not be detected if they are not adjacent, so it may be necessary to sort the files first</p>
+<p>The <code>uniq</code> command compares adjacent lines and the default behavior is for it to remove duplicates</p>
+<p><strong>Comparison is based on the current locale</strong></p>
+<p>You must sort the data for <code>uniq</code> to work properly</p>
+<h4 id="uniq-options">Uniq options</h4>
+<p>The following options are available:</p>
+<ul>
+<li><code>-c</code> Precede each output line with the count of the number of times the line occurred in the input,followed by a single space.</li>
+<li><code>-d</code> Only output lines that are repeated in the input.</li>
+<li><code>-f</code> num  Ignore the first num fields in each input line when doing comparisons.  <ul>
+<li>A field is a string of non-blank characters separated from adjacent fields by blanks.  </li>
+<li>Field numbers are one based, i.e., the first field is field one.</li>
+</ul>
+</li>
+<li><code>-s</code> chars<ul>
+<li>Ignore the first chars characters in each input line when doing comparisons.  </li>
+<li>If specified in conjunction with the -f option,
+the first chars characters after the first num fields will be ignored.</li>
+<li>Character numbers are one based, i.e., the first character is character one.</li>
+</ul>
+</li>
+<li><code>-u</code> Only output lines that are not repeated in the input.</li>
+<li><code>-i</code> Case insensitive comparison of lines.</li>
+</ul>
+<h4 id="uniq-examples">Uniq examples</h4>
+<pre><code class="lang-bash">grep -v <span class="hljs-string">&apos;^ID&apos;</span> data/students.repeated.csv | sort -t, -k2,2r -k4gr | sed <span class="hljs-string">&apos;s/^[0-9],//&apos;</span> | sed <span class="hljs-string">&apos;s/^10,//&apos;</span> | uniq
+</code></pre>
+<p>In the final pipeline we remove duplicate entries with uniq</p>
+<pre><code class="lang-bash">grep -v <span class="hljs-string">&apos;^ID&apos;</span> data/students.repeated.csv | sort -t, -k2,2r -k4gr | sed <span class="hljs-string">&apos;s/^[0-9],//&apos;</span> | sed <span class="hljs-string">&apos;s/^10,//&apos;</span> | uniq -c
+</code></pre>
+<p>Here we run the earlier command and pipe into <code>uniq</code> and use the <code>-c</code> option to print the number of times each line occurred</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="working-with-fields.html">Working with Fields</a></td>
+<td style="text-align:right"><a href="arithmetic-operations-and-variables.html">Arithmetic Operations and variables</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="working-with-fields.html" class="navigation navigation-prev " aria-label="Previous page: Working with Fields">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="arithmetic-operations-and-variables.html" class="navigation navigation-next " aria-label="Next page: Arithmetic Operations and variables">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Text Sorting","level":"1.8","depth":1,"next":{"title":"Arithmetic Operations and variables","level":"1.9","depth":1,"path":"docs/arithmetic-operations-and-variables.md","ref":"docs/arithmetic-operations-and-variables.md","articles":[]},"previous":{"title":"Working with Fields","level":"1.7","depth":1,"path":"docs/working-with-fields.md","ref":"docs/working-with-fields.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/text-sorting.md","mtime":"2018-11-22T17:17:35.875Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

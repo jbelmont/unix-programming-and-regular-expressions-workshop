@@ -1,0 +1,891 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Signal Handling · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="working-with-files.html" />
+    
+    
+    <link rel="prev" href="shell-functions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Signal Handling</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---signal-handling">Unix Programming and Regular Expressions Workshop - Signal Handling</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#signals">Signals</a></li>
+<li><a href="#jobs-command-description">Jobs Command Description</a></li>
+<li><a href="#jobs-command-options">Jobs Command Options</a></li>
+<li><a href="#bg-command">bg command</a></li>
+<li><a href="#fg-command">fg command</a></li>
+<li><a href="#jobs%5C,-fg%5C,-bg-command-examples">Jobs, fg, bg command examples</a></li>
+<li><a href="#kill-command-description">Kill Command Description</a></li>
+<li><a href="#kill-command-options">Kill Command Options</a></li>
+<li><a href="#trap-command">Trap Command</a></li>
+<li><a href="#trap-command-usage">Trap Command Usage</a></li>
+<li><a href="#special-shell-signals">Special Shell Signals</a></li>
+<li><a href="#trap-and-kill-command-examples">Trap and Kill Command Examples</a></li>
+<li><a href="#tips-for-trap-and-kill-usage">Tips for Trap and Kill Usage</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="signals">Signals</h4>
+<p>A signal is a signal sent by the operating system to a shell process that something occurred</p>
+<p>Signal Examples Scenarios:</p>
+<ul>
+<li><p>Hardware Error (floating point error, bad memory access, etc)</p>
+<ul>
+<li>Division by zero</li>
+</ul>
+</li>
+<li><p>Software Event (communication disconnect or hangup) </p>
+</li>
+<li><p>User Action occurred (user pressed control c, control d, etc)</p>
+</li>
+</ul>
+<p>Signals can be caught, ignored or left alone to behave under default behavior</p>
+<p>The default behavior for signals can vary</p>
+<p>Some signals are ignored but most will terminate your program unless the signal is caught</p>
+<h4 id="jobs-command-description">Jobs Command Description</h4>
+<p>jobs: jobs [-lnprs] [jobspec ...] or jobs -x command [args]</p>
+<p>Display status of jobs.</p>
+<p>Lists the active jobs.  JOBSPEC restricts output to that job.
+Without options, the status of all active jobs is displayed.</p>
+<h4 id="job-command-options">Job Command Options</h4>
+<p>Job Options:</p>
+<ul>
+<li><code>-l</code>    lists process IDs in addition to the normal information</li>
+<li><code>-n</code>    lists only processes that have changed status since the last notification</li>
+<li><code>-p</code>    lists process IDs only</li>
+<li><code>-r</code>    restrict output to running jobs</li>
+<li><code>-s</code>    restrict output to stopped jobs</li>
+</ul>
+<p>If -x is supplied, COMMAND is run after all job specifications that
+appear in ARGS have been replaced with the process ID of that job&apos;s
+process group leader.</p>
+<p>Exit Status:
+Returns success unless an invalid option is given or an error occurs.
+If -x is used, returns the exit status of COMMAND.</p>
+<h4 id="bg-command">bg command</h4>
+<p>bg: bg [job_spec ...]
+Move jobs to the background.</p>
+<p>Place the jobs identified by each JOB_SPEC in the background, as if they
+had been started with `&amp;&apos;.  If JOB_SPEC is not present, the shell&apos;s notion
+of the current job is used.</p>
+<p>Exit Status:
+Returns success unless job control is not enabled or an error occurs.</p>
+<h4 id="fg-command">fg command</h4>
+<p>fg: fg [job_spec]</p>
+<p>Move job to the foreground.</p>
+<p>Place the job identified by JOB_SPEC in the foreground, making it the
+current job.  If JOB_SPEC is not present, the shell&apos;s notion of the
+current job is used.</p>
+<p>Exit Status:
+Status of command placed in foreground, or failure if an error occurs.</p>
+<h4 id="jobs-fg-bg-command-examples">Jobs, fg, bg command examples</h4>
+<pre><code class="lang-bash">sleep 60 &amp;
+</code></pre>
+<p>Issue the sleep command for 60 seconds and send to background process</p>
+<p>This returns the following to stdout:</p>
+<p><em>[2] 36312</em></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">fg</span> 2
+</code></pre>
+<p>Now the job has been moved to the foreground</p>
+<p>But let us now press <em>Control-Z</em> to suspend the job and it prints out the following to stdout:</p>
+<p><strong>[2]+  Stopped  sleep 60</strong></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">bg</span>
+</code></pre>
+<p>Here we move the current job to the background and it prints out:</p>
+<p><strong>[2]+ sleep 60 &amp;</strong></p>
+<h4 id="kill-command-description">Kill Command Description</h4>
+<p>kill -- terminate or signal a process</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">kill</span> [<span class="hljs-_">-s</span> signal_name] pid ...
+<span class="hljs-built_in">kill</span> <span class="hljs-_">-l</span> [exit_status]
+<span class="hljs-built_in">kill</span> -signal_name pid ...
+<span class="hljs-built_in">kill</span> -signal_number pid ...
+</code></pre>
+<p>The kill utility sends a signal to the processes specified by the pid operands.</p>
+<p>You send signals to a shell process using the <em>kill</em> command</p>
+<p>Usage of <em>kill</em> command is: <code>kill -SIGNAL *process id* aka pid</code></p>
+<h4 id="kill-command-options">Kill Command Options</h4>
+<p>The options are as follows:</p>
+<ul>
+<li><p><code>-s</code> signal_name*</p>
+<ul>
+<li>A symbolic signal name specifying the signal to be sent instead of the default TERM.</li>
+</ul>
+</li>
+<li><p><code>-l</code> [exit_status]</p>
+<ul>
+<li>If no operand is given, list the signal names; otherwise, write the signal name corresponding to exit_status.</li>
+</ul>
+</li>
+<li><p><code>-signal_name</code></p>
+<ul>
+<li>A symbolic signal name specifying the signal to be sent instead of the default TERM.</li>
+</ul>
+</li>
+<li><p><code>-signal_number</code></p>
+<ul>
+<li>A non-negative decimal integer, specifying the signal to be sent instead of the default TERM.</li>
+</ul>
+</li>
+</ul>
+<p>The following PIDs have special meanings:</p>
+<p>-1 If superuser, broadcast the signal to all processes; otherwise broadcast to all processes belonging to the user.</p>
+<p>Some of the more commonly used signals:</p>
+<p>1       HUP (hang up)
+2       INT (interrupt)
+3       QUIT (quit)
+6       ABRT (abort)
+9       KILL (non-catchable, non-ignorable kill)
+14      ALRM (alarm clock)
+15      TERM (software termination signal)</p>
+<p>Some shells may provide a builtin kill command which is similar or identical to this utility.  Consult the builtin manual page.</p>
+<p>If you use <code>kill -l</code> it will list all the available signals</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">kill</span> <span class="hljs-_">-l</span>
+</code></pre>
+<p>HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2</p>
+<p>Some of the signals that are sent are sent by the keyboard:</p>
+<ul>
+<li>INT is sent with keyboard press <em>Control-C</em></li>
+<li>JOB Control stop with keyboard press <em>Control-Z</em></li>
+</ul>
+<h4 id="trap-command">Trap Command</h4>
+<p>trap: trap [-lp] [[arg] signal_spec ...]</p>
+<p>Trap signals and other events.</p>
+<p>Defines and activates handlers to be run when the shell receives signals or other conditions.</p>
+<p>You can manage signals sent to a shell script using the <em>trap</em> command</p>
+<p>Trap Options:</p>
+<ul>
+<li><code>-l</code>    print a list of signal names and their corresponding numbers</li>
+</ul>
+<p>1) SIGHUP     2) SIGINT     3) SIGQUIT     4) SIGILL     5) SIGTRAP
+6) SIGABRT     7) SIGEMT     8) SIGFPE     9) SIGKILL    10) SIGBUS
+11) SIGSEGV    12) SIGSYS    13) SIGPIPE    14) SIGALRM    15) SIGTERM
+16) SIGURG    17) SIGSTOP    18) SIGTSTP    19) SIGCONT    20) SIGCHLD
+21) SIGTTIN    22) SIGTTOU    23) SIGIO    24) SIGXCPU    25) SIGXFSZ
+26) SIGVTALRM    27) SIGPROF    28) SIGWINCH    29) SIGINFO    30) SIGUSR1</p>
+<ul>
+<li><code>-p</code>    display the trap commands associated with each SIGNAL_SPEC</li>
+</ul>
+<p>Trap is used as follows:</p>
+<ul>
+<li><p><code>trap &apos;command&apos; SIGNAL_NAME</code></p>
+<ul>
+<li>Runs a command for signal</li>
+</ul>
+</li>
+<li><p><code>trap - SIGNAL_NAME</code></p>
+<ul>
+<li>Reset signals to default</li>
+</ul>
+</li>
+<li><p><code>trap &apos;&apos; SIGNAL_NAME</code></p>
+<ul>
+<li>Ignore signals</li>
+</ul>
+</li>
+</ul>
+<p>Signals are all names in upper case but they can be numeric for backwards compatibility</p>
+<p>If you just use <code>trap</code> with no arguments it will print out current trap settings</p>
+<h4 id="trap-command-usage">Trap Command Usage</h4>
+<p>The first argument to trap is called the <em>signal handler</em></p>
+<p>The text is evaluated twice:</p>
+<p>The first time the text is evaluated when trap itself executes to set the trap</p>
+<p>The second time is when one of the given signals arrives</p>
+<p>Try to use single quotes for the signal handler when you can because it will delay signal evaluation until the signal arrives which is what you usually want</p>
+<h4 id="special-shell-signals">Special Shell Signals</h4>
+<p>All shells support an <em>EXIT</em> pseudo signal which is the numeric 0 signal</p>
+<p>The <em>EXIT</em> pseudo signal considerations:</p>
+<ul>
+<li><em>EXIT</em> pseudeo signal occurs when a shell script exits (after any other traps)</li>
+<li><em>EXIT</em> pseudeo signal will preserve the final <code>$?</code> value<ul>
+<li>Remember <code>$?</code> means the exit status</li>
+<li>Value will change though if signal handler runs <em>exit</em></li>
+</ul>
+</li>
+<li><em>EXIT</em> pseudeo signal is intended for clean up actions such as removing any temporary files</li>
+</ul>
+<p>Bash and other bash like clone shells have <strong>ERR</strong> and <strong>DEBUG</strong> trap signals</p>
+<p><em>*ERR</em> trap runs when a command exits with non-zero exit code</p>
+<p><strong>DEBUG</strong> trap runs before a command executes</p>
+<p>The bash debugger is based on the <strong>DEBUG</strong> trap mechanism</p>
+<h4 id="trap-and-kill-command-examples">Trap and Kill Command Examples</h4>
+<pre><code class="lang-bash">sleep 10
+</code></pre>
+<p>Press <em>Control-C</em> and the SIGINT signal is sent</p>
+<pre><code class="lang-bash">bash
+</code></pre>
+<p>Here we enter a bash subshell</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">kill</span> -CHILD $$
+</code></pre>
+<p>Here nothing will occur because the shell will ignore this signal but it is stop child subshell</p>
+<pre><code class="lang-bash">PS1=<span class="hljs-string">&quot;&gt; &quot;</span>
+</code></pre>
+<p>Changing the PS1 prompt to be <code>&gt;</code></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">kill</span> -HUP $$
+</code></pre>
+<p>This will send a hangup signal to current shell process which happens to be the bash subshell we are in</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+name=<span class="hljs-string">&quot;Zach&quot;</span>
+
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&quot;echo name is <span class="hljs-variable">$name</span>&quot;</span> EXIT
+
+name=<span class="hljs-string">&quot;Marcel&quot;</span>
+
+sleep 2
+</code></pre>
+<p>You can run the following shell script with:</p>
+<pre><code class="lang-bash">./scripts/signal-handling/<span class="hljs-built_in">trap</span>-with-quote.sh
+</code></pre>
+<p>Notice that this script will sleep for 2 seconds but it will print Zach and not Marcel as we would expect</p>
+<p>The reason being is that the double quotes are evaluated when the trap command executes and what is stored in the string</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+name=<span class="hljs-string">&quot;Zach&quot;</span>
+
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&apos;echo name is $name&apos;</span> EXIT
+
+name=<span class="hljs-string">&quot;Marcel&quot;</span>
+
+sleep 2
+</code></pre>
+<p>The only difference in this shell script is that the trap command argument is wrapped in single quotes but because the single quotes will delay action until the trap actually runs</p>
+<p>This key difference is the main reason single quotes are preferred for the trap command</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&apos;echo Ignoring HUP ...&apos;</span> HUP
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&apos;echo Terminating on USR1 ... ; exit 1&apos;</span> USR1
+
+<span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>
+<span class="hljs-keyword">do</span>
+  sleep 2
+  date &gt; /dev/null
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>Here we have a shell script that runs 2 different trap commands but there is a while true statement continually running</p>
+<pre><code class="lang-bash">./scripts/signal-handling/<span class="hljs-built_in">trap</span>-usage.sh &amp;
+</code></pre>
+<p>Here we run trap-usage in a background process</p>
+<p>I get the following job pid</p>
+<pre><code class="lang-bash">[1] 32428
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">kill</span> -HUP 32428
+</code></pre>
+<p>This will print a hangup signal and continue running the script</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">jobs</span>
+</code></pre>
+<p>This prints the following:</p>
+<p><em>[1]  + running    ./scripts/signal-handling/trap-usage.sh</em></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">kill</span> -USR1 32428
+</code></pre>
+<p>Here we send the final trap and it prints the message <strong>Terminating on USR1 ...</strong> and finally exits with this:</p>
+<p><strong>[1]  + 32428 exit 1     ./scripts/signal-handling/trap-usage.sh</strong></p>
+<p>We can also confirm it has been killed with <em>jobs</em> command</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">jobs</span>
+</code></pre>
+<h4 id="tips-for-trap-and-kill-usage">Tips for Trap and Kill Usage</h4>
+<ul>
+<li>Use <code>trap</code> command to manage signals in your shell scripts and for cleanup actions</li>
+<li>The most important signals are:<ul>
+<li>EXIT</li>
+<li>INT</li>
+<li>HUP</li>
+<li>TERM</li>
+<li>QUIT</li>
+</ul>
+</li>
+<li>Make sure to remember that the signal handler is evaluated twice<ul>
+<li>Remember that is the reason we used single quotes instead of double quotes</li>
+</ul>
+</li>
+<li>Signal Numbers are still used but using the signal name is generally more readable for others to read</li>
+<li>Also consider writing a function for cleanup actions</li>
+<li>Remember that the signals primarily convey that something happened</li>
+<li>Signals are sent by the keyboard and by the <code>kill</code> command</li>
+<li>Signals can be caught, ignored or be left for default action</li>
+<li>Use <em>trap</em> command to manage signals in your shell scripts</li>
+<li>The <strong>EXIT</strong> pseudo signal is used for cleanup actions</li>
+</ul>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="shell-functions.html">Shell Functions</a></td>
+<td style="text-align:right"><a href="working-with-files.html">Working with Files</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shell-functions.html" class="navigation navigation-prev " aria-label="Previous page: Shell Functions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="working-with-files.html" class="navigation navigation-next " aria-label="Next page: Working with Files">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Signal Handling","level":"1.18","depth":1,"next":{"title":"Working with Files","level":"1.19","depth":1,"path":"docs/working-with-files.md","ref":"docs/working-with-files.md","articles":[]},"previous":{"title":"Shell Functions","level":"1.17","depth":1,"path":"docs/shell-functions.md","ref":"docs/shell-functions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/signal-handling.md","mtime":"2018-11-22T17:17:35.947Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

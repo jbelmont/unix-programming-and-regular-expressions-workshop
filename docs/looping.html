@@ -1,0 +1,975 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Looping · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="input-and-output.html" />
+    
+    
+    <link rel="prev" href="decision-making-and-exit-status.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Looping</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---looping">Unix Programming and Regular Expressions Workshop - Looping</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#while-loop">While Loop</a></li>
+<li><a href="#until-loop">Until Loop</a></li>
+<li><a href="#for-loop">For Loop</a></li>
+<li><a href="#for-loop-arithmetic-style">For Loop Arithmetic Style</a></li>
+<li><a href="#break-command">Break Command</a></li>
+<li><a href="#continue-command">Continue Command</a></li>
+<li><a href="#special-builtins">Special Builtins</a></li>
+<li><a href="#select-loops">Select Loop</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="loops">Loops</h4>
+<p><a href="https://en.wikipedia.org/wiki/Control_flow#Loops" target="_blank">Loops</a></p>
+<blockquote>
+<p>A loop is a sequence of statements which is specified once but which may be carried out several times in succession. The code &quot;inside&quot; the loop (the body of the loop, shown below as xxx) is obeyed a specified number of times, or once for each of a collection of items, or until some condition is met, or indefinitely.</p>
+</blockquote>
+<h4 id="while-loop">While Loop</h4>
+<p><code>while COMMANDS; do COMMANDS; done</code></p>
+<p>Execute commands as long as a test succeeds.</p>
+<p>Expand and execute COMMANDS as long as the final command in the
+<em>while</em> COMMANDS has an exit status of zero.</p>
+<p>Exit Status:
+Returns the status of the last command executed.</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">while</span> condition to check
+<span class="hljs-keyword">do</span>
+  statements
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p><strong>A while loop will continue to run as long as a statement is true</strong></p>
+<h4 id="until-loop">Until Loop</h4>
+<p><code>until: until COMMANDS; do COMMANDS; done</code></p>
+<p>Execute commands as long as a test does not succeed.</p>
+<p>Expand and execute COMMANDS as long as the final command in the
+<em>until</em> COMMANDS has an exit status which is not zero.</p>
+<p>Exit Status:
+Returns the status of the last command executed.</p>
+<p><em>Until loops run until a condition becomes true*</em></p>
+<p>It is the inverse of the <em>while</em> loop</p>
+<p>You can supply multiple commands between <em>while</em> and <em>until</em> and the <em>do</em> keyword</p>
+<pre><code class="lang-bash">until something not <span class="hljs-literal">true</span>
+<span class="hljs-keyword">do</span>
+  statements
+<span class="hljs-keyword">done</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-keyword">while</span> pipeline1 | pipeline2 ... | pipeline
+<span class="hljs-keyword">do</span>
+  statements here
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>The exit status of the last command is taken into account before the do block determines success or failure</p>
+<h4 id="for-loop">For Loop</h4>
+<p><code>for: for NAME [in WORDS ... ] ; do COMMANDS; done</code></p>
+<p>Execute commands for each member in a list.</p>
+<p>The <em>for</em> loop executes a sequence of commands for each member in a list of items.  </p>
+<p>If &apos;in WORDS ...;&apos; is not present, then <code>in &quot;$@&quot;</code> is
+assumed.  </p>
+<p>For each element in <em>WORDS</em>, <em>NAME</em> is set to that element, and the <em>COMMANDS</em> are executed.</p>
+<p>Exit Status:
+Returns the status of the last command executed.</p>
+<p>So you see a <strong>for</strong> is used to traverse a list:</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">for</span> var [ <span class="hljs-keyword">in</span> list]
+<span class="hljs-keyword">do</span>
+  something to be <span class="hljs-keyword">done</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>The default behavior of a <em>for</em> loop is there is no list is to use <em>&quot;$@&quot;</em> aka all the arguments provided</p>
+<p>You can generate a list any way you want:</p>
+<ul>
+<li>Wildcard</li>
+<li><em>$var</em></li>
+<li><em>$( ... )</em></li>
+</ul>
+<h4 id="for-loop-arithmetic-style">For Loop Arithmetic Style</h4>
+<p>There is an arithmetic for loop that you can do in both bash, ksh, and zsh</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">for</span> (( init ; condition ; increment ))
+<span class="hljs-keyword">do</span>
+  statements to execute
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>It has a similar form to C-based languages</p>
+<p>The order of execution is as follows:</p>
+<ol>
+<li>Init</li>
+<li>Condition to test</li>
+<li>Execute Loop Body</li>
+<li>Increment Statement</li>
+<li>Condition to Test</li>
+<li>Execute Loop Body</li>
+<li>This will occur until the Condition is not true anymore</li>
+</ol>
+<p>If you forgot to put a condition then it is taken as <em>true</em></p>
+<h4 id="break-command">Break Command</h4>
+<p><code>break: break [n]</code></p>
+<p>Exit for, while, or until loops.</p>
+<p>Exit a FOR, WHILE or UNTIL loop.  If N is specified, break N enclosing
+loops.</p>
+<p>Exit Status:
+The exit status is 0 unless N is not greater than or equal to 1.</p>
+<p>The Break Command is usually used to break out of a loop in the middle of the body</p>
+<p>The <em>break</em> command &quot;breaks out of a loop&quot;</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">while</span> something is <span class="hljs-literal">true</span>
+<span class="hljs-keyword">do</span>
+  some stuff here
+  <span class="hljs-keyword">if</span> condition is <span class="hljs-literal">true</span>; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">break</span>
+  <span class="hljs-keyword">fi</span>
+  some more stuff
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>Notice here the keyword <strong>break</strong></p>
+<p>You can provide a break level for example if you have 2 for loops and the break is inside of the second for loop <code>break 2</code> will break out of the outer loop as well</p>
+<h4 id="continue-command">Continue Command</h4>
+<p><code>continue: continue [n]</code></p>
+<p>Resume for, while, or until loops.</p>
+<p>Resumes the next iteration of the enclosing FOR, WHILE or UNTIL loop.
+If N is specified, resumes the Nth enclosing loop.</p>
+<p>Exit Status:
+The exit status is 0 unless N is not greater than or equal to 1.</p>
+<p>The <strong>continue</strong> statement is used to skip the rest of the loop body and go back to the condition of the loop</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">while</span> something is <span class="hljs-literal">true</span>
+<span class="hljs-keyword">do</span>
+  some stuff here
+  <span class="hljs-keyword">if</span> condition is <span class="hljs-literal">true</span>; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">continue</span>
+  <span class="hljs-keyword">fi</span>
+  some more stuff
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>You can pass an integer with the <code>continue</code> command like this <em>continue 2</em> and it will break out of the second level of the loop just as I described in the <em>break</em> statement section</p>
+<h4 id="shift-command">Shift Command</h4>
+<p><code>shift: shift [n]</code></p>
+<p>Shift positional parameters.</p>
+<p>Rename the positional parameters $N+1, $N+2 ... to $1, $2 ...  If N is
+not given, it is assumed to be 1.</p>
+<p>Exit Status:
+Returns success unless N is negative or greater than $#.</p>
+<p>The <em>shift</em> command shifts the command-line parameters down</p>
+<p>You can give a number if you want to shift by more than 1</p>
+<p>The <em>shift</em> command is designed for argument processing in a loop</p>
+<p>Behavior works like this:</p>
+<p><code>$3</code> becomes <code>$2</code> with first shift command and then <code>$2</code> becomes <code>$1</code> with another shift command and so on</p>
+<p>The original <em>$1</em> will be lost with the <em>shift</em> command</p>
+<p>Also the <em>$#</em> is adjusted on each <em>shift</em> command iteration</p>
+<h3 id="special-builtins">Special Builtins</h3>
+<p>The commands <em>break</em>, <em>continue</em>, and <em>shift</em> are considered <strong>special</strong> builtin commands</p>
+<p>Special Builtins are found by the shell before other functions</p>
+<p>Some more special builtins:</p>
+<ul>
+<li>eval</li>
+<li>exec</li>
+<li>exit</li>
+<li>export</li>
+<li>readonly</li>
+<li>return</li>
+<li>set</li>
+<li>times</li>
+<li>trap</li>
+<li>unset</li>
+</ul>
+<p><a href="http://pubs.opengroup.org/onlinepubs/9699919799//utilities/V3_chap02.html#tag_18_14" target="_blank">A more complete list of special builtins</a></p>
+<h4 id="select-loops">Select Loops</h4>
+<p><code>select: select NAME [in WORDS ... ;] do COMMANDS; done</code></p>
+<ul>
+<li><p>Select words from a list and execute commands.</p>
+</li>
+<li><p>The WORDS are expanded, generating a list of words.  </p>
+</li>
+<li><p>The set of expanded words is printed on the standard error, each preceded by a number.  </p>
+</li>
+<li><p>If <code>in WORDS</code> is not present then &quot;$@&quot;&apos; is assumed.</p>
+</li>
+<li><p>The PS3 prompt is then displayed and a line read
+from the standard input.</p>
+</li>
+<li><p>If the line consists of the number corresponding to one of the displayed words, then NAME is set
+to that word.</p>
+</li>
+<li><p>If the line is empty, WORDS and the prompt are
+redisplayed.  </p>
+</li>
+<li><p>If EOF is read, the command completes.  </p>
+</li>
+<li><p>Any other value read causes NAME to be set to null.  </p>
+</li>
+<li><p>The line read is saved in the variable REPLY.  </p>
+</li>
+<li><p>COMMANDS are executed after each selection until a break command is executed.</p>
+</li>
+<li><p>Exit Status:</p>
+<ul>
+<li>Returns the status of the last command executed.</li>
+</ul>
+</li>
+</ul>
+<p>The <strong>select</strong> loop is designed for running an interactive menu from a shell script</p>
+<p>It is most useful in terminal-based environments</p>
+<p>Environments like:</p>
+<ul>
+<li>Remote Logiin</li>
+<li>Embedded Systems</li>
+</ul>
+<pre><code class="lang-bash">select var [ <span class="hljs-keyword">in</span> list ]
+<span class="hljs-keyword">do</span>
+  body statements
+  <span class="hljs-keyword">if</span> <span class="hljs-keyword">done</span> ; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">break</span>
+  <span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>The <em>select</em> loop is similar to the <em>for</em> loop</p>
+<p>The default list is &quot;$@&quot; aka the command line arguments</p>
+<p>The <em>select</em> loop does the following:</p>
+<ul>
+<li>Creates and prints a numbered menu from the <em>list</em> values</li>
+<li>Prompt with <code>$PS3</code>. The default value for this prompt is <code>$#?</code></li>
+<li>The select loop places user&apos;s response into <em>REPLY</em></li>
+<li>The select loop places the selected value into the loop variable</li>
+<li>The select loop runs the loop body<ul>
+<li>You use <code>$REPLY</code> as a case selector to decide what to do</li>
+</ul>
+</li>
+<li><code>Control-D</code> or the EOF is used to exit the loop</li>
+<li>The <code>break</code> command can also break out of <em>select</em> loop</li>
+</ul>
+<p>Even though <code>$PS3</code> has a default prompt, it is a good idea to set a more descriptive prompt</p>
+<ul>
+<li><p><code>$REPLY</code> containes the users response</p>
+<ul>
+<li>You can set <code>$REPLY</code> to empty <code>&quot;&quot;</code> to force the menu to repeat</li>
+<li>Also user hitting <code>Enter</code> will repeat the menu</li>
+</ul>
+</li>
+<li><p><code>$TMOUT</code> is the timeout in seconds for when the shell will exit the <em>select</em> loop and continue</p>
+</li>
+</ul>
+<h4 id="loop-examples">Loop Examples</h4>
+<p>All The scripts can be found in <strong>scripts/looping</strong> directory</p>
+<p><em>Example While Loop</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+COUNT=1
+
+<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Printing Numbers: &quot;</span>
+<span class="hljs-keyword">while</span> [[ <span class="hljs-variable">$COUNT</span> <span class="hljs-_">-lt</span> 11 ]] ; <span class="hljs-keyword">do</span>
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%i &quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$((COUNT++)</span>)&quot;</span>
+<span class="hljs-keyword">done</span>
+<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;\n&quot;</span>
+</code></pre>
+<p><em>Example Until Loop</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+COUNT=10
+
+<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Printing Numbers: &quot;</span>
+until [[ <span class="hljs-variable">$COUNT</span> <span class="hljs-_">-lt</span> 1 ]]
+<span class="hljs-keyword">do</span>
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%i &quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$((COUNT--)</span>)&quot;</span>
+<span class="hljs-keyword">done</span>
+
+<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;\n&quot;</span>
+</code></pre>
+<p><em>Example For Loop</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+NAMES=(John Kate Ashish Lee Tom Omar)
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Names: &quot;</span>
+<span class="hljs-keyword">for</span> NAME <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${NAMES[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;\t%s\n&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$NAME</span>&quot;</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p><em>Example Arithmetic For Loop</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+SUM=0
+ANOTHER_SUM=0
+YEP_ANOTHER_SUM=0
+
+<span class="hljs-keyword">for</span> (( COUNT=0 ; <span class="hljs-variable">$COUNT</span>&lt;=10 ; $((COUNT++)) ))
+<span class="hljs-keyword">do</span>
+  ((SUM+=COUNT))
+  ANOTHER_SUM=`expr <span class="hljs-variable">$COUNT</span> + <span class="hljs-variable">$ANOTHER_SUM</span>`
+  YEP_ANOTHER_SUM=$(( <span class="hljs-variable">$COUNT</span> + <span class="hljs-variable">$YEP_ANOTHER_SUM</span> ))
+<span class="hljs-keyword">done</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;The Sum of the numbers 1 ... 10 is <span class="hljs-variable">${SUM}</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Another Sum of the numbers 1 ... 10 is <span class="hljs-variable">${ANOTHER_SUM}</span>&quot;</span>
+<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Yep another sum of the numbers 1 ... 10 is %s\n&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${YEP_ANOTHER_SUM}</span>&quot;</span>
+</code></pre>
+<p><em>Example Break Statement</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+SUM=0
+ANOTHER_SUM=0
+YEP_ANOTHER_SUM=0
+
+<span class="hljs-keyword">for</span> (( COUNT=0 ; <span class="hljs-variable">$COUNT</span>&lt;=10 ; $((COUNT++)) ))
+<span class="hljs-keyword">do</span>
+  <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$COUNT</span> == 5 ]] ; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">break</span>
+  <span class="hljs-keyword">fi</span>
+  ((SUM+=COUNT))
+  ANOTHER_SUM=`expr <span class="hljs-variable">$COUNT</span> + <span class="hljs-variable">$ANOTHER_SUM</span>`
+  YEP_ANOTHER_SUM=$(( <span class="hljs-variable">$COUNT</span> + <span class="hljs-variable">$YEP_ANOTHER_SUM</span> ))
+<span class="hljs-keyword">done</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;The Sum of the numbers 1 ... 10 is <span class="hljs-variable">${SUM}</span>&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Another Sum of the numbers 1 ... 10 is <span class="hljs-variable">${ANOTHER_SUM}</span>&quot;</span>
+<span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Yep another sum of the numbers 1 ... 10 is %s\n&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">${YEP_ANOTHER_SUM}</span>&quot;</span>
+</code></pre>
+<p><em>Example continue statement</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+NAMES=(John Kate Ashish Lee Tom Omar)
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Names: &quot;</span>
+<span class="hljs-keyword">for</span> NAME <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${NAMES[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+  <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$NAME</span> == <span class="hljs-string">&quot;John&quot;</span> ]] ; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">continue</span>
+  <span class="hljs-keyword">fi</span>
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;\t%s\n&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$NAME</span>&quot;</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p><em>Example shift command</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+ARGS=<span class="hljs-variable">$@</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;The number of arguments is <span class="hljs-variable">$#</span>&quot;</span>
+<span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${ARGS}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+  <span class="hljs-built_in">echo</span> <span class="hljs-variable">$arg</span>
+  <span class="hljs-built_in">shift</span>
+<span class="hljs-keyword">done</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&quot;</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;The number of arguments is now <span class="hljs-variable">$#</span>&quot;</span>
+</code></pre>
+<p><em>Example select loop</em></p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+PS3=<span class="hljs-string">&quot;selection: &quot;</span>
+
+FRUITS=(Apple Oranges Pineapple Strawberry Nectarine)
+select fruit <span class="hljs-keyword">in</span> <span class="hljs-string">&quot;<span class="hljs-variable">${FRUITS[@]}</span>&quot;</span>
+<span class="hljs-keyword">do</span>
+  <span class="hljs-built_in">echo</span> <span class="hljs-variable">$fruit</span>
+  <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;<span class="hljs-variable">$fruit</span>&quot;</span> <span class="hljs-keyword">in</span>
+    Apple)
+      <span class="hljs-built_in">echo</span> The fruit is <span class="hljs-variable">$fruit</span>
+      ;;
+    Oranges)
+      <span class="hljs-built_in">echo</span> yummy fruit is <span class="hljs-variable">$fruit</span>
+      ;;
+    Pineapple)
+      <span class="hljs-built_in">echo</span> Who is not a fan of <span class="hljs-variable">$fruit</span>?
+      ;;
+    Strawberry)
+      <span class="hljs-built_in">echo</span> Eat some yummy <span class="hljs-variable">$fruit</span> sundaes
+      ;;
+    Nectarine)
+      <span class="hljs-built_in">echo</span> Well <span class="hljs-variable">$fruit</span> is not too bad
+      ;;
+    End)
+      <span class="hljs-built_in">echo</span> Going to <span class="hljs-built_in">exit</span> here
+      <span class="hljs-built_in">break</span>
+      ;;
+    *)
+      <span class="hljs-built_in">echo</span> What fruit is this?
+      ;;
+  <span class="hljs-keyword">esac</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>We will run each of these script and talk about them.</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="decision-making-and-exit-status.html">Decision Making and Exit Status</a></td>
+<td style="text-align:right"><a href="input-and-output.html">Input and Output</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="decision-making-and-exit-status.html" class="navigation navigation-prev " aria-label="Previous page: Decision Making and Exit Status">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="input-and-output.html" class="navigation navigation-next " aria-label="Next page: Input and Output">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Looping","level":"1.11","depth":1,"next":{"title":"Input and Output","level":"1.12","depth":1,"path":"docs/input-and-output.md","ref":"docs/input-and-output.md","articles":[]},"previous":{"title":"Decision Making and Exit Status","level":"1.10","depth":1,"path":"docs/decision-making-and-exit-status.md","ref":"docs/decision-making-and-exit-status.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/looping.md","mtime":"2018-11-22T17:17:35.871Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

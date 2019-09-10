@@ -1,0 +1,36 @@
+{
+  "name": "unix-programming-and-regular-expressions-workshop",
+  "version": "1.0.0",
+  "description": "A workshop on Unix Programming Principles using tools such as grep, sed, awk, shell programming and regular expressions",
+  "main": "index.js",
+  "scripts": {
+    "docs:prepare": "gitbook install",
+    "docs:build": "npm run docs:prepare && rm -rf _book && gitbook build",
+    "docs:watch": "npm run docs:prepare && gitbook serve",
+    "docs:publish": "npm run docs:build && cd _book && git init && git commit --allow-empty -m 'Update docs' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'Update docs' && git push git@github.com:jbelmont/unix-programming-and-regular-expressions-workshop.git gh-pages --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop.git"
+  },
+  "keywords": [],
+  "author": "Jean-Marcel Belmont <marcelbelmont@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop/issues"
+  },
+  "homepage": "https://github.com/jbelmont/unix-programming-and-regular-expressions-workshop#readme",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^4.14.0",
+    "faker": "^4.1.0",
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2",
+    "request": "^2.83.0"
+  },
+  "dependencies": {
+    "gitbook-plugin-copy-code-button": "0.0.2",
+    "gitbook-plugin-highlight": "^2.0.3",
+    "gitbook-plugin-include-codeblock": "^3.2.1"
+  }
+}

@@ -1,0 +1,1818 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>System Administration Commands · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="find-and-replace-patterns.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >System Administration Commands</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---system-administration-commands">Unix Programming and Regular Expressions Workshop - System Administration Commands</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#memory-usage-commands">Memory Usage Commands</a><ul>
+<li><a href="#free-command-description">free command description</a></li>
+<li><a href="#free-command-options">free command options</a></li>
+<li><a href="#free-command-examples">free command examples</a></li>
+<li><a href="#proc-meminfo-stats">Read /proc/meminfo stats</a></li>
+<li><a href="#vmstat-command-description">vmstat command description</a></li>
+<li><a href="#vmstat-command-options">vmstat command options</a></li>
+<li><a href="#vmstat-command-examples">vmstat command examples</a></li>
+</ul>
+</li>
+<li><a href="#process-information-commands">Process Information Commands</a><ul>
+<li><a href="#top%5C%7Chtop-command-description">top|htop command description</a></li>
+<li><a href="#top%5C%7Chtop-command-options">top|htop command options</a></li>
+<li><a href="#top%5C%7Chtop-command-examples">top|htop command examples</a></li>
+<li><a href="#ps-command-description">ps command description</a></li>
+<li><a href="#ps-command-options">ps command options</a></li>
+<li><a href="#ps-command-examples">ps command examples</a></li>
+</ul>
+</li>
+<li><a href="#environment-variable-commands">Environment Variable Commands</a><ul>
+<li><a href="#printenv-command-description">printenv command description</a></li>
+<li><a href="#printenv-command-options">printenv command options</a></li>
+<li><a href="#printenv-command-examples">printenv command examples</a></li>
+<li><a href="#env-command-description">env command description</a></li>
+<li><a href="#env-command-options">env command options</a></li>
+<li><a href="#env-command-examples">env command examples</a></li>
+</ul>
+</li>
+<li><a href="#disk-usage-commands">Disk Usage Commands</a><ul>
+<li><a href="#df-command-description">df command description</a></li>
+<li><a href="#df-command-options">df command options</a></li>
+<li><a href="#df-command-examples">df command examples</a></li>
+<li><a href="#du-command-description">du command description</a></li>
+<li><a href="#du-command-options">du command options</a></li>
+<li><a href="#du-command-examples">du command examples</a></li>
+<li><a href="#stat-command-description">stat command description</a></li>
+<li><a href="#stat-command-options">stat command options</a></li>
+<li><a href="#stat-command-examples">stat command examples</a></li>
+<li><a href="#fdisk-command-description">fdisk command description</a></li>
+<li><a href="#fdisk-command-options">fdisk command options</a></li>
+<li><a href="#fdisk-command-examples">fdisk command examples</a></li>
+</ul>
+</li>
+<li><a href="#network-commands">Network Commands</a><ul>
+<li><a href="#ifconfig-command-description">ifconfig command description</a></li>
+<li><a href="#ifconfig-command-options">ifconfig command options</a></li>
+<li><a href="#ifconfig-command-examples">ifconfig command examples</a></li>
+<li><a href="#traceroute-command-description">traceroute command description</a></li>
+<li><a href="#traceroute-command-options">traceroute command options</a></li>
+<li><a href="#traceroute-command-examples">traceroute command examples</a></li>
+<li><a href="#dig-command-description">dig command description</a></li>
+<li><a href="#dig-command-options">dig command options</a></li>
+<li><a href="#dig-command-examples">dig command examples</a></li>
+<li><a href="#telnet-command-description">telnet command description</a></li>
+<li><a href="#telnet-command-options">telnet command options</a></li>
+<li><a href="#telnet-command-examples">telnet command examples</a></li>
+</ul>
+</li>
+<li><p><a href="#filesystem-commands">FileSystem Commands</a></p>
+<ul>
+<li><a href="#mount%5C%7Cunmount-command-description">mount|unmount command description</a></li>
+<li><a href="#mount%5C%7Cunmount-command-options">mount|unmount command options</a></li>
+<li><a href="#mount%5C%7Cunmount-command-examples">mount|unmount command examples</a></li>
+<li><a href="#fstab-command-description">fstab command description</a></li>
+<li><a href="#fstab-file-example">fstab file example</a></li>
+<li><a href="#tune2fs-command-description">tune2fs command description</a></li>
+<li><a href="#tune2fs-command-options">tune2fs command options</a></li>
+<li><a href="#tune2fs-command-examples">tune2fs command examples</a></li>
+</ul>
+</li>
+<li><p><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></p>
+</li>
+</ul>
+<h2 id="memory-usage-commands">Memory Usage Commands</h2>
+<p>There are several commands you can use in Unix/Linux for to check memory usage:</p>
+<ul>
+<li>free</li>
+<li>vmstats</li>
+</ul>
+<p><strong>It is important to  check memory usage and memory used per process on a server that way resources do not fall short and users are able to access the server.</strong></p>
+<p>For example a webserver must have enough memory to serve the traffic or else the website can become slow and in extreme traffic spike situations go down.</p>
+<h4 id="free-command-description">free command description</h4>
+<p>free - Display amount of free and used memory in the system</p>
+<p>free  displays  the  total amount of free and used physical and swap memory in the system, as well as the buffers and caches used by the kernel. </p>
+<p>The information is gathered by parsing /proc/meminfo. </p>
+<p>The displayed columns are:</p>
+<ul>
+<li><p>total  </p>
+<ul>
+<li>Total installed memory (MemTotal and SwapTotal in /proc/meminfo)</li>
+</ul>
+</li>
+<li><p>used   </p>
+<ul>
+<li>Used memory (calculated as total - free - buffers - cache)</li>
+</ul>
+</li>
+<li><p>free   </p>
+<ul>
+<li>Unused memory (MemFree and SwapFree in /proc/meminfo)</li>
+</ul>
+</li>
+<li><p>shared </p>
+<ul>
+<li>Memory used (mostly) by tmpfs (Shmem in /proc/meminfo)</li>
+</ul>
+</li>
+<li><p>buffers</p>
+<ul>
+<li>Memory used by kernel buffers (Buffers in /proc/meminfo)</li>
+</ul>
+</li>
+<li><p>cache  </p>
+<ul>
+<li>Memory used by the page cache and slabs (Cached and SReclaimable in /proc/meminfo)</li>
+</ul>
+</li>
+<li><p>buff/cache</p>
+<ul>
+<li>Sum of buffers and cache</li>
+</ul>
+</li>
+<li><p>available</p>
+<ul>
+<li>Estimation of how much memory is available for starting new applications, without swapping.</li>
+</ul>
+</li>
+</ul>
+<h4 id="free-command-options">free command options</h4>
+<p>List of <code>free</code> command options:</p>
+<ul>
+<li><p><code>-b</code>, <code>--bytes</code></p>
+<ul>
+<li>Display the amount of memory in bytes.</li>
+</ul>
+</li>
+<li><p><code>-k</code>, <code>--kibi</code></p>
+<ul>
+<li>Display the amount of memory in kibibytes.  This is the default.</li>
+</ul>
+</li>
+<li><p><code>-m</code>, <code>--mebi</code></p>
+<ul>
+<li>Display the amount of memory in mebibytes.</li>
+</ul>
+</li>
+<li><p><code>-g</code>, <code>--gibi</code></p>
+<ul>
+<li>Display the amount of memory in gibibytes.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man1/free.1.html" target="_blank">Free Man Page</a></p>
+<h4 id="free-command-examples">free command examples</h4>
+<pre><code class="lang-bash">&gt; free -m
+              total        used        free      shared  buff/cache   available
+Mem:            994          38         866           3          90         839
+Swap:             0           0           0
+</code></pre>
+<p>Here we display the amount of memory used in mebibytes.</p>
+<h4 id="proc-meminfo-stats">proc meminfo stats</h4>
+<p>We can also view the contents of the <code>/proc/meminfo</code> file which has dynamic information about the Unix/Linux Kernel and of the system.</p>
+<p>You can cat the contents of the file or you can use grep like this:</p>
+<pre><code class="lang-bash">&gt; grep -E <span class="hljs-string">&quot;Mem*|Buffers|Cached|Swap*&quot;</span> /proc/meminfo
+MemTotal:        1018452 kB
+MemFree:          886536 kB
+MemAvailable:     859580 kB
+Buffers:           12276 kB
+Cached:            67408 kB
+SwapCached:            0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+</code></pre>
+<p><em>Here we use extended regular expression mode in grep <code>-E</code> to utilize alternation to view some statistics related to memory usage.</em></p>
+<h4 id="vmstat-command-description">vmstat command description</h4>
+<p><code>vmstat</code> - Report virtual memory statistics</p>
+<p><code>vmstat</code> reports information about processes, memory, paging, block IO, traps, disks and cpu activity.</p>
+<p>The first report produced gives averages since the last reboot.  </p>
+<p>Additional reports give information on a sampling period of length delay.<br>The process and memory reports are instantaneous in either case.</p>
+<h4 id="vmstat-command-options">vmstat command options</h4>
+<p>List of <code>vmstat</code> command options:</p>
+<ul>
+<li><p><code>-a</code>, <code>--active</code></p>
+<ul>
+<li>Display active and  inactive memory, given a 2.5.41 kernel or better.</li>
+</ul>
+</li>
+<li><p><code>-f</code>, <code>--forks</code></p>
+<ul>
+<li>The -f switch displays the number of forks since boot.  </li>
+<li>This includes the fork, vfork, and clone system calls, and is equivalent to the total number of tasks created.  </li>
+<li>Each process is represented by one or more  tasks,  depending  on  thread  usage.</li>
+</ul>
+</li>
+<li><p><code>-m</code>, <code>--slabs</code></p>
+<ul>
+<li>Displays slabinfo.</li>
+</ul>
+</li>
+<li><p><code>-n</code>, <code>--one-header</code></p>
+<ul>
+<li>Display the header only once rather than periodically.</li>
+</ul>
+</li>
+<li><p><code>-s</code>, <code>--stats</code></p>
+<ul>
+<li>Displays a table of various event counters and memory statistics.  This display does not repeat.</li>
+</ul>
+</li>
+<li><p><code>-d</code>, <code>--disk</code></p>
+<ul>
+<li>Report disk statistics (2.5.70 or above required).</li>
+</ul>
+</li>
+<li><p><code>-D</code>, <code>--disk-sum</code></p>
+<ul>
+<li>Report some summary statistics about disk activity.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man8/vmstat.8.html" target="_blank">vmstat man page</a></p>
+<h4 id="vmstat-command-examples">vmstat command examples</h4>
+<pre><code class="lang-bash">&gt; vmstat <span class="hljs-_">-s</span>
+      1018452 K total memory
+        39028 K used memory
+        64168 K active memory
+        28412 K inactive memory
+       886280 K free memory
+        12376 K buffer memory
+        80768 K swap cache
+            0 K total swap
+            0 K used swap
+            0 K free swap
+          374 non-nice user cpu ticks
+            0 nice user cpu ticks
+          163 system cpu ticks
+       152579 idle cpu ticks
+           79 IO-wait cpu ticks
+            0 IRQ cpu ticks
+            2 softirq cpu ticks
+          758 stolen cpu ticks
+        74489 pages paged <span class="hljs-keyword">in</span>
+        10328 pages paged out
+            0 pages swapped <span class="hljs-keyword">in</span>
+            0 pages swapped out
+        19377 interrupts
+        34163 CPU context switches
+   1566773958 boot time
+          695 forks
+</code></pre>
+<p>The command above displays a table of various event counters and memory statistics on this server.</p>
+<h2 id="process-information-commands">Process Information Commands</h2>
+<p>In Unix/Linux systems there are a number of commands for displaying running processes, and to manage/change priority/kill processes.</p>
+<h4 id="tophtop-command-description">top|htop command description</h4>
+<p>top - display Linux processes</p>
+<p>The  top program provides a dynamic real-time view of a running system.  </p>
+<p>It can display system summary information as well as a list of processes or threads currently being managed by the Linux kernel.  The types of system summary information shown and  the  types, order and size of information displayed for processes are all user configurable and that configuration can be made persistent across restarts.</p>
+<h6 id="installing-htop-on-debian-linux">Installing htop on Debian Linux</h6>
+<pre><code class="lang-bash">sudo su -
+apt install htop
+</code></pre>
+<h6 id="htop-command">htop command</h6>
+<p>htop - interactive process viewer</p>
+<p>htop is similar to top, but allows you to scroll vertically and horizontally, so you can see all the processes running on the system, along with their full command lines, as well as viewing them as a process tree, selecting multiple processes and acting on them all at once.</p>
+<h4 id="tophtop-command-options">top|htop command options</h4>
+<p>List of <code>top</code> command options:</p>
+<ul>
+<li><p><code>-h</code> | <code>-v</code>  </p>
+<ul>
+<li><code>:Help/Version</code><ul>
+<li>Show library version and the usage prompt, then quit.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>-b</code>  <code>:Batch-mode</code> operation</p>
+<ul>
+<li>Starts top in Batch mode, which could be useful for sending output from top to other programs or to a file.  </li>
+<li>In this mode, top will not accept input and runs until the iterations limit you&apos;ve set with the <code>-n</code> command-line option or until killed.</li>
+</ul>
+</li>
+<li><p><code>-c</code>  <code>:Command-line/Program-name</code> toggle
+  Starts  top  with  the last remembered <code>-c</code> state reversed.  Thus, if top was displaying command lines, now that field will show
+  program names, and vice versa.</p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man8/vmstat.8.html" target="_blank">vmstat man page</a></p>
+<h6 id="htop-command-options">htop command options</h6>
+<p>List of <code>htop</code> command options:</p>
+<ul>
+<li><p><code>-d</code> <code>--delay=DELAY</code></p>
+<ul>
+<li>Delay between updates, in tenths of seconds</li>
+</ul>
+</li>
+<li><p><code>-C</code> <code>--no-color</code> <code>--no-colour</code></p>
+<ul>
+<li>Start htop in monochrome mode</li>
+</ul>
+</li>
+<li><p><code>-h</code> <code>--help</code></p>
+<ul>
+<li>Display a help message and exit</li>
+</ul>
+</li>
+<li><p><code>-p</code> <code>--pid=PID,PID...</code></p>
+<ul>
+<li>Show only the given PIDs</li>
+</ul>
+</li>
+<li><p><code>-s</code> <code>--sort-key COLUMN</code></p>
+<ul>
+<li>Sort by this column (use --sort-key help for a column list)</li>
+</ul>
+</li>
+<li><p><code>-u</code> <code>--user=USERNAME</code></p>
+<ul>
+<li>Show only the processes of a given user</li>
+</ul>
+</li>
+<li><p><code>-v</code> <code>--version</code></p>
+<ul>
+<li>Output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="tophtop-command-examples">top|htop command examples</h4>
+<p><img src="../images/top.png" alt="images/top"></p>
+<p>Here you can see top command statistics</p>
+<h6 id="htop-command-example">htop command example</h6>
+<p><img src="../images/htop.png" alt="images/htop"></p>
+<p><em>Notice that in this screenshot <code>htop</code> has colored output as well as additional information.</em></p>
+<h4 id="ps-command-description">ps command description</h4>
+<p>ps - report a snapshot of the current processes.</p>
+<p>ps displays information about a selection of the active processes.  </p>
+<p>If you want a repetitive update of the selection and the displayed information, use top instead.</p>
+<h4 id="ps-command-options">ps command options</h4>
+<p>List of <code>ps</code> command options:</p>
+<ul>
+<li><p><code>-C</code> cmdlist</p>
+<ul>
+<li>Select by command name.  </li>
+<li>This selects the processes whose executable name is given in cmdlist.</li>
+</ul>
+</li>
+<li><p><code>-G</code> grplist</p>
+<ul>
+<li>Select by real group ID (RGID) or name.  </li>
+<li>This selects the processes whose real group name or ID is in the grplist list.  </li>
+<li>The real group ID identifies the group of the user who created the process, see getgid.</li>
+</ul>
+</li>
+<li><p><code>-g</code> <code>grplist</code></p>
+<ul>
+<li>Select by session OR by effective group name.  </li>
+<li>Selection by session is specified by many standards, but selection by effective group is the logical behavior that several other operating systems use.  </li>
+<li>This ps will select by session when the list is completely numeric (as sessions are).  </li>
+<li>Group ID numbers will work only when some group names are also specified.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man1/ps.1.html" target="_blank">vmstat man page</a></p>
+<h4 id="ps-command-examples">ps command examples</h4>
+<h6 id="to-see-every-process-on-the-system-using-standard-syntax">To see every process on the system using standard syntax:</h6>
+<ul>
+<li><code>ps -e</code></li>
+<li><code>ps -ef</code></li>
+<li><code>ps -eF</code></li>
+<li><code>ps -ely</code></li>
+</ul>
+<pre><code class="lang-bash">&gt; ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 22:59 ?        00:00:00 /sbin/init
+root         2     0  0 22:59 ?        00:00:00 [kthreadd]
+root         3     2  0 22:59 ?        00:00:00 [ksoftirqd/0]
+root         5     2  0 22:59 ?        00:00:00 [kworker/0:0H]
+root         6     2  0 22:59 ?        00:00:00 [kworker/u30:0]
+root         7     2  0 22:59 ?        00:00:00 [rcu_sched]
+root         8     2  0 22:59 ?        00:00:00 [rcu_bh]
+root         9     2  0 22:59 ?        00:00:00 [migration/0]
+root        10     2  0 22:59 ?        00:00:00 [lru-add-drain]
+root        11     2  0 22:59 ?        00:00:00 [watchdog/0]
+root        12     2  0 22:59 ?        00:00:00 [cpuhp/0]
+</code></pre>
+<p>You can grep for a certain process like this for example:</p>
+<pre><code class="lang-bash">ps -ef | grep mongod
+</code></pre>
+<h6 id="to-see-every-process-on-the-system-using-bsd-syntax">To see every process on the system using BSD syntax:</h6>
+<ul>
+<li><code>ps ax</code></li>
+<li><code>ps axu</code></li>
+</ul>
+<h6 id="to-print-a-process-tree">To print a process tree:</h6>
+<ul>
+<li><code>ps -ejH</code></li>
+<li><code>ps axjf</code></li>
+</ul>
+<pre><code class="lang-bash">&gt; ps -ejH
+  PID  PGID   SID TTY          TIME CMD
+    2     0     0 ?        00:00:00 kthreadd
+    3     0     0 ?        00:00:00   ksoftirqd/0
+    5     0     0 ?        00:00:00   kworker/0:0H
+    6     0     0 ?        00:00:00   kworker/u30:0
+    7     0     0 ?        00:00:00   rcu_sched
+    8     0     0 ?        00:00:00   rcu_bh
+    9     0     0 ?        00:00:00   migration/0
+   10     0     0 ?        00:00:00   lru-add-drain
+.........................................................
+</code></pre>
+<h6 id="to-get-info-about-threads">To get info about threads:</h6>
+<ul>
+<li><code>ps -eLf</code></li>
+<li><code>ps axms</code></li>
+</ul>
+<pre><code class="lang-bash">&gt; ps <span class="hljs-_">-e</span>Lf
+UID        PID  PPID   LWP  C NLWP STIME TTY          TIME CMD
+root         1     0     1  0    1 Aug25 ?        00:00:00 /sbin/init
+root         2     0     2  0    1 Aug25 ?        00:00:00 [kthreadd]
+root         3     2     3  0    1 Aug25 ?        00:00:00 [ksoftirqd/0]
+root         5     2     5  0    1 Aug25 ?        00:00:00 [kworker/0:0H]
+root         6     2     6  0    1 Aug25 ?        00:00:00 [kworker/u30:0]
+root         7     2     7  0    1 Aug25 ?        00:00:00 [rcu_sched]
+root         8     2     8  0    1 Aug25 ?        00:00:00 [rcu_bh]
+.........................................................
+</code></pre>
+<h6 id="to-get-security-info">To get security info:</h6>
+<ul>
+<li><code>ps -eo euser,ruser,suser,fuser,f,comm,label</code></li>
+<li><code>ps axZ</code></li>
+<li><code>ps -eM</code></li>
+</ul>
+<pre><code class="lang-bash">ps <span class="hljs-_">-e</span>M
+LABEL                             PID TTY          TIME CMD
+-                                   1 ?        00:00:00 systemd
+-                                   2 ?        00:00:00 kthreadd
+-                                   3 ?        00:00:00 ksoftirqd/0
+-                                   5 ?        00:00:00 kworker/0:0H
+-                                   6 ?        00:00:00 kworker/u30:0
+-                                   7 ?        00:00:00 rcu_sched
+.........................................................
+</code></pre>
+<h2 id="environment-variable-commands">Environment Variable Commands</h2>
+<p>Environmental variables are variables that are defined for the current shell and are inherited by any child shells or processes. </p>
+<p>These environment variables are then passed to processes that are spawned by a shell session.</p>
+<h4 id="printenv-command-description">printenv command description</h4>
+<p>printenv - print all or part of environment</p>
+<p>Print the values of the specified environment VARIABLE(s).  If no VARIABLE is specified, print name and value pairs for them all.</p>
+<h4 id="printenv-command-options">printenv command options</h4>
+<p>List of <code>printenv</code> command options:</p>
+<ul>
+<li><p><code>-0</code>, <code>--null</code></p>
+<ul>
+<li>end each output line with NUL, not newline</li>
+</ul>
+</li>
+<li><p><code>--help</code> </p>
+<ul>
+<li>display this help and exit</li>
+</ul>
+</li>
+<li><p><code>--version</code></p>
+<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man1/printenv.1.html" target="_blank">printenv man page</a></p>
+<h4 id="printenv-command-examples">printenv command examples</h4>
+<pre><code class="lang-bash">&gt; printenv
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:<span class="hljs-keyword">do</span>=01;35:bd=40;33;01:<span class="hljs-built_in">cd</span>=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+.......
+LANG=en_US.UTF-8
+....
+</code></pre>
+<p>In the command above we merely print out every environment variable</p>
+<pre><code class="lang-bash">&gt; printenv PATH
+/usr/<span class="hljs-built_in">local</span>/bin:/usr/bin:/bin:/usr/<span class="hljs-built_in">local</span>/games:/usr/game
+</code></pre>
+<h4 id="env-command-description">env command description</h4>
+<p>env - run a program in a modified environment</p>
+<p>Set each NAME to VALUE in the environment and run COMMAND.</p>
+<h4 id="env-command-options">env command options</h4>
+<p>List of <code>env</code> command options:</p>
+<p>-i, --ignore-environment
+              start with an empty environment</p>
+<pre><code>   -0, --null
+          end each output line with NUL, not newline
+
+   -u, --unset=NAME
+          remove variable from the environment
+
+   --help display this help and exit
+
+   --version
+          output version information and exit
+</code></pre><h4 id="env-command-examples">env command examples</h4>
+<pre><code class="lang-bash">env | grep USER
+USER=admin
+</code></pre>
+<p>Notice that in the command above we used <code>env</code> command to find the value of USER environment variable.</p>
+<p>We can also use <code>env</code> to set environment variables like so:</p>
+<pre><code class="lang-bash">&gt; env DUDE=john
+....................................................
+DUDE=john
+</code></pre>
+<p>This will only set the environment for the duration of the command as the next example proves:</p>
+<pre><code class="lang-bash">env | grep DUDE
+<span class="hljs-comment"># Nothing shown</span>
+</code></pre>
+<p>The next example shows using <code>env</code> by passing variable and then calling command</p>
+<pre><code class="lang-bash">env VAR=val1 VAR2=val2 &lt;unix_command&gt; &lt;arguments&gt;
+</code></pre>
+<p>Although this example is generic, it illustrates using env to set environment variables that will be set when command is run.</p>
+<h2 id="disk-usage-commands">Disk Usage Commands</h2>
+<p>There are various commands to check disk usage including:</p>
+<ul>
+<li>df</li>
+<li>du</li>
+<li>stat</li>
+<li>fdisk</li>
+</ul>
+<h4 id="df-command-description">df command description</h4>
+<p><code>df</code> - report file system disk space usage</p>
+<p><code>df</code> displays the amount of disk space available on the file system containing each file name argument.  </p>
+<p>If no file name is given, the space available on all currently mounted  file  systems  is  shown.   </p>
+<p>Disk space is shown in 1K blocks by default, unless the environment variable <code>POSIXLY_CORRECT</code> is set, in which case 512-byte blocks are used.</p>
+<h4 id="df-command-options">df command options</h4>
+<p>List of <code>df</code> command options:</p>
+<ul>
+<li><p><code>-a</code>, <code>--all</code></p>
+<ul>
+<li>include pseudo, duplicate, inaccessible file systems</li>
+</ul>
+</li>
+<li><p><code>-B</code>, <code>--block-size=SIZE</code></p>
+<ul>
+<li>scale sizes by SIZE before printing them; e.g., &apos;-BM&apos; prints sizes in units of 1,048,576 bytes; see SIZE format below</li>
+</ul>
+</li>
+<li><p><code>-h</code>, <code>--human-readable</code></p>
+<ul>
+<li>print sizes in powers of 1024 (e.g., 1023M)</li>
+</ul>
+</li>
+<li><p><code>-H</code>, <code>--si</code></p>
+<ul>
+<li>print sizes in powers of 1000 (e.g., 1.1G)</li>
+</ul>
+</li>
+<li><p><code>-i</code>, <code>--inodes</code></p>
+<ul>
+<li>list inode information instead of block usage</li>
+</ul>
+</li>
+<li><p><code>-k</code>     </p>
+<ul>
+<li>like <code>--block-size=1K</code></li>
+</ul>
+</li>
+<li><p><code>-l</code>, <code>--local</code></p>
+<ul>
+<li>limit listing to local file systems</li>
+</ul>
+</li>
+<li><p><code>--no-sync</code></p>
+<ul>
+<li>do not invoke sync before getting usage info (default)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man1/df.1.html" target="_blank">df man page</a></p>
+<h4 id="df-command-examples">df command examples</h4>
+<pre><code class="lang-bash"><span class="hljs-comment">## get current directory size</span>
+&gt; df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            487M     0  487M   0% /dev
+tmpfs           100M   12M   89M  12% /run
+/dev/xvda1      7.9G  1.1G  6.4G  15% /
+tmpfs           498M     0  498M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+tmpfs           498M     0  498M   0% /sys/fs/cgroup
+tmpfs           100M     0  100M   0% /run/user/1000
+
+<span class="hljs-comment">## display information on particular partition</span>
+df -hT /etc
+Filesystem     Type  Size  Used Avail Use% Mounted on
+/dev/xvda1     ext4  7.9G  1.1G  6.4G  15% /
+</code></pre>
+<h4 id="du-command-description">du command description</h4>
+<p><code>du</code> - estimate file space usage</p>
+<p>Summarize disk usage of the set of FILEs, recursively for directories.</p>
+<h4 id="du-command-options">du command options</h4>
+<p>List of <code>du</code> command options:</p>
+<ul>
+<li><p><code>-0</code>, <code>--null</code></p>
+<ul>
+<li>end each output line with NUL, not newline</li>
+</ul>
+</li>
+<li><p><code>-a</code>, <code>--all</code></p>
+<ul>
+<li>write counts for all files, not just directories</li>
+</ul>
+</li>
+<li><p><code>--apparent-size</code></p>
+<ul>
+<li>print apparent sizes, rather than disk usage; although the apparent size is usually smaller, it may be larger due to holes in (&apos;sparse&apos;) files, internal fragmentation, indirect blocks, and the like</li>
+</ul>
+</li>
+<li><p><code>-B</code>, <code>--block-size=SIZE</code></p>
+<ul>
+<li>scale sizes by SIZE before printing them; e.g., &apos;-BM&apos; prints sizes in units of 1,048,576 bytes; see SIZE format below</li>
+</ul>
+</li>
+<li><p><code>-b</code>, <code>--bytes</code></p>
+<ul>
+<li>equivalent to &apos;--apparent-size <code>--block-size=1&apos;</code></li>
+</ul>
+</li>
+<li><p><code>-c</code>, <code>--total</code></p>
+<ul>
+<li>produce a grand total</li>
+</ul>
+</li>
+<li><p><code>-D</code>, <code>--dereference-args</code></p>
+<ul>
+<li>dereference only symlinks that are listed on the command line</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man1/du.1.html" target="_blank">du man page</a></p>
+<h4 id="du-command-examples">du command examples</h4>
+<pre><code class="lang-bash"><span class="hljs-comment">## default disk usage information example</span>
+&gt; du 
+8    ./.config/htop
+12    ./.config
+8    ./.ssh
+44    .
+
+<span class="hljs-comment"># the `-h` option lets you display output in Byte, Kilobyte, Megabyte, Gigabyte, Terabyte and Petabyte (Human-readable output)</span>
+&gt; du -h /var/<span class="hljs-built_in">log</span>
+8.0K    /var/<span class="hljs-built_in">log</span>/unattended-upgrades
+152K    /var/<span class="hljs-built_in">log</span>/fai/fai-debian-image/install-20190813_161832
+156K    /var/<span class="hljs-built_in">log</span>/fai/fai-debian-image
+160K    /var/<span class="hljs-built_in">log</span>/fai
+92K    /var/<span class="hljs-built_in">log</span>/apt
+4.0K    /var/<span class="hljs-built_in">log</span>/chrony
+1.5M    /var/<span class="hljs-built_in">log</span>
+
+<span class="hljs-comment"># -x: skip directories on different file systems</span>
+<span class="hljs-comment"># -c: produce a grand total</span>
+<span class="hljs-comment"># -h: print sizes in human readable format (e.g., 1K 234M 2G)</span>
+du -xch --max-depth=1 /
+4.0K    /lib64
+4.0K    /mnt
+32K    /tmp
+4.0K    /srv
+16K    /lost+found
+579M    /usr
+48K    /home
+4.0K    /opt
+6.1M    /sbin
+7.4M    /bin
+3.3M    /etc
+24K    /root
+176M    /var
+4.0K    /media
+225M    /lib
+34M    /boot
+1.1G    /
+1.1G    total
+</code></pre>
+<h4 id="stat-command-description">stat command description</h4>
+<p><code>stat</code> - display file or file system status</p>
+<p>Display file or file system status.</p>
+<h4 id="stat-command-options">stat command options</h4>
+<p>List of <code>stat</code> command options:</p>
+<ul>
+<li><p><code>-L</code>, <code>--dereference</code></p>
+<ul>
+<li>follow links</li>
+</ul>
+</li>
+<li><p><code>-f</code>, <code>--file-system</code></p>
+<ul>
+<li>display file system status instead of file status</li>
+</ul>
+</li>
+<li><p><code>-c</code>  <code>--format=FORMAT</code></p>
+<ul>
+<li>use the specified FORMAT instead of the default; output a newline after each use of FORMAT</li>
+</ul>
+</li>
+<li><p><code>--printf=FORMAT</code></p>
+<ul>
+<li>like  <code>--format</code>,  but  interpret  backslash  escapes,  and  do not output a mandatory trailing newline; if you want a newline, include \n in FORMAT</li>
+</ul>
+</li>
+<li><p><code>-t</code>, <code>--terse</code></p>
+<ul>
+<li>print the information in terse form</li>
+</ul>
+</li>
+<li><p><code>--help</code></p>
+<ul>
+<li>display this help and exit</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man2/stat.2.html" target="_blank">stat man page</a></p>
+<h4 id="stat-command-examples">stat command examples</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># Check Linux File Status</span>
+<span class="hljs-built_in">stat</span> /var/<span class="hljs-built_in">log</span>/syslog
+  File: /var/<span class="hljs-built_in">log</span>/syslog
+  Size: 13699         Blocks: 32         IO Block: 4096   regular file
+Device: ca01h/51713d    Inode: 406955      Links: 1
+Access: (0640/-rw-r-----)  Uid: (    0/    root)   Gid: (    4/     adm)
+Access: 2019-08-28 06:25:01.090542366 +0000
+Modify: 2019-08-28 09:54:22.127128119 +0000
+Change: 2019-08-28 09:54:22.127128119 +0000
+ Birth: -
+
+<span class="hljs-comment"># Check File System Status</span>
+<span class="hljs-built_in">stat</span> <span class="hljs-_">-f</span> /var/<span class="hljs-built_in">log</span>/syslog
+  File: <span class="hljs-string">&quot;/var/log/syslog&quot;</span>
+    ID: 35574f912c967e5a Namelen: 255     Type: ext2/ext3
+Block size: 4096       Fundamental block size: 4096
+Blocks: Total: 2047598    Free: 1774850    Available: 1665910
+Inodes: Total: 524288     Free: 483503
+
+<span class="hljs-comment"># Enable Following of Symbolic Links</span>
+<span class="hljs-built_in">stat</span> -L /bin/
+  File: /bin/
+  Size: 4096          Blocks: 8          IO Block: 4096   directory
+Device: ca01h/51713d    Inode: 262183      Links: 2
+Access: (0755/drwxr-xr-x)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2019-08-28 09:44:08.931003908 +0000
+Modify: 2019-08-13 16:21:21.317589334 +0000
+Change: 2019-08-13 16:21:21.317589334 +0000
+ Birth: -
+
+<span class="hljs-comment"># Use a Custom Format To Display Information</span>
+<span class="hljs-built_in">stat</span> --printf=<span class="hljs-string">&apos;%U\n%G\n%C\n%z\n&apos;</span> /var/<span class="hljs-built_in">log</span>
+root
+root
+<span class="hljs-built_in">stat</span>: failed to get security context of <span class="hljs-string">&apos;/var/log&apos;</span>: No data available
+?
+2019-08-28 06:25:01.090542366 +0000
+</code></pre>
+<h4 id="fdisk-command-description">fdisk command description</h4>
+<p>fdisk - manipulate disk partition table</p>
+<p>fdisk  is a dialog-driven program for creation and manipulation of partition tables.<br>It understands GPT, MBR, Sun, SGI and BSD partition tables.</p>
+<p>Block devices can be divided into one or more logical disks called partitions.  This division is recorded in  the  partition  table,
+usually found in sector 0 of the disk.  (In the BSD world one talks about <code>disk slices&apos; and a</code>disklabel&apos;.)</p>
+<p>All  partitioning is driven by device I/O limits (the topology) by default.  fdisk is able to optimize the disk layout for a 4K-sec&#x2010;
+tor size and use an alignment offset on modern devices for MBR and GPT.  It is always a good idea to follow fdisk&apos;s defaults as  the
+default  values  (e.g.  first  and last partition sectors) and partition sizes specified by the &gt;size&lt;{M,G,...} notation are always
+aligned according to the device properties.</p>
+<h4 id="fdisk-command-options">fdisk command options</h4>
+<p>List of <code>fdisk</code> command options:</p>
+<ul>
+<li><p><code>-b</code>, <code>--sector-size sectorsize</code></p>
+<ul>
+<li>Specify the sector size of the disk.  Valid values are 512, 1024, 2048, and 4096.  (Recent kernels know the sector size.  </li>
+<li>Use this option only on old kernels or to override the kernel&apos;s ideas.)  </li>
+<li>Since util-linux-2.17, fdisk differentiates between logical and physical sector size.  </li>
+<li>This option changes both sector sizes to sectorsize.</li>
+</ul>
+</li>
+<li><p><code>-B</code>, <code>--protect-boot</code></p>
+<ul>
+<li>Don&apos;t erase the begin of the first disk sector when create a new disk label.  </li>
+<li>This feature is supported for GPT and MBR.</li>
+</ul>
+</li>
+<li><p><code>-c</code>, <code>--compatibility[=mode]</code></p>
+<ul>
+<li>Specify  the compatibility mode, &apos;dos&apos; or &apos;nondos&apos;.  The default is non-DOS mode. </li>
+</ul>
+</li>
+<li><p><code>-h</code>, <code>--help</code></p>
+<ul>
+<li>Display a help text and exit.</li>
+</ul>
+</li>
+<li><p><code>-L</code>, <code>--color[=when]</code></p>
+<ul>
+<li>Colorize  the output.  The optional argument when can be auto, never or always.  </li>
+<li>If the when argument is omitted, it defaults to auto.  The colors can be disabled; for the current built-in default see the --help output. </li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man8/fdisk.8.html" target="_blank">fdisk man page</a></p>
+<h4 id="fdisk-command-examples">fdisk command examples</h4>
+<h6 id="view-all-disk-partitions-in-linux">View all Disk Partitions in Linux</h6>
+<pre><code class="lang-bash">&gt; sudo su -
+&gt; fdisk <span class="hljs-_">-l</span>
+Disk /dev/xvda: 8 GiB, 8589934592 bytes, 16777216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel <span class="hljs-built_in">type</span>: dos
+Disk identifier: 0x242113bb
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/xvda1 *     2048 16777215 16775168   8G 83 Linux
+</code></pre>
+<h6 id="view-specific-disk-partition-in-linux">View Specific Disk Partition in Linux</h6>
+<pre><code class="lang-bash">fdisk <span class="hljs-_">-l</span> /dev/xvda
+Disk /dev/xvda: 8 GiB, 8589934592 bytes, 16777216 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel <span class="hljs-built_in">type</span>: dos
+Disk identifier: 0x242113bb
+
+Device     Boot Start      End  Sectors Size Id Type
+/dev/xvda1 *     2048 16777215 16775168   8G 83 Linux
+</code></pre>
+<h6 id="check-all-available-fdisk-commands">Check all Available fdisk Commands</h6>
+<pre><code class="lang-bash">fdisk /dev/xvda
+
+Welcome to fdisk (util-linux 2.29.2).
+Changes will remain <span class="hljs-keyword">in</span> memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m <span class="hljs-keyword">for</span> <span class="hljs-built_in">help</span>): m
+
+Help:
+
+  DOS (MBR)
+   a   toggle a bootable flag
+   b   edit nested BSD disklabel
+   c   toggle the dos compatibility flag
+
+  Generic
+   d   delete a partition
+   F   list free unpartitioned space
+   l   list known partition types
+   n   add a new partition
+   p   <span class="hljs-built_in">print</span> the partition table
+   t   change a partition <span class="hljs-built_in">type</span>
+   v   verify the partition table
+   i   <span class="hljs-built_in">print</span> information about a partition
+
+  Misc
+   m   <span class="hljs-built_in">print</span> this menu
+   u   change display/entry units
+   x   extra functionality (experts only)
+
+  Script
+   I   load disk layout from sfdisk script file
+   O   dump disk layout to sfdisk script file
+
+  Save &amp; Exit
+   w   write table to disk and <span class="hljs-built_in">exit</span>
+   q   quit without saving changes
+
+  Create a new label
+   g   create a new empty GPT partition table
+   G   create a new empty SGI (IRIX) partition table
+   o   create a new empty DOS partition table
+   s   create a new empty Sun partition table
+</code></pre>
+<h2 id="network-commands">Network Commands</h2>
+<blockquote>
+<p>Network computer devices that originate, route and terminate the data are called network nodes.[1] Nodes are generally identified by network addresses, and can include hosts such as personal computers, phones, and servers, as well as networking hardware such as routers and switches. Two such devices can be said to be networked together when one device is able to exchange information with the other device, whether or not they have a direct connection to each other. In most cases, application-specific communications protocols are layered (i.e. carried as payload) over other more general communications protocols. This formidable collection of information technology requires skilled network management to keep it all running reliably.</p>
+</blockquote>
+<h4 id="ifconfig-command-description">ifconfig command description</h4>
+<p>ifconfig - configure a network interface</p>
+<p>Ifconfig  is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.</p>
+<p>After that, it is usually only needed when debugging or when system tuning is needed.</p>
+<h4 id="ifconfig-command-options">ifconfig command options</h4>
+<p>List of <code>ifconfig</code> options:</p>
+<ul>
+<li><p><code>-a</code> display all interfaces which are currently available, even if down</p>
+</li>
+<li><p><code>-s</code> display a short list (like netstat -i)</p>
+</li>
+<li><p><code>-v</code> be more verbose for some error conditions</p>
+</li>
+<li><p><code>interface</code></p>
+<ul>
+<li>The  name of the interface.  This is usually a driver name followed by a unit number, for example eth0 for the first Ethernet interface. </li>
+</ul>
+</li>
+<li><p><code>up</code> *This flag causes the interface to be activated. </p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="https://manpages.debian.org/stretch/net-tools/ifconfig.8.en.html" target="_blank">ifconfig man page</a></p>
+<h4 id="ifconfig-command-examples">ifconfig command examples</h4>
+<h6 id="display-all-interfaces-which-are-currently-available-even-if-down">display all interfaces which are currently available, even if down</h6>
+<p><code>ifconfig -a</code></p>
+<h6 id="display-information-on-a-particular-interface-eth0-in-this-example">display information on a particular interface (eth0) in this example</h6>
+<p><code>ifconfig eth0</code></p>
+<h4 id="traceroute-command-description">traceroute command description</h4>
+<p><code>traceroute</code> - print the route packets trace to network host</p>
+<p><code>traceroute</code>  tracks  the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol&apos;s time to live (TTL) field and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host.</p>
+<h4 id="traceroute-command-options">traceroute command options</h4>
+<p>List of <code>traceroute</code> options:</p>
+<ul>
+<li><p><code>--help</code> Print help info and exit.</p>
+</li>
+<li><p><code>-4</code>, <code>-6</code> Explicitly force IPv4 or IPv6 tracerouting. </p>
+<ul>
+<li>By default, the program will try to resolve the  name  given,  and  choose  the appropriate  protocol  automatically.  If  resolving  a host name returns both IPv4 and IPv6 addresses traceroute will use IPv4.</li>
+</ul>
+</li>
+<li><p><code>-I</code>, <code>--icmp</code></p>
+<ul>
+<li>Use ICMP ECHO for probes</li>
+</ul>
+</li>
+<li><p><code>-T</code>, <code>--tcp</code></p>
+<ul>
+<li>Use TCP SYN for probes</li>
+</ul>
+</li>
+<li><p><code>-d</code>, <code>--debug</code></p>
+<ul>
+<li>Enable socket level debugging (when the Linux kernel supports it)</li>
+</ul>
+</li>
+<li><p><code>-F</code>, <code>--dont-fragment</code></p>
+<ul>
+<li>Do not fragment probe packets. </li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="https://linux.die.net/man/8/traceroute" target="_blank">traceroute man page</a></p>
+<h4 id="traceroute-command-examples">traceroute command examples</h4>
+<h6 id="run-traceroute-on-googlecom">Run traceroute on google.com</h6>
+<pre><code class="lang-bash">&gt; traceroute google.com
+traceroute to google.com (172.217.15.110), 30 hops max, 60 byte packets
+ 1  216.182.229.240 (216.182.229.240)  2.909 ms 216.182.226.64 (216.182.226.64)  11.100 ms 216.182.226.228 (216.182.226.228)  13.826 ms
+ 2  100.66.13.148 (100.66.13.148)  19.540 ms 100.66.12.128 (100.66.12.128)  33.635 ms 100.66.13.124 (100.66.13.124)  21.646 ms
+ 3  100.66.15.70 (100.66.15.70)  12.782 ms 100.66.11.114 (100.66.11.114)  11.947 ms 100.66.10.228 (100.66.10.228)  18.313 ms
+ 4  100.66.7.39 (100.66.7.39)  10.372 ms 100.66.7.29 (100.66.7.29)  12.425 ms 100.66.6.155 (100.66.6.155)  17.452 ms
+ 5  100.66.5.231 (100.66.5.231)  20.238 ms 100.66.5.43 (100.66.5.43)  60.356 ms 100.66.5.205 (100.66.5.205)  18.193 ms
+ 6  100.65.13.193 (100.65.13.193)  0.531 ms  0.276 ms 100.65.12.97 (100.65.12.97)  0.376 ms
+ 7  52.93.29.3 (52.93.29.3)  0.329 ms 52.93.28.199 (52.93.28.199)  0.503 ms 52.93.29.3 (52.93.29.3)  0.617 ms
+ 8  100.100.30.52 (100.100.30.52)  0.541 ms 100.100.30.54 (100.100.30.54)  0.498 ms 100.100.28.62 (100.100.28.62)  0.563 ms
+ 9  100.95.7.161 (100.95.7.161)  21.276 ms 100.95.7.112 (100.95.7.112)  0.829 ms 100.95.7.161 (100.95.7.161)  19.871 ms
+10  100.100.30.112 (100.100.30.112)  0.517 ms 100.100.30.68 (100.100.30.68)  1.015 ms 52.93.114.40 (52.93.114.40)  8.742 ms
+11  100.95.7.177 (100.95.7.177)  0.839 ms 100.95.7.241 (100.95.7.241)  1.191 ms 52.93.27.140 (52.93.27.140)  0.645 ms
+12  52.93.114.114 (52.93.114.114)  14.170 ms 52.93.114.30 (52.93.114.30)  13.165 ms 52.93.114.42 (52.93.114.42)  6.670 ms
+13  * 52.93.27.136 (52.93.27.136)  0.607 ms 108.170.246.1 (108.170.246.1)  0.675 ms
+14  216.239.54.106 (216.239.54.106)  0.758 ms 52.95.219.141 (52.95.219.141)  0.968 ms  0.939 ms
+15  iad30s21-in<span class="hljs-_">-f</span>14.1e100.net (172.217.15.110)  0.615 ms * *
+</code></pre>
+<h4 id="dig-command-description">dig command description</h4>
+<p><code>dig</code> - DNS lookup utility</p>
+<p><code>dig</code> (domain information groper) is a flexible tool for interrogating DNS name servers. </p>
+<p>It performs DNS lookups and displays the answers that are returned from the name server(s) that were queried. </p>
+<p>Most DNS administrators use dig to troubleshoot DNS problems because of its flexibility, ease of use and clarity of output. Other lookup tools tend to have less functionality than dig.</p>
+<h6 id="install-dig-with-dnsutils">Install dig with dnsutils</h6>
+<p><code>sudo apt install dnsutils</code></p>
+<h4 id="dig-command-options">dig command options</h4>
+<p>List of <code>dig</code> command options:</p>
+<ul>
+<li><p><code>-4</code></p>
+<ul>
+<li>Use IPv4 only.</li>
+</ul>
+</li>
+<li><p><code>-6</code></p>
+<ul>
+<li>Use IPv6 only.</li>
+</ul>
+</li>
+<li><p><code>-b</code> address[#port]</p>
+<ul>
+<li>Set the source IP address of the query. The address must be a valid address on one of the host&apos;s network interfaces.</li>
+</ul>
+</li>
+<li><p><code>-c class</code></p>
+<ul>
+<li>Set the query class. The default class is IN; other classes are HS for Hesiod records or CH for Chaosnet records.</li>
+</ul>
+</li>
+<li><p><code>-f file</code></p>
+<ul>
+<li>Batch mode: dig reads a list of lookup requests to process from the given file. Each line in the file should be organized in
+the same way they would be presented as queries to dig using the command-line interface.</li>
+</ul>
+</li>
+<li><p><code>-i</code></p>
+<ul>
+<li>Do reverse IPv6 lookups using the obsolete RFC1886 IP6.INT domain, which is no longer in use. Obsolete bit string label queries (RFC2874) are not attempted.</li>
+</ul>
+</li>
+<li><p><code>-k keyfile</code></p>
+<ul>
+<li>Sign queries using TSIG using a key read from the given file. Key files can be generated using tsig-keygen(8). When using TSIG authentication with dig, the name server that is queried needs to know the key and algorithm that is being used. In BIND, this
+is done by providing appropriate key and server statements in named.conf.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="https://manpages.debian.org/jessie/dnsutils/dig.1.en.html" target="_blank">dig man page</a></p>
+<h4 id="dig-command-examples">dig command examples</h4>
+<h6 id="running-dnslookup-for-twittercom">Running dnslookup for twitter.com</h6>
+<pre><code class="lang-bash">dig twitter.com
+
+; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Debian &lt;&lt;&gt;&gt; twitter.com
+;; global options: +cmd
+;; Got answer:
+;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 49918
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;twitter.com.            IN    A
+
+;; ANSWER SECTION:
+twitter.com.        60    IN    A    104.244.42.65
+twitter.com.        60    IN    A    104.244.42.1
+
+;; Query time: 1 msec
+;; SERVER: 172.31.0.2<span class="hljs-comment">#53(172.31.0.2)</span>
+;; WHEN: Tue Sep 10 14:24:42 UTC 2019
+;; MSG SIZE  rcvd: 72
+</code></pre>
+<h6 id="find-the-ttl-for-my-personal-website">Find the TTL for my personal website</h6>
+<pre><code class="lang-bash">dig +nocmd marcelbelmont.com +noall +answer
+marcelbelmont.com.    60    IN    A    104.28.24.116
+marcelbelmont.com.    60    IN    A    104.28.25.116
+</code></pre>
+<h6 id="to-find-the-dns-records-for-my-personal-website">To find the DNS Records for my personal website</h6>
+<pre><code class="lang-bash">&gt; dig marcelbelmont.com NS +noall +answer
+
+; &lt;&lt;&gt;&gt; DiG 9.10.3-P4-Debian &lt;&lt;&gt;&gt; marcelbelmont.com NS +noall +answer
+;; global options: +cmd
+marcelbelmont.com.    60    IN    NS    marek.ns.cloudflare.com.
+marcelbelmont.com.    60    IN    NS    adi.ns.cloudflare.com.
+</code></pre>
+<h6 id="to-find-the-configured-full-ttl-value-you-need-to-query-one-of-the-dns-servers-obtained-by-the-command-above">To find the configured full TTL value you need to query one of the DNS servers obtained by the command above.</h6>
+<pre><code class="lang-bash">&gt; dig +noauthority +noquestion +nostats marcelbelmont.com @marek.ns.cloudflare.com
+</code></pre>
+<h4 id="telnet-command-description">telnet command description</h4>
+<p>telnet connect destination host:port via a telnet protocol if connection establishes means connectivity between two hosts is working fine.</p>
+<p><code>telnet</code> &#x2014; user interface to the TELNET protocol</p>
+<p>The telnet command is used for interactive communication with another host using the TELNET protocol. It begins in command mode, where it prints a telnet prompt (&quot;telnet&gt; &quot;). If telnet is invoked with a host argument, it performs an open command implicitly.</p>
+<h4 id="telnet-command-options">telnet command options</h4>
+<p>List of <code>telnet</code> options:</p>
+<ul>
+<li><p><code>-4</code> Force IPv4 address resolution.</p>
+</li>
+<li><p><code>-6</code> Force IPv6 address resolution.</p>
+</li>
+<li><p><code>-8</code> Request 8-bit operation. This causes an attempt to negotiate the TELNET BINARY option for both input and output.</p>
+</li>
+<li><p><code>-E</code> Disables the escape character functionality; that is, sets the escape character to no character.</p>
+</li>
+<li><p><code>-L</code> Specifies an 8-bit data path on output.  This causes the TELNET BINARY option to be negotiated on just output.</p>
+</li>
+<li><p><code>-a</code> Attempt automatic login.  Currently, this sends the user name via the USER variable of the NEW-ENVIRON option if supported by the remote system. The username is retrieved via getlogin.</p>
+</li>
+</ul>
+<h4 id="telnet-command-examples">telnet command examples</h4>
+<h6 id="connecting-to-twittercom">Connecting to twitter.com</h6>
+<pre><code class="lang-bash">telnet twitter.com 80
+Trying 104.244.42.129...
+Connected to twitter.com.
+Escape character is <span class="hljs-string">&apos;^]&apos;</span>.
+^]
+Connection closed by foreign host.
+</code></pre>
+<h2 id="filesystem-commands">FileSystem Commands</h2>
+<p>There are some common commands used for managing disk partitions in Linux and to display file system information.</p>
+<h4 id="mountumount-command-description">mount|umount command description</h4>
+<p><code>mount</code> - mount a filesystem</p>
+<p>All  files  accessible  in a Unix system are arranged in one big tree, the file hierarchy, rooted at /.  </p>
+<p>These files can be spread out over several devices.  The mount command serves to attach the filesystem found on some device to  the  big  file  tree.   </p>
+<p>Conversely, the <code>umount</code> command will detach it again.</p>
+<h6 id="umount-description">umount description</h6>
+<p><code>umount</code> - unmount file systems</p>
+<p>The umount command detaches the mentioned file system(s) from the file hierarchy.  A file system is specified by giving the directory where it has been mounted.  </p>
+<p>Giving the special device on which the file system lives may also work, but is  obsolete,  mainly because it will fail in case this device was mounted on more than one directory.</p>
+<h4 id="mountunmount-command-options">mount|unmount command options</h4>
+<p>List of <code>mount</code> command options:</p>
+<ul>
+<li><p><code>-a</code>, <code>--all</code></p>
+<ul>
+<li><p>Mount all filesystems (of the given types) mentioned in fstab (except for those whose line contains  the  noauto  keyword). The filesystems are mounted following their order in fstab.</p>
+</li>
+<li><p>Note that it is a bad practice to use mount -a for fstab checking. The recommended solution is findmnt --verify.</p>
+</li>
+</ul>
+</li>
+<li><p><code>-B</code>, <code>--bind</code></p>
+<ul>
+<li>Remount a subtree somewhere else (so that its contents are available in both places).  See above, under Bind mounts.</li>
+</ul>
+</li>
+<li><p><code>-c</code>, <code>--no-canonicalize</code></p>
+<ul>
+<li>Don&apos;t  canonicalize paths.  The mount command canonicalizes all paths (from command line or fstab) by default.  This option
+can be used together with the -f flag for already canonicalized absolute paths.  The option is designed for  mount  helpers
+which call mount -i.  It is strongly recommended to not use this command-line option for normal mount operations.</li>
+</ul>
+</li>
+<li><p><code>-F</code>, <code>--fork</code>
+  (Used  in conjunction with -a.)  Fork off a new incarnation of mount for each device.  This will do the mounts on different
+  devices or different NFS servers in parallel.  This has the advantage that it is faster; also NFS timeouts go in  parallel.
+  A  disadvantage is that the mounts are done in undefined order.  Thus, you cannot use this option if you want to mount both
+  /usr and /usr/spool.</p>
+</li>
+<li><p><code>-f</code>, <code>--fake</code>
+  Causes everything to be done except for the actual system call; if it&apos;s not obvious, this ``fakes&apos;&apos; mounting  the  filesys&#x2010;
+  tem.   This  option  is useful in conjunction with the -v flag to determine what the mount command is trying to do.  It can
+  also be used to add entries for devices that were mounted earlier with the -n option.  The -f option checks for an existing
+  record in /etc/mtab and fails when the record already exists (with a regular non-fake mount, this check is done by the ker&#x2010;
+  nel).</p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man8/mount.8.html" target="_blank">mount man page</a></p>
+<h4 id="mountumount-command-examples">mount|umount command examples</h4>
+<h6 id="show-mounted-drives">Show mounted drives</h6>
+<pre><code class="lang-bash">&gt; mount
+sysfs on /sys <span class="hljs-built_in">type</span> sysfs (rw,nosuid,nodev,noexec,relatime)
+proc on /proc <span class="hljs-built_in">type</span> proc (rw,nosuid,nodev,noexec,relatime)
+udev on /dev <span class="hljs-built_in">type</span> devtmpfs (rw,nosuid,relatime,size=498244k,nr_inodes=124561,mode=755)
+devpts on /dev/pts <span class="hljs-built_in">type</span> devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=000)
+tmpfs on /run <span class="hljs-built_in">type</span> tmpfs (rw,nosuid,noexec,relatime,size=101848k,mode=755)
+/dev/xvda1 on / <span class="hljs-built_in">type</span> ext4 (rw,relatime,discard,errors=remount-ro,data=ordered)
+securityfs on /sys/kernel/security <span class="hljs-built_in">type</span> securityfs (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev/shm <span class="hljs-built_in">type</span> tmpfs (rw,nosuid,nodev)
+tmpfs on /run/lock <span class="hljs-built_in">type</span> tmpfs (rw,nosuid,nodev,noexec,relatime,size=5120k)
+tmpfs on /sys/fs/cgroup <span class="hljs-built_in">type</span> tmpfs (ro,nosuid,nodev,noexec,mode=755)
+cgroup on /sys/fs/cgroup/systemd <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,xattr,release_agent=/lib/systemd/systemd-cgroups-agent,name=systemd)
+pstore on /sys/fs/pstore <span class="hljs-built_in">type</span> pstore (rw,nosuid,nodev,noexec,relatime)
+cgroup on /sys/fs/cgroup/perf_event <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,perf_event)
+cgroup on /sys/fs/cgroup/net_cls,net_prio <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,net_cls,net_prio)
+cgroup on /sys/fs/cgroup/cpu,cpuacct <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,cpu,cpuacct)
+cgroup on /sys/fs/cgroup/blkio <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,blkio)
+cgroup on /sys/fs/cgroup/freezer <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,freezer)
+cgroup on /sys/fs/cgroup/devices <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,devices)
+cgroup on /sys/fs/cgroup/memory <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,memory)
+cgroup on /sys/fs/cgroup/cpuset <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,cpuset)
+cgroup on /sys/fs/cgroup/pids <span class="hljs-built_in">type</span> cgroup (rw,nosuid,nodev,noexec,relatime,pids)
+systemd-1 on /proc/sys/fs/binfmt_misc <span class="hljs-built_in">type</span> autofs (rw,relatime,fd=28,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=9476)
+hugetlbfs on /dev/hugepages <span class="hljs-built_in">type</span> hugetlbfs (rw,relatime)
+mqueue on /dev/mqueue <span class="hljs-built_in">type</span> mqueue (rw,relatime)
+debugfs on /sys/kernel/debug <span class="hljs-built_in">type</span> debugfs (rw,relatime)
+tmpfs on /run/user/1000 <span class="hljs-built_in">type</span> tmpfs (rw,nosuid,nodev,relatime,size=101844k,mode=700,uid=1000,gid=1000)
+</code></pre>
+<h6 id="mount-a-new-folder-to-a-device">Mount a new folder to a device</h6>
+<pre><code class="lang-bash">mkdir /data
+mount /dev/xvda1 /data
+</code></pre>
+<p>Then we can grep to see this new mount point like this:</p>
+<pre><code class="lang-bash">mount | grep <span class="hljs-string">&quot;xvda1&quot;</span>
+/dev/xvda1 on / <span class="hljs-built_in">type</span> ext4 (rw,relatime,discard,errors=remount-ro,data=ordered)
+/dev/xvda1 on /data <span class="hljs-built_in">type</span> ext4 (rw,relatime,discard,errors=remount-ro,data=ordered)
+</code></pre>
+<h6 id="unmount-new-mounted-drive">Unmount new mounted drive</h6>
+<pre><code class="lang-bash">&gt; umount /dev/xvda1
+&gt; mount | grep <span class="hljs-string">&quot;xvda1&quot;</span>
+/dev/xvda1 on / <span class="hljs-built_in">type</span> ext4 (rw,relatime,discard,errors=remount-ro,data=ordered)
+</code></pre>
+<p><em>Notice that now the mount does not have /data mount anymore</em></p>
+<h4 id="fstab-command-description">fstab command description</h4>
+<p><code>fstab</code> - static information about the filesystems</p>
+<p>The  file <code>fstab</code> contains descriptive information about the filesystems the system can mount.  </p>
+<p>fstab is only read by programs, and not written; it is the duty of the system administrator to properly create and maintain this file.  </p>
+<p><em>The order of records in  fstab is important because fsck, mount, and umount sequentially iterate through fstab doing their thing.</em></p>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="http://man7.org/linux/man-pages/man5/fstab.5.html" target="_blank">fstab man page</a></p>
+<h4 id="fstab-file-example">fstab file example</h4>
+<pre><code class="lang-bash"><span class="hljs-comment"># /etc/fstab: static file system information.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># &lt;file sys&gt;    &lt;mount point&gt;    &lt;type&gt;    &lt;options&gt;    &lt;dump&gt;    &lt;pass&gt;</span>
+
+<span class="hljs-comment"># device during installation: /dev/loop0p1</span>
+UUID=1d1c745e-7ded-4d3a-8c53-236b2793db16    /    ext4    rw,discard,errors=remount-ro    0    1
+</code></pre>
+<h4 id="tune2fs-command-description">tune2fs command description</h4>
+<p><code>tune2fs</code> - adjust tunable filesystem parameters on ext2/ext3/ext4 filesystems</p>
+<p><code>tune2fs</code> allows the system administrator to adjust various tunable filesystem parameters on Linux ext2, ext3, or ext4 filesystems.</p>
+<p>The current values of these options can be displayed by using the -l option to tune2fs program, or by using the <code>dumpe2fs</code> program.</p>
+<h4 id="tune2fs-command-options">tune2fs command options</h4>
+<p>List of <code>tune2fs</code> command options:</p>
+<ul>
+<li><p><code>-c</code> max-mount-counts</p>
+<ul>
+<li>Adjust the number of mounts after which the filesystem will be checked by e2fsck(8).  If max-mount-counts is 0 or  -1, the number of times the filesystem is mounted will be disregarded by e2fsck(8) and the kernel.</li>
+</ul>
+</li>
+<li><p><code>-C</code> mount-count</p>
+<ul>
+<li>Set the number of times the filesystem has been mounted.  If set to a greater value than the max-mount-counts parameter set
+by the -c option, e2fsck will check the filesystem at the next reboot.</li>
+</ul>
+</li>
+<li><p><code>-e</code> error-behavior
+  Change  the behavior of the kernel code when errors are detected.  In all cases, a filesystem error will cause e2fsck(8) to
+  check the filesystem on the next boot.  error-behavior can be one of the following:</p>
+<ul>
+<li><p>continue    Continue normal execution.</p>
+</li>
+<li><p>remount-ro  Remount filesystem read-only.</p>
+</li>
+<li><p>panic       Cause a kernel panic.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options
+at <a href="https://linux.die.net/man/8/tune2fs" target="_blank">tune2fs man page</a></p>
+<h4 id="tune2fs-command-examples">tune2fs command examples</h4>
+<h6 id="get-the-age-of-a-linux-system">Get the age of a Linux System</h6>
+<pre><code class="lang-bash">tune2fs <span class="hljs-_">-l</span> /dev/sda1 | grep created
+</code></pre>
+<h2 id="bread-crumb-navigation">Bread Crumb Navigation</h2>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="find-and-replace-patterns">Find and Replace Patterns</a></td>
+<td style="text-align:right"><a href="../">README</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="find-and-replace-patterns.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Find and Replace Patterns">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"System Administration Commands","level":"1.27","depth":1,"previous":{"title":"Find and Replace Patterns","level":"1.26","depth":1,"path":"docs/find-and-replace-patterns.md","ref":"docs/find-and-replace-patterns.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/system-administration-commands.md","mtime":"2019-09-10T15:33:09.700Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

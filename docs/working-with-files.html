@@ -1,0 +1,1705 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Working with Files · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="remote-file-sharing-and-file-access.html" />
+    
+    
+    <link rel="prev" href="signal-handling.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Working with Files</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---working-with-files">Unix Programming and Regular Expressions Workshop - Working with Files</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#ls-command-description">ls Command Description</a></li>
+<li><a href="#ls-command-options">ls Command Options</a></li>
+<li><a href="#ls-command-examples">ls Command Examples</a></li>
+<li><a href="#touch-command-description">touch Command Description</a></li>
+<li><a href="#touch-command-options">touch Command Options</a></li>
+<li><a href="#touch-command-examples">touch Command Examples</a></li>
+<li><a href="#df-command-description">df Command Description</a></li>
+<li><a href="#df-command-options">df Command Options</a></li>
+<li><a href="#df-command-examples">df Command Examples</a></li>
+<li><a href="#du-command-description">du Command Description</a></li>
+<li><a href="#du-command-options">du Command Options</a></li>
+<li><a href="#du-command-examples">du Command Examples</a></li>
+<li><a href="#mkdir-command-description">mkdir Command Description</a></li>
+<li><a href="#mkdir-command-options">mkdir Command Options</a></li>
+<li><a href="#rmdir-command-description">rmdir Command Description</a></li>
+<li><a href="#rmdir-command-options">rmdir Command Options</a></li>
+<li><a href="#rm%5C,-rmdir%5C,-mkdir-command-examples">rm, rmdir, mkdir Command Examples</a></li>
+<li><a href="#cmp-command-description">cmp Command Description</a></li>
+<li><a href="#temporary-files-tips">Temporary Files Tips</a></li>
+<li><a href="#mktemp-command-description">mktemp Command Description</a></li>
+<li><a href="#file-permissions">File Permissions</a></li>
+<li><a href="#chmod-command-description">chmod Command Description</a></li>
+<li><a href="#chmod-command-options">chmod Command Options</a></li>
+<li><a href="#chmod-command-examples">chmod Command Examples</a></li>
+<li><a href="#umask-command-options">umask Command Options</a></li>
+<li><a href="#umask-command-examples">umask Command Examples</a></li>
+<li><a href="#umask-command-examples">umask Command Examples</a></li>
+<li><a href="#chown-command-options">chown Command Options</a></li>
+<li><a href="#chown-command-examples">chown Command Examples</a></li>
+<li><a href="#chown-command-examples">chown Command Examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="ls-command-description">ls Command Description</h4>
+<p>For each operand that names a file of a type other than directory, ls displays its name as well as any requested, associated information.</p>
+<p>For each operand that names a file of type directory, ls displays the names of files contained within that directory, as well as any requested, associated information.</p>
+<p>ls -- list directory contents</p>
+<p>ls [-ABCFGHLOPRSTUW@abcdefghiklmnopqrstuwx1] [file ...]</p>
+<p>If no operands are given, the contents of the current directory are displayed.  If more than one operand is given, non-directory operands are displayed first; directory and non-directory operands are sorted separately and in lexicographical order.</p>
+<h4 id="ls-command-options">ls Command Options</h4>
+<p>Mandatory arguments to long options are mandatory for short options too.</p>
+<p>Common ls options:</p>
+<ul>
+<li><p><code>-1</code> Force output to be one entry per line.  This is the default when output is not to a terminal.</p>
+</li>
+<li><p><code>-a</code> Include directory entries whose names begin with a dot (.).</p>
+</li>
+<li><p><code>-d</code> Directories are listed as plain files (not searched recursively).</p>
+</li>
+<li><p><code>-l</code> Provide a more detailed listing</p>
+</li>
+<li><p><code>-r</code> Reverse the order of the sort to get reverse lexicographical order or the oldest    </p>
+<ul>
+<li>entries first (or largest files last, if combined with sort by size</li>
+</ul>
+</li>
+<li><p><code>-t</code> Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.</p>
+</li>
+<li><p><code>-R</code> Recursively list subdirectories encountered.</p>
+</li>
+</ul>
+<p>Please Read the Fine Manual for more options by running <code>man ls</code></p>
+<h4 id="ls-command-examples">ls Command Examples</h4>
+<pre><code class="lang-bash">ls -ltr
+total 44
+-rw-r--r--   1 marcelbelmont  1076 Oct  1 22:12 LICENSE
+-rw-r--r--   1 marcelbelmont  1290 Oct  5 19:49 package.json
+drwxr-xr-x 363 marcelbelmont 12342 Oct  5 19:50 node_modules
+-rw-r--r--   1 marcelbelmont   110 Oct 14 19:02 book.json
+drwxr-xr-x   5 marcelbelmont   170 Oct 14 19:48 object-files
+drwxr-xr-x  36 marcelbelmont  1224 Oct 18 14:08 data
+-rw-r--r--   1 marcelbelmont  1254 Oct 29 12:40 SUMMARY.md
+drwxr-xr-x  13 marcelbelmont   442 Oct 29 18:06 images
+-rw-r--r--   1 marcelbelmont 11271 Oct 29 18:07 CONTRIBUTING.md
+drwxr-xr-x  22 marcelbelmont   748 Nov 11 15:18 docs
+-rw-r--r--   1 marcelbelmont    93 Nov 11 15:18 TEST.md
+drwxr-xr-x  21 marcelbelmont   714 Nov 11 16:42 scripts
+-rw-r--r--   1 marcelbelmont  9228 Nov 12 10:38 README.md
+drwxr-xr-x  18 marcelbelmont   612 Nov 12 10:39 _book
+</code></pre>
+<p>Notice here that the <code>ls</code> command printed a detailed listing of the directory by the time modified and printed in reverse order all the files in the current directory</p>
+<pre><code class="lang-bash">ls -R scripts/shell-functions
+</code></pre>
+<p>Here we use the <code>-R</code> flag which recursively prints out any subdirectories in a directory</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-a</span>
+.   .git     .gitignore       LICENSE     SUMMARY.md  _book    data  images        object-files  scripts
+..  .github  CONTRIBUTING.md  README.md  TEST.md     book.json    docs  node_modules  package.json
+</code></pre>
+<p>The <code>-a</code> flag will print out any hidden files/directories that starts with <code>.</code></p>
+<pre><code class="lang-bash">ls working-with-fields
+bank_statement.sh
+</code></pre>
+<pre><code class="lang-bash">ls <span class="hljs-_">-d</span> working-with-fields
+working-with-fields
+</code></pre>
+<p>Notice the difference between ls and ls -d, <code>ls -d</code> prints out directory as a plain file instead of the contents of the working-with-fields directory</p>
+<p>The touch command is useful with the <code>make</code> utility and specifically for bootstrapping programs in linux distributions</p>
+<pre><code class="lang-bash">ls -ld /tmp
+lrwxr-xr-x 1 root 11 May 24 14:27 /tmp -&gt; private/tmp
+</code></pre>
+<p>Notice in this example we have the <code>-&gt;</code> which indicates that /tmp is a symbolic link to <code>private/tmp</code></p>
+<h4 id="touch-command-description">touch Command Description</h4>
+<p>The touch utility sets the modification and access times of files.<br>If any file does not exist, it is created with default permissions.</p>
+<p>By default, touch changes both modification and access times.  </p>
+<p>The -a and -m flags may be used to select the access time or the modification time individually.</p>
+<p>Selecting both is equivalent to the default.  By default, the timestamps are set to the current time.  </p>
+<p>The -t flag explicitly specifies a different time, and the -r flag specifies to set the times those of the specified file.  </p>
+<p>The -A flag adjusts the values by a specified amount.</p>
+<h4 id="touch-command-options">touch Command Options</h4>
+<p><code>touch</code> command options:</p>
+<ul>
+<li><p><code>-a</code> change only the access time</p>
+</li>
+<li><p><code>-c</code>, <code>--no-create</code></p>
+<ul>
+<li>do not create any files</li>
+</ul>
+</li>
+<li><p><code>-d</code>, <code>--date=STRING</code></p>
+<ul>
+<li>parse STRING and use it instead of current time</li>
+</ul>
+</li>
+<li><p><code>-f</code> (ignored)</p>
+</li>
+<li><p><code>-h</code>, <code>--no-dereference</code></p>
+<ul>
+<li>affect each symbolic link instead of any referenced file (useful only on systems that can change the timestamps of a symlink)</li>
+</ul>
+</li>
+<li><p><code>-m</code>     change only the modification time</p>
+</li>
+<li><p><code>-r</code>, <code>--reference=FILE</code></p>
+<ul>
+<li>use this file&apos;s times instead of current time</li>
+</ul>
+</li>
+<li><p><code>-t</code> STAMP</p>
+<ul>
+<li>use [[CC]YY]MMDDhhmm[.ss] instead of current time</li>
+</ul>
+</li>
+</ul>
+<h4 id="touch-command-examples">touch Command Examples</h4>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> scripts/working-with-files
+</code></pre>
+<p>Here we <strong>cd</strong> into working-with-files directory to begin work</p>
+<pre><code class="lang-bash">touch file1
+</code></pre>
+<p>Here we create a file called file1</p>
+<pre><code class="lang-bash">touch file2 file3 file4
+</code></pre>
+<p>Here we create multiple files using the <code>touch</code> command</p>
+<pre><code class="lang-bash">vi file1
+</code></pre>
+<p>make some edits to file1</p>
+<pre><code class="lang-bash">touch <span class="hljs-_">-a</span> file1
+</code></pre>
+<p>update access time to file1</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> file1
+</code></pre>
+<p>You should see a new updated modification time</p>
+<pre><code class="lang-bash">ls
+</code></pre>
+<p>Look at the contents of the directory</p>
+<pre><code class="lang-bash">touch -c file5
+</code></pre>
+<p>Notice here that file5 will not be created because it is a new file</p>
+<pre><code class="lang-bash">touch -m file2
+</code></pre>
+<p>Here we update the modification time of file2</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> file2
+</code></pre>
+<p>Now we confirm that the modification time has been updated</p>
+<p>Remember the -t option:</p>
+<p>CC      The first two digits of the year (the century).
+YY      The second two digits of the year.  If <code>YY</code> is specified, but <code>CC</code> is not, 
+      a value for <code>YY</code> between 69 and 99 results in a <code>CC</code> value of 19.<br>      Otherwise, a <code>CC</code> value of 20 is used.
+MM      The month of the year, from 01 to 12.
+DD      the day of the month, from 01 to 31.
+hh      The hour of the day, from 00 to 23.
+mm      The minute of the hour, from 00 to 59.
+SS      The second of the minute, from 00 to 61.</p>
+<pre><code class="lang-bash">touch file5
+</code></pre>
+<p>Here we create file5 because it must exist before we modify the time it was created</p>
+<pre><code class="lang-bash">touch -c -t 2010030915 file5
+</code></pre>
+<p>Here we set the new date to be as follows:</p>
+<p>Year: 2020
+Month: 10 (October)
+Day: 03
+Hour: 09
+Minute: 15</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span>
+</code></pre>
+<p>Here we confirm that it has been updated</p>
+<pre><code class="lang-bash">touch -r file1 file5
+</code></pre>
+<p>Here we use file1&apos;s access and modification time instead of what file5 already has as the time</p>
+<h4 id="df-command-description">df Command Description</h4>
+<p>The df utility displays statistics about the amount of free disk space on the specified filesystem or on the filesystem of which file is a part.  </p>
+<p>Values are displayed in 512-byte per block counts.  </p>
+<p>If neither a file or a filesystem operand is specified, statistics for all mounted filesystems are displayed (subject to the -t option below).</p>
+<p>df -- display free disk space</p>
+<p>Historically The df command has used different size blocks for example 512 vs 1024</p>
+<p>Also the header format of the printed table has historically been different like for example multiple lines</p>
+<h4 id="df-command-options">df Command Options</h4>
+<p><code>df</code> command options:</p>
+<ul>
+<li><p><code>-a</code>, <code>--all</code></p>
+<ul>
+<li>include pseudo, duplicate, inaccessible file systems</li>
+</ul>
+</li>
+<li><p><code>-B</code>, <code>--block-size=SIZE</code></p>
+<ul>
+<li>scale sizes by SIZE before printing them; e.g., &apos;-BM&apos; prints sizes in units of 1,048,576 bytes; see SIZE format below</li>
+</ul>
+</li>
+<li><p><code>-h</code>, <code>--human-readable</code></p>
+<ul>
+<li>print sizes in powers of 1024 (e.g., 1023M)</li>
+</ul>
+</li>
+<li><p><code>-H</code>, <code>--si</code></p>
+<ul>
+<li>print sizes in powers of 1000 (e.g., 1.1G)</li>
+</ul>
+</li>
+<li><p><code>-i</code>, <code>--inodes</code></p>
+<ul>
+<li>list inode information instead of block usage</li>
+</ul>
+</li>
+<li><p><code>-k</code> like --block-size=1K</p>
+</li>
+<li><p><code>-l</code>, <code>--local</code></p>
+<ul>
+<li>limit listing to local file systems</li>
+</ul>
+</li>
+<li><p><code>--no-sync</code></p>
+<ul>
+<li>do not invoke sync before getting usage info (default)</li>
+</ul>
+</li>
+<li><p><code>--output[=FIELD_LIST]</code></p>
+<ul>
+<li>use the output format defined by FIELD_LIST, or print all fields if FIELD_LIST is omitted.</li>
+</ul>
+</li>
+<li><p><code>-P</code>, <code>--portability</code></p>
+<ul>
+<li>use the POSIX output format</li>
+</ul>
+</li>
+<li><p><code>--sync</code> invoke sync before getting usage info</p>
+</li>
+<li><p><code>--total</code></p>
+<ul>
+<li>elide all entries insignificant to available space, and produce a grand total</li>
+</ul>
+</li>
+<li><p><code>-t</code>, <code>--type=TYPE</code></p>
+</li>
+<li><p><code>-T</code>, <code>--print-type</code></p>
+<ul>
+<li>print file system type</li>
+</ul>
+</li>
+<li><p><code>-x</code>, <code>--exclude-type=TYPE</code></p>
+<ul>
+<li>limit listing to file systems not of type TYPE</li>
+</ul>
+</li>
+<li><p><code>-v</code> (ignored)</p>
+</li>
+<li><p><code>--help</code> display this help and exit</p>
+</li>
+<li><p><code>--version</code></p>
+<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="df-command-examples">df Command Examples</h4>
+<pre><code class="lang-bash">df
+</code></pre>
+<p>This will print out a table of disk free statistics like this</p>
+<p>Filesystem     1K-blocks      Used Available Use% Mounted on
+/dev/disk1     484696704 224577476 259863228  47% /
+kbfs@kbfuse0   262144000         0 262144000   0% /keybase</p>
+<pre><code class="lang-bash">df -P
+</code></pre>
+<p>Will print out a table in POSIX format</p>
+<p>Filesystem     1024-blocks      Used Available Capacity Mounted on
+/dev/disk1       484696704 224578156 259862548      47% /
+kbfs@kbfuse0     262144000         0 262144000       0% /keybase</p>
+<p>Notice here that it printed out A capacity column and has 1024-blocks column instead of 1K-blocks</p>
+<pre><code class="lang-bash">df -i
+</code></pre>
+<p>This command prints out free i nodes in the system</p>
+<p>Filesystem         Inodes   IUsed      IFree IUse% Mounted on
+/dev/disk1     4294967279 6197229 4288770050    1% /</p>
+<h4 id="du-command-description">du Command Description</h4>
+<p>Summarize disk usage of the set of FILEs, recursively for directories.</p>
+<p>du - estimate file space usage</p>
+<p>The <code>du</code> command shows disk usage of files and directory trees</p>
+<p>The <code>du</code> command recursively shows file and directory information</p>
+<p>The <code>du</code> command only shows hard-linked files once</p>
+<p>The <code>du</code> command does not follow symbolic links but instead counts the space of the symbolic link</p>
+<p>The POSIX default for the <code>du</code> command is to use 512-byte blocks</p>
+<p>That being said many systems default to 1024-byte blocks instead of following the POSIX because it is much easier to use and understand 1024 byte blocks</p>
+<h4 id="du-command-options">du Command Options</h4>
+<p><code>du</code> command options:</p>
+<ul>
+<li><p><code>-0</code>, <code>--null</code></p>
+<ul>
+<li>end each output line with NUL, not newline</li>
+</ul>
+</li>
+<li><p><code>-a</code>, <code>--all</code></p>
+<ul>
+<li>write counts for all files, not just directories</li>
+</ul>
+</li>
+<li><p><code>--apparent-size</code></p>
+<ul>
+<li>print  apparent  sizes,  rather than disk usage; although the apparent size is usually smaller, it may be larger due to holes in (&apos;sparse&apos;) files, internal fragmentation, indirect blocks, and the like</li>
+</ul>
+</li>
+<li><p><code>-B</code>, <code>--block-size=SIZE</code></p>
+<ul>
+<li>scale sizes by SIZE before printing them; e.g., &apos;-BM&apos; prints sizes in units of 1,048,576 bytes; see SIZE format below</li>
+</ul>
+</li>
+<li><p><code>-b</code>, <code>--bytes</code></p>
+<ul>
+<li>equivalent to &apos;--apparent-size --block-size=1&apos;</li>
+</ul>
+</li>
+<li><p><code>-c</code>, <code>--total</code></p>
+<ul>
+<li>produce a grand total</li>
+</ul>
+</li>
+<li><p><code>-D</code>, <code>--dereference-args</code></p>
+<ul>
+<li>dereference only symlinks that are listed on the command line</li>
+</ul>
+</li>
+<li><p><code>-d</code>, <code>--max-depth=N</code></p>
+<ul>
+<li>print the total for a directory (or file, with --all) only if it  is  N  or  fewer  levels  below  the  command  line  argument; --max-depth=0 is the same as --summarize</li>
+</ul>
+</li>
+<li><p><code>--files0-from=F</code></p>
+<ul>
+<li>summarize disk usage of the NUL-terminated file names specified in file F; if F is -, then read names from standard input</li>
+</ul>
+</li>
+<li><p><code>-H</code> equivalent to --dereference-args (-D)</p>
+</li>
+<li><p><code>-h</code>, <code>--human-readable</code></p>
+<ul>
+<li>print sizes in human readable format (e.g., 1K 234M 2G)</li>
+</ul>
+</li>
+<li><p><code>--inodes</code></p>
+<ul>
+<li>list inode usage information instead of block usage</li>
+</ul>
+</li>
+<li><p><code>-k</code> like --block-size=1K</p>
+</li>
+<li><p><code>-L</code>, <code>--dereference</code></p>
+<ul>
+<li>dereference all symbolic links</li>
+</ul>
+</li>
+<li><p><code>-l</code>, <code>--count-links</code></p>
+<ul>
+<li>count sizes many times if hard linked</li>
+</ul>
+</li>
+<li><p><code>-m</code> like --block-size=1M</p>
+</li>
+<li><p><code>-P</code>, <code>--no-dereference</code></p>
+<ul>
+<li>don&apos;t follow any symbolic links (this is the default)</li>
+</ul>
+</li>
+<li><p><code>-S</code>, <code>--separate-dirs</code></p>
+<ul>
+<li>for directories do not include size of subdirectories</li>
+</ul>
+</li>
+<li><p><code>--si</code> like <code>-h</code>, but use powers of 1000 not 1024</p>
+</li>
+<li><p><code>-s</code>, <code>--summarize</code></p>
+<ul>
+<li>display only a total for each argument</li>
+</ul>
+</li>
+<li><p><code>-t</code>, <code>--threshold=SIZE</code></p>
+</li>
+</ul>
+<p>Read the Fine Manual for more options</p>
+<h4 id="du-command-examples">du Command Examples</h4>
+<pre><code class="lang-bash">mkdir dir1 dir2
+</code></pre>
+<p>Here we create 2 directories <em>dir1</em> <em>dir2</em></p>
+<pre><code class="lang-bash"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> dir1/file1 dir1/file2 dir2/file1 dir2/file2
+  <span class="hljs-keyword">do</span> <span class="hljs-built_in">echo</span> this is <span class="hljs-variable">$i</span> &gt; <span class="hljs-variable">$i</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>Here we create files file1 and file2 in both dir1 and dir2 directories and put <code>this is dir1/file1</code> etc into each file</p>
+<pre><code class="lang-bash">du <span class="hljs-_">-s</span> *
+</code></pre>
+<p>The <code>-s</code> option displays an entry for each specified file.  (Equivalent to -d 0)</p>
+<p>8    dir1
+8    dir2
+4    file1
+0    file2
+0    file3
+0    file4
+0    file5
+0    program.sh</p>
+<p>Using <code>-s</code> is most useful in shell scripts</p>
+<pre><code class="lang-bash">du <span class="hljs-_">-a</span> *
+</code></pre>
+<p>Here we get the following difference using the <code>-a</code> option which is to <em>display an entry for each file in a file hierarchy.</em></p>
+<p>4    dir1/file1
+4    dir1/file2
+8    dir1
+4    dir2/file1
+4    dir2/file2
+8    dir2
+4    file1
+0    file2
+0    file3
+0    file4
+0    file5
+0    program.sh</p>
+<h4 id="mkdir-command-description">mkdir Command Description</h4>
+<p>The mkdir utility creates the directories named as operands, in the order specified, using mode rwxrwxrwx (0777) as modified by the current umask.</p>
+<p>mkdir - make directories</p>
+<h4 id="mkdir-command-options">mkdir Command Options</h4>
+<ul>
+<li><p><code>-m</code>, <code>--mode=MODE</code></p>
+<ul>
+<li>set file mode (as in chmod), not a=rwx - umask</li>
+</ul>
+</li>
+<li><p><code>-p</code>, <code>--parents</code></p>
+<ul>
+<li>no error if existing, make parent directories as needed</li>
+</ul>
+</li>
+<li><p><code>-v</code>, <code>--verbose</code></p>
+<ul>
+<li>print a message for each created directory</li>
+</ul>
+</li>
+<li><p><code>-Z</code> set SELinux security context of each created directory to the default type</p>
+</li>
+<li><p><code>--context[=CTX]</code></p>
+<ul>
+<li>like -Z, or if CTX is specified then set the SELinux or SMACK security context to CTX</li>
+</ul>
+</li>
+<li><p><code>--help</code> display this help and exit</p>
+</li>
+<li><p><code>--version</code></p>
+<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="rmdir-command-description">rmdir Command Description</h4>
+<p>The rmdir utility removes the directory entry specified by each directory argument, provided it is empty.</p>
+<p>Arguments are processed in the order given.  </p>
+<p>In order to remove both a parent directory and a subdirectory of that parent, the subdirectory must be specified first so the parent directory is empty when rmdir tries to remove it.</p>
+<h4 id="rmdir-command-options">rmdir Command Options</h4>
+<p><code>rmdir</code> command options:</p>
+<ul>
+<li><p><code>--ignore-fail-on-non-empty</code></p>
+<ul>
+<li>ignore each failure that is solely because a directory is non-empty</li>
+</ul>
+</li>
+<li><p><code>-p</code>, <code>--parents</code></p>
+<ul>
+<li>remove DIRECTORY and its ancestors; e.g., &apos;rmdir -p a/b/c&apos; is similar to &apos;rmdir a/b/c a/b a&apos;</li>
+</ul>
+</li>
+<li><p><code>-v</code>, <code>--verbose</code></p>
+<ul>
+<li>output a diagnostic for every directory processed</li>
+</ul>
+</li>
+<li><p><code>--help</code> display this help and exit</p>
+</li>
+<li><p><code>--version</code></p>
+<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="rm-command-description">rm Command Description</h4>
+<p>The rm utility attempts to remove the non-directory type files specified on the command line.  If the permissions of the file do not permit writing, and the standard input device is a terminal, the user is prompted (on the standard error output) for confirmation.</p>
+<p>rm, unlink -- remove directory entries</p>
+<h4 id="rm-command-options">rm Command Options</h4>
+<p><code>rm</code> command options:</p>
+<ul>
+<li><p><code>-f</code>, <code>--force</code></p>
+<ul>
+<li>ignore nonexistent files and arguments, never prompt</li>
+</ul>
+</li>
+<li><p><code>-i</code> prompt before every removal</p>
+</li>
+<li><p><code>-I</code>  prompt once before removing more than three files, or when removing recursively; less intrusive than -i, while still giving protection against most mistakes</p>
+</li>
+<li><p><code>--interactive[=WHEN]</code></p>
+<ul>
+<li>prompt according to WHEN: never, once (-I), or always (-i); without WHEN, prompt always</li>
+</ul>
+</li>
+<li><p><code>--one-file-system</code></p>
+<ul>
+<li>when removing a hierarchy recursively, skip any directory that is on a file system different from that of the corresponding command line argument</li>
+</ul>
+</li>
+<li><p><code>--no-preserve-root</code></p>
+<ul>
+<li>do not treat &apos;/&apos; specially</li>
+</ul>
+</li>
+<li><p><code>--preserve-root</code></p>
+<ul>
+<li>do not remove &apos;/&apos; (default)</li>
+</ul>
+</li>
+<li><p><code>-r</code>, <code>-R</code>, <code>--recursive</code></p>
+<ul>
+<li>remove directories and their contents recursively</li>
+</ul>
+</li>
+<li><p><code>-d</code>, <code>--dir</code></p>
+<ul>
+<li>remove empty directories</li>
+</ul>
+</li>
+<li><p><code>-v</code>, <code>--verbose</code></p>
+<ul>
+<li>explain what is being done</li>
+</ul>
+</li>
+<li><p><code>--help</code> display this help and exit</p>
+</li>
+<li><p><code>--version</code></p>
+<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="rm-rmdir-mkdir-command-examples">rm, rmdir, mkdir Command Examples</h4>
+<pre><code class="lang-bash">mkdir -vp dir3/subdir1/subsubdir2
+</code></pre>
+<p>Here we create the following directory tree structure:</p>
+<p>dir3:
+  subdir1:
+    subsubdir2</p>
+<p>The <code>-p</code> flag will create the intermediate directories and the <code>-v</code> will print out the directories created</p>
+<pre><code class="lang-bash">rmdir dir3/subdir1/subsubdir2
+</code></pre>
+<p>Here we remove the empty folder <strong>subsubdir2</strong> directory</p>
+<pre><code class="lang-bash">rm -rf dir3/subdir1
+</code></pre>
+<p>This command forcibly removes subdir1 and recursively any files inside of subdir1</p>
+<h4 id="cmp-command-description">cmp Command Description</h4>
+<p>cmp - compare two files byte by byte</p>
+<p>cmp [OPTION]... FILE1 [FILE2 [SKIP1 [SKIP2]]]</p>
+<p>The optional SKIP1 and SKIP2 specify the number of bytes to skip at the beginning of each file (zero by default).</p>
+<p>The <code>cmp</code> command compares two files and has exit status of zero if the 2 files are identical</p>
+<p>if the files are identical
+  then there is no output 
+else 
+  cmp will print out the line and character of the first byte that differs and then it exits</p>
+<h4 id="cmp-command-options">cmp Command Options</h4>
+<p><code>cmp</code> command options:</p>
+<ul>
+<li><p><code>-b</code>, <code>--print-bytes</code></p>
+<ul>
+<li>print differing bytes</li>
+</ul>
+</li>
+<li><p><code>-i</code>, <code>--ignore-initial=SKIP</code></p>
+<ul>
+<li>skip first SKIP bytes of both inputs</li>
+</ul>
+</li>
+<li><p><code>-i</code>, <code>--ignore-initial=SKIP1:SKIP2</code></p>
+<ul>
+<li>skip first SKIP1 bytes of FILE1 and first SKIP2 bytes of FILE2</li>
+</ul>
+</li>
+<li><p><code>-l</code>, <code>--verbose</code></p>
+<ul>
+<li>output byte numbers and differing byte values</li>
+</ul>
+</li>
+<li><p><code>-n</code>, <code>--bytes=LIMIT</code></p>
+<ul>
+<li>compare at most LIMIT bytes</li>
+</ul>
+</li>
+<li><p><code>-s</code>, <code>--quiet</code>, <code>--silent</code></p>
+<ul>
+<li>suppress all normal output</li>
+</ul>
+</li>
+<li><p><code>--help</code> display this help and exit</p>
+</li>
+<li><p><code>-v</code>, <code>--version</code></p>
+<ul>
+<li>output version information and exit</li>
+</ul>
+</li>
+</ul>
+<h4 id="temporary-files-tips">Temporary Files Tips</h4>
+<p>As a convention use the shell variable <code>$TMPDIR</code> to override the default location for temp files in <code>/tmp</code></p>
+<p>Make sure to use trap on EXIT pseudo code to clean up your temporary files as</p>
+<p>Also try to use <code>umask 077</code> so that only the current running user can read files that are created by your shell script</p>
+<p>A common technique for creating temporary files that are unique is the following pattern</p>
+<p><strong>/tmp/someprogram.$$</strong></p>
+<p>Remember that <code>$$</code> is the current process id number</p>
+<p>However there is security problems with using this technique</p>
+<p>Here are the following security issues with that technique:</p>
+<ul>
+<li><p>The filenames created are easily guessable by an attacker who can use this pattern to have system use malicious script created by him/her</p>
+</li>
+<li><p>The temporary files created in this manner can cause a program failure</p>
+</li>
+<li><p>The temporary files can feed your program false data or other unwanted content</p>
+</li>
+</ul>
+<p>The temporary filenames you create need to be both random and long</p>
+<p>To solve all of these issues just use the <code>mktemp</code> command</p>
+<h4 id="mktemp-command-description">mktemp Command Description</h4>
+<p>mktemp -- make temporary file name (unique)</p>
+<p>The mktemp utility takes each of the given file name templates and overwrites a portion of it to create a file name.  This file name is unique and suitable for use by the application.  </p>
+<p>The template may be any file name with some number of <code>Xs</code> appended to it, for example /tmp/temp.XXXX.<br>The trailing <code>Xs</code> are replaced with the current process number and/or a unique letter combination.  </p>
+<p>The number of unique file names mktemp can return depends on the number of <code>Xs</code> provided; six <code>Xs</code> will result in mktemp selecting 1 of 56800235584 (62 ** 6) possible file names.  </p>
+<p>On case-insensitive file systems, the effective number of unique names is significantly less; given six <code>Xs</code>, mktemp will instead select 1 of 2176782336 (36 ** 6) possible unique file names.</p>
+<p>If mktemp can successfully generate a unique file name, the file is created with mode 0600 (unless the -u flag is given) and the filename is printed to standard output.</p>
+<p>The mktemp utility is provided to allow shell scripts to safely use temporary files.  </p>
+<p>Traditionally, many shell scripts take the name of the program with the pid as a suffix and use that as a temporary file name.  </p>
+<p>This kind of naming scheme is predictable and the race condition it creates is easy for an attacker to win.  </p>
+<p>A safer, though still inferior, approach is to make a temporary directory using the same naming scheme. </p>
+<p>While this does allow one to guarantee that a temporary file will not be subverted, it still  allows a simple denial of service attack.  </p>
+<p>For these reasons it is suggested that mktemp be used instead.</p>
+<p>If no template is provided then <code>mktemp</code> provides a default template</p>
+<h4 id="mktemp-command-options">mktemp Command Options</h4>
+<p><code>mktemp</code> command options:</p>
+<ul>
+<li><p><code>-d</code> Make a directory instead of a file.</p>
+</li>
+<li><p><code>-q</code> Fail silently if an error occurs.  This is useful if a script does not want error output to go to standard error.</p>
+</li>
+<li><p><code>-t</code> prefix</p>
+<ul>
+<li>Generate a template (using the supplied prefix and TMPDIR if set) to create a filename template.</li>
+</ul>
+</li>
+<li><p><code>-u</code> Operate in <code>unsafe</code> mode.  </p>
+<ul>
+<li>The temp file will be unlinked before mktemp exits.  </li>
+<li>This is slightly better than mktemp but still introduces a race condition.  </li>
+<li>Use of this option is not encouraged.</li>
+</ul>
+</li>
+</ul>
+<h4 id="mktemp-command-examples">mktemp Command Examples</h4>
+<pre><code class="lang-bash">cmp line1 line2
+</code></pre>
+<p>Here we compare line1 and line2 which are identical</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>Here we check the exit status of the <code>cmp</code> command which returns 0 meaning the 2 files are identical</p>
+<pre><code class="lang-bash">cmp line1 line3
+</code></pre>
+<p>Here the 2 files are different so we get this output</p>
+<p>line1 line3 differ: char 1, line 1</p>
+<pre><code class="lang-bash">cmp /etc/passwd /etc/group
+</code></pre>
+<p>Here the files /etc/passwd and /etc/group differ as well like this:</p>
+<p><strong>/etc/passwd /etc/group differ: char 6, line 2</strong></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>The exit status here is 1 meaning the files differ</p>
+<pre><code class="lang-bash">cmp <span class="hljs-_">-l</span> line1 line3
+</code></pre>
+<p>Here we compare line1 and line3 using <code>-l</code> for long listing output showing the differences on each byte</p>
+<pre><code class="lang-bash">cmp <span class="hljs-_">-s</span> line1 line3
+</code></pre>
+<p>Here we use the <code>-s</code> option to suppress the output</p>
+<p>When this is done in a shell script normally you check the exit status</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> $?
+</code></pre>
+<p>This will output 1</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/sh
+</span>
+<span class="hljs-comment">## Here we trap the command when pseudo EXIT signal is given so that we cleanup temp files that were created</span>
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&apos;rm -f $tmpfile $tmpfile2&apos;</span> EXIT
+
+tmpfile=<span class="hljs-variable">${TMPDIR:-/tmp}</span>/someprogram.$$
+
+<span class="hljs-built_in">echo</span> Here is a simple line &gt; <span class="hljs-variable">$tmpfile</span>
+
+ls <span class="hljs-_">-l</span> <span class="hljs-variable">$tmpfile</span>
+<span class="hljs-built_in">echo</span>
+cat <span class="hljs-variable">$tmpfile</span>
+
+<span class="hljs-built_in">echo</span>
+
+<span class="hljs-built_in">umask</span> 077
+tmpfile2=<span class="hljs-variable">${TMPDIR:-/tmp}</span>/someprogram.$$.2
+
+<span class="hljs-built_in">echo</span> Another line to write here &gt; <span class="hljs-variable">$tmpfile2</span>
+
+ls <span class="hljs-_">-l</span> <span class="hljs-variable">$tmpfile2</span>
+
+<span class="hljs-built_in">echo</span> 
+
+cat <span class="hljs-variable">$tmpfile2</span>
+</code></pre>
+<p>Remember this parameter expansion assignment <code>${var:-word}</code> Its purpose is to return if a variable is not defined</p>
+<p>Here we are creating a temporary file using the common but vulnerable naming scheme we mentioned previously</p>
+<pre><code class="lang-bash">./temp-files.sh
+
+-rw-r--r-- 1 marcelbelmont staff 22 Nov 12 20:55 /var/folders/s4/szxqn65j3tz89r6c5z786x2m0000gn/T//someprogram.57340
+
+Here is a simple line
+
+-rw------- 1 marcelbelmont staff 27 Nov 12 20:55 /var/folders/s4/szxqn65j3tz89r6c5z786x2m0000gn/T//someprogram.57340.2
+</code></pre>
+<p>Here we are using umask instead of chmod because we are setting the permission bits in creation time for tmpfile2</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+<span class="hljs-comment"># Run trap for cleanup no matter what</span>
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&apos;rm -f $tmpfile&apos;</span> EXIT
+
+tmpfile=$(mktemp -p /tmp someprogram.XXXXXXXXXXX) || <span class="hljs-built_in">exit</span> 1
+
+<span class="hljs-built_in">echo</span> Here is some data again &gt; <span class="hljs-variable">$tmpfile</span>
+
+ls <span class="hljs-_">-l</span> <span class="hljs-variable">$tmpfile</span>
+
+<span class="hljs-built_in">echo</span>
+
+cat <span class="hljs-variable">$tmpfile</span>
+</code></pre>
+<p>The difference in this script is that we are using the mktemp utility</p>
+<p>Here is the output of this shell script:</p>
+<pre><code class="lang-bash">-rw------- 1 marcelbelmont wheel 24 Nov 12 21:27 /tmp/someprogram.OaZPcfjZ6oc
+
+Here is some data again
+</code></pre>
+<p>Notice that mktemp entered random symbols for the <code>XXXXX</code> placeholder</p>
+<p>Also notice that we didn&apos;t have to use <code>umask</code> because <code>mktemp</code> set the proper security permissions for us</p>
+<pre><code class="lang-bash"><span class="hljs-meta">#! /bin/bash
+</span>
+<span class="hljs-built_in">trap</span> <span class="hljs-string">&apos;rm -f $tmpfile&apos;</span> EXIT
+
+tmpfile=$(mktemp -p /dev anotherprogram.XXXX) || <span class="hljs-built_in">exit</span> 1
+
+<span class="hljs-built_in">echo</span> Some data here <span class="hljs-keyword">for</span> a file &gt; <span class="hljs-variable">$tmpfile</span>
+
+ls <span class="hljs-_">-l</span> <span class="hljs-variable">$tmpfile</span>
+
+<span class="hljs-built_in">echo</span> 
+
+cat <span class="hljs-variable">$tmpfile</span>
+</code></pre>
+<p>Here we try to run <code>mktemp</code> on the <code>/dev</code> directory but it is not a writable directory so this will fail with this error </p>
+<p><strong>mktemp: failed to create file via template &#x2018;/dev/anotherprogram.XXXX&#x2019;: Permission denied</strong></p>
+<h4 id="file-permissions">File Permissions</h4>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span>
+total 24
+-rwxrwxrwx 1 marcelbelmont   0 Nov 14 17:15 bad-practice.txt
+-rw-r--r-- 1 marcelbelmont  15 Nov 12 20:08 line1
+-rw-r--r-- 1 marcelbelmont  15 Nov 12 20:08 line2
+-rw-r--r-- 1 marcelbelmont  31 Nov 12 20:11 line3
+-rw-r--r-- 1 marcelbelmont   0 Oct  5 09:17 program.sh
+drwxrwxrwx 3 marcelbelmont 102 Nov 14 17:20 really-bad-directory
+-rw-r-Sr-- 1 marcelbelmont   0 Nov 14 17:07 stick-bit.txt
+-rwSr--r-- 1 marcelbelmont   0 Nov 14 17:09 stick-bit.txt2
+-rwsr-sr-x 1 marcelbelmont   0 Nov 14 17:09 stick-bit.txt3
+-rwxr-xr-x 1 marcelbelmont 178 Nov 12 21:24 temp-files-with-mktemp-version2.sh
+-rwxr-xr-x 1 marcelbelmont 217 Nov 12 21:22 temp-files-with-mktemp.sh
+-rwxr-xr-x 1 marcelbelmont 305 Nov 12 20:53 temp-files.sh
+</code></pre>
+<p>You can see file Permission Bits in the following <code>ls</code> command above in the root of the repository</p>
+<p>There are 3 specific types of file permissions:</p>
+<ol>
+<li><p><strong>read</strong> </p>
+<ol>
+<li>The read permission grants the ability to read a file. When set for a directory, this permission grants the ability to read the names of files in the directory, but not to find out any further information about them such as contents, file type, size, ownership, permissions.</li>
+</ol>
+</li>
+<li><p><strong>write</strong></p>
+<ol>
+<li>The write permission grants the ability to modify a file. When set for a directory, this permission grants the ability to modify entries in the directory. This includes creating files, deleting files, and renaming files.</li>
+</ol>
+</li>
+<li><p><strong>execute</strong></p>
+<ol>
+<li>The execute permission grants the ability to execute a file. This permission must be set for executable programs, including shell scripts, in order to allow the operating system to run them. When set for a directory, the execute permission is interpreted as the search permission: it grants the ability to access file contents and meta-information if its name is known, but not list files inside the directory, unless read is set also.</li>
+</ol>
+</li>
+</ol>
+<p>Notice that there are 10 entries</p>
+<table>
+<thead>
+<tr>
+<th>Directory</th>
+<th>User</th>
+<th>Group</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>XXX</td>
+<td>XXX</td>
+<td>XXX</td>
+</tr>
+<tr>
+<td>This First Character Indicates the File Type (i.e File or Directory)</td>
+<td>what the user/owner can do</td>
+<td>what the group members can do</td>
+<td>what other users can do</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> scripts/working-with-files
+</code></pre>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> bad-practice.txt
+-rwxrwxrwx 1 marcelbelmont 0 Nov 14 17:15 bad-practice.txt
+</code></pre>
+<p>Notice here the order for XXX =&gt; r (read) w (write) x (execute)</p>
+<pre><code class="lang-bash">drwxrwxrwx 3 marcelbelmont 102 Nov 14 17:20 really-bad-directory
+</code></pre>
+<p>Here is a directory that has read, write, execute for owner/user, group, and others</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Name</th>
+<th>Octal Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>read</td>
+<td>4</td>
+<td>read a file or list a directory&apos;s contents</td>
+</tr>
+<tr>
+<td>w</td>
+<td>write</td>
+<td>2</td>
+<td>write to a file or directory</td>
+</tr>
+<tr>
+<td>x</td>
+<td>execute</td>
+<td>1</td>
+<td>execute a file or recurse a directory tree</td>
+</tr>
+<tr>
+<td>X</td>
+<td>special execute</td>
+<td>--</td>
+<td>It applies execute permissions to directories regardless of their current permissions and applies execute permissions to a file which already has at least one execute permission bit already set</td>
+</tr>
+<tr>
+<td>s</td>
+<td>setuid/gid</td>
+<td>--</td>
+<td>The symbolic modes use s to represent the setuid and setgid modes</td>
+</tr>
+<tr>
+<td>t</td>
+<td>sticky</td>
+<td>--</td>
+<td>When a directory&apos;s sticky bit is set, the filesystem treats the files in such directories in a special way so only the file&apos;s owner, the directory&apos;s owner, or root user can rename or delete the file</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-bash">chmod +t stick-bit.txt
+</code></pre>
+<p>Here we set the sticky bit for the user</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> stick-bit.txt
+-rw-r-Sr-T 1 marcelbelmont 0 Nov 14 17:07 stick-bit.txt
+</code></pre>
+<p>Notice here that we have a T at the end of the triad which is the sticky bit</p>
+<p>A trick to remembering how to add octal values</p>
+<p>_  _  _</p>
+<p>4    2   1</p>
+<p>The first <code>_</code> has 4 which stands for read permission</p>
+<p>The second <code>_</code> has 2 which stands for write permission</p>
+<p>The third <code>_</code> has 1 which stands for execute permission</p>
+<p>If you add up 4 + 2 you get read and write Permission = 6</p>
+<p>If you add up 4 + 1 you get read and execute Permission = 5</p>
+<p>If you add up 2 + 1 you get write and execute permission = 3</p>
+<p>If you add up 4 + 2 + 1 you get read, write, and execute permission = 7</p>
+<h4 id="chmod-command-description">chmod Command Description</h4>
+<p>chmod -- change file modes or Access Control Lists</p>
+<p>The chmod utility modifies the file mode bits of the listed files as specified by the mode operand. It may also be used to modify the Access Control Lists (ACLs) associated with the listed files.</p>
+<p>chmod [-fv] [-R [-H | -L | -P]] mode file ...
+chmod [-fv] [-R [-H | -L | -P]] [-a | +a | =a] ACE file ...
+chmod [-fhv] [-R [-H | -L | -P]] [-E] file ...
+chmod [-fhv] [-R [-H | -L | -P]] [-C] file ...
+chmod [-fhv] [-R [-H | -L | -P]] [-N] file ...</p>
+<h4 id="chmod-command-options">chmod Command Options</h4>
+<p><code>chmod</code> command options:</p>
+<ul>
+<li><p><code>-f</code> Do not display a diagnostic message if chmod could not modify the mode for file.</p>
+</li>
+<li><p><code>-H</code> If the <code>-R</code> option is specified, symbolic links on the command line are followed.  (Symbolic links encountered in the tree traversal are not followed by default.)</p>
+</li>
+<li><p><code>-h</code> If the file is a symbolic link, change the mode of the link itself rather than the file that the link points to.</p>
+</li>
+<li><p><code>-L</code> If the <code>-R</code> option is specified, all symbolic links are followed.</p>
+</li>
+<li><p><code>-P</code> If the <code>-R</code> option is specified, no symbolic links are followed.  This is the default.</p>
+</li>
+<li><p><code>-R</code> Change the modes of the file hierarchies rooted in the files instead of just the files themselves.</p>
+</li>
+<li><p><code>-v</code> Cause chmod to be verbose, showing filenames as the mode is modified.  If the -v flag is specified more than once, the old and new modes of the file will also be printed, in both octal and symbolic notation.</p>
+</li>
+</ul>
+<h4 id="chmod-command-examples">chmod Command Examples</h4>
+<pre><code class="lang-bash">chmod a+r permissions.txt
+</code></pre>
+<p>Here we give read permission for users, groups, and others using the <code>a</code></p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> permissions.txt
+-rw-r--r-- 1 marcelbelmont 0 Nov 14 17:37 permissions.txt
+</code></pre>
+<p>We confirm with this with the following <code>ls -l permissions.txt</code> command</p>
+<pre><code class="lang-bash">chmod ugo-r permissions.txt
+</code></pre>
+<p>Here we remove read permission for users, groups, and others using <code>-</code> instead of <code>+</code></p>
+<pre><code class="lang-bash">chmod 444 permissions.txt
+</code></pre>
+<p>Here we give read permission using octal value 4 to users, groups, and others</p>
+<pre><code class="lang-bash">chmod a-r permissions.txt
+</code></pre>
+<p>Here we remove read permission for users, groups, and others</p>
+<pre><code class="lang-bash">chmod +r permissions.txt
+</code></pre>
+<p>Here we give users read permission but no one else</p>
+<pre><code class="lang-bash">chmod -r permissions.txt
+</code></pre>
+<p>Here we remove read permission for everyone</p>
+<pre><code class="lang-bash">chmod u=rwx,g=rx,o= permissions.txt
+</code></pre>
+<p>Here we give user =&gt; read, write, execute, group =&gt; read, execute, other: none</p>
+<pre><code class="lang-bash">chmod -R u+w,go-w really-bad-directory
+</code></pre>
+<p>Here we use <code>-R</code> flag and recursively go done directory structure and add the following permissions:</p>
+<p>User =&gt; write
+Group and Other =&gt; remove write permission</p>
+<pre><code class="lang-bash">chmod 0722 permissions.txt
+</code></pre>
+<p>Here we explicitly set no special modes denoted by <code>0</code> and give user=rwx, go=w</p>
+<pre><code class="lang-bash">chmod 1755 permissions.txt
+</code></pre>
+<p>Here we set the sticky bit denoted by <code>1</code> and give user=rwx,go=rx</p>
+<pre><code class="lang-bash">chmod -R u+rwX,g-rwx,o-rx really-bad-directory
+</code></pre>
+<p>Here we Recursively adds read, write, and special execution permissions for owner, remove read, write, and execution permissions for group, and remove read and execution permissions for others</p>
+<p>Also notice we used a capital <code>X</code> here instead of lowercase <code>x</code></p>
+<h4 id="umask-command-description">umask Command Description</h4>
+<p>Display or set file mode mask.</p>
+<p>Sets the user file-creation mask to MODE.  </p>
+<p>If MODE is omitted, prints the current value of the mask.</p>
+<p>If MODE begins with a digit, it is interpreted as an octal number, otherwise it is a symbolic mode string like that accepted by chmod</p>
+<p>umask entails only new files. </p>
+<p>umask sets the default permissions that a file/directory will have on creation time.</p>
+<p>umask has no effect on existing files/directories</p>
+<h4 id="umask-command-options">umask Command Options</h4>
+<p><code>umask</code> command options:</p>
+<ul>
+<li><code>-p</code>    if MODE is omitted, output in a form that may be reused as input</li>
+<li><code>-S</code>    makes the output symbolic; otherwise an octal number is output</li>
+</ul>
+<h4 id="umask-command-examples">umask Command Examples</h4>
+<pre><code class="lang-bash"><span class="hljs-built_in">umask</span>
+022
+</code></pre>
+<p>Here it prints out the default file permissions that will get added in creation time</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">umask</span> -S
+u=rwx,g=rx,o=rx
+</code></pre>
+<p>Notice that in octal values that is 755 meaning users =&gt; read (r), write (w), execute (x), groups =&gt; read (r), execute (x), others =&gt; read (r), execute (x)</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">umask</span> 000
+</code></pre>
+<p>Here we allow read, write, and execute permission for all (potential security risk)</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">umask</span> 777
+</code></pre>
+<p>Here we disallow read, write, and execute permission for all</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">umask</span> u=rw,go=
+</code></pre>
+<p>Here we allow read and write permission to be enabled for the user, while prohibiting execute permission from being enabled for the owner; prohibit enabling any permissions for the group and others</p>
+<h4 id="chown-command-description">chown Command Description</h4>
+<p>chown - change file owner and group</p>
+<p>This  manual  page  documents the GNU version of chown.  chown changes the user and/or group ownership of each given file.  </p>
+<p>If only an owner (a user name or numeric user ID) is given, that user is made the owner of each given file, and the files&apos; group is not  changed.</p>
+<p>If  the  owner  is followed by a colon and a group name (or numeric group ID), with no spaces between them, the group ownership of the files is changed as well.  </p>
+<p>If a colon but no group name follows the user name, that user is made the owner of the files and the group of the files is changed to that user&apos;s login group.  </p>
+<p>If the colon and group are given, but the owner is omitted, only the group of the files is changed; in this case, chown performs the same function as chgrp.  </p>
+<p>If only a colon is given, or if the entire operand is empty, neither the owner nor the group is changed.</p>
+<h4 id="chown-command-options">chown Command Options</h4>
+<p><code>chown</code> command options:</p>
+<ul>
+<li><p><code>-c</code>, <code>--changes</code></p>
+<ul>
+<li>like verbose but report only when a change is made</li>
+</ul>
+</li>
+<li><p><code>-f</code>, <code>--silent</code>, <code>--quiet</code></p>
+<ul>
+<li>suppress most error messages</li>
+</ul>
+</li>
+<li><p><code>-v</code>, <code>--verbose</code></p>
+<ul>
+<li>output a diagnostic for every file processed</li>
+</ul>
+</li>
+<li><p><code>--dereference</code></p>
+<ul>
+<li>affect the referent of each symbolic link (this is the default), rather than the symbolic link itself</li>
+</ul>
+</li>
+<li><p><code>-h</code>, <code>--no-dereference</code></p>
+<ul>
+<li>affect symbolic links instead of any referenced file (useful only on systems that can change the ownership of a symlink)</li>
+</ul>
+</li>
+<li><p><code>--from=CURRENT_OWNER:CURRENT_GROUP</code></p>
+<ul>
+<li>change the owner and/or group of each file only if its current owner and/or group match those specified here.   </li>
+<li>Either may be omitted, in which case a match is not required for the omitted attribute</li>
+</ul>
+</li>
+<li><p><code>--no-preserve-root</code></p>
+<ul>
+<li>do not treat &apos;/&apos; specially (the default)</li>
+</ul>
+</li>
+<li><p><code>--preserve-root</code></p>
+<ul>
+<li>fail to operate recursively on &apos;/&apos;</li>
+</ul>
+</li>
+<li><p><code>--reference=RFILE</code></p>
+<ul>
+<li>use RFILE&apos;s owner and group rather than specifying OWNER:GROUP values</li>
+</ul>
+</li>
+<li><p><code>-R</code>, <code>--recursive</code></p>
+<ul>
+<li>operate on files and directories recursively</li>
+</ul>
+</li>
+</ul>
+<p>The  following  options modify how a hierarchy is traversed when the -R option is also specified.  </p>
+<p>If more than one is specified, only  dthe final one takes effect.</p>
+<ul>
+<li><p><code>-H</code> if a command line argument is a symbolic link to a directory, traverse it</p>
+</li>
+<li><p><code>-L</code> traverse every symbolic link to a directory encountered</p>
+</li>
+<li><p><code>-P</code> do not traverse any symbolic links (default)</p>
+</li>
+<li><p><code>--help</code> display this help and exit</p>
+</li>
+<li><p><code>--version</code> output version information and exit</p>
+</li>
+</ul>
+<h4 id="chown-command-examples">chown Command Examples</h4>
+<pre><code class="lang-bash">sudo chown root chown-practice.txt
+</code></pre>
+<p>Here we set ownership to <em>chown-practice.txt</em> to root using sudo privileges</p>
+<pre><code class="lang-bash">sudo chown marcelbelmont:wheel chown-practice.txt
+</code></pre>
+<p>Here we explicitly set chown-practice.txt to user marcelbelmont and to group wheel</p>
+<pre><code class="lang-bash">ls <span class="hljs-_">-l</span> chown-practice.txt
+-rw-r--r-- 1 marcelbelmont wheel 0 Nov 14 18:22 chown-practice.txt
+</code></pre>
+<p>I had to get into bash subshell to see because my oh my zsh shell wasn&apos;t showing it</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="signal-handling.html">Signal Handling</a></td>
+<td style="text-align:right"><a href="remote-file-sharing-and-file-access.html">Remote File Sharing and File Access</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="signal-handling.html" class="navigation navigation-prev " aria-label="Previous page: Signal Handling">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="remote-file-sharing-and-file-access.html" class="navigation navigation-next " aria-label="Next page: Remote File Sharing and File Access">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Working with Files","level":"1.19","depth":1,"next":{"title":"Remote File Sharing and File Access","level":"1.20","depth":1,"path":"docs/remote-file-sharing-and-file-access.md","ref":"docs/remote-file-sharing-and-file-access.md","articles":[]},"previous":{"title":"Signal Handling","level":"1.18","depth":1,"path":"docs/signal-handling.md","ref":"docs/signal-handling.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/working-with-files.md","mtime":"2018-11-22T17:17:35.913Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

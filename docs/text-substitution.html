@@ -1,0 +1,796 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Text Substitution · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="filename-expansions-and-globbing.html" />
+    
+    
+    <link rel="prev" href="text-searching.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Text Substitution</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---text-substitution">Unix Programming and Regular Expressions Workshop - Text Substitution</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#what-is-sed">What is Sed</a></li>
+<li><a href="#commandline-options-to-sed">Commandline Options to Sed</a></li>
+<li><a href="#basic-sed-usage">Basic Sed Usage</a></li>
+<li><a href="#sed-command-structure">Sed command structure</a></li>
+<li><a href="#substitute-command-structure">Substitute command structure</a></li>
+<li><a href="#substitute-and-replacement-text">Substitute and Replacement text</a></li>
+<li><a href="#substitute-flags">Substitute Flags</a></li>
+<li><a href="#sed-examples">Sed Examples</a></li>
+<li><a href="#best-practices-for-sed">Best Practices for Sed</a></li>
+<li><a href="#exercises">Exercises</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="what-is-sed">What is Sed</h4>
+<p><a href="https://en.wikipedia.org/wiki/Sed" target="_blank">Sed</a> (stream editor) is a Unix utility that parses and transforms text, using a simple, compact programming language.</p>
+<p>Sed was developed by <a href="https://en.wikipedia.org/wiki/Lee_E._McMahon" target="_blank">Lee McMahon</a> in 1974.</p>
+<p>Sed was the one of the first tools that supported regular expressions</p>
+<p>The sed utility reads the specified files, or the standard input if no files are specified, modifying the input as specified by a list of commands.  </p>
+<p>The input is then written to the standard output.</p>
+<ul>
+<li><p>Sed can get input from command line files and/or standard input</p>
+</li>
+<li><p>Sed can use editing command from the command line and/or script</p>
+</li>
+<li><p>Sed outputs to standard output but original input files are changed</p>
+</li>
+<li><p>You can edit a file in place if you use <code>-i</code> option which will create a backup file and then edit file in place</p>
+</li>
+</ul>
+<h4 id="commandline-options-to-sed">Commandline Options to Sed</h4>
+<p>The following options are available:</p>
+<ul>
+<li><p><code>-E</code> Interpret regular expressions as extended (modern) regular expressions rather than basic regular expressions (BRE&apos;s).</p>
+<ul>
+<li><code>-r</code> can be used in gnu sed</li>
+</ul>
+</li>
+<li><p><code>-a</code> The files listed as parameters for the <code>w</code> functions are created (or truncated) before any processing begins, by default.  </p>
+<ul>
+<li>The * -a option causes sed to delay opening each file until a command containing the related ``w&apos;&apos; function is applied to a line of input.</li>
+</ul>
+</li>
+<li><p>-e command</p>
+<ul>
+<li>Append the editing commands specified by the command argument to the list of commands.</li>
+</ul>
+</li>
+<li><p>-f command_file</p>
+<ul>
+<li>Append the editing commands found in the file command_file to the list of commands.  </li>
+<li>The editing commands should each be listed on a separate line.</li>
+</ul>
+</li>
+<li><p>-i extension</p>
+<ul>
+<li>Edit files in* -place, saving backups with the specified extension.  </li>
+<li>If a zero* -length extension is given, no backup will be saved.</li>
+<li>It is not recommended to give a zero<em> -length extension when in</em> -place editing files,  as you risk corruption or partial content in situations where disk space is exhausted, etc.</li>
+</ul>
+</li>
+<li><p>-l Make output line buffered.</p>
+</li>
+<li><p>-n By default, each line of input is echoed to the standard output after all of the commands have been applied to it.  The * -n option suppresses this behavior.</p>
+</li>
+</ul>
+<p>You can mix <code>-e</code> and <code>-f</code> options together</p>
+<p>If you don&apos;t provide options then first command line argument is the script</p>
+<h4 id="basic-sed-usage">Basic Sed Usage</h4>
+<p><a href="https://www.gnu.org/software/sed/manual/sed.html#Overview" target="_blank">Sed Manual</a></p>
+<p><em>sed [-Ealn] [-e command] [-f command_file] [-i extension] [file ...]</em></p>
+<p>Although <code>sed</code> has a large command set be wary of writing unwieldy scripts as they will be hard to read for others</p>
+<p>The primary command is <code>&quot;s&quot;</code> (substitute) that does text replacements</p>
+<h4 id="sed-command-structure">Sed command structure</h4>
+<ul>
+<li><p><address> <command> [ <operands> [ <flags> ] ]</flags></operands></address></p>
+</li>
+<li><p><code>&lt;address&gt;</code></p>
+<ul>
+<li>one or two line numbers and use <code>$</code> to mean last line</li>
+<li>Pattern to match aka basic regular expression</li>
+</ul>
+</li>
+<li><p><code>&lt;command&gt;</code></p>
+<ul>
+<li>A single letter: <code>s</code> and <code>p</code> are most useful</li>
+</ul>
+</li>
+<li><p><code>&lt;operands&gt;</code></p>
+<ul>
+<li>In particular for <code>s</code> is the pattern to match and replacement text</li>
+<li>Other commands can take other operands</li>
+</ul>
+</li>
+<li><p><code>&lt;flags&gt;</code></p>
+<ul>
+<li>Flags serve as modifiers for <code>s</code> command</li>
+</ul>
+</li>
+</ul>
+<h4 id="substitute-command-structure">Substitute command structure</h4>
+<p><strong>s  /  pattern  / replacement  / [flags]</strong></p>
+<p>The delimiter can be any punctuation character but the <code>/</code> is the most common delimiter</p>
+<ul>
+<li><p>Use <code>\/</code> in pattern or replacement for real <code>/</code> (forward slash) or another delimiter</p>
+</li>
+<li><p><code>pattern</code> is a basic regular expression</p>
+</li>
+<li><p><code>replacement</code> is the text to replace the matched input text</p>
+</li>
+<li><p>Flags are optional modifiers</p>
+</li>
+</ul>
+<h4 id="substitute-and-replacement-text">Substitute and Replacement text</h4>
+<p>Replacement text can be:</p>
+<ul>
+<li><p><code>Empty</code> which means the matched text is deleted</p>
+</li>
+<li><p><code>Plain Text</code> which means matched text is replaced by contents of plain text</p>
+</li>
+<li><p><code>&amp;</code> which means the text matching the pattern</p>
+<ul>
+<li><code>echo you are the man | sed &apos;s/you are the/&amp; goat/g&apos;</code><ul>
+<li>Notice in this example the <code>&amp;</code> was used as replacement text for the pattern text used</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code>\&amp;</code> means a real <code>&amp;</code></p>
+</li>
+<li><p><code>\1</code> through <code>\9</code> is for text matched in <code>\(....\)</code> in the BRE (basic regular expression)</p>
+</li>
+<li><p><code>\\</code> means a real <code>\</code> backslash</p>
+</li>
+</ul>
+<h4 id="substitute-flags">Substitute Flags</h4>
+<ul>
+<li><p>An optional flags will modify the behavior of the <code>s</code> command</p>
+</li>
+<li><p>The default behavior of substitution is to only replace the first occurrence</p>
+</li>
+</ul>
+<p>Portable flags to use across various flavors of <code>sed</code>:</p>
+<ul>
+<li><p><code>g</code> flag will replace every match on the input line</p>
+</li>
+<li><p><code>1, 2, 3, 4, 5</code> or <code>nth</code> digit replace the nth occurrence</p>
+</li>
+<li><p><code>i</code> will ignore case but only works in <code>gnu</code> sed</p>
+</li>
+</ul>
+<h4 id="sed-examples">Sed Examples</h4>
+<h6 id="examples-with-s">Examples with <code>s</code></h6>
+<pre><code class="lang-bash">$ grep <span class="hljs-string">&apos;2017-08-22&apos;</span> data/aapl.csv | sed <span class="hljs-string">&apos;s/,.*//&apos;</span>
+</code></pre>
+<p>Notice in this example we use grep to find the date <code>2017-08-22</code> and then pipe output to sed and remove everything after the comma</p>
+<pre><code class="lang-bash">$ sed <span class="hljs-string">&apos;s/Liam/Frank/g&apos;</span> data/top-10-baby-names-2016.txt | sed <span class="hljs-string">&apos;s/Charlotte/Katy/g&apos;</span>
+</code></pre>
+<p>In this example we use sed to replace the baby name <code>Liam</code> with <code>Frank</code> and then pipe that as stdin to replace <code>Charlotte</code> into <code>Katy</code></p>
+<pre><code class="lang-bash">$ sed <span class="hljs-string">&apos;s/Liam/Frank/g&apos;</span> data/top-10-baby-names-2016.txt | sed <span class="hljs-string">&apos;/Charlotte/d&apos;</span>
+</code></pre>
+<p>This example changed Liam to Frank and then deleted the line for Charlotte</p>
+<pre><code class="lang-bash">$ sed <span class="hljs-string">&apos;s/^/      /g&apos;</span> data/numbers.txt
+</code></pre>
+<p>This example prepends 8 spaces to beginning of line in numbers.txt</p>
+<h6 id="examples-for-filtering-text">Examples for filtering text</h6>
+<pre><code class="lang-bash">$ sed -n <span class="hljs-string">&apos;/Jacob/p&apos;</span> data/top-10-baby-names-2016.txt &gt; data/jacob.txt
+</code></pre>
+<p>This example suppresses all output except matched text and prints it to stdout and then creates file called <code>jacob.txt</code></p>
+<p>There is a many more examples of sed usage this is just a sample.</p>
+<h4 id="best-practices-for-sed">Best practices for Sed:</h4>
+<ul>
+<li><p>The longest, left-most matching basic regular expressions is critical for proper sed usage</p>
+</li>
+<li><p>Use basic regular expressions over extended regular expressions and only use simple sed commands for portability and readability</p>
+</li>
+<li><p>Make sure to use edit commands on the sed command line to make sustainable scripts</p>
+</li>
+<li><p>sed is mainly used for text substitutions</p>
+</li>
+<li><p>sed is used a lot in scripts with pattern matching and text replacement or deletion of text via substitution</p>
+</li>
+<li><p>sed is often used in the middle of shell pipelines to transform data</p>
+</li>
+</ul>
+<h4 id="exercises">Exercises</h4>
+<p>Using sed find all the occurrences of <em>fries</em> in the &apos;data/orders.txt&apos; file and replace with French Fries</p>
+<p>One Possible Solution:</p>
+<details>
+  <pre>
+    sed &apos;s/Fries/French Fries/g&apos; data/orders.txt
+  </pre>
+</details>
+
+<p>Using sed delete the first row in the file <code>data/orders.txt</code></p>
+<p>One Possible Solution:</p>
+<details>
+  <pre>
+    sed &apos;/^ID/d&apos; data/orders.txt
+  </pre>
+</details>
+
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="text-searching.html">Text Searching</a></td>
+<td style="text-align:right"><a href="filename-expansions-and-globbing.html">Filename expansions and globbing</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="text-searching.html" class="navigation navigation-prev " aria-label="Previous page: Text Searching">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="filename-expansions-and-globbing.html" class="navigation navigation-next " aria-label="Next page: Filename expansions and globbing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Text Substitution","level":"1.5","depth":1,"next":{"title":"Filename expansions and globbing","level":"1.6","depth":1,"path":"docs/filename-expansions-and-globbing.md","ref":"docs/filename-expansions-and-globbing.md","articles":[]},"previous":{"title":"Text Searching","level":"1.4","depth":1,"path":"docs/text-searching.md","ref":"docs/text-searching.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/text-substitution.md","mtime":"2018-11-22T17:17:35.896Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1156 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Remote File Sharing and File Access · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="build-automation.html" />
+    
+    
+    <link rel="prev" href="working-with-files.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Remote File Sharing and File Access</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---remote-file-sharing-and-file-access">Unix Programming and Regular Expressions Workshop - Remote File Sharing and File Access</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#osi-model">OSI Model</a></li>
+<li><a href="#openssh-replacement-tools">Openssh replacement tools</a></li>
+<li><a href="#telnet-command-description">telnet Command Description</a></li>
+<li><a href="#telnet-command-options">telnet Command Options</a></li>
+<li><a href="#telnet-command-examples">telnet Command Examples</a></li>
+<li><a href="#ftp-command-description">ftp Command Description</a></li>
+<li><a href="#ftp-command-options">ftp Command Options</a></li>
+<li><a href="#ftp-command-examples">ftp Command Examples</a></li>
+<li><a href="#telnet-command-description">ssh Command Description</a></li>
+<li><a href="#telnet-command-options">ssh Command Options</a></li>
+<li><a href="#ssh-config-options">ssh config options</a></li>
+<li><a href="#requirements-to-run-secure-shell">Requirements to Run Secure shell</a></li>
+<li><a href="#telnet-command-examples">ssh Command Examples</a></li>
+<li><a href="#sftp-command-description">sftp Command Description</a></li>
+<li><a href="#sftp-command-options">sftp Command Options</a></li>
+<li><a href="#sftp-command-examples">sftp Command Examples</a></li>
+<li><a href="#scp-command-description">scp Command Description</a></li>
+<li><a href="#scp-command-options">scp Command Options</a></li>
+<li><a href="#scp-command-examples">scp Command Examples</a></li>
+<li><a href="#rsync-command-description">rsync Command Description</a></li>
+<li><a href="#rsync-command-options">rsync Command Options</a></li>
+<li><a href="#rsync-command-examples">rsync Command Examples</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h3 id="osi-model">OSI Model</h3>
+<p><a href="https://en.wikipedia.org/wiki/OSI_model" target="_blank">OSI Model</a></p>
+<p>The Open Systems Interconnection model (OSI model) is a conceptual model that characterizes and standardizes the communication functions of a telecommunication or computing system without regard to their underlying internal structure and technology. </p>
+<p>Its goal is the interoperability of diverse communication systems with standard protocols. The model partitions a communication system into abstraction layers. </p>
+<p>The original version of the model defined seven layers.</p>
+<table>
+<thead>
+<tr>
+<th>Type Layer</th>
+<th>OSI Layer</th>
+<th>Protocol Data Unit (PDU)</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host Layer</td>
+<td>7. Application</td>
+<td>Data</td>
+<td>High-level APIs, including resource sharing, remote file access</td>
+</tr>
+<tr>
+<td>Host Layer</td>
+<td>6. Presentation</td>
+<td>Data</td>
+<td>Translation of data between a networking service and an application; including character encoding, data compression and encryption/decryption</td>
+</tr>
+<tr>
+<td>Host Layer</td>
+<td>5. Session</td>
+<td>Data</td>
+<td>Managing communication sessions, i.e. continuous exchange of information in the form of multiple back-and-forth transmissions between two nodes</td>
+</tr>
+<tr>
+<td>Host Layer</td>
+<td>4. Transport</td>
+<td>Segment (TCP) / Datagram (UDP)</td>
+<td>Reliable transmission of data segments between points on a network, including segmentation, acknowledgement and multiplexing</td>
+</tr>
+<tr>
+<td>Media Layer</td>
+<td>3. Network</td>
+<td>Packet</td>
+<td>Structuring and managing a multi-node network, including addressing, routing and traffic control</td>
+</tr>
+<tr>
+<td>Media Layer</td>
+<td>2. Data Link</td>
+<td>Frame</td>
+<td>Reliable transmission of data frames between two nodes connected by a physical layer</td>
+</tr>
+<tr>
+<td>Media Layer</td>
+<td>1. Physical</td>
+<td>Bit</td>
+<td>Transmission and reception of raw bit streams over a physical medium</td>
+</tr>
+</tbody>
+</table>
+<p>Layer 5: Session Layer:</p>
+<ul>
+<li><p>The session layer controls the dialogues (connections) between computers. </p>
+</li>
+<li><p>It establishes, manages and terminates the connections between the local and remote application. </p>
+</li>
+<li><p>It provides for full-duplex, half-duplex, or simplex operation, and establishes checkpointing, adjournment, termination, and restart procedures. </p>
+</li>
+<li><p>The OSI model made this layer responsible for graceful close of sessions, which is a property of the Transmission Control Protocol, and also for session checkpointing and recovery, which is not usually used in the Internet Protocol Suite. </p>
+</li>
+<li><p>The session layer is commonly implemented explicitly in application environments that use remote procedure calls.</p>
+</li>
+</ul>
+<h4 id="openssh-replacement-tools">Openssh replacement tools</h4>
+<p>OpenSSH is a suite of secure network connectivity tools that replaces:</p>
+<ul>
+<li><code>telnet</code> / <code>telnetd</code> </li>
+<li><code>rcp</code></li>
+<li><code>rsh</code> / <code>rshd</code></li>
+<li><code>rlogin</code> / <code>rlogind</code></li>
+<li><code>ftp</code> / <code>ftpd</code></li>
+</ul>
+<p>None of these older tools encrypt traffic, everything comes over clear text and they can be sniffed with tools like <a href="https://www.wireshark.org/docs/wsug_html_chunked/ChapterIntroduction.html#ChIntroWhatIs" target="_blank">Wireshark</a></p>
+<p>Unlike the tools they replace, OpenSSH tools encrypt all traffic, including passwords. </p>
+<p>Openssh tools can thwart attackers who attempt to eavesdrop, hijack connections, and steal passwords.</p>
+<h4 id="telnet-command-description">telnet Command Description</h4>
+<p>telnet -- user interface to the TELNET protocol</p>
+<p>The telnet command is used to communicate with another host using the TELNET protocol.  </p>
+<p>If telnet is invoked without the host argument, it enters command mode, indicated by its prompt (<code>telnet</code>).  </p>
+<p>In this mode, it accepts and executes the commands listed below.  </p>
+<p>If it is invoked with arguments, it performs an open command with those arguments.</p>
+<h4 id="telnet-command-option">telnet Command Option</h4>
+<p><code>telnet</code> command options:</p>
+<ul>
+<li><p><code>-4</code> Forces telnet to use IPv4 addresses only.</p>
+</li>
+<li><p><code>-6</code> Forces telnet to use IPv6 addresses only.</p>
+</li>
+<li><p><code>-8</code> Specifies an 8-bit data path.  </p>
+<ul>
+<li>This causes an attempt to negotiate the TELNET BINARY option on both input and output.</li>
+</ul>
+</li>
+<li><p><code>-E</code> Stops any character from being recognized as an escape character.</p>
+</li>
+<li><p><code>-F</code> If Kerberos V5 authentication is being used, the -F option allows the local credentials to be forwarded to the remote system, including any credentials that have already been forwarded into the local environment.</p>
+</li>
+<li><p><code>-K</code> Specifies no automatic login to the remote system.</p>
+</li>
+<li><p><code>-L</code> Specifies an 8-bit data path on output.  This causes the BINARY option to be negotiated on output.</p>
+</li>
+<li><p><code>-N</code> Prevents IP address to name lookup when destination host is given as an IP address.</p>
+</li>
+<li><p><code>-S</code> tos  Sets the IP type-of-service (TOS) option for the telnet connection to the value tos, which can be a numeric TOS value or, on systems that support it, a symbolic TOS name found in the /etc/iptos file.</p>
+</li>
+<li><p><code>-X</code> atype</p>
+<ul>
+<li>Disables the atype type of authentication.</li>
+</ul>
+</li>
+<li><p><code>-a</code> Attempt automatic login.  </p>
+<ul>
+<li>This is now the default, so this option is ignored.  Currently, this sends the user name via the USER variable of the ENVIRON option if supported by the remote system.  The name used is that of the current user as returned by getlogin if it agrees with the current user ID, otherwise it is the name associated with the user ID.</li>
+</ul>
+</li>
+<li><p><code>-c</code> Disables the reading of the user&apos;s .telnetrc file.</p>
+</li>
+<li><p><code>-d</code> Sets the initial value of the debug toggle to TRUE.</p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options</p>
+<h4 id="telnet-command-examples">telnet Command Examples</h4>
+<pre><code class="lang-bash">telnet www.google.com 80
+</code></pre>
+<p>If you enter this command you should see </p>
+<pre><code class="lang-bash">Trying 173.194.206.99...
+Connected to www.google.com.
+Escape character is <span class="hljs-string">&apos;^]&apos;</span>.
+</code></pre>
+<p>If you press <strong>Control ]</strong> then you will get into telnet prompt</p>
+<p>You can also get into prompt by simply typing in <strong>telnet</strong></p>
+<pre><code class="lang-bash">telnet
+</code></pre>
+<p>This will start an interactive telnet session with <strong>telnet</strong> prompt</p>
+<p>Type <em>?</em> to see the available options</p>
+<pre><code class="lang-bash">telnet towel.blinkenlights.nl
+</code></pre>
+<p>This will start in an interactive telnet session to watch star wars</p>
+<p>In order to quit press <strong>Control ]</strong> and then type <em>quit</em> command to exit telnet session</p>
+<pre><code class="lang-bash">telnet
+</code></pre>
+<p>this gets you into interactive telnet prompt</p>
+<pre><code class="lang-bash">o telehack.com
+</code></pre>
+<p>This will get telnet session started for telehack.com</p>
+<p>type in <strong>eliza</strong> to get session with a computerized Psychotherapist</p>
+<p>Press <strong>Control ]</strong> to get back into telnet prompt</p>
+<p>Type <strong>quit</strong> command to exit telnet</p>
+<pre><code class="lang-bash">telnet freechess.org 5000
+</code></pre>
+<p>This will take you into telnet session with freechess.org</p>
+<p>Type <strong>guest</strong> if you aren&apos;t a registered user</p>
+<p>Type <strong>quit</strong> to get out or type <strong>?</strong> to see all the options</p>
+<h4 id="ftp-command-description">ftp Command Description</h4>
+<p>ftp -- Internet file transfer program</p>
+<p>ftp is the user interface to the Internet standard File Transfer Protocol.  </p>
+<p>The program allows a user to transfer files to and from remote network site.</p>
+<p>The last five arguments will fetch a file using the FTP or HTTP protocols, or by direct copying, into the current directory.  </p>
+<p>This is ideal for scripts.</p>
+<h4 id="ftp-command-options">ftp Command Options</h4>
+<p><code>ftp</code> command options:</p>
+<ul>
+<li><p><code>-4</code> Forces ftp to only use IPv4 addresses.</p>
+</li>
+<li><p><code>-6</code> Forces ftp to only use IPv6 addresses.</p>
+</li>
+<li><p><code>-A</code> Force active mode ftp.  </p>
+<ul>
+<li>By default, ftp will try to use passive mode ftp and fall back to active mode if passive is not supported by the server.  </li>
+<li>This option causes ftp to always use an active connection.  It is only useful for connecting to very old servers that do not implement passive mode properly.</li>
+</ul>
+</li>
+<li><p><code>-a</code> Causes ftp to bypass normal login procedure, and use an anonymous login instead.</p>
+</li>
+<li><p><code>-d</code> Enables debugging.</p>
+</li>
+<li><p><code>-e</code> Disables command line editing.  This is useful for Emacs ange-ftp mode.</p>
+</li>
+<li><p><code>-f</code> Forces a cache reload for transfers that go through the FTP or HTTP proxies.</p>
+</li>
+<li><p><code>-g</code> Disables file name globbing.</p>
+</li>
+<li><p><code>-i</code> Turns off interactive prompting during multiple file transfers.</p>
+</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more options</p>
+<h4 id="ftp-command-examples">ftp Command Examples</h4>
+<pre><code class="lang-bash">ftp domain.com
+</code></pre>
+<p>This won&apos;t work but is an example of accessing a site</p>
+<pre><code class="lang-bash">ftp &gt; ls
+</code></pre>
+<p>This will list files in the remote directory</p>
+<pre><code class="lang-bash">ftp
+</code></pre>
+<p>This will get you into an interactive ftp session</p>
+<pre><code class="lang-bash">ftp &gt; ?
+</code></pre>
+<p>This will out all the available ftp command in an interactive session</p>
+<pre><code class="lang-bash">ftp &gt; ? lcd
+lcd            change <span class="hljs-built_in">local</span> working directory
+</code></pre>
+<p>This prints out a description of the <em>ftp</em> command <strong>lcd</strong></p>
+<h4 id="ssh-command-description">ssh Command Description</h4>
+<p><a href="https://en.wikipedia.org/wiki/Secure_Shell" target="_blank">SSH Description</a></p>
+<p>ssh -- OpenSSH SSH client (remote login program)</p>
+<p>ssh (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine.  </p>
+<p>It is intended to provide secure encrypted communications between two untrusted hosts over an insecure network.  </p>
+<p>X11 connections, arbitrary TCP ports and UNIX-domain sockets can also be forwarded over the secure channel.</p>
+<p>ssh connects and logs into the specified hostname (with optional user name).  </p>
+<p>The user must prove his/her identity to the remote machine using one of several methods.</p>
+<h4 id="ssh-command-options">ssh Command Options</h4>
+<p><code>ssh</code> command options:</p>
+<ul>
+<li><p><code>-1</code> Use protocol version 1 only.</p>
+</li>
+<li><p><code>-2</code> Use protocol version 2 only.</p>
+</li>
+<li><p><code>-4</code> Use IPv4 addresses only.</p>
+</li>
+<li><p><code>-6</code> Use IPv6 addresses only.</p>
+</li>
+<li><p><code>-A</code> Enable forwarding of the authentication agent connection.</p>
+</li>
+<li><p><code>-a</code> Disable forwarding of the authentication agent connection.</p>
+</li>
+<li><p><code>-C</code> Use data compression</p>
+</li>
+<li><p><code>-c</code> cipher_spec Selects the cipher specification for encrypting the session.</p>
+</li>
+<li><p><code>-D</code> [bind_address:]port Dynamic application-level port forwarding. This allocates a socket to listen to port on the local side. When a connection is made to this port, the connection is forwarded over the secure channel, and the application protocol is then used to determine where to connect to from the remote machine.</p>
+</li>
+<li><p><code>-E</code> log_file Append debug logs to log_file instead of standard error.</p>
+</li>
+<li><p><code>-F</code> config file Specifies a per-user configuration file. The default for the per-user configuration file is ~/.ssh/config.</p>
+</li>
+<li><p><code>-g</code> Allows remote hosts to connect to local forwarded ports.</p>
+</li>
+<li><p><code>-i</code> identity_file A file from which the identity key (private key) for public key authentication is read.</p>
+</li>
+<li><p><code>-J</code> [user@]host[:port] Connect to the target host by first making a ssh connection to the pjump host[(/iam/jump-host) and then establishing a TCP forwarding to the ultimate destination from there.</p>
+</li>
+<li><p><code>-l</code> login_name Specifies the user to log in as on the remote machine.</p>
+</li>
+<li><p><code>-p</code> port Port to connect to on the remote host.</p>
+</li>
+<li><p><code>-q</code> Quiet mode.</p>
+</li>
+<li><p><code>-V</code> Display the version number.</p>
+</li>
+<li><p><code>-v</code> Verbose mode.</p>
+</li>
+<li><p><code>-X</code> Enables X11 forwarding.</p>
+</li>
+</ul>
+<h4 id="ssh-config-options">ssh config options</h4>
+<pre><code class="lang-yml">Host firsthost
+    SSH_OPTION_1 custom_value
+    SSH_OPTION_2 custom_value
+    SSH_OPTION_3 custom_value
+
+Host secondhost
+    ANOTHER_OPTION custom_value
+
+Host <span class="hljs-meta">*host</span>
+    ANOTHER_OPTION custom_value
+
+Host *
+    CHANGE_DEFAULT custom_value
+</code></pre>
+<p>All the available options can be found by <em>Reading the Fine Manual</em>.</p>
+<p>You can do <code>man ssh_config</code> for all the available options for the client in <code>/etc/ssh/ssh_config</code> or you can create your own options in <code>~/.ssh/config</code> for user options</p>
+<h4 id="requirements-to-run-secure-shell">Requirements to Run Secure shell</h4>
+<p>To run a secure shell on or securely copy a file to or from a remote system you must meet the following requirements:</p>
+<ul>
+<li>The remote system must be running the OpenSSH daemon (sshd)</li>
+<li>There needs to be an account on the remote system</li>
+<li>The SSH server must positively identify itself to the client</li>
+</ul>
+<pre><code class="lang-bash">ls -al ~/.ssh
+</code></pre>
+<p>I have the following in the <code>~/.ssh</code> directory:</p>
+<pre><code class="lang-bash">total 16
+drwx------    5 marcelbelmont  170 Oct  3  2016 .
+drwxr-xr-x+ 163 marcelbelmont 5542 Nov 22 14:31 ..
+-rw-------    1 marcelbelmont 1675 Sep 19  2016 id_rsa
+-rw-r--r--    1 marcelbelmont  421 Sep 19  2016 id_rsa.pub
+-rw-r--r--    1 marcelbelmont 4752 Oct 21 08:09 known_hosts
+</code></pre>
+<p>If you don&apos;t have any <code>ssh</code> keys or want a new key then create another key by doing the following command:</p>
+<pre><code class="lang-bash">ssh-keygen -t ecdsa -b 521 -C <span class="hljs-string">&quot;johnrambo@hero.net&quot;</span>
+</code></pre>
+<p>Here we are generating a new key using <code>ecdsa</code> type key with key length of <em>521</em> bits and with a comment of email type of &quot;johnrambo@hero.net&quot;</p>
+<p>Here is the sample output for the command given above:</p>
+<pre><code class="lang-bash">Generating public/private ecdsa key pair.
+Enter file <span class="hljs-keyword">in</span> <span class="hljs-built_in">which</span> to save the key (/Users/marcelbelmont/.ssh/id_ecdsa):
+Enter passphrase (empty <span class="hljs-keyword">for</span> no passphrase):
+Enter same passphrase again:
+Your identification has been saved <span class="hljs-keyword">in</span> /Users/marcelbelmont/.ssh/id_ecdsa.
+Your public key has been saved <span class="hljs-keyword">in</span> /Users/marcelbelmont/.ssh/id_ecdsa.pub.
+The key fingerprint is:
+SHA256:LF3IksGBcXTYv9mDj4KD33oMOb0kfX+MP5Heo/FVshU johnrambo@hero.net
+The key<span class="hljs-string">&apos;s randomart image is:
++---[ECDSA 521]---+
+|    .==+.        |
+|    ..o=..       |
+|      o o..    E |
+|       + ..     .|
+|      .+S  =  ..o|
+|      =.+ = o o+.|
+|     . B o + *.o.|
+|    . o.= . + B.o|
+|     .o+..   +oo.|
++----[SHA256]-----+
+</span></code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$(ssh-agent -s)</span>&quot;</span>
+</code></pre>
+<pre><code class="lang-bash">ssh-add ~/.ssh/id_rsa
+</code></pre>
+<p>Here we add private key to ssh agent</p>
+<p>You can copy keys to be used with ssh using <code>ssh-copy-id</code> command</p>
+<h6 id="ssh-copy-id-command-description">ssh-copy-id command description</h6>
+<p>ssh-copy-id -- use locally available keys to authorise logins on a remote machine</p>
+<p>ssh-copy-id is a script that uses ssh(1) to log into a remote machine (presumably using a login password, so password authentication should be enabled, unless you&apos;ve done some clever use of multiple identities).  </p>
+<p>It assembles a list of one or more fingerprints (as described below) and tries to log in with each key, to see if any of them are already installed (of course, if you are not using ssh-agent(1) this may result in you being repeatedly prompted for pass-phrases).  </p>
+<p>It then assembles a list of those that failed to login, and using ssh, enables logins with those keys on the remote server.  </p>
+<p>By default it adds the keys by appending them to the remote user&apos;s ~/.ssh/authorized_keys (creating the file, and directory, if necessary).  It is also capable of detecting if the remote system is a NetScreen, and using its `set ssh pka-dsa key ...&apos; command instead</p>
+<h6 id="ssh-copy-id-command-options">ssh-copy-id command options</h6>
+<p><code>ssh-copy-id</code> command options:</p>
+<ul>
+<li><p><code>-i</code> identity_file</p>
+<ul>
+<li>Use only the key(s) contained in identity_file (rather than looking for identities via ssh-add(1) or in the default_ID_file).</li>
+<li>If the filename does not end in .pub this is added.  If the filename is omitted, the default_ID_file is used.</li>
+</ul>
+</li>
+<li><p><code>-f</code> Forced mode: doesn&apos;t check if the keys are present on the remote server.  This means that it does not need the private key.</p>
+</li>
+<li><p><code>-n</code> do a dry-run.  Instead of installing keys on the remote system simply prints the key(s) that would have been installed.</p>
+</li>
+<li><p><code>-h</code>, <code>-?</code>  Print Usage summary</p>
+</li>
+<li><p><code>-p</code> port, <code>-o</code> ssh_option</p>
+<ul>
+<li>These two options are simply passed through untouched, along with their argument, to allow one to set the port or other ssh(1) options, respectively.</li>
+</ul>
+</li>
+</ul>
+<p>Here is a sample <strong>ssh-copy-id</strong> command that automates copying keys</p>
+<pre><code class="lang-bash">ssh-copy-id jbelmont@104.131.117.137
+</code></pre>
+<p>This will fail for my system because I have already uploaded my keys to the system</p>
+<h4 id="ssh-command-examples">ssh Command Examples</h4>
+<pre><code class="lang-bash">ssh jbelmont@104.131.117.137
+</code></pre>
+<p>Here I am <code>ssh</code>ing into a linux box that I have. Notice here that I have specified a username before the <strong>IP Address</strong></p>
+<pre><code class="lang-bash">ssh <span class="hljs-_">-l</span> jbelmont 104.131.117.137
+</code></pre>
+<p>Here is the same command but using the <code>-l</code> (login name) option</p>
+<pre><code class="lang-bash">ssh -i <span class="hljs-string">&quot;workshop.pem&quot;</span> ubuntu@ec2-54-165-173-39.compute-1.amazonaws.com touch temp1.txt
+</code></pre>
+<p>Here I login into my ec2 instance and create a file and then logout</p>
+<pre><code class="lang-bash">ssh -i <span class="hljs-string">&quot;workshop.pem&quot;</span> ubuntu@ec2-54-165-173-39.compute-1.amazonaws.com <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;something&quot;</span> &gt; temp2.txt
+</code></pre>
+<p>Here I am <code>echo</code>ing something to stdout and then creating a file in my local file</p>
+<pre><code class="lang-bash">ssh -i <span class="hljs-string">&quot;workshop.pem&quot;</span> ubuntu@ec2-54-165-173-39.compute-1.amazonaws.com <span class="hljs-string">&apos;echo &quot;something&quot; &gt; temp2.txt&apos;</span>
+</code></pre>
+<p>Here because we quoted <code>ssh</code> command part the file is created in the remote shell instead of the local shell</p>
+<pre><code class="lang-bash">cat scripts/remote-file-sharing-and-file-access/temp1.txt | ssh -i <span class="hljs-string">&quot;~/marcel-aws/workshop.pem&quot;</span> ubuntu@ec2-54-165-173-39.compute-1.amazonaws.com diff - temp2.txt
+</code></pre>
+<p>Here we pipe the output of temp1.txt into ssh command stdin to the <strong>diff</strong> utility and compare against temp2.txt</p>
+<h4 id="sftp-command-description">sftp Command Description</h4>
+<p>sftp -- secure file transfer program</p>
+<p>sftp is an interactive file transfer program, similar to ftp, which performs all operations over an encrypted ssh(1) transport.  </p>
+<p>It may also use many features of ssh, such as public key authentication and compression.  sftp connects and logs into the specified host, then enters an interactive command mode.</p>
+<p>The second usage format will retrieve files automatically if a non-interactive authentication method is used; otherwise it will do so after successful interactive authentication.</p>
+<p>The third usage format allows sftp to start in a remote directory.</p>
+<p>The final usage format allows for automated sessions using the -b option.  </p>
+<p>In such cases, it is necessary to configure non-interactive authentication to obviate the need to enter a password at connection time.</p>
+<p>Since some usage formats use colon characters to delimit host names from path names, IPv6 addresses must be enclosed in square brackets to avoid ambiguity.</p>
+<h4 id="sftp-command-options">sftp Command Options</h4>
+<p><code>sftp</code> command options:</p>
+<ul>
+<li><p><code>-4</code> Forces sftp to use IPv4 addresses only.</p>
+</li>
+<li><p><code>-6</code> Forces sftp to use IPv6 addresses only.</p>
+</li>
+<li><p><code>-a</code> Attempt to continue interrupted transfers rather than overwriting existing partial or complete copies of files.  </p>
+<ul>
+<li>If the partial contents differ from those being transferred, then the resultant file is likely to be corrupt.</li>
+</ul>
+</li>
+<li><p><code>-B</code> buffer_size</p>
+<ul>
+<li>Specify the size of the buffer that sftp uses when transferring files.  Larger buffers require fewer round trips at the cost of higher memory consumption.  The default is 32768 bytes.</li>
+</ul>
+</li>
+<li><p><code>-b</code> batchfile</p>
+<ul>
+<li>Batch mode reads a series of commands from an input batchfile instead of stdin.  Since it lacks user interaction it should be used in conjunction with non-interactive authentication.</li>
+</ul>
+</li>
+<li><p><code>-C</code> Enables compression (via ssh&apos;s -C flag).</p>
+</li>
+<li><p><code>-c</code> cipher</p>
+<ul>
+<li>Selects the cipher to use for encrypting the data transfers.  This option is directly passed to ssh.</li>
+</ul>
+</li>
+<li><p><code>-D</code> sftp_server_path</p>
+<ul>
+<li>Connect directly to a local sftp server (rather than via ssh.  This option may be useful in debugging the client and server.</li>
+</ul>
+</li>
+<li><p><code>-F</code> ssh_config</p>
+<ul>
+<li>Specifies an alternative per-user configuration file for ssh(1).  This option is directly passed to ssh.</li>
+</ul>
+</li>
+<li><p><code>-f</code> Requests that files be flushed to disk immediately after transfer.  When uploading files, this feature is only enabled if the server implements the &quot;fsync@openssh.com&quot; extension.</p>
+</li>
+<li><p><code>-i</code> identity_file</p>
+<ul>
+<li>Selects the file from which the identity (private key) for public key authentication is read.  This option is directly passed to ssh</li>
+</ul>
+</li>
+</ul>
+<h4 id="sftp-command-examples">sftp Command Examples</h4>
+<pre><code class="lang-bash">sftp -i <span class="hljs-string">&quot;~/marcel-aws/workshop.pem&quot;</span> ubuntu@ec2-54-165-173-39.compute-1.amazonaws.com
+</code></pre>
+<p>Here I am connecting to my ec2 instance using <code>sftp</code> command.</p>
+<pre><code class="lang-bash">sftp&gt; ?
+</code></pre>
+<p>Here I entered a <code>?</code> to get all the available commands</p>
+<pre><code class="lang-bash">sftp&gt; lls
+</code></pre>
+<p>Here I am printing out the files in my local directory and here is the output</p>
+<pre><code class="lang-bash">CONTRIBUTING.md  LICENSE  README.md  SUMMARY.md  TEST.md  _book  book.json  data  docs    images    node_modules  object-files  package.json  scripts
+</code></pre>
+<pre><code class="lang-bash">put TEST.md
+</code></pre>
+<p>I am uploading <strong>TEST.md</strong> into the remote server here</p>
+<p><strong>Read the Fine Manual</strong> for more options with sftp</p>
+<h4 id="scp-command-description">scp Command Description</h4>
+<p>scp -- secure copy (remote file copy program)</p>
+<p>scp copies files between hosts on a network.  </p>
+<p>It uses ssh for data transfer, and uses the same authentication and provides the same security as ssh.  </p>
+<p>scp will ask for passwords or passphrases if they are needed for authentication</p>
+<p>File names may contain a user and host specification to indicate that the file is to be copied to/from that host.  </p>
+<p>Local file names can be made explicit using absolute or relative pathnames to avoid scp treating file names containing <code>:</code> as host specifiers.  </p>
+<p>Copies between two remote hosts are also permitted</p>
+<h4 id="scp-command-options">scp Command Options</h4>
+<p><code>scp</code> command options:</p>
+<ul>
+<li><p><code>-3</code> Copies between two remote hosts are transferred through the local host.  Without this option the data is copied directly between the two remote hosts.  Note that this option disables the progress meter.</p>
+</li>
+<li><p><code>-4</code> Forces scp to use IPv4 addresses only.</p>
+</li>
+<li><p><code>-6</code> Forces scp to use IPv6 addresses only.</p>
+</li>
+<li><p><code>-B</code> Selects batch mode (prevents asking for passwords or passphrases).</p>
+</li>
+<li><p><code>-C</code> Compression enable.  Passes the -C flag to ssh(1) to enable compression.</p>
+</li>
+<li><p><code>-c</code> cipher</p>
+<ul>
+<li>Selects the cipher to use for encrypting the data transfer.  This option is directly passed to ssh(1).</li>
+</ul>
+</li>
+<li><p><code>-F</code> ssh_config</p>
+<ul>
+<li>Specifies an alternative per-user configuration file for ssh.  This option is directly passed to ssh(1).</li>
+</ul>
+</li>
+<li><p><code>-i</code> identity_file</p>
+<ul>
+<li>Selects the file from which the identity (private key) for public key authentication is read.  This option is directly passed to ssh(1).</li>
+</ul>
+</li>
+<li><p><code>-l</code> limit</p>
+<ul>
+<li>Limits the used bandwidth, specified in Kbit/s.</li>
+</ul>
+</li>
+</ul>
+<h4 id="scp-command-examples">scp Command Examples</h4>
+<pre><code class="lang-bash">scp -vvv SUMMARY.md  jbelmont@104.131.117.137:/home/jbelmont
+</code></pre>
+<p>Here I logged out a very verbose output for <code>scp</code> </p>
+<p>This will upload SUMMARY.md into my remote ubuntu server</p>
+<pre><code class="lang-bash">scp -v jbelmont@104.131.117.137:/home/jbelmont/random.txt .
+</code></pre>
+<p>Here I am passing verbose output and copying a file from my remote server into my local directory</p>
+<p>You can also pass the <code>-r</code> to recursively copy directories with <code>scp</code> command</p>
+<h4 id="rsync-command-description">rsync Command Description</h4>
+<p>rsync - a fast, versatile, remote (and local) file-copying tool</p>
+<p>Rsync  is a fast and extraordinarily versatile file copying tool.  </p>
+<p>It can copy locally, to/from another host over any remote shell, or to/from a remote rsync daemon.  </p>
+<p>It offers a large number of options that control every aspect of its behavior and permit very flexible specification  of the set of files to be copied.  </p>
+<p>It is famous for its delta-transfer algorithm, which reduces the amount of data sent over the network by sending only the differences between the source files and the existing files in the destination.  </p>
+<p>Rsync is  widely used for backups and mirroring and as an improved copy command for everyday use.</p>
+<p>Rsync  finds  files that need to be transferred using a &quot;quick check&quot; algorithm (by default) that looks for files that have changed in size or in last-modified time.  </p>
+<p>Any changes in the other preserved attributes (as requested by options) are made  on  the  destination file directly when the quick check indicates that the file&apos;s data does not need to be updated.</p>
+<h4 id="rsync-command-options">rsync Command Options</h4>
+<p><code>rsync</code> command options: </p>
+<ul>
+<li><code>-v</code>, <code>--verbose</code> increase verbosity</li>
+<li><code>--info=FLAGS</code> fine-grained informational verbosity</li>
+<li><code>--debug=FLAGS</code> fine-grained debug verbosity</li>
+<li><code>--msgs2stderr</code> special output handling for debugging</li>
+<li><code>-q</code>, <code>--quiet</code> suppress non-error messages</li>
+<li><code>--no-motd</code> suppress daemon-mode MOTD (see caveat)</li>
+<li><code>-c</code>, <code>--checksum</code> skip based on checksum, not mod-time &amp; size</li>
+<li><code>-a</code>, <code>--archive</code> archive mode; equals -rlptgoD (no -H,-A,-X)</li>
+<li><code>--no-OPTION</code> turn off an implied OPTION (e.g. --no-D)</li>
+<li><code>-r</code>, <code>--recursive</code> recurse into directories</li>
+</ul>
+<p><strong>Read the Fine Manual</strong> for more optionscontent</p>
+<h4 id="rsync-command-examples">rsync Command Examples</h4>
+<pre><code class="lang-bash">rsync -zvh SUMMARY.md /tmp/
+</code></pre>
+<p>Here we sync a local file <strong>SUMMARY.md</strong> into our local <code>/tmp</code> directory</p>
+<pre><code class="lang-bash">rsync -zvh SUMMARY.MD jbelmont@104.131.117.137
+</code></pre>
+<p>Here we are uploading a local file to remote server.</p>
+<p>The <code>-z</code> option will compress output as it goes over the wire, the <code>-v</code> options will print extra verbose output and <code>-h</code> will show output in human readable format.</p>
+<p>There are many more options to do with <code>rsync</code> command</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="working-with-files.html">Working with Files</a></td>
+<td style="text-align:right"><a href="build-automation.html">Build Automation</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="working-with-files.html" class="navigation navigation-prev " aria-label="Previous page: Working with Files">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="build-automation.html" class="navigation navigation-next " aria-label="Next page: Build Automation">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Remote File Sharing and File Access","level":"1.20","depth":1,"next":{"title":"Build Automation","level":"1.21","depth":1,"path":"docs/build-automation.md","ref":"docs/build-automation.md","articles":[]},"previous":{"title":"Working with Files","level":"1.19","depth":1,"path":"docs/working-with-files.md","ref":"docs/working-with-files.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/remote-file-sharing-and-file-access.md","mtime":"2018-11-22T17:17:35.940Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

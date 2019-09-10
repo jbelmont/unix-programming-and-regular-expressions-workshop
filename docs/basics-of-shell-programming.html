@@ -1,0 +1,1227 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basics of Shell Programming · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="introduction-to-text-processing.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Basics of Shell Programming</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---basics-of-shell-programming">Unix Programming and Regular Expressions Workshop - Basics of Shell Programming</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#variables">Variables</a></li>
+<li><a href="#demonstrate-different-types-of-args">Demonstrate different types of args</a></li>
+<li><a href="#quoting">Quoting</a></li>
+<li><a href="#execution-tracing">Execution Tracing</a></li>
+<li><a href="#redirection">Redirection</a></li>
+<li><a href="#command-types-and-searching">Command Types and Searching</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="variables">Variables</h4>
+<p>Variables store data.</p>
+<p>If you want to get the value of a stored variable then you need to use <code>$SOME_VARIABLE</code></p>
+<pre><code class="lang-bash">$ MY_JUNK_VARIABLE=JUNKY
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$MY_JUNK_VARIABLE</span>
+JUNKY
+</code></pre>
+<p>Bash doesn&apos;t preserve whitespace in variables unless you use double quotes</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;a        b&apos;</span>
+a        b
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;a              b&quot;</span>
+a              b
+$ some=<span class="hljs-string">&quot;a              b&quot;</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$some</span>
+a b
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$some</span>&quot;</span>
+a              b
+</code></pre>
+<p>Zsh on the either hand does preserve spaces</p>
+<pre><code class="lang-bash">$ one=<span class="hljs-string">&quot;a         b&quot;</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$one</span>
+a         b
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$one</span>&quot;</span>
+a         b
+</code></pre>
+<p>If you pass the <code>-n</code> flag to <code>echo</code> like this <code>echo -n &quot;Type your name: &quot;</code> it will not print trailing newline</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter your Name: &quot;</span>
+Enter your Name: %
+</code></pre>
+<p>Notice the <code>%</code> character in the prompt</p>
+<pre><code class="lang-bash">$ chmod +x scripts/basics-of-shell-programming/simple-output.sh
+$ ./scripts/basics-of-shell-programming/simple-output.sh
+</code></pre>
+<p>The <code>$#</code> tells you the number of arguments passed in</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$#</span>
+0
+</code></pre>
+<p>Notice that 0 printed but that is not fixed</p>
+<pre><code class="lang-bash">$ ./scripts/basics-of-shell-programming/count-arguments.sh the number of args is
+The number of arguments passed <span class="hljs-keyword">in</span> this script is: 5
+</code></pre>
+<p><strong>Run the script above at the root of the repository</strong></p>
+<h4 id="demonstrate-different-types-of-args">Demonstrate different types of args</h4>
+<p>$1 ... $9 will print the position of the argument</p>
+<p>Both <code>$*</code> and <code>$@</code> expand to positional parameters.</p>
+<p>But <code>$*</code> and <code>$@</code> behave differently when you use double quotes:</p>
+<ol>
+<li>&quot;$@&quot; expands to properly quoted arguments</li>
+<li>&quot;$*&quot; makes all arguments into a single argument.</li>
+</ol>
+<pre><code class="lang-bash">$ ./scripts/basics-of-shell-programming/compare-positional-parameters.sh
+Args using <span class="hljs-variable">$@</span>
+one
+two three
+four
+Args using $*
+one two three four
+</code></pre>
+<p>Notice that the <code>$@</code> treated each argument that was quoted as separate while <code>$*</code> treated them as one argument</p>
+<p><em>Always use double quotes when referring to variable values</em></p>
+<p>Always use &quot;$*&quot; to refer to all command line arguments in these scenarios:</p>
+<ol>
+<li>Processing arguments in a loop</li>
+<li>Passing arguments onto another command</li>
+</ol>
+<h4 id="quoting">Quoting</h4>
+<pre><code class="lang-bash">$ one=one
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$one</span>
+one
+$ <span class="hljs-built_in">echo</span> \<span class="hljs-variable">$one</span>
+<span class="hljs-variable">$one</span>
+</code></pre>
+<p>Notice above that the backslash made <code>echo \$one</code> a literal argument</p>
+<pre><code class="lang-bash">$ first_name=marcel
+$ last_name=belmont
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;$first_name $last_name&apos;</span>
+<span class="hljs-variable">$first_name</span> <span class="hljs-variable">$last_name</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$first_name</span> <span class="hljs-variable">$last_name</span>&quot;</span>
+marcel belmont
+$ name=<span class="hljs-string">&quot;<span class="hljs-variable">$first_name</span> <span class="hljs-variable">$last_name</span>&quot;</span>
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;My name is <span class="hljs-variable">$name</span>&quot;</span>
+My name is marcel belmont
+</code></pre>
+<p>Notice that the variables in single quotes were treated literally while the double quotes were evaluated</p>
+<h4 id="execution-tracing">Execution Tracing</h4>
+<p><a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html" target="_blank">Debugging in Bash</a></p>
+<p>Execution tracing is the main way to conduct debugging in the <code>shell</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">set</span> -x
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$name</span>
++ <span class="hljs-built_in">echo</span> Jean-Marcel
+Jean-Marcel
+$ <span class="hljs-built_in">set</span> +x
++ <span class="hljs-built_in">set</span> +x
+$ <span class="hljs-built_in">echo</span> <span class="hljs-variable">$name</span>
+Jean-Marcel
+</code></pre>
+<p>Notice that <code>set -x</code> turned on execution tracing while <code>set +x</code> turned it off again</p>
+<p>Run the script <code>./scripts/basics-of-shell-programming/script-tracing.sh</code></p>
+<pre><code class="lang-bash">$ ./scripts/basics-of-shell-programming/script-tracing.sh one two three
++ <span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;&quot;$@&quot;&apos;</span>
++ <span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;This arg is one\n&apos;</span>
+This arg is one
++ <span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;&quot;$@&quot;&apos;</span>
++ <span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;This arg is two\n&apos;</span>
+This arg is two
++ <span class="hljs-keyword">for</span> arg <span class="hljs-keyword">in</span> <span class="hljs-string">&apos;&quot;$@&quot;&apos;</span>
++ <span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;This arg is three\n&apos;</span>
+This arg is three
+</code></pre>
+<p>Notice here that we turned on execution tracing in the <code>shebang</code> line with optional argument
+Each line traced each step of the script, notice that the script ran 3 times</p>
+<ul>
+<li>Backslash <code>\</code> will quote the following single character</li>
+<li>Single Quotes are treated literally<ul>
+<li>No need to escape and single quotes don&apos;t do expansion</li>
+<li>Need to escape embedded single quotes in single quotes<ul>
+<li><code>echo &apos;one &apos;\&apos;&apos;two&apos;\&apos;&apos;&apos;</code> =&gt; <code>one &apos;two&apos;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Double quotes do some expansions<ul>
+<li>Use <code>\</code> inside &quot;...&quot; to escape the following characters:<ul>
+<li>&quot;</li>
+<li>$</li>
+<li>`</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Execution Tracing helps you understand what the shell is doing on each step</li>
+</ul>
+<h6 id="best-practice-for-quoting">Best Practice for Quoting</h6>
+<ul>
+<li>Quote text that are passed to commands<ul>
+<li>Double quote is almost always what you want to do</li>
+</ul>
+</li>
+<li>Make sure to understand what double quote do</li>
+<li>Execution Tracing is the most important form of debugging in the shell<ul>
+<li>There is a bash debugger as well</li>
+</ul>
+</li>
+<li>Bash quotes arguments with metacharacters</li>
+</ul>
+<h4 id="redirection">Redirection</h4>
+<p><a href="https://en.wikipedia.org/wiki/Redirection_%28computing%29" target="_blank">Redirection</a></p>
+<pre><code class="lang-bash">$ cat
+one
+one
+two
+two
+three
+three
+</code></pre>
+<p>Here I entered <code>cat</code> pressed enter then typed one and hit enter and standard output printed another one to standard output and the last three printed to standard output I pressed <code>control d</code></p>
+<pre><code class="lang-bash">$ cat &gt; colors.txt
+<span class="hljs-comment">## Hit enter</span>
+blue
+green
+orange
+black
+yellow
+<span class="hljs-comment">## Press Control D for end of line</span>
+</code></pre>
+<pre><code class="lang-bash">$ cat colors.txt
+blue
+green
+orange
+black
+yellow
+</code></pre>
+<p>Notice that we used cat and redirected the output of standard input into the file called <code>colors.txt</code></p>
+<pre><code class="lang-bash">$ cat &gt;&gt; colors.txt
+white
+bash-4.4$ cat colors.txt
+blue
+green
+orange
+black
+yellow
+white
+</code></pre>
+<p>Notice here that the <code>&gt;&gt;</code> operator appended elements to a file</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;one
+&gt; two
+&gt; three
+&gt; &quot;</span> &gt; numbers.txt
+
+$ cat numbers.txt
+one
+two
+three
+
+$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;four
+&gt; five
+&gt; six&quot;</span> &gt; numbers2.txt
+
+$ cat numbers.txt numbers2.txt &gt; allnumbers.txt
+
+$ cat allnumbers.txt
+one
+two
+three
+four
+five
+six
+</code></pre>
+<ol>
+<li>Notice in this shell execution we created 2 files called <code>numbers.txt</code> and <code>numbers2.txt</code> using echo command</li>
+<li>Then we created another file called <code>allnumbers.txt</code> using <code>&gt;</code> redirection operator</li>
+</ol>
+<pre><code class="lang-bash">$ tr a-z A-Z &lt;&lt; UPPER
+&gt; one
+&gt; two
+&gt; three
+&gt; UPPER
+ONE
+TWO
+THREE
+</code></pre>
+<p>Notice the <code>tr</code> operator which translate characters and the <code>&lt;&lt;</code> operator is known as a here document
+When you use the <code>&lt;&lt;</code> operator (here document) you need to define a literal value to delimit in this case we used <code>UPPER</code></p>
+<p><a href="https://en.wikipedia.org/wiki/Here_document" target="_blank">Here Document</a></p>
+<pre><code class="lang-bash">$ tr a-z A-Z &lt;&lt;&lt; <span class="hljs-string">&quot;one two three&quot;</span>
+</code></pre>
+<p>Notice that here we use <code>&lt;&lt;&lt;</code> which is known as <code>here string</code></p>
+<p><a href="https://en.wikipedia.org/wiki/Here_document#Here_strings" target="_blank">Here strings</a></p>
+<pre><code class="lang-bash">$ od -c allnumbers.txt
+0000000    o   n   e  \n   t   w   o  \n   t   h   r   e   e  \n   f   o
+0000020    u   r  \n   f   i   v   e  \n   s   i   x  \n
+0000034
+</code></pre>
+<p>Notice here we used the <code>od -- octal, decimal, hex, ASCII dump</code> operator with <code>-c</code> flag to output c-style escaped characters</p>
+<h6 id="differences-with-redirection-operators">Differences with Redirection Operators</h6>
+<ol>
+<li><code>&lt;</code> is used to redirect input</li>
+<li><code>&gt;</code> is used to redirect output.</li>
+<li><code>&gt;&gt;</code> is used to append output</li>
+<li><code>&lt;&lt;</code> is used to read from a stream literal and behaves like a file</li>
+<li><code>&lt;&lt;&lt;</code> is used to read a stream from a word</li>
+<li><code>|</code> is used to feed standard output of one command as standard input for another command</li>
+</ol>
+<h6 id="other-operators-used-in-shell-redirection">Other operators used in shell redirection</h6>
+<p><a href="http://www.tldp.org/LDP/abs/html/io-redirection.html" target="_blank">TLDP Shell Redirection</a></p>
+<ul>
+<li><p>1&gt; filename</p>
+<ul>
+<li>Redirect stdout to file &quot;filename.&quot;</li>
+</ul>
+</li>
+<li><p>1&gt;&gt; filename</p>
+<ul>
+<li>Redirect and append stdout to file &quot;filename.&quot;</li>
+</ul>
+</li>
+<li><p>2&gt; filename</p>
+<ul>
+<li>Redirect stderr to file &quot;filename.&quot;</li>
+</ul>
+</li>
+<li><p>2&gt;&gt; filename</p>
+<ul>
+<li>Redirect and append stderr to file &quot;filename.&quot;</li>
+</ul>
+</li>
+<li><p>&amp;&gt; filename</p>
+<ul>
+<li>Redirect both stdout and stderr to file &quot;filename.&quot;</li>
+<li>This operator is now functional, as of Bash 4, final release.</li>
+</ul>
+</li>
+<li><p>2&gt;&amp;1</p>
+<ul>
+<li>Redirects stderr to stdout.</li>
+<li>Error messages get sent to same place as standard output.</li>
+<li><blockquote>
+<blockquote>
+<p>filename 2&gt;&amp;1</p>
+<ul>
+<li>bad_command &gt;&gt;filename 2&gt;&amp;1</li>
+<li>Appends both stdout and stderr to the file &quot;filename&quot; ...</li>
+<li>2&gt;&amp;1 | [command(s)]</li>
+<li>bad_command 2&gt;&amp;1 | awk &apos;{print $5}&apos;   # found</li>
+<li>Sends stderr through a pipe.</li>
+<li>|&amp; was added to Bash 4 as an abbreviation for 2&gt;&amp;1 |.</li>
+</ul>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>i&gt;&amp;j</p>
+<ul>
+<li>Redirects file descriptor i to j.</li>
+<li>All output of file pointed to by i gets sent to file pointed to by j.</li>
+</ul>
+</li>
+<li><blockquote>
+<p>&amp;j</p>
+<ul>
+<li>Redirects, by default, file descriptor 1 (stdout) to j.</li>
+<li>All stdout gets sent to file pointed to by j.</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p>Here is a hello world example in the C programming Language with a syntax error</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> **argv)</span> </span>{
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello World\n&quot;</span>)
+  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<pre><code class="lang-bash">$ make helloWorld
+cc     helloWorld.c   -o helloWorld
+helloWorld.c:4:26: error: expected <span class="hljs-string">&apos;;&apos;</span> after expression
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello World\n&quot;</span>)
+                         ^
+                         ;
+1 error generated.
+make: *** [helloWorld] Error 1
+</code></pre>
+<p>Here we use the <a href="https://en.wikipedia.org/wiki/Make_%28software%29" target="_blank">Make</a> utility which is a build automation tool to build executable programs</p>
+<p>When we run <code>make helloWorld</code> we get both standard output and standard error all printed in screen</p>
+<pre><code class="lang-bash">$ make helloWorld &gt; helloWorld.out 2&gt; helloWorld.err
+$ cat helloWorld.err
+helloWorld.c:4:26: error: expected <span class="hljs-string">&apos;;&apos;</span> after expression
+  <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello World\n&quot;</span>)
+                         ^
+                         ;
+1 error generated.
+make: *** [helloWorld] Error 1
+$ cat helloWorld.out
+cc     helloWorld.c   -o helloWorld
+</code></pre>
+<p>Notice here we used <code>&gt;</code> to redirect standard output  and <code>2&gt;</code> to redirect standard error
+One important point is that you must redirect standard output before redirecting standard error</p>
+<pre><code class="lang-bash">$ make helloWorld 2&gt;&amp;1 | tee errors
+</code></pre>
+<p>Notice here used <code>2&gt;&amp;1</code> to redirect stderr to stdout and then used the <a href="https://en.wikipedia.org/wiki/Tee_\(command\" target="_blank">TEE command</a>)</p>
+<ul>
+<li>The tee utility copies standard input to standard output, making a copy in zero or more files.<ul>
+<li>The output is unbuffered.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-bash">$ make helloWorld &gt; helloWorld.out 2&gt;&amp;1
+</code></pre>
+<p>This command redirects standard output and standard error to a file called helloWorld.out</p>
+<h6 id="pipe-operator">Pipe Operator</h6>
+<pre><code class="lang-bash">&#x2717; <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;one two three&apos;</span> | tr a-z A-Z
+ONE TWO THREE
+</code></pre>
+<p>The <code>|</code> operator used the standard output of echo to feed the <code>tr</code> operator and transform characters to uppercase</p>
+<p><a href="https://en.wikipedia.org/wiki/Pipeline_%28Unix%29" target="_blank">Pipelines in Unix</a></p>
+<blockquote>
+<p>In Unix-like computer operating systems, a pipeline is a sequence of processes chained together by their standard streams, so that the output of each process (stdout) feeds directly as input (stdin) to the next one.</p>
+</blockquote>
+<h6 id="good-practices-in-shell-redirection">Good Practices in Shell Redirection</h6>
+<ul>
+<li>Read the Fine Manual (RTFM) as necessary using <code>man</code> command</li>
+<li>Capture standard error as necessary</li>
+<li>Throw away standard output if you don&apos;t need it</li>
+<li>Redirection with <code>&lt;</code>, <code>&gt;</code>, <code>&lt;&lt;</code>, <code>&lt;&lt;&lt;</code>, <code>|</code> are fundamental operators to use</li>
+<li>Redirecting standard error with <code>2&gt;...</code> is both powerful and useful</li>
+</ul>
+<p>Redirecting standard error in 3 ways:</p>
+<ol>
+<li><code>make helloWorld &gt; helloWorld.out 2&gt; helloWorld.err</code><ol>
+<li>This format creates 2 separate files with <code>&gt;</code> funneling standard output into a file</li>
+<li>and <code>2&gt;</code> funneling standard error into a file</li>
+</ol>
+</li>
+<li><code>make helloWorld &gt; helloWorld.out 2&gt;&amp;1</code><ol>
+<li>This command sends stdout and stderr both to helloWorld.out</li>
+</ol>
+</li>
+<li><code>make helloWorld 2&gt;&amp;1 | tee helloWorld.out</code><ol>
+<li>This command uses tee to both send stdout and stderr to console and create file called <code>helloWorld.out</code></li>
+</ol>
+</li>
+</ol>
+<h6 id="redirect-to-devnull">Redirect to /dev/null</h6>
+<pre><code class="lang-bash">$ cat /etc/passwd &gt; /dev/null
+$ <span class="hljs-built_in">echo</span> $?
+0
+</code></pre>
+<p>In this run we threw away standard output into <code>/dev/null</code> and then checked exit status with <code>$?</code> and it ran successfully</p>
+<ul>
+<li>Read more about devices directory in <a href="http://www.tldp.org/LDP/sag/html/dev-fs.html" target="_blank">The /dev directory</a></li>
+</ul>
+<h4 id="command-types-and-searching">Command Types and Searching</h4>
+<p><a href="https://en.wikipedia.org/wiki/Type_%28Unix%29" target="_blank">Type Operator</a></p>
+<h6 id="shell-builtins">Shell Builtins</h6>
+<p><a href="https://en.wikipedia.org/wiki/Shell_builtin" target="_blank">Shell Builtin</a></p>
+<blockquote>
+<p>In computing, a shell builtin is a command or a function, called from a shell, that is executed directly in the shell itself, instead of an external executable program which the shell would load and execute.</p>
+</blockquote>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">type</span> <span class="hljs-built_in">echo</span>
+<span class="hljs-built_in">echo</span> is a shell <span class="hljs-built_in">builtin</span>
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">type</span> <span class="hljs-built_in">type</span>
+<span class="hljs-built_in">type</span> is a shell <span class="hljs-built_in">builtin</span>
+</code></pre>
+<p>Notice here that <code>type</code> is used to tell what type of command we have</p>
+<h6 id="shell-functions">Shell Functions</h6>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">type</span> cp
+cp is /bin/cp
+</code></pre>
+<p><code>cp</code> is a shell function</p>
+<h6 id="shell-aliases">Shell Aliases</h6>
+<p><a href="https://en.wikipedia.org/wiki/Alias_%28command%29" target="_blank">Shell Aliases</a></p>
+<blockquote>
+<p>In computing, alias is a command in various command line interpreters (shells) such as Unix shells, 4DOS/4NT and Windows PowerShell, which enables a replacement of a word by another string. It is mainly used for abbreviating a system command, or for adding default arguments to a regularly used command. Aliasing functionality in the MS-DOS and Microsoft Windows operating systems is provided by the DOSKey command-line utility.</p>
+</blockquote>
+<pre><code class="lang-bash">&#x2717; <span class="hljs-built_in">alias</span>
+-=<span class="hljs-string">&apos;cd -&apos;</span>
+...=../..
+....=../../..
+.....=../../../..
+......=../../../../..
+1=<span class="hljs-string">&apos;cd -&apos;</span>
+2=<span class="hljs-string">&apos;cd -2&apos;</span>
+3=<span class="hljs-string">&apos;cd -3&apos;</span>
+4=<span class="hljs-string">&apos;cd -4&apos;</span>
+5=<span class="hljs-string">&apos;cd -5&apos;</span>
+6=<span class="hljs-string">&apos;cd -6&apos;</span>
+7=<span class="hljs-string">&apos;cd -7&apos;</span>
+8=<span class="hljs-string">&apos;cd -8&apos;</span>
+9=<span class="hljs-string">&apos;cd -9&apos;</span>
+_=sudo
+afind=<span class="hljs-string">&apos;ack -il&apos;</span>
+baidu=<span class="hljs-string">&apos;web_search baidu&apos;</span>
+bing=<span class="hljs-string">&apos;web_search bing&apos;</span>
+brews=<span class="hljs-string">&apos;brew list -1&apos;</span>
+bubc=<span class="hljs-string">&apos;brew upgrade &amp;&amp; brew cleanup&apos;</span>
+bubo=<span class="hljs-string">&apos;brew update &amp;&amp; brew outdated&apos;</span>
+bubu=<span class="hljs-string">&apos;bubo &amp;&amp; bubc&apos;</span>
+d=<span class="hljs-string">&apos;dirs -v | head -10&apos;</span>
+dcb=<span class="hljs-string">&apos;docker-compose build&apos;</span>
+dcdn=<span class="hljs-string">&apos;docker-compose down&apos;</span>
+dce=<span class="hljs-string">&apos;docker-compose exec&apos;</span>
+dcl=<span class="hljs-string">&apos;docker-compose logs&apos;</span>
+dclf=<span class="hljs-string">&apos;docker-compose logs -f&apos;</span>
+dco=docker-compose
+dcps=<span class="hljs-string">&apos;docker-compose ps&apos;</span>
+dcr=<span class="hljs-string">&apos;docker-compose run&apos;</span>
+dcrestart=<span class="hljs-string">&apos;docker-compose restart&apos;</span>
+dcrm=<span class="hljs-string">&apos;docker-compose rm&apos;</span>
+dcstop=<span class="hljs-string">&apos;docker-compose stop&apos;</span>
+...
+</code></pre>
+<p>Notice here that aliases are used to make abbreviated commands</p>
+<h6 id="hashed-commands">Hashed commands</h6>
+<pre><code class="lang-bash">$ ls
+LICENSE                _book                docs                package.json
+README.md            book.json            node_modules            scripts
+SUMMARY.md            data                npm-debug.log.4075885730
+$ man bash
+$ <span class="hljs-built_in">hash</span>
+hits    <span class="hljs-built_in">command</span>
+   1    /usr/bin/man
+   1    /bin/ls
+</code></pre>
+<h6 id="shell-keywords">Shell Keywords</h6>
+<blockquote>
+<p>A keyword is a reserved word, token or operator. Keywords have a special meaning to the shell, and indeed are the building blocks of the shell&apos;s syntax. As examples, for, while, do, and ! are keywords. Similar to a builtin, a keyword is hard-coded into Bash, but unlike a builtin, a keyword is not in itself a command, but a subunit of a command construct.</p>
+</blockquote>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">type</span> [
+[ is a shell <span class="hljs-built_in">builtin</span>
+$ <span class="hljs-built_in">type</span> [[
+[[ is a shell keyword
+</code></pre>
+<p>We will go over these later in the workshop</p>
+<h6 id="shell-documentation-for-builtins">Shell Documentation for Builtins</h6>
+<p>In bash use <code>help</code> to get documentation for shell builtins</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">help</span> <span class="hljs-built_in">echo</span>
+<span class="hljs-built_in">echo</span>: <span class="hljs-built_in">echo</span> [<span class="hljs-_">-ne</span>E] [arg ...]
+    Write arguments to the standard output.
+
+    Display the ARGs, separated by a single space character and followed by a
+    newline, on the standard output.
+
+    Options:
+      -n    <span class="hljs-keyword">do</span> not append a newline
+      <span class="hljs-_">-e</span>    <span class="hljs-built_in">enable</span> interpretation of the following backslash escapes
+      -E    explicitly suppress interpretation of backslash escapes
+
+    `<span class="hljs-built_in">echo</span><span class="hljs-string">&apos; interprets the following backslash-escaped characters:
+      \a    alert (bell)
+      \b    backspace
+      \c    suppress further output
+      \e    escape character
+      \E    escape character
+      \f    form feed
+      \n    new line
+      \r    carriage return
+      \t    horizontal tab
+      \v    vertical tab
+      \\    backslash
+      \0nnn    the character whose ASCII code is NNN (octal).  NNN can be
+            0 to 3 octal digits
+      \xHH    the eight-bit character whose value is HH (hexadecimal).  HH
+            can be one or two hex digits
+
+    Exit Status:
+    Returns success unless a write error occurs.
+</span></code></pre>
+<p>while in Zsh you need to use <code>run-help</code> to get shell builtin documentation</p>
+<pre><code class="lang-zsh">$ run-help <span class="hljs-built_in">echo</span>
+<span class="hljs-comment">## Pager is used in my case it is LESS</span>
+<span class="hljs-built_in">echo</span> [ <span class="hljs-_">-ne</span>E ] [ arg ... ]
+       Write  each  arg on the standard output, with a space separating
+       each one.  If the -n flag is not present, <span class="hljs-built_in">print</span> a newline at the
+       end.  <span class="hljs-built_in">echo</span> recognizes the following escape sequences:
+
+       \a     bell character
+       \b     backspace
+       \c     suppress final newline
+       \e     escape
+       \f     form feed
+       \n     linefeed (newline)
+       \r     carriage <span class="hljs-built_in">return</span>
+       \t     horizontal tab
+       \v     vertical tab
+       \\     backslash
+       \0NNN  character code <span class="hljs-keyword">in</span> octal
+       \xNN   character code <span class="hljs-keyword">in</span> hexadecimal
+       \uNNNN unicode character code <span class="hljs-keyword">in</span> hexadecimal
+       \UNNNNNNNN
+              unicode character code <span class="hljs-keyword">in</span> hexadecimal
+
+       The  -E  flag,  or  the  BSD_ECHO option, can be used to <span class="hljs-built_in">disable</span>
+       these escape sequences.  In the latter <span class="hljs-keyword">case</span>, <span class="hljs-_">-e</span> flag can be used
+       to <span class="hljs-built_in">enable</span> them.
+/Users/marcelbelmont/zsh_help/<span class="hljs-built_in">echo</span> (END)
+</code></pre>
+<h6 id="command-builtin">Command Builtin</h6>
+<p>Command is used when you want to enhance a regular builtin command and what to use shell functions</p>
+<p>In this script below although we really didn&apos;t enhance <code>echo</code> command is a sample script using <code>command</code> builtin</p>
+<p><code>different-type-of-echo.sh</code>:</p>
+<pre><code class="lang-bash"><span class="hljs-comment">#! /bin/bash -</span>
+
+<span class="hljs-built_in">type</span> <span class="hljs-built_in">echo</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;defining echo command&quot;</span>
+
+<span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">echo</span></span> () {
+  <span class="hljs-built_in">command</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span>
+  <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Printing some commands here\n&quot;</span>
+}
+
+<span class="hljs-built_in">type</span> <span class="hljs-built_in">echo</span>
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;one two three&quot;</span>
+</code></pre>
+<p>Running the script above:</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> is a shell <span class="hljs-built_in">builtin</span>
+defining <span class="hljs-built_in">echo</span> <span class="hljs-built_in">command</span>
+<span class="hljs-built_in">echo</span> is a <span class="hljs-keyword">function</span>
+<span class="hljs-function"><span class="hljs-title">echo</span></span> ()
+{
+    <span class="hljs-built_in">command</span> <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$@</span>&quot;</span>;
+    <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;Printing some commands here\n&quot;</span>
+}
+one two three
+Printing some commands here
+</code></pre>
+<p>Notice that at first <code>echo</code> is a shell builtin and then with the <code>command</code> builtin we are using our own version of <code>echo</code></p>
+<h6 id="special-builtins">Special Builtins</h6>
+<p><a href="https://www.gnu.org/software/bash/manual/html_node/Special-Builtins.html#Special-Builtins" target="_blank">Bash Special Builtins</a></p>
+<p>For historical reasons, the POSIX standard has classified several builtin commands as special. When Bash is executing in POSIX mode, the special builtins differ from other builtin commands in three respects:</p>
+<p>Special builtins are found before shell functions during command lookup.
+If a special builtin returns an error status, a non-interactive shell exits.
+Assignment statements preceding the command stay in effect in the shell environment after the command completes.
+When Bash is not executing in POSIX mode, these builtins behave no differently than the rest of the Bash builtin commands. The Bash POSIX mode is described in Bash POSIX Mode.</p>
+<p>These are the POSIX special builtins:</p>
+<p>break : . continue eval exec exit export readonly return set
+shift trap unset</p>
+<p>I am not sure whether zsh calls <code>break</code> and <code>continue</code> special builtins</p>
+<h6 id="defining-your-own-scripts">Defining your own scripts</h6>
+<p>The <code>PATH</code> variable is used find location of binary executables</p>
+<blockquote>
+<p>On POSIX and Unix-like operating systems, the $PATH variable is specified as a list of one or more directory names separated by colon (:) characters.</p>
+</blockquote>
+<p><a href="https://en.wikipedia.org/wiki/PATH_%28variable%29" target="_blank">Path Variable</a></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span>
+/Users/marcelbelmont/.gvm/bin:/Users/marcelbelmont/.nvm/versions/node/v6.11.2/bin:/Users/marcelbelmont/.local/bin:/Users/marcelbelmont/bin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/opt/go/libexec/bin:/usr/<span class="hljs-built_in">local</span>/opt/openvpn/sbin:/Users/marcelbelmont/go/bin:/Users/marcelbelmont/.gvm/bin:/Users/marcelbelmont/.local/bin:/Users/marcelbelmont/bin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/opt/go/libexec/bin:/usr/<span class="hljs-built_in">local</span>/opt/openvpn/sbin:/Users/marcelbelmont/go/bin:/Users/marcelbelmont/.gvm/bin:/Users/marcelbelmont/.local/bin:/Users/marcelbelmont/bin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/<span class="hljs-built_in">local</span>/sbin:...
+</code></pre>
+<p>Notice that when we echo the contents of <code>PATH</code> variable the local executables come first</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$HOME</span>/.local/bin:<span class="hljs-variable">$HOME</span>/bin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/opt/go/libexec/bin:$(brew --prefix openvpn)/sbin:<span class="hljs-variable">$GOPATH</span>/bin:<span class="hljs-variable">$PATH</span>
+</code></pre>
+<p>Here is my local <code>PATH</code> variable</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">export</span> PATH=<span class="hljs-string">&quot;<span class="hljs-variable">$PATH</span>:<span class="hljs-variable">$HOME</span>/.rvm/bin&quot;</span>
+</code></pre>
+<p>Here <code>rvm</code> is prepended to existing <code>PATH</code> variable</p>
+<p><em>Good Practices for PATH variable:</em></p>
+<ul>
+<li>You should use a convention like <code>$HOME:/bin</code> to define any local scripts</li>
+<li>Don&apos;t use current directory as this can be used to execute malicious code like a <code>trojan horse</code></li>
+<li>Be careful with <code>PATH</code> variable<ul>
+<li>Use full paths only</li>
+<li>Don&apos;t use empty elements or explicit <code>.</code> in PATH variable</li>
+</ul>
+</li>
+<li>Try to put private directories first</li>
+<li>Use command function to skip functions</li>
+<li>Clear <code>CDPATH</code> in production environments</li>
+</ul>
+<h6 id="cdpath-variable">CDPATH variable</h6>
+<ul>
+<li>Use CDPATH to define the base directory for cd command</li>
+<li>Never export CDPATH from your shell to the environment.</li>
+<li>If you use CDPATH then set it in your <code>.bashrc</code>, <code>.zshrc</code> file and don&#x2019;t export it<ul>
+<li>so that it&#x2019;s only set in interactive shells.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-bash">CDPATH=~/genesys:.
+</code></pre>
+<p>Now when I try <code>cd</code> into directory I can cd into any folders inside of <code>~/genesys</code> and it will be found</p>
+<p>As I mentioned above don&apos;t do this in production because there is assumptions about directory structure here that won&apos;t necessarily be the case in a production environment</p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="../">README</a></td>
+<td style="text-align:right"><a href="introduction-to-text-processing.html">Introduction to Text Processing</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Workshop Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="introduction-to-text-processing.html" class="navigation navigation-next " aria-label="Next page: Introduction to Text Processing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basics of Shell Programming","level":"1.2","depth":1,"next":{"title":"Introduction to Text Processing","level":"1.3","depth":1,"path":"docs/introduction-to-text-processing.md","ref":"docs/introduction-to-text-processing.md","articles":[]},"previous":{"title":"Workshop Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/basics-of-shell-programming.md","mtime":"2018-11-22T17:17:35.936Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,917 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Shell Login Order · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="network-utilities.html" />
+    
+    
+    <link rel="prev" href="building-command-line-applications.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Shell Login Order</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---shell-login-order">Unix Programming and Regular Expressions Workshop - Shell Login Order</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#shell-configuration-files">Shell Configuration Files</a></li>
+<li><a href="#configuration-files-in-home-directory">Configuration files in Home Directory</a></li>
+<li><a href="#shell-login-order">Shell Login Order</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="shell-configuration-files">Shell Configuration Files</h4>
+<p>Here is a the list of shell configuration files:</p>
+<ul>
+<li><code>/etc/profile</code> Configuration File</li>
+<li><code>/etc/profile.d</code> Directory with Configuration Files<ul>
+<li><code>/etc/profile.d/dircolors.sh</code></li>
+<li><code>/etc/profile.d/extrapaths.sh</code></li>
+<li><code>/etc/profile.d/readline.sh</code></li>
+<li><code>/etc/profile.d/umask.sh</code></li>
+<li><code>/etc/profile.d/X.sh</code></li>
+<li><code>/etc/profile.d/i18n.sh</code></li>
+</ul>
+</li>
+<li><code>/etc/bashrc</code> </li>
+<li><code>/etc/zshrc</code></li>
+<li><code>/etc/zprofile</code></li>
+<li><code>~/.bash_profile</code></li>
+<li><code>~/.bash_login</code></li>
+<li><code>~/.bash_logout</code></li>
+<li><code>~/.bashrc</code></li>
+<li><code>~/.bashenv</code></li>
+<li><code>~/.zprofile</code></li>
+<li><code>~/.profile</code></li>
+<li><code>~/.zshrc</code></li>
+<li><code>~/.zshenv</code></li>
+<li><code>~/.zlogin</code></li>
+<li><code>~/.zlogout</code></li>
+</ul>
+<p>There are other configuration files for the other shells: </p>
+<ul>
+<li><code>fish</code></li>
+<li><code>csh</code></li>
+<li><code>tcsh</code></li>
+<li><code>ksh</code></li>
+<li><code>sh</code></li>
+</ul>
+<h6 id="etcprofile">/etc/profile</h6>
+<p>This file usually set the shell variables <code>PATH</code>, <code>USER</code>, <code>MAIL</code>, <code>HOSTNAME</code> and <code>HISTSIZE</code>.</p>
+<p>This file starts by setting up some helper functions and some basic parameters</p>
+<p>Here is the contents of <code>/etc/profile</code> in the Ubuntu Linux Distribution</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># /etc/profile: system-wide .profile file for the Bourne shell (sh(1))</span>
+<span class="hljs-comment"># and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).</span>
+
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$PS1</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
+  <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$BASH</span>&quot;</span> ] &amp;&amp; [ <span class="hljs-string">&quot;<span class="hljs-variable">$BASH</span>&quot;</span> != <span class="hljs-string">&quot;/bin/sh&quot;</span> ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-comment"># The file bash.bashrc already sets the default PS1.</span>
+    <span class="hljs-comment"># PS1=&apos;\h:\w\$ &apos;</span>
+    <span class="hljs-keyword">if</span> [ <span class="hljs-_">-f</span> /etc/bash.bashrc ]; <span class="hljs-keyword">then</span>
+      . /etc/bash.bashrc
+    <span class="hljs-keyword">fi</span>
+  <span class="hljs-keyword">else</span>
+    <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;`id -u`&quot;</span> <span class="hljs-_">-eq</span> 0 ]; <span class="hljs-keyword">then</span>
+      PS1=<span class="hljs-string">&apos;# &apos;</span>
+    <span class="hljs-keyword">else</span>
+      PS1=<span class="hljs-string">&apos;$ &apos;</span>
+    <span class="hljs-keyword">fi</span>
+  <span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-keyword">if</span> [ <span class="hljs-_">-d</span> /etc/profile.d ]; <span class="hljs-keyword">then</span>
+  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> /etc/profile.d/*.sh; <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">if</span> [ -r <span class="hljs-variable">$i</span> ]; <span class="hljs-keyword">then</span>
+      . <span class="hljs-variable">$i</span>
+    <span class="hljs-keyword">fi</span>
+  <span class="hljs-keyword">done</span>
+  <span class="hljs-built_in">unset</span> i
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>Here are the contents in Mac OS X</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># System-wide .profile for sh(1)</span>
+
+<span class="hljs-keyword">if</span> [ -x /usr/libexec/path_helper ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">eval</span> `/usr/libexec/path_helper <span class="hljs-_">-s</span>`
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">${BASH-no}</span>&quot;</span> != <span class="hljs-string">&quot;no&quot;</span> ]; <span class="hljs-keyword">then</span>
+    [ -r /etc/bashrc ] &amp;&amp; . /etc/bashrc
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<h6 id="etcprofiled">/etc/profile.d</h6>
+<p>All large user and site specific environment customization should be placed in this directory.</p>
+<p>Here are the configuration files in this directory:</p>
+<ul>
+<li><code>/etc/profile.d/dircolors.sh</code></li>
+<li><code>/etc/profile.d/extrapaths.sh</code></li>
+<li><code>/etc/profile.d/readline.sh</code></li>
+<li><code>/etc/profile.d/umask.sh</code></li>
+<li><code>/etc/profile.d/X.sh</code></li>
+<li><code>/etc/profile.d/i18n.sh</code></li>
+</ul>
+<h6 id="etcprofileddircolorssh">/etc/profile.d/dircolors.sh</h6>
+<p>The <code>/etc/profile.d/dircolors.sh</code> script uses the <code>~/.dircolors</code> and <code>/etc/dircolors</code> files to control the colors of file names in a directory listing. </p>
+<p>They control colorized output of things like <code>ls --color</code>. </p>
+<p>The explanation of how to initialize these files is at the end of this section.</p>
+<h6 id="etcprofiledextrapathssh">/etc/profile.d/extrapaths.sh</h6>
+<p>This script adds several useful paths to the PATH and PKG_CONFIG_PATH environment variables.</p>
+<p>This will allow executables in the current working directory to be executed without specifiying a ./, however you are warned that this is generally considered a security hazard</p>
+<p>This script adds some useful paths to the PATH and can be used to customize other PATH related environment variables (e.g. LD_LIBRARY_PATH, etc) that may be needed for all users.</p>
+<p>Sample Entry for this configuration file</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ <span class="hljs-_">-d</span> /usr/<span class="hljs-built_in">local</span>/lib/pkgconfig ] ; <span class="hljs-keyword">then</span>
+        pathappend /usr/<span class="hljs-built_in">local</span>/lib/pkgconfig PKG_CONFIG_PATH
+<span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-_">-d</span> /usr/<span class="hljs-built_in">local</span>/bin ]; <span class="hljs-keyword">then</span>
+        pathprepend /usr/<span class="hljs-built_in">local</span>/bin
+<span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-_">-d</span> /usr/<span class="hljs-built_in">local</span>/sbin <span class="hljs-_">-a</span> <span class="hljs-variable">$EUID</span> <span class="hljs-_">-eq</span> 0 ]; <span class="hljs-keyword">then</span>
+        pathprepend /usr/<span class="hljs-built_in">local</span>/sbin
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-comment"># Set some defaults before other applications add to these paths.</span>
+pathappend /usr/share/man  MANPATH
+pathappend /usr/share/info INFOPATH
+</code></pre>
+<h6 id="etcprofiledreadlinesh">/etc/profile.d/readline.sh</h6>
+<p>This script sets up the default inputrc configuration file. </p>
+<p>If the user does not have individual settings, it uses the global file.</p>
+<p>Here is a sample entry:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Setup the INPUTRC environment variable.</span>
+<span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">$INPUTRC</span>&quot;</span> <span class="hljs-_">-a</span> ! <span class="hljs-_">-f</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.inputrc&quot;</span> ] ; <span class="hljs-keyword">then</span>
+        INPUTRC=/etc/inputrc
+<span class="hljs-keyword">fi</span>
+<span class="hljs-built_in">export</span> INPUTRC
+</code></pre>
+<h6 id="etcprofiledumasksh">/etc/profile.d/umask.sh</h6>
+<p>Setting the umask value is important for security. </p>
+<p>Here the default group write permissions are turned off for system users and when the user name and group name are not the same.</p>
+<p>Here is a sample entry:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># By default we want the umask to get set.</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$(id -gn)</span>&quot;</span> = <span class="hljs-string">&quot;<span class="hljs-variable">$(id -un)</span>&quot;</span> <span class="hljs-_">-a</span> <span class="hljs-variable">$EUID</span> <span class="hljs-_">-gt</span> 99 ] ; <span class="hljs-keyword">then</span>
+  <span class="hljs-built_in">umask</span> 002
+<span class="hljs-keyword">else</span>
+  <span class="hljs-built_in">umask</span> 022
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<h6 id="etcprofiledxsh">/etc/profile.d/X.sh</h6>
+<p>If X is installed, the PATH and PKG_CONFIG_PATH variables are also updated.</p>
+<p>Here is a sample entry:</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">if</span> [ -x /usr/X11R6/bin/X ]; <span class="hljs-keyword">then</span>
+        pathappend /usr/X11R6/bin
+<span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-_">-d</span> /usr/X11R6/lib/pkgconfig ] ; <span class="hljs-keyword">then</span>
+        pathappend /usr/X11R6/lib/pkgconfig PKG_CONFIG_PATH
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<h6 id="etcprofiledi18nsh">/etc/profile.d/i18n.sh</h6>
+<p>This script sets an environment variable necessary for native language support.</p>
+<p>Here is a sample entry:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Set up i18n variables</span>
+<span class="hljs-built_in">export</span> LANG=&lt;ll&gt;_&lt;CC&gt;.&lt;charmap&gt;&lt;@modifiers&gt;
+</code></pre>
+<h4 id="etcbashrc">/etc/bashrc</h4>
+<p>This <code>/etc/bashrc</code> file is meant for setting command aliases and functions used by bash shell users.</p>
+<p>Here is a sample bashrc from ubuntu `/etc/bash.bashrc</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># System-wide .bashrc file for interactive bash(1) shells.</span>
+
+<span class="hljs-comment"># To enable the settings / commands in this file for login shells as well,</span>
+<span class="hljs-comment"># this file has to be sourced in /etc/profile.</span>
+
+<span class="hljs-comment"># If not running interactively, don&apos;t do anything</span>
+[ -z <span class="hljs-string">&quot;<span class="hljs-variable">$PS1</span>&quot;</span> ] &amp;&amp; <span class="hljs-built_in">return</span>
+
+<span class="hljs-comment"># check the window size after each command and, if necessary,</span>
+<span class="hljs-comment"># update the values of LINES and COLUMNS.</span>
+<span class="hljs-built_in">shopt</span> <span class="hljs-_">-s</span> checkwinsize
+
+<span class="hljs-comment"># set variable identifying the chroot you work in (used in the prompt below)</span>
+<span class="hljs-keyword">if</span> [ -z <span class="hljs-string">&quot;<span class="hljs-variable">${debian_chroot:-}</span>&quot;</span> ] &amp;&amp; [ -r /etc/debian_chroot ]; <span class="hljs-keyword">then</span>
+    debian_chroot=$(cat /etc/debian_chroot)
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-comment"># set a fancy prompt (non-color, overwrite the one in /etc/profile)</span>
+PS1=<span class="hljs-string">&apos;${debian_chroot:+($debian_chroot)}\u@\h:\w\$ &apos;</span>
+
+<span class="hljs-comment"># Commented out, don&apos;t overwrite xterm -T &quot;title&quot; -n &quot;icontitle&quot; by default.</span>
+<span class="hljs-comment"># If this is an xterm set the title to user@host:dir</span>
+<span class="hljs-comment">#case &quot;$TERM&quot; in</span>
+<span class="hljs-comment">#xterm*|rxvt*)</span>
+<span class="hljs-comment">#    PROMPT_COMMAND=&apos;echo -ne &quot;\033]0;${USER}@${HOSTNAME}: ${PWD}\007&quot;&apos;</span>
+<span class="hljs-comment">#    ;;</span>
+<span class="hljs-comment">#*)</span>
+<span class="hljs-comment">#    ;;</span>
+<span class="hljs-comment">#esac</span>
+
+<span class="hljs-comment"># enable bash completion in interactive shells</span>
+<span class="hljs-comment">#if ! shopt -oq posix; then</span>
+<span class="hljs-comment">#  if [ -f /usr/share/bash-completion/bash_completion ]; then</span>
+<span class="hljs-comment">#    . /usr/share/bash-completion/bash_completion</span>
+<span class="hljs-comment">#  elif [ -f /etc/bash_completion ]; then</span>
+<span class="hljs-comment">#    . /etc/bash_completion</span>
+<span class="hljs-comment">#  fi</span>
+<span class="hljs-comment">#fi</span>
+
+<span class="hljs-comment"># sudo hint</span>
+<span class="hljs-keyword">if</span> [ ! <span class="hljs-_">-e</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.sudo_as_admin_successful&quot;</span> ] &amp;&amp; [ ! <span class="hljs-_">-e</span> <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/.hushlogin&quot;</span> ] ; <span class="hljs-keyword">then</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-string">&quot; <span class="hljs-variable">$(groups)</span> &quot;</span> <span class="hljs-keyword">in</span> *\ admin\ *|*\ sudo\ *)
+    <span class="hljs-keyword">if</span> [ -x /usr/bin/sudo ]; <span class="hljs-keyword">then</span>
+    cat &lt;&lt;-EOF
+    To run a <span class="hljs-built_in">command</span> as administrator (user <span class="hljs-string">&quot;root&quot;</span>), use <span class="hljs-string">&quot;sudo &lt;command&gt;&quot;</span>.
+    See <span class="hljs-string">&quot;man sudo_root&quot;</span> <span class="hljs-keyword">for</span> details.
+
+    EOF
+    <span class="hljs-keyword">fi</span>
+    <span class="hljs-keyword">esac</span>
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-comment"># if the command-not-found package is installed, use it</span>
+<span class="hljs-keyword">if</span> [ -x /usr/lib/<span class="hljs-built_in">command</span>-not-found -o -x /usr/share/<span class="hljs-built_in">command</span>-not-found/<span class="hljs-built_in">command</span>-not-found ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-keyword">function</span> command_not_found_handle {
+            <span class="hljs-comment"># check because c-n-f could&apos;ve been removed in the meantime</span>
+                <span class="hljs-keyword">if</span> [ -x /usr/lib/<span class="hljs-built_in">command</span>-not-found ]; <span class="hljs-keyword">then</span>
+           /usr/lib/<span class="hljs-built_in">command</span>-not-found -- <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>
+                   <span class="hljs-built_in">return</span> $?
+                <span class="hljs-keyword">elif</span> [ -x /usr/share/<span class="hljs-built_in">command</span>-not-found/<span class="hljs-built_in">command</span>-not-found ]; <span class="hljs-keyword">then</span>
+           /usr/share/<span class="hljs-built_in">command</span>-not-found/<span class="hljs-built_in">command</span>-not-found -- <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span>
+                   <span class="hljs-built_in">return</span> $?
+        <span class="hljs-keyword">else</span>
+           <span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;%s: command not found\n&quot;</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> &gt;&amp;2
+           <span class="hljs-built_in">return</span> 127
+        <span class="hljs-keyword">fi</span>
+    }
+</code></pre>
+<h6 id="etczshrc">/etc/zshrc</h6>
+<p>This <code>/etc/zshrc</code> file is meant for setting command aliases and functions used by zsh shell users.</p>
+<p>Here is a sample:</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># Correctly display UTF-8 with combining characters.</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$TERM_PROGRAM</span>&quot;</span> = <span class="hljs-string">&quot;Apple_Terminal&quot;</span> ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">setopt</span> combiningchars
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-built_in">disable</span> <span class="hljs-built_in">log</span>
+</code></pre>
+<h6 id="etczprofile">/etc/zprofile</h6>
+<p>Used for executing user&apos;s commands at start, will be sourced when starting as a login shell.</p>
+<h4 id="configuration-files-in-home-directory">Configuration files in Home Directory</h4>
+<p>Shell Users can define these configuration files in their home directory which will override the system level configuration files <code>/etc</code> directory</p>
+<p>Linux users home directory path is usually like this: <code>/home/jbelmont</code></p>
+<p>Mac OS X Users home directory is like this: <code>/Users/marcelbelmont</code></p>
+<p>You can create the configuration files by using the <code>touch</code> command and set your own local configuration that you want to override with the system level configuration</p>
+<h4 id="shell-login-order">Shell Login Order</h4>
+<p>If Bash is invoked as an interactive login shell, or as a non-interactive shell with the --login option</p>
+<p>Bash will first read and execute commands from the file <code>/etc/profile</code></p>
+<p>Then if that <code>/etc/profile</code> exists. </p>
+<p>After reading <code>/etc/profile</code>, it looks for <code>~/.bash_profile</code>, <code>~/.bash_login</code>, and <code>~/.profile</code>, in that order, and reads and executes commands from the first one that exists and is readable. </p>
+<p>The --noprofile option may be used when the shell is started to inhibit this behavior.</p>
+<p>Here is a zsh chart with login order</p>
+<table>
+<thead>
+<tr>
+<th>Shell</th>
+<th>Interactive Login</th>
+<th>Interactive non-login</th>
+<th>Script</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/etc/zshenv</code></td>
+<td>A</td>
+<td>A</td>
+<td>A</td>
+</tr>
+<tr>
+<td><code>~/.zshenv</code></td>
+<td>B</td>
+<td>B</td>
+<td>B</td>
+</tr>
+<tr>
+<td><code>/etc/zprofile</code></td>
+<td>C</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/.zprofile</code></td>
+<td>D</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>/etc/zshrc</code></td>
+<td>E</td>
+<td>C</td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/.zshrc</code></td>
+<td>F</td>
+<td>D</td>
+<td></td>
+</tr>
+<tr>
+<td><code>/etc/zlogin</code></td>
+<td>G</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/.zlogin</code></td>
+<td>H</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>~/.zlogout</code></td>
+<td>I</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>/etc/zlogout</code></td>
+<td>J</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="building-command-line-applications.html">Building Command line applications</a></td>
+<td style="text-align:right"><a href="network-utilities.html">Network Utilities</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="building-command-line-applications.html" class="navigation navigation-prev " aria-label="Previous page: Building Command line applications">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="network-utilities.html" class="navigation navigation-next " aria-label="Next page: Network Utilities">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Shell Login Order","level":"1.23","depth":1,"next":{"title":"Network Utilities","level":"1.24","depth":1,"path":"docs/network-utilities.md","ref":"docs/network-utilities.md","articles":[]},"previous":{"title":"Building Command line applications","level":"1.22","depth":1,"path":"docs/building-command-line-applications.md","ref":"docs/building-command-line-applications.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/shell-login-order.md","mtime":"2018-11-22T17:17:35.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

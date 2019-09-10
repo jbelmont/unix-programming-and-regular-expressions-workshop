@@ -1,0 +1,1248 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Text Searching · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="text-substitution.html" />
+    
+    
+    <link rel="prev" href="introduction-to-text-processing.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Text Searching</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---text-searching">Unix Programming and Regular Expressions Workshop - Text Searching</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#regular-expressions">Regular Expressions</a></li>
+<li><a href="#history-and-types-of-regular-expressions">History and Types of Regular Expressions</a></li>
+<li><a href="#unix-tools-that-use-regular-expressions">Unix Tools that use Regular Expressions</a></li>
+<li><a href="#basic-regular-expressions">Basic Regular Expressions</a></li>
+<li><a href="#extended-regular-expressions">Extended Regular Expressions</a></li>
+<li><a href="#family-of-regular-expression-tools">Family of Regular Expression Tools</a></li>
+<li><a href="#important-grep-options">Important Grep Options</a></li>
+<li><a href="#good-practices-for-regular-expressions">Good Practices for Regular Expressions</a></li>
+<li><a href="#bracket-expressions">Bracket Expressions</a></li>
+<li><a href="#basic-grep-examples">Basic Grep Examples</a></li>
+<li><a href="#interval-expressions">Interval Expressions</a></li>
+<li><a href="#parenthesized-subexpressions">Parenthesized Subexpressions</a></li>
+<li><a href="#basic-regular-expression-operator-precedence">Basic Regular Expression Operator Precedence</a></li>
+<li><a href="#regular-expression-matching">Regular Expression Matching</a></li>
+<li><a href="#intermediate-grep-examples">Intermediate Grep Examples</a></li>
+<li><a href="#extended-regular-expressions">Extended Regular Expressions</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="regular-expressions">Regular Expressions</h4>
+<p><a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">Regular Expressions</a></p>
+<p>Regular expressions (regex) can be thought of as a language to describe matching text.</p>
+<blockquote>
+<p>A regular expression, regex or regexp (sometimes called a rational expression) is, in theoretical computer science and formal language theory, a sequence of characters that define a search pattern.</p>
+</blockquote>
+<p>Regular Expressions are comprised of:</p>
+<ul>
+<li>Some regular characters that can stand for themselves like &apos;a&apos;</li>
+<li>Metacharacters that can stand for a regular expression operation</li>
+</ul>
+<p>Here is a chart on metacharacters:</p>
+<table>
+<thead>
+<tr>
+<th><code>Metacharacter</code></th>
+<th><code>Description</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>^</code></td>
+<td>Matches the starting position within the string. In line-based tools, it matches the starting position of any line.</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>Matches any single character (many applications exclude newlines, and exactly which characters are considered newlines is flavor-, character-encoding-, and platform-specific, but it is safe to assume that the line feed character is included). Within POSIX bracket expressions, the dot character matches a literal dot. For example, a.c matches &quot;abc&quot;, etc., but [a.c] matches only &quot;a&quot;, &quot;.&quot;, or &quot;c&quot;.</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>A bracket expression. Matches a single character that is contained within the brackets. For example, [abc] matches &quot;a&quot;, &quot;b&quot;, or &quot;c&quot;. [a-z] specifies a range which matches any lowercase letter from &quot;a&quot; to &quot;z&quot;. These forms can be mixed: [abcx-z] matches &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;x&quot;, &quot;y&quot;, or &quot;z&quot;, as does [a-cx-z]. The - character is treated as a literal character if it is the last or the first (after the ^, if present) character within the brackets: [abc-], [-abc]. Note that backslash escapes are not allowed. The ] character can be included in a bracket expression if it is the first (after the ^) character: []abc].</td>
+</tr>
+<tr>
+<td><code>[^]</code></td>
+<td>Matches a single character that is not contained within the brackets. For example, <sup><a href="#fn_abc" id="reffn_abc">abc</a></sup> matches any character other than &quot;a&quot;, &quot;b&quot;, or &quot;c&quot;. <sup><a href="#fn_a-z" id="reffn_a-z">a-z</a></sup> matches any single character that is not a lowercase letter from &quot;a&quot; to &quot;z&quot;. Likewise, literal characters and ranges can be mixed.</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>Matches the ending position of the string or the position just before a string-ending newline. In line-based tools, it matches the ending position of any line.</td>
+</tr>
+<tr>
+<td><code>()</code></td>
+<td>Defines a marked subexpression. The string matched within the parentheses can be recalled later (see the next entry, \n). A marked subexpression is also called a block or capturing group. BRE mode requires ( ).</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>Matches what the nth marked subexpression matched, where n is a digit from 1 to 9. This construct is vaguely defined in the POSIX.2 standard. Some tools allow referencing more than nine capturing groups.</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>Matches the preceding element zero or more times. For example, ab<em>c matches &quot;ac&quot;, &quot;abc&quot;, &quot;abbbc&quot;, etc. [xyz]</em> matches &quot;&quot;, &quot;x&quot;, &quot;y&quot;, &quot;z&quot;, &quot;zx&quot;, &quot;zyx&quot;, &quot;xyzzy&quot;, and so on. (ab)* matches &quot;&quot;, &quot;ab&quot;, &quot;abab&quot;, &quot;ababab&quot;, and so on.</td>
+</tr>
+<tr>
+<td><code>{m, n}</code></td>
+<td>Matches the preceding element at least m and not more than n times. For example, a{3,5} matches only &quot;aaa&quot;, &quot;aaaa&quot;, and &quot;aaaaa&quot;. This is not found in a few older instances of regexes. BRE mode requires {m,n}.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Expressions that denote categories of a regular expression</li>
+</ul>
+<h4 id="history-and-types-of-regular-expressions">History and Types of Regular Expressions</h4>
+<blockquote>
+<p>Regular expressions originated in 1956, when mathematician Stephen Cole Kleene described regular languages using his mathematical notation called regular sets. These arose in theoretical computer science, in the subfields of automata theory (models of computation) and the description and classification of formal languages. Other early implementations of pattern matching include the <a href="https://en.wikipedia.org/wiki/SNOBOL" target="_blank">SNOBOL language</a>, which did not use regular expressions, but instead its own pattern matching constructs.</p>
+</blockquote>
+<ul>
+<li>Different Unix tools have used different Regular Expression types</li>
+<li>This reflects the influence and interests in AT&amp;T Research Labs (Kernighan, Ritchie, etc)</li>
+</ul>
+<h4 id="unix-tools-that-use-regular-expressions">Unix Tools that use Regular Expressions</h4>
+<p>Unix Tools that use Regexes:</p>
+<ul>
+<li><p>grep</p>
+</li>
+<li><p>sed</p>
+</li>
+<li><p>awk</p>
+</li>
+<li><p>vim</p>
+</li>
+<li><p>emacs</p>
+</li>
+</ul>
+<h4 id="basic-regular-expressions">Basic Regular Expressions</h4>
+<p>BRE (Basic Regular Expressions)</p>
+<p>BRE . Although POSIX.2 leaves some implementation specifics undefined, BRE and ERE provide a &quot;standard&quot; which has since been adopted as the default syntax of many tools, where the choice of BRE or ERE modes is usually a supported option. For example, GNU grep has the following options: &quot;grep -E&quot; for ERE, and &quot;grep -G&quot; for BRE (the default), and &quot;grep -P&quot; for Perl regexes.</p>
+<h6 id="examples-of-regular-expressions">Examples of Regular Expressions</h6>
+<p>Here are some examples from the <a href="https://en.wikipedia.org/wiki/Regular_expression" target="_blank">Regular Expressions Wikipedia Page</a>:</p>
+<ul>
+<li><p><code>.at</code> matches any three-character string ending with &quot;at&quot;, including &quot;hat&quot;, &quot;cat&quot;, and &quot;bat&quot;.</p>
+</li>
+<li><p><code>[hc]at</code> matches &quot;hat&quot; and &quot;cat&quot;.</p>
+</li>
+<li><p><code>[^b]at</code> matches all strings matched by .at except &quot;bat&quot;.</p>
+</li>
+<li><p><code>[^hc]at</code> matches all strings matched by .at other than &quot;hat&quot; and &quot;cat&quot;.</p>
+</li>
+<li><p><code>^[hc]at</code> matches &quot;hat&quot; and &quot;cat&quot;, but only at the beginning of the string or line.</p>
+</li>
+<li><p><code>[hc]at$</code> matches &quot;hat&quot; and &quot;cat&quot;, but only at the end of the string or line.</p>
+</li>
+<li><p><code>\[.\]</code> matches any single character surrounded by &quot;[&quot; and &quot;]&quot; since the brackets are escaped, for example: &quot;[a]&quot; and &quot;[b]&quot;.</p>
+</li>
+<li><p><code>s.*</code> matches s followed by zero or more characters, for example: &quot;s&quot; and &quot;saw&quot; and &quot;seed&quot;.</p>
+</li>
+</ul>
+<h4 id="extended-regular-expressions">Extended Regular Expressions</h4>
+<ul>
+<li><p>ERE (Extended Regular Expressions) adds <code>?</code>, <code>+</code>, and <code>|</code>, and EREs removes the need to escape the metacharacters <code>( )</code> and <code>{ }</code>, which are required in BREs.</p>
+</li>
+<li><p>Furthermore, as long as the POSIX standard syntax for regexes is adhered to, there can be, and often is, additional syntax to serve specific (yet POSIX compliant) applications</p>
+</li>
+<li><p>The meaning of metacharacters escaped with a backslash is reversed for some characters in the POSIX Extended Regular Expression (ERE) syntax.</p>
+</li>
+<li><p>With this syntax, a backslash causes the metacharacter to be treated as a literal character.</p>
+</li>
+<li><p>So, for example, <code>\( \)</code> is now <code>( )</code> and <code>\{ \}</code> is now <code>{ }</code>.</p>
+</li>
+<li><p>Additionally, support is removed for \n backreferences and the following metacharacters are added:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><code>Metacharacter</code></th>
+<th><code>Description</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>?</code></td>
+<td>Matches the preceding element zero or one time. For example, ab?c matches only &quot;ac&quot; or &quot;abc&quot;.</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>Matches the preceding element one or more times. For example, ab+c matches &quot;abc&quot;, &quot;abbc&quot;, &quot;abbbc&quot;, and so on, but not &quot;ac&quot;.</td>
+</tr>
+<tr>
+<td><code>|</code></td>
+<td>The choice (also known as alternation or set union) operator matches either the expression before or the expression after the operator. For example, abc|def matches &quot;abc&quot; or &quot;def&quot;.</td>
+</tr>
+</tbody>
+</table>
+<h6 id="examples-of-eres">Examples of EREs</h6>
+<ul>
+<li><p>[hc]?at matches &quot;hat&quot;, &quot;cat&quot;, and &quot;at&quot;.</p>
+</li>
+<li><p>[hc]*at matches &quot;hat&quot;, &quot;cat&quot;, &quot;hhat&quot;, &quot;chat&quot;, &quot;hcat&quot;, &quot;cchchat&quot;, &quot;at&quot;, and so on.</p>
+</li>
+<li><p>[hc]+at matches &quot;hat&quot;, &quot;cat&quot;, &quot;hhat&quot;, &quot;chat&quot;, &quot;hcat&quot;, &quot;cchchat&quot;, and so on, but not &quot;at&quot;.</p>
+</li>
+<li><p>cat|dog matches &quot;cat&quot; or &quot;dog&quot;.</p>
+</li>
+</ul>
+<h4 id="family-of-regular-expression-tools">Family of Regular Expression Tools</h4>
+<h6 id="grep">Grep</h6>
+<p>Different <code>Grep</code> programs:</p>
+<ol>
+<li>The <code>grep</code> utility searches any given input files, selecting lines that match one or more patterns.</li>
+<li>The <code>egrep</code> interprets pattern as an extended regular expression<ol>
+<li>Force regular <code>grep</code> to behave like <code>egrep</code> with <code>-E</code> flag.</li>
+</ol>
+</li>
+<li>The <code>fgrep</code> interprets pattern as a set of fixed strings.<ol>
+<li>Force regular <code>grep</code> to behave as <code>fgrep</code> with <code>-F</code>.</li>
+</ol>
+</li>
+<li>The <code>zgrep</code> invokes grep on compressed or gzipped files<ol>
+<li>Force regular <code>grep</code> to behave as <code>zgrep</code> with <code>-Z</code>.</li>
+</ol>
+</li>
+<li>The <code>zegrep</code> accept input files compressed with the compress utility</li>
+<li>The <code>zfgrep</code> compression utilities with gzip</li>
+</ol>
+<h6 id="sed">Sed</h6>
+<ul>
+<li><p>Sed is good for text matching and substitution</p>
+</li>
+<li><p>The sed utility reads the specified files, or the standard input if no files are specified, modifying the input as specified by a list of commands.</p>
+</li>
+<li><p>The input is then written to the standard output</p>
+</li>
+</ul>
+<h6 id="awk">Awk</h6>
+<ul>
+<li><p>Pattern matching with an actual programming language</p>
+</li>
+<li><p>Awk scans each input file for lines that match any of a set of patterns specified literally in prog or in one or more files specified as -f progfile.</p>
+</li>
+<li><p>With each pattern there can be an associated action that will be performed when a line of a file matches the  pattern.</p>
+</li>
+<li><p>Each line is matched against the pattern portion of every pattern-action statement; the associated action is performed for each matched pattern.</p>
+</li>
+<li><p>The file name - means the standard input.</p>
+</li>
+<li><p>Any file of the form var=value is treated as an assignment, not a filename, and is executed  at the time it would have been opened if it were a filename.</p>
+</li>
+<li><p>The option -v followed by var=value is an assignment to be done before prog is executed; any number of -v options may be present.</p>
+</li>
+<li><p>The -F fs option defines the input field separator to be the regular expression fs.</p>
+</li>
+</ul>
+<h6 id="scripting-languages-with-regular-expression-flavors-of-their-own">Scripting Languages with Regular Expression Flavors of their own</h6>
+<ul>
+<li>Perl</li>
+<li>Python</li>
+<li>Ruby</li>
+<li>JavaScript</li>
+</ul>
+<h4 id="important-grep-options">Important Grep Options</h4>
+<p>List of Imporant <code>grep</code> options:</p>
+<ul>
+<li><p><code>-e</code> specify a pattern used during the search of the input: an input line is selected if it matches any of the specified patterns.</p>
+<ul>
+<li>This option is most useful when multiple -e options are used to specify multiple patterns, or when a pattern begins with a dash (`-&apos;).</li>
+</ul>
+</li>
+<li><p><code>-f</code> Read one or more newline separated patterns from file.</p>
+<ul>
+<li>Empty pattern lines match every input line.</li>
+<li>Newlines are not considered part of a pattern.</li>
+<li>If file is empty, nothing is matched.</li>
+</ul>
+</li>
+<li><p><code>-l</code> Only the names of files containing selected lines are written to standard output.  grep will only search a file until a match has been found, making searches potentially less expensive.</p>
+<ul>
+<li>Pathnames are listed once per file searched.</li>
+<li>If the standard input is searched, the string ``(standard input)&apos;&apos; is written.</li>
+</ul>
+</li>
+<li><p><code>-v</code> Selected lines are those not matching any of the specified patterns (invert matches)</p>
+</li>
+<li><p><code>-q</code> suppress output or quiet mode</p>
+<ul>
+<li>Often in a shell script doing <code>&gt; /dev/null</code> is more obvious to readers</li>
+</ul>
+</li>
+<li><p><code>-s</code> don&apos;t print errors</p>
+</li>
+</ul>
+<h4 id="good-practices-for-regular-expressions">Good Practices for Regular Expressions</h4>
+<ul>
+<li><p>Try to use <code>EREs</code> as much as you can as their more powerful and modern machines have the capability to run them with too much performance impact.</p>
+</li>
+<li><p>Always quote your Regular Expressions</p>
+</li>
+</ul>
+<h5 id="single-character-expressions">Single Character Expressions</h5>
+<ul>
+<li><p>Regular characters like &quot;Z&quot; or &quot;&amp;&quot; match themselves</p>
+</li>
+<li><p>Character case matters: &quot;d&quot; and &quot;D&quot; are different</p>
+</li>
+<li><p>Period (&quot;.&quot;) matches any single character</p>
+<ul>
+<li>Possibly matches newlines</li>
+</ul>
+</li>
+</ul>
+<p>Escaped metacharacter:</p>
+<ul>
+<li><code>\.</code> matches a real period</li>
+<li><code>\\</code> matches a real backslash</li>
+</ul>
+<h4 id="bracket-expressions">Bracket Expressions</h4>
+<ul>
+<li>The brackets <code>[ ]</code> match any one character</li>
+<li>So [abcde] matches one of the characters <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, <code>e</code> respectively</li>
+<li>Using a dash like this <code>[0-9]</code> or <code>[A-Z]</code> matches all characters in alphabet or numbers 0 through 9 respectively</li>
+<li>Using a caret <code>^</code> in the beginning of bracket will invert matches <code>[^cd]</code> will match anything not <code>c</code> or <code>d</code></li>
+</ul>
+<p>Character classes are used for digits, punctuations, letters, etc..</p>
+<ul>
+<li><code>[[:classname:]]</code> notice the inner bracket <code>[:classname:]</code></li>
+</ul>
+<p>Character Classes:</p>
+<ul>
+<li><p><code>&apos;[:alnum:]&apos;</code></p>
+<ul>
+<li>Alphanumeric characters: &apos;[:alpha:]&apos; and &apos;[:digit:]&apos;; in the &apos;C&apos; locale and ASCII character encoding, this is the same as &#x2018;[0-9A-Za-z]&#x2019;.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:alpha:]&apos;</code></p>
+<ul>
+<li>Alphabetic characters: &apos;[:lower:]&apos; and &apos;[:upper:]&apos;; in the &apos;C&apos; locale and ASCII character encoding, this is the same as &apos;[A-Za-z]&apos;.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:blank:]&apos;</code></p>
+<ul>
+<li>Blank characters: space and tab.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:cntrl:]&apos;</code></p>
+<ul>
+<li>Control characters. In ASCII, these characters have octal codes 000 through 037, and 177 (DEL).</li>
+<li>In other character sets, these are the equivalent characters, if any.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:digit:]&apos;</code></p>
+<ul>
+<li>Digits: 0 1 2 3 4 5 6 7 8 9.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:graph:]&apos;</code></p>
+<ul>
+<li>Graphical characters: &apos;[:alnum:]&apos; and &apos;[:punct:]&apos;.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:lower:]&apos;</code></p>
+<ul>
+<li>Lower-case letters; in the &#x2018;C&#x2019; locale and ASCII character encoding, this is a b c d e f g h i j k l m n o p q r s t u v w x y z.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:print:]&apos;</code></p>
+<ul>
+<li>Printable characters: &apos;[:alnum:]&apos;, &apos;[:punct:]&apos;, and space.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:punct:]&apos;</code></p>
+<ul>
+<li>Punctuation characters; in the &#x2018;C&#x2019; locale and ASCII character encoding, this is ! &quot; # $ % &amp; &apos; ( ) * + , - . / : ; &lt; = &gt; ? @ [ \ ] ^ _ ` { | } ~.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:space:]&apos;</code></p>
+<ul>
+<li>Space characters: in the &#x2018;C&#x2019; locale, this is tab, newline, vertical tab, form feed, carriage return, and space.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:upper:]&apos;</code></p>
+<ul>
+<li>Upper-case letters: in the &#x2018;C&#x2019; locale and ASCII character encoding, this is A B C D E F G H I J K L M N O P Q R S T U V W X Y Z.</li>
+</ul>
+</li>
+<li><p><code>&apos;[:xdigit:]&apos;</code></p>
+<ul>
+<li>Hexadecimal digits: 0 1 2 3 4 5 6 7 8 9 A B C D E F a b c d e f.</li>
+</ul>
+</li>
+</ul>
+<h4 id="repetition-in-grep">Repetition in Grep</h4>
+<ul>
+<li><code>Asterisk</code> (<code>*</code>) indicates zero or more of the preceding character<ul>
+<li>bc*d matches bd, bcd, bccd, bcccd, ...</li>
+</ul>
+</li>
+<li>Notice the <code>*</code> matches zero or more the <code>c</code> characters</li>
+<li>it does not match <code>bAd</code> though it only matches with <code>c</code> characters</li>
+<li><code>.*</code> matches any character though so it is most powerful match</li>
+<li><code>*</code> matches the null string as well which can affect substitutions</li>
+</ul>
+<h4 id="basic-grep-examples">Basic Grep Examples</h4>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;Hey Marcel how are you doing?&apos;</span> | grep --color <span class="hljs-string">&apos;Marcel&apos;</span>
+</code></pre>
+<p>Notice when you output this that <code>Marcel</code> is in color because it is a match</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;Hey Marcel how are you doing?&apos;</span> | grep --color <span class="hljs-string">&apos;marcel&apos;</span>
+</code></pre>
+<p>This will not match though because case matters</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;You are hungry right?&apos;</span> | grep --color h.ngry
+</code></pre>
+<p>Notice that <code>hungry</code> matches because the dot <code>.</code> matches any character</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> this is www.marcelbelmont.com domain | grep --color <span class="hljs-string">&apos;www\.marcelbelmont\.com&apos;</span>
+</code></pre>
+<p>When you want to match a literal character such as a dot it needs to be escaped</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> abc 555 | grep --color <span class="hljs-string">&apos;[aeiouc]&apos;</span>
+</code></pre>
+<p>What do you think will match here?</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> what will match here 987 | grep --color <span class="hljs-string">&apos;[^whe9]&apos;</span>
+</code></pre>
+<p>What matches here?</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> what is happening 587-987-1000 | grep --color <span class="hljs-string">&apos;[[:digit:]]&apos;</span>
+</code></pre>
+<p>This matches numbers 0-9</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> what should match here? 897-888-3333 | grep --color <span class="hljs-string">&apos;[^[:digit:]]&apos;</span>
+</code></pre>
+<p>What matches here?</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-keyword">do</span> alphas match? 5899 | grep --color <span class="hljs-string">&apos;[[:alpha:]]&apos;</span>
+</code></pre>
+<p>The alpha character class matches any characters in alphabet</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-keyword">do</span> alphas match? 5899 | grep --color <span class="hljs-string">&apos;[^[:alpha:]]&apos;</span>
+</code></pre>
+<p>What should match here?</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> what matches here 888 | grep --color <span class="hljs-string">&apos;[[:alpha:]]*&apos;</span>
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 0899 matches here 888 | grep --color <span class="hljs-string">&apos;[[:alpha:]]*&apos;</span>
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 159 out <span class="hljs-keyword">for</span> this 999 | ggrep -E --color <span class="hljs-string">&apos;[^[:alpha:]]*&apos;</span>
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> what the 189 stuff 877 | grep --color -E <span class="hljs-string">&apos;[[:digit:]]*&apos;</span>
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> what the 189 stuff 877 | grep --color -E <span class="hljs-string">&apos;[^[:digit:]]*&apos;</span>
+</code></pre>
+<p>When using <code>bsd</code> grep there is what seems like subtle bugs</p>
+<p>I have gnu grep installed and all occurrences of  characters not in alphabet matched as they should</p>
+<ul>
+<li><p>Be aware of subtle differences between <code>BSD</code> Unix Tools and <code>GNU</code> they creep up on you.</p>
+</li>
+<li><p>Using <code>--color</code> and some sample data helps test your <code>BREs</code> as you write them</p>
+</li>
+</ul>
+<h4 id="interval-expressions">Interval Expressions</h4>
+<ul>
+<li><code>d\{A\}</code> - A occurrences of d</li>
+<li><code>d\{A,\}</code> - At least A occurrences of d</li>
+<li><p><code>d\{A, B\}</code> - A to B occurrences of d</p>
+</li>
+<li><p>The <code>d</code> means a single character</p>
+</li>
+<li><p><code>[[:digit:]]\{3\}-[[:digit:]]\{4\}</code> this RegEx matches on a US local phone number</p>
+<ul>
+<li>such as 531-2000</li>
+</ul>
+</li>
+<li><p>A and B are integers up to RE_DUP_MAX</p>
+</li>
+</ul>
+<p>If you are on a Mac run the following command:</p>
+<pre><code class="lang-bash">$ sysctl user.re_dup_max
+user.re_dup_max: 255
+</code></pre>
+<p><code>sysctl</code> can print kernel state variables</p>
+<h4 id="anchor-regex-matches">Anchor regex matches</h4>
+<ul>
+<li><p>Caret <code>^</code> means match must start at beginning of line or string</p>
+</li>
+<li><p>Dollar Sign <code>$</code> means match must occur at end of line or string</p>
+</li>
+<li><p>if you use <code>^</code> and <code>$</code> in the middle of a basic regular expression than they stand for their literal value</p>
+</li>
+</ul>
+<h4 id="parenthesized-subexpressions">Parenthesized Subexpressions</h4>
+<ul>
+<li><p>(o[pq])(567)yy\2\1 is the same as `o[pq]567yyY2Y1</p>
+<ul>
+<li>The Y2 and Yq are the actual text that match expressions in parentheses</li>
+<li>The contents of the parenthesis can be any regular expression</li>
+</ul>
+</li>
+<li>You can use up to 9 parenthesized subexpressions</li>
+<li>This is often called &quot;backreferences&quot;</li>
+<li>This only works for Basic Regular Expressions (BREs)</li>
+</ul>
+<h4 id="basic-regular-expression-operator-precedence">Basic Regular Expression Operator Precedence</h4>
+<p>I am ordering from Highest to Lowest Precedence:</p>
+<ul>
+<li>Bracket Symbols: [:class:], [=a=], [.ab.]</li>
+<li>\metacharacter</li>
+<li>Bracket Expresssions <code>[ ]</code></li>
+<li>(.....) and \digit</li>
+<li><ul>
+<li>and {......}</li>
+</ul>
+</li>
+<li>concatenation (cde is c followed by d then by e)</li>
+<li>^ and $ anchors</li>
+</ul>
+<h4 id="regular-expression-matching">Regular Expression Matching</h4>
+<ul>
+<li>Regular Expression match the longest possible, leftmost occurrence of text that can be matched<ul>
+<li>It is said that regular expressions are greedy by default in this way</li>
+</ul>
+</li>
+<li>The regex match stops at the first character that cannot be matched</li>
+<li>If a text is matched then it is used even if a longer match exists further down the text</li>
+</ul>
+<h4 id="intermediate-grep-examples">Intermediate Grep Examples</h4>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 891 you 588 | grep --color <span class="hljs-string">&apos;[[:alpha:]]\{2\}&apos;</span>
+</code></pre>
+<p>It matches 2 characters here the <code>yo</code></p>
+<p>but</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 891 some 5888 | grep --color <span class="hljs-string">&apos;[[:alpha:]]\{2\}&apos;</span>
+</code></pre>
+<p>Here it matches the <code>some</code> the whole character set</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 589 him 999 | grep --color <span class="hljs-string">&apos;[^[:alpha:]]\{2\}&apos;</span>
+</code></pre>
+<p>Here it matches on 4 pairs:</p>
+<p>The <code>58</code>, <code>9 and space</code>, <code>a space and 9</code>, and <code>99</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 589 him 999 | grep --color <span class="hljs-string">&apos;[^[:alpha:][:space:]]\{2\}&apos;</span>
+</code></pre>
+<p>Here it matched on 2 pairs:</p>
+<p>The <code>58</code> and the <code>99</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 589 her 897 | grep --color <span class="hljs-string">&apos;^[[:digit:]]*&apos;</span>
+</code></pre>
+<p>Here it matches the digits at the beginning which happens to be <code>589</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> her 888 | grep --color <span class="hljs-string">&apos;^[^[:digit:]]*&apos;</span>
+</code></pre>
+<p>This matches anything that is not a digit at the beginning of the set so it matches <code>her</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 567 vim 321 | grep --color <span class="hljs-string">&apos;[^[:alpha:]]*$&apos;</span>
+</code></pre>
+<p>This matches any character that is not in alphabet and in the end of the set so it matches <code>321</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 567 abcd 789 himhim | grep --color <span class="hljs-string">&apos;[aeiouhm]*&apos;</span>
+</code></pre>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 567 abcd 789 himhim | grep --color <span class="hljs-string">&apos;[aeiouhm]*&apos;</span>
+</code></pre>
+<p>Here it didn&apos;t match with <code>BSD</code> grep but with gnu grep</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 567 abcd 789 himhim | ggrep --color <span class="hljs-string">&apos;[aeiouhm]*&apos;</span>
+</code></pre>
+<p>it matches with <code>a</code>,<code>him</code>, <code>him</code> like it should to match longest string</p>
+<p>This seems to be a bug between <code>bsd</code> grep and <code>gnu</code> grep</p>
+<p>Here is an example using <code>sed</code> which will go into soon</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 567 aeod 888 houhou  | sed <span class="hljs-string">&apos;s/[aeioud]*/D/&apos;</span>
+</code></pre>
+<p>Notice a quirk here it matched on the null string which is at the beginning of the set</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> 567 aeod 888 houhou  | sed <span class="hljs-string">&apos;s/[aeioud][aeioud]*/D/&apos;</span>
+
+567 D 888 houhou
+</code></pre>
+<p>Here it matched on the string <code>aeod</code> and replaced with <code>D</code> but it didn&apos;t match all occurrence because we need the <code>g</code> flag which does a global replace</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> 567 aeod 888 houhou  | sed <span class="hljs-string">&apos;s/[aeioud][aeioud]*/D/g&apos;</span>
+
+567 D 888 hDhD
+</code></pre>
+<p>Notice this time <code>ou</code> was replaced with <code>D</code> twice</p>
+<p><em>Always quote your regular expressions on the command line or you will get unexpected behavior</em></p>
+<p>Things to be watch out for regular expressions:</p>
+<ul>
+<li><p>Substitutions can match the null string in unexpected ways as you saw</p>
+</li>
+<li><p>Matches will go with <em>longest leftmost match</em></p>
+</li>
+<li><p>Regular expressions can become cryptic very quickly so do take your time to read, write and to test them.</p>
+</li>
+</ul>
+<h4 id="extended-regular-expressions">Extended Regular Expressions</h4>
+<p>Similiarites to Basic Regular Expressions:</p>
+<ul>
+<li><p>Matching single characters</p>
+<ul>
+<li>Regular characters, <code>.</code>, escaped metacharacters</li>
+<li>Bracket expressions: ranges and classes</li>
+</ul>
+</li>
+<li><p>Conduct repetition with <code>*</code> and inverval expressions <code>({.....})</code></p>
+</li>
+<li><p>Anchor sets with <code>^</code> and <code>$</code></p>
+<ul>
+<li>Although in <code>EREs</code> the <code>^</code> and <code>$</code> are still special even in the middle of a Regular Expression</li>
+</ul>
+</li>
+<li><p>Matches go with longest, leftmost match</p>
+</li>
+</ul>
+<h6 id="additional-repition-operators-for-eres">Additional Repition Operators for EREs</h6>
+<ul>
+<li><code>re?</code> is zero or one of <code>re</code><ul>
+<li>so for example <code>mother?</code> would match one mother or none, meaning optional</li>
+</ul>
+</li>
+<li>A note that <code>re</code> can be more than one character<ul>
+<li>This applies to <code>*</code> and <code>{...}</code> as well</li>
+</ul>
+</li>
+</ul>
+<h6 id="grouping-with-parenthesis">Grouping with Parenthesis</h6>
+<ul>
+<li>Parenthesis group smaller Regular Expressions into larger regexes<ul>
+<li><code>([[:digit:]]{3}-[[:digit:]]{4})+</code> this matches one or more US phone numbers</li>
+<li>We can even include repetition operators</li>
+</ul>
+</li>
+<li>You can&apos;t use backreferences with EREs</li>
+</ul>
+<h6 id="alternation">Alternation</h6>
+<ul>
+<li><code>Alternation</code> means this or that<ul>
+<li><code>(mayo|ketchup)</code> will match either mayo or ketchup but not both</li>
+<li><code>Alternation</code> is often used with parenthesis</li>
+</ul>
+</li>
+<li><code>Alternation</code> has the lowest precedence of all the operators<ul>
+<li>^sorry|world$ will expand like this<ul>
+<li>(^sorry)|(world$) and not like this ^(sorry|world)$ as you would think due to operator precedence</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="extended-regular-expressions-operator-precedence">Extended Regular Expressions Operator Precedence</h6>
+<p>Operator Precedence:</p>
+<ol>
+<li>Bracket symbols: <code>[:class:]</code>, <code>[=c=]</code>, <code>[.bs.]</code>, and <code>[012345]</code><ol>
+<li>Meaning the brackets themselves <code>[  ]</code></li>
+</ol>
+</li>
+<li><code>\metacharacter</code></li>
+<li>Bracket expressions <code>[:alnum:]</code></li>
+<li><code>(.....)</code> grouping</li>
+<li><code>*</code>, <code>+</code>, <code>?</code>, and <code>{.....}</code></li>
+<li>Concatenation =&gt; who means <code>w</code> followed by <code>h</code> then followed by <code>o</code></li>
+<li>Alternation</li>
+</ol>
+<h6 id="eres-examples">EREs Examples</h6>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> ac abc abbc abbbc | egrep --color <span class="hljs-string">&apos;ab?c&apos;</span>
+</code></pre>
+<p>This matches <code>ac</code> and <code>abc</code> since <code>ac</code> does not have a <code>b</code> and it matched <code>abc</code> since it was one <code>b</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> ac abc abbc abbbc | grep -E --color <span class="hljs-string">&apos;ab?c&apos;</span>
+</code></pre>
+<p>this also works because <code>-E</code> puts grep in ERE mode</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> abc 531-2000 531-7777 cba | egrep --color <span class="hljs-string">&apos;([[:digit:]]{3}-[[:digit:]]{4} )+
+</span></code></pre>
+<p>This uses grouping operator <code>()</code> and matches 3 digits, a <code>-</code> and 4 digits respectively</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;yo man
+how are you&apos;</span> | egrep --color <span class="hljs-string">&apos;how|yo&apos;</span>
+</code></pre>
+<p>This matches <code>yo</code> twice once in <code>yo</code> and second in <code>yo</code>u and it matches <code>how</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> word and up | egrep --color <span class="hljs-string">&apos;^word|up$&apos;</span>
+</code></pre>
+<p>This matches both <code>word</code> and <code>up</code> because of operator precedence</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> word and up | egrep --color <span class="hljs-string">&apos;^(word|up)$&apos;</span>
+</code></pre>
+<p>This doesn&apos;t match because we have more in the line than just <code>word</code> or <code>up</code></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> abc 888-7777 999-1111 cba |
+grep --color <span class="hljs-string">&apos;\([[:digit:]]\{3\}-[[:digit:]]\{4\} \)\+&apos;</span>
+</code></pre>
+<p>This matches using regular `grep with backslashes and interval expressions and grouping expressions and the plus operator</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;yo
+man
+hey&apos;</span> | grep --color <span class="hljs-string">&apos;^\(yo\|man\)$&apos;</span>
+</code></pre>
+<p>Notice here that we need to escape with <code>\</code> but we match with <code>yo</code>, <code>man</code></p>
+<p>Notice an example with <code>sed</code> and <code>gsed</code></p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">echo</span> yo and hey | sed <span class="hljs-string">&apos;s/^yo\|hey$/zzz/g&apos;</span>
+</code></pre>
+<p>this should have worked and replaced both <code>yo</code> and <code>hey</code> with <code>zzz</code></p>
+<p>but this example with <code>gnu</code> sed works</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> yo and hey | gsed <span class="hljs-string">&apos;s/^yo\|hey$/zzz/g&apos;</span>
+zzz and zzz
+</code></pre>
+<h6 id="main-programs-that-use-eres">Main programs that use EREs</h6>
+<ul>
+<li>egrep</li>
+<li>grep with <code>-E</code></li>
+<li>awk</li>
+<li>GNU grep and sed let you use <code>\?</code>, <code>\+</code> and <code>\|</code> to get the same <code>ERE</code> power but is not readable</li>
+</ul>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="basics-of-shell-programming.html">Basics of Shell Programming</a></td>
+<td style="text-align:right"><a href="text-substitution.html">Text Substitution</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="introduction-to-text-processing.html" class="navigation navigation-prev " aria-label="Previous page: Introduction to Text Processing">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="text-substitution.html" class="navigation navigation-next " aria-label="Next page: Text Substitution">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Text Searching","level":"1.4","depth":1,"next":{"title":"Text Substitution","level":"1.5","depth":1,"path":"docs/text-substitution.md","ref":"docs/text-substitution.md","articles":[]},"previous":{"title":"Introduction to Text Processing","level":"1.3","depth":1,"path":"docs/introduction-to-text-processing.md","ref":"docs/introduction-to-text-processing.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/text-searching.md","mtime":"2019-06-19T17:17:59.594Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

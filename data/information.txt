@@ -1,0 +1,6 @@
+Name,Rank,Height,Years of Service
+John Rambo,SSG,64,15
+Chuck Norris,SSG,70,10
+John Doe,PVT,58,1
+Luke Cage,SGT,72,8
+Audie Murphy,CPT,58,6

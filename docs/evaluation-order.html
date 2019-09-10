@@ -1,0 +1,757 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Evaluation Order · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="subshells.html" />
+    
+    
+    <link rel="prev" href="history-substitution.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Evaluation Order</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---evaluation-order">Unix Programming and Regular Expressions Workshop - Evaluation Order</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#shell-evaluation-order">Shell Evaluation Order</a></li>
+<li><a href="#short-circuit-shell-evalution-order">Short Circuit Shell Evaluation Order</a></li>
+<li><a href="#eval-command-description">Eval Command Description</a></li>
+<li><a href="#eval-command-short-circuit">Eval Command Short Circuit</a></li>
+<li><a href="#eval-command-examples">Eval Command Examples</a></li>
+<li><a href="#importance-of-shell-evaluation-order">Importance of Shell Evaluation Order</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="shell-evaluation-order">Shell Evaluation Order</h4>
+<ol>
+<li><p>Token Recognition </p>
+<ol>
+<li>Words in the command line are split into <strong>tokens</strong> separated by metacharacters</li>
+<li>White Space <code>`,</code>;<code>(Semicolon),</code>|<code>,</code>&lt;<code>,</code>&gt;<code>,</code>`, </li>
+<li>Substitution can occur here like <code>$HOME/myfile</code></li>
+</ol>
+</li>
+<li><p>Shell then looks if there is an opening <em>keyword</em>
+if <strong>keyword</strong>
+ then the shell knows it is a compound command and that it needs to collect all of the  actual command before executing
+else
+ if <strong>middle or final keyword</strong> // <code>elif</code> or <code>fi</code>
+   then keep going and collect all of the command or finish everything and go to <strong>step 3</strong>
+ else
+   a syntax error has occurred and shell exits or in a interactive session just go back to shell prompt</p>
+</li>
+<li><p>Is the word an <em>alias</em> ?
+ if token an <code>alias</code> 
+   then expand alias and go to step 1</p>
+<pre><code> `alias ll=&apos;ls -lh&apos;` the shell would expand *ll* in this case to `ls -lh`
+</code></pre><p> else
+   continue on to step 4</p>
+</li>
+<li><p>Tilde Substitution occurs in following situations:</p>
+<ol>
+<li>On the start of a word</li>
+<li>After <code>:</code>, <code>:-</code> in variable assignment as we mentioned previously</li>
+<li>In expressions like <code>${somevar operation aword}</code></li>
+</ol>
+</li>
+<li><p>Parameter or aka variable expansion</p>
+<ol>
+<li><code>NAME=james ; echo $NAME</code></li>
+<li>Here the <code>NAME</code> variable is expanded to james</li>
+</ol>
+</li>
+<li><p>Command substitution</p>
+<ol>
+<li>Old style with backticks ``</li>
+<li>New style with <code>$()</code></li>
+</ol>
+</li>
+<li><p>Arithmetic expansion</p>
+<ol>
+<li><code>$(())</code></li>
+</ol>
+</li>
+<li><p>Split results of Step 5, 6, 7 onto characters in the <a href="https://en.wikipedia.org/wiki/Internal_field_separator" target="_blank">Internal Field Separator aka $IFS variable</a></p>
+<ol>
+<li><p>For many command line interpreters (&quot;shell&quot;) of Unix operating systems, the internal field separator (abbreviated IFS) refers to a variable which defines the character or characters used to separate a pattern into tokens for some operations.</p>
+</li>
+<li><p>IFS typically includes the space, tab, and the newline.</p>
+</li>
+<li><p>This step is distinguished by steps you can control as shell programmer</p>
+</li>
+<li><p>if there is whitespace then each <em>run</em> of whitespace will separate fields</p>
+</li>
+<li><p>else each non whitespace will delimit a field</p>
+</li>
+</ol>
+</li>
+<li><p>Filename generation / Wilcard Expansion</p>
+</li>
+<li><p>In a series of tokens then look at first word</p>
+<ol>
+<li>Keywords will be found but really any keywords have already been found</li>
+<li>Look at special builtins: <code>break, continue</code></li>
+<li>Functions</li>
+<li>Regular builtins <code>cd, echo</code></li>
+</ol>
+</li>
+<li><p>Setup Input and Output I/0 redirections that were saved from step 1 and finally to run the shell program</p>
+</li>
+</ol>
+<h4 id="short-circuit-shell-evaluation-order">Short Circuit Shell Evaluation Order</h4>
+<ul>
+<li><p>Anything in single quotes &apos; &apos; is taken literally and shell program execution goes straight to step 11</p>
+</li>
+<li><p>Anything in double quotes &quot; &quot; goes from token recognition Step 1 ==&gt; Step 5 (Variable Expansion)</p>
+</li>
+<li><p>If you use the <em>eval</em> command
+then shell program execution will go from Step 11 ==&gt; Step 1</p>
+</li>
+</ul>
+<h4 id="eval-command-description">Eval Command Description</h4>
+<p><code>eval: eval [arg ...]</code></p>
+<ul>
+<li><p>Execute arguments as a shell command.</p>
+</li>
+<li><p>Combine ARGs into a single string, use the result as input to the shell, and execute the resulting commands.</p>
+</li>
+<li><p>Exit Status:</p>
+<ul>
+<li>Returns exit status of command or success if command is null.</li>
+</ul>
+</li>
+</ul>
+<h4 id="eval-command-short-circuit">Eval Command Short Circuit</h4>
+<p>Eval will rerun each of the steps given previously</p>
+<p>The main purpose of eval is to build up a command in a string and then to run it</p>
+<pre><code class="lang-bash">mycommand=<span class="hljs-string">&quot;echo $?&quot;</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$SOMEVAR</span>&quot;</span> <span class="hljs-_">-eq</span> <span class="hljs-string">&quot;<span class="hljs-variable">$ANOTHERVAR</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
+  mycommand=<span class="hljs-string">&quot;<span class="hljs-variable">$mycommand</span> | less&quot;</span> 
+<span class="hljs-keyword">fi</span>
+<span class="hljs-built_in">eval</span> <span class="hljs-string">&quot;<span class="hljs-variable">$mycommand</span>&quot;</span>
+</code></pre>
+<p>When we run <code>eval</code> then command will be run albeit this is a senseless case of eval</p>
+<h4 id="eval-command-examples">Eval Command Examples</h4>
+<pre><code class="lang-bash">testcommand=<span class="hljs-string">&quot;man test&quot;</span>
+<span class="hljs-built_in">command</span>=<span class="hljs-string">&quot;<span class="hljs-variable">$testcommand</span> | more&quot;</span>
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$command</span>
+</code></pre>
+<p>This will just echo the command and treat values literally but not execute it</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">eval</span> <span class="hljs-variable">$command</span>
+</code></pre>
+<p>This will actually execute the $command and run the man page through the more utility</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> scripts/<span class="hljs-built_in">eval</span>-order
+</code></pre>
+<pre><code class="lang-bash">mkdir tmp
+</code></pre>
+<pre><code class="lang-bash"><span class="hljs-built_in">cd</span> tmp
+</code></pre>
+<pre><code class="lang-bash">cat &gt; tempFile
+Some temporary file
+Just a <span class="hljs-built_in">test</span> here
+</code></pre>
+<p>Press Control D to redirect stdin into tempFile</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">read</span> -p <span class="hljs-string">&apos;Enter something here: &apos;</span> something
+</code></pre>
+<p>Here we are getting user supplied input</p>
+<p>I put in <code>rm *</code> as my input</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">set</span> -x
+</code></pre>
+<p>Set execution tracing so you see what is happening</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">eval</span> <span class="hljs-variable">$something</span>
+</code></pre>
+<p>Notice here that tempFile has been deleted</p>
+<pre><code class="lang-bash">ls
+</code></pre>
+<h4 id="importance-of-shell-evaluation-order">Importance of Shell Evaluation Order</h4>
+<p>You need to understand shell evalution order in order to write correctly working shell scripts</p>
+<p>Shell Interactions can be tricky to see when they occur:</p>
+<ul>
+<li>Substitutions can occur during token parsing</li>
+<li>Nested shell constructs happen during command substitution</li>
+<li>Substitutions can occur in double quoted contexts</li>
+</ul>
+<p>Using <em>eval*</em> can provide a mechanism to short circuit shell evalution order</p>
+<p><em>*An important caveat is that using eval can be a possible security vulnerability as you see in the example shown above</em></p>
+<p><strong>Don&apos;t ever run eval with user supplied input because a malicious user could be attempting a malicious attack</strong></p>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="history-substitution.html">History Substitution</a></td>
+<td style="text-align:right"><a href="subshells.html">Subshells</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="history-substitution.html" class="navigation navigation-prev " aria-label="Previous page: History Substitution">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="subshells.html" class="navigation navigation-next " aria-label="Next page: Subshells">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Evaluation Order","level":"1.15","depth":1,"next":{"title":"Subshells","level":"1.16","depth":1,"path":"docs/subshells.md","ref":"docs/subshells.md","articles":[]},"previous":{"title":"History Substitution","level":"1.14","depth":1,"path":"docs/history-substitution.md","ref":"docs/history-substitution.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/evaluation-order.md","mtime":"2018-11-22T17:17:35.931Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

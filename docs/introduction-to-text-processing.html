@@ -1,0 +1,806 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction to Text Processing · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="text-searching.html" />
+    
+    
+    <link rel="prev" href="basics-of-shell-programming.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Unix Programming and Regular Expressions Workshop</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Workshop Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics-of-shell-programming.html">
+            
+                <a href="basics-of-shell-programming.html">
+            
+                    
+                    Basics of Shell Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="introduction-to-text-processing.html">
+            
+                <a href="introduction-to-text-processing.html">
+            
+                    
+                    Introduction to Text Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="text-searching.html">
+            
+                <a href="text-searching.html">
+            
+                    
+                    Text Searching
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="text-substitution.html">
+            
+                <a href="text-substitution.html">
+            
+                    
+                    Text Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="filename-expansions-and-globbing.html">
+            
+                <a href="filename-expansions-and-globbing.html">
+            
+                    
+                    Filename expansions and globbing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="working-with-fields.html">
+            
+                <a href="working-with-fields.html">
+            
+                    
+                    Working with Fields
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="text-sorting.html">
+            
+                <a href="text-sorting.html">
+            
+                    
+                    Text Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="arithmetic-operations-and-variables.html">
+            
+                <a href="arithmetic-operations-and-variables.html">
+            
+                    
+                    Arithmetic Operations and variables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="decision-making-and-exit-status.html">
+            
+                <a href="decision-making-and-exit-status.html">
+            
+                    
+                    Decision Making and Exit Status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="looping.html">
+            
+                <a href="looping.html">
+            
+                    
+                    Looping
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="input-and-output.html">
+            
+                <a href="input-and-output.html">
+            
+                    
+                    Input and Output
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="command-process-substitution.html">
+            
+                <a href="command-process-substitution.html">
+            
+                    
+                    Command Process Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="history-substitution.html">
+            
+                <a href="history-substitution.html">
+            
+                    
+                    History Substitution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="evaluation-order.html">
+            
+                <a href="evaluation-order.html">
+            
+                    
+                    Evaluation Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="subshells.html">
+            
+                <a href="subshells.html">
+            
+                    
+                    Subshells
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="shell-functions.html">
+            
+                <a href="shell-functions.html">
+            
+                    
+                    Shell Functions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="signal-handling.html">
+            
+                <a href="signal-handling.html">
+            
+                    
+                    Signal Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="working-with-files.html">
+            
+                <a href="working-with-files.html">
+            
+                    
+                    Working with Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="remote-file-sharing-and-file-access.html">
+            
+                <a href="remote-file-sharing-and-file-access.html">
+            
+                    
+                    Remote File Sharing and File Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="build-automation.html">
+            
+                <a href="build-automation.html">
+            
+                    
+                    Build Automation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="building-command-line-applications.html">
+            
+                <a href="building-command-line-applications.html">
+            
+                    
+                    Building Command line applications
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="shell-login-order.html">
+            
+                <a href="shell-login-order.html">
+            
+                    
+                    Shell Login Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="network-utilities.html">
+            
+                <a href="network-utilities.html">
+            
+                    
+                    Network Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" data-path="shell-security.html">
+            
+                <a href="shell-security.html">
+            
+                    
+                    Shell Security
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" data-path="find-and-replace-patterns.html">
+            
+                <a href="find-and-replace-patterns.html">
+            
+                    
+                    Find and Replace Patterns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" data-path="system-administration-commands.html">
+            
+                <a href="system-administration-commands.html">
+            
+                    
+                    System Administration Commands
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Introduction to Text Processing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="unix-programming-and-regular-expressions-workshop---introduction-to-text-processing">Unix Programming and Regular Expressions Workshop - Introduction to Text Processing</h2>
+<h2 id="sections">Sections:</h2>
+<ul>
+<li><a href="#counting-lines%5C,-words%5C,-and-characters">Counting lines, words, and characters</a></li>
+<li><a href="#transforming-text">Transforming Text</a></li>
+<li><a href="#tabs-vs-spaces">Tabs vs Spaces</a></li>
+<li><a href="#text-extraction">Text extraction</a></li>
+<li><a href="#comparing-sorted-files">Comparing Sorted Files</a></li>
+<li><a href="#script-using-tr%5C,-sort%5C,-and-comm">Script using tr, sort, and comm</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#bread-crumb-navigation">Bread Crumb Navigation</a></li>
+</ul>
+<h4 id="counting-lines-words-and-characters">Counting lines, words, and characters</h4>
+<ul>
+<li><code>wc</code> command, short for <code>word count</code></li>
+<li>The wc utility displays the number of lines, words, and bytes contained in each input file<ul>
+<li>or standard input (if no file is specified) to the standard output.</li>
+<li>A line is defined as a string of characters delimited by a <newline> character.</newline></li>
+<li>Characters beyond the final <newline> character will not be included in the line count.</newline></li>
+</ul>
+</li>
+<li>Output order: count of lines, words, characters, or bytes<ul>
+<li>Default count is lines, words, bytes</li>
+<li>Characters can be multibyte encoded</li>
+</ul>
+</li>
+</ul>
+<p><code>wc</code> takes the following output:</p>
+<ul>
+<li>-c The number of bytes in each input file is written to the standard output.  This will cancel out any prior usage of the -m option.</li>
+<li>-l The number of lines in each input file is written to the standard output.</li>
+<li>-m The number of characters in each input file is written to the standard output.<ul>
+<li>If the current locale does not support multibyte characters, this is equivalent to the -c option.</li>
+<li>This will cancel out any prior usage of the -c option.</li>
+</ul>
+</li>
+<li>-w The number of words in each input file is written to the standard output.</li>
+</ul>
+<h4 id="transforming-text">Transforming Text</h4>
+<ul>
+<li><code>tr</code> command, short for <code>translate characters</code></li>
+<li>The tr utility copies the standard input to the standard output with substitution or deletion of selected characters</li>
+<li>The <code>tr</code> command transforms text</li>
+<li>The following options are available for <code>tr</code>:<ul>
+<li>-C Complement the set of characters in string1, that is <code>`-C ab&apos;&apos; includes every character except for</code>a&apos; and `b&apos;.</li>
+<li>-c Same as -C but complement the set of values in string1.</li>
+<li>-d Delete characters in string1 from the input.</li>
+<li>-s Squeeze multiple occurrences of the characters listed in the last operand (either string1 or string2) in the input into a single instance of the character.<ul>
+<li>This occurs after all deletion and translation is completed.</li>
+</ul>
+</li>
+<li>-u Guarantee that any output is unbuffered.</li>
+</ul>
+</li>
+</ul>
+<p>Typical usage for <code>tr</code> is to map one set of values into another:</p>
+<ul>
+<li>tr a-z A-Z is old style</li>
+<li>tr [:lower:] [:upper:] is POSIX style</li>
+</ul>
+<p>[:class:] Represents all characters belonging to the defined character class.</p>
+<p>Class names are:</p>
+<ul>
+<li>alnum        <alphanumeric characters=""></alphanumeric></li>
+<li>alpha        <alphabetic characters=""></alphabetic></li>
+<li>blank        <whitespace characters=""></whitespace></li>
+<li>cntrl        <control characters=""></control></li>
+<li>digit        <numeric characters=""></numeric></li>
+<li>graph        <graphic characters=""></graphic></li>
+<li>ideogram     <ideographic characters=""></ideographic></li>
+<li>lower        <lower-case alphabetic="" characters=""></lower-case></li>
+<li>phonogram    <phonographic characters=""></phonographic></li>
+<li>print        <printable characters=""></printable></li>
+<li>punct        <punctuation characters=""></punctuation></li>
+<li>rune         <valid characters=""></valid></li>
+<li>space        <space characters=""></space></li>
+<li>special      <special characters=""></special></li>
+<li>upper        <upper-case characters=""></upper-case></li>
+<li>xdigit       <hexadecimal characters=""></hexadecimal></li>
+</ul>
+<h4 id="tabs-vs-spaces">Tabs vs Spaces</h4>
+<ul>
+<li>expand command converts tabs to spaces</li>
+<li>The expand utility processes the named files or the standard input writing the standard output with tabs changed into blanks.</li>
+<li>Backspace characters are preserved into the output and decrement the column count for tab calculations.</li>
+<li>The expand utility is useful for pre-processing character files (before sorting, looking at specific columns, etc.) that contain tabs.</li>
+<li>unexpand command converts spaces to tabs</li>
+<li>The unexpand utility puts tabs back into the data from the standard input or the named files and writes the result on the standard output.</li>
+</ul>
+<p>The following options are available for both <code>expand</code> and <code>unexpand</code>:</p>
+<ul>
+<li>-a (unexpand only.)<ul>
+<li>By default, only leading blanks and tabs are reconverted to maximal strings of tabs.</li>
+<li>If the -a option is given, then tabs are inserted whenever they would compress the resultant file by replacing two or more characters.</li>
+<li>-t tab1,tab2,...,tabn<ul>
+<li>Set tab stops at column positions tab1, tab2, ..., tabn.</li>
+<li>If only a single number is given, tab stops are set that number of column positions apart instead of the default number of 8.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-bash">od -c
+one two three   4 five  six
+0000000    o   n   e       t   w   o       t   h   r   e   e  \t   4
+0000020    f   i   v   e  \t   s   i   x  \n
+0000031
+</code></pre>
+<ul>
+<li>The od utility is a filter which displays the specified files, or standard input if no files are specified, in a user specified format.</li>
+<li>od -- octal, decimal, hex, ASCII dump</li>
+</ul>
+<p>Here we see the white space characters given, namely <code>space</code>, <code>\t</code>, and <code>\n</code></p>
+<pre><code class="lang-bash"><span class="hljs-built_in">printf</span> <span class="hljs-string">&quot;a\tb\tc\n&quot;</span> | expand -8 | unexpand <span class="hljs-_">-a</span> | od -c
+0000000    a  \t   b  \t   c  \n
+0000006
+</code></pre>
+<p>Here we expand and unexpand meaning we expand tabs to spaces and then back to tabs again</p>
+<pre><code class="lang-bash">$ <span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;     a     b     c\n&apos;</span> | gexpand -4 | gunexpand <span class="hljs-_">-a</span> -4 | od -c
+0000000   \t       a  \t               b  \t       c  \n
+0000014
+$ <span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;     a     b     c\n&apos;</span> | gexpand -4 | gunexpand -4 | od -c
+0000000   \t       a                       b                       c  \n
+0000020
+$ <span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;     a     b     c\n&apos;</span> | expand -4 | unexpand <span class="hljs-_">-a</span> -4 | od -c
+unexpand: illegal option -- 4
+usage: unexpand [<span class="hljs-_">-a</span> | -t tablist] [file ...]
+</code></pre>
+<p>Notice here the difference between <code>gnu</code> expand/unexpand and <code>bsd</code> expand/unexpand (Mac)</p>
+<pre><code class="lang-bash"><span class="hljs-built_in">printf</span> <span class="hljs-string">&apos;     a     b     c\n&apos;</span> | expand -t 4 | unexpand <span class="hljs-_">-a</span> -t 4 | od -c
+0000000   \t       a  \t               b  \t       c  \n
+0000014
+</code></pre>
+<p>Here when I use <code>BSD</code> expand/unexpand I had to explicitly set <code>-t</code> flag</p>
+<h4 id="text-extraction">Text extraction</h4>
+<ul>
+<li><code>tail</code> command prints <code>N</code> lines (10 by default)</li>
+<li>The tail utility displays the contents of file or, by default, its standard input, to the standard output.</li>
+</ul>
+<p>The options for <code>tail</code> are as follows:</p>
+<ul>
+<li>-b number The location is number 512-byte blocks.</li>
+<li>-c number The location is number bytes.</li>
+<li>-f The -f option causes tail to not stop when end of file is reached, but rather to wait for additional data to be appended to the input.<ul>
+<li>The -f option is ignored if the standard input is a pipe, but not if it is a FIFO.</li>
+</ul>
+</li>
+<li>-F The -F option implies the -f option, but tail will also check to see if the file being followed has been renamed or rotated.<ul>
+<li>The file is closed and reopened when tail detects that the filename being read from has a new inode number.</li>
+<li>The -F option is ignored if reading from standard input rather than a file.</li>
+<li>-n number The location is number lines.</li>
+<li>-q Suppresses printing of headers when multiple files are being examined.</li>
+<li>-r The -r option causes the input to be displayed in reverse order, by line.</li>
+</ul>
+</li>
+</ul>
+<p><code>Read the Fine Manual</code> for more options</p>
+<h4 id="comparing-sorted-files">Comparing Sorted Files</h4>
+<ul>
+<li><code>comm</code> command compares two sorted files</li>
+<li>The comm utility reads file1 and file2, which should be sorted lexically, and produces three text columns as output: lines only in file1; lines only in file2; and lines in both files</li>
+<li>The filename <code>-</code> means the standard input (stdin)</li>
+</ul>
+<p>The following options for <code>comm</code> are available:</p>
+<ul>
+<li>-1    Suppress printing of column 1.</li>
+<li>-2    Suppress printing of column 2.</li>
+<li>-3    Suppress printing of column 3.</li>
+<li>-i    Case insensitive comparison of lines.</li>
+</ul>
+<h4 id="script-using-tr-sort-and-comm">Script using tr, sort, and comm</h4>
+<pre><code class="lang-bash">./scripts/introduction-to-text-processing/spell_checking.sh
+
+cont
+dat
+spele
+sumetimes
+</code></pre>
+<p>Notice this script printed out the misspelled words from the text file into the screen</p>
+<pre><code class="lang-bash">./scripts/introduction-to-text-processing/spell_checking_success.sh
+</code></pre>
+<p>Notice no words were printed out</p>
+<p>Step by step execution of the script:</p>
+<ol>
+<li><code>tr &apos;[:space:][:punct:]&apos; &apos;\n&apos; &lt; ./data/spelling_success.txt</code><ol>
+<li>tr transforms spaces and punctuation characters to a new line</li>
+</ol>
+</li>
+<li><code>tr &apos;[:upper:]&apos; &apos;[:lower:]&apos;</code> via pipeline tr transforms any Uppercase characters to lowercase</li>
+<li><code>sort -u</code> via another pipeline we sort the text and show only unique entries</li>
+<li><code>comm -23 - /usr/share/dict/words</code> via the last pipeline we pass into the <code>comm</code> command the standard input and compare it to entries in <code>/usr/share/dict/words</code><ol>
+<li>Remember that the comm file needs to have input sorted and column 1 is content only in 1</li>
+<li>The second column is content only in file 2</li>
+<li>The third column is content only in both</li>
+<li>We only want the content from standard input or column 1</li>
+</ol>
+</li>
+</ol>
+<h4 id="best-practices">Best Practices</h4>
+<ul>
+<li>Use POSIX options instead for portability</li>
+<li><p>Utilities that work with character sets (tr) and with sorted files (comm) are sensitive to current locale</p>
+<ul>
+<li>Character sets can vary wildly in different locales</li>
+<li>Similarly files sort differently in different locales</li>
+</ul>
+</li>
+<li><p>If you use <code>export LC_ALL=C</code> you will get a traditional Unix environment</p>
+</li>
+<li>To be safe re-sort files in the current locale if the files were sorted in a different locale</li>
+<li>Try to utilize the power of sorting and regular expressions</li>
+<li>Use <code>tr</code> for letter case transformations and to break lines into one word per line</li>
+</ul>
+<h4 id="bread-crumb-navigation">Bread Crumb Navigation</h4>
+<hr>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Previous</th>
+<th style="text-align:right">Next</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">&#x2190; <a href="basics-of-shell-programming.html">Basics of Shell Programming</a></td>
+<td style="text-align:right"><a href="text-searching.html">Text Searching</a> &#x2192;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basics-of-shell-programming.html" class="navigation navigation-prev " aria-label="Previous page: Basics of Shell Programming">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="text-searching.html" class="navigation navigation-next " aria-label="Next page: Text Searching">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction to Text Processing","level":"1.3","depth":1,"next":{"title":"Text Searching","level":"1.4","depth":1,"path":"docs/text-searching.md","ref":"docs/text-searching.md","articles":[]},"previous":{"title":"Basics of Shell Programming","level":"1.2","depth":1,"path":"docs/basics-of-shell-programming.md","ref":"docs/basics-of-shell-programming.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","advanced-emoji","highlight","copy-code-button"],"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"docs/introduction-to-text-processing.md","mtime":"2018-11-22T17:17:35.917Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-10T15:33:32.918Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
